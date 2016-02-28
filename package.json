@@ -10,14 +10,12 @@
   "author": "BransonGitomeh",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "genesis-express-waterline": "0.0.1",
-    "sails-mongo": "^0.12.0",
-    "waterline": "^0.11.0",
     "sails-memory": "^0.10.6",
-    "sails-mysql": "^0.11.5"
+    "sails-mongo": "^0.12.0",
+    "sails-mysql": "^0.11.5",
+    "waterline": "^0.11.0"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }

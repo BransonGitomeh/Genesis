@@ -1,5 +1,5 @@
 module.exports = {
-  production:true,
+  production:false,
   //autoswitch ports depending on environment
   port:function(){
     if(this.production == true){

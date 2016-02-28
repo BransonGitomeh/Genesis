@@ -1,4 +1,4 @@
-var initializeFW = require("genesis-express-waterline")
+var initializeFW = require("./init")
 //import the config
 var config = require("./config")
 var fs = require("fs")
