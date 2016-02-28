@@ -1,4 +1,4 @@
-var waterlineFramework = require("waterlineFramework")
+var initializeFW = require("genesis-express-waterline")
 //import the config
 var config = require("./config")
 var fs = require("fs")
@@ -11,7 +11,7 @@ fs.readdir("./collections",(err,files) => {
 	})
 
 	//innit the framework
-	waterlineFramework(collections,config,function(app){
+	initializeFW(collections,config,function(app){
 		//snoop through all the files inside routes folder and get the [app.gets] to complete the routing
 		fs.readdir("./routes",(err,files) => {
 			files.map((file) => require("./routes/" + file)(app,app.locals.collections))
