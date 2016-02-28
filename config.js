@@ -5,7 +5,7 @@ module.exports = {
     if(this.production == true){
       return process.env.PORT
     }else{
-      return 4200
+      return 3000
     }
   },
   adapters:{
