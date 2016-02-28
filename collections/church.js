@@ -1,8 +1,8 @@
 module.exports = {
   identity:"church",
 
-  connection:"memory",
-  
+  connection:"prodMongo",
+
   attributes:{
     firstname:{
       type:"string"

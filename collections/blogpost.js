@@ -1,7 +1,7 @@
 module.exports = {
   identity: 'blogpost',
 
-  connection: 'memory',
+  connection: 'prodMongo',
 
   migrate: "alter",
 
