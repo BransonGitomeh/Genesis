@@ -3,7 +3,7 @@ module.exports = {
 
   connection: 'prodMongo',
 
-  migrate: "alter",
+  migrate: "safe",
 
   attributes: {
       sessionId: 'string',

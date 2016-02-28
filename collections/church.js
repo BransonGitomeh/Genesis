@@ -1,6 +1,8 @@
 module.exports = {
   identity:"church",
 
+  migrate: "safe",
+  
   connection:"prodMongo",
 
   attributes:{
