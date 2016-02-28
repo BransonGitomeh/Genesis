@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4",
+    "genesis-express-waterline": "0.0.1",
     "sails-mongo": "^0.12.0",
     "waterline": "^0.11.0"
   },
