@@ -1,0 +1,20 @@
+{
+  "name": "genesis_express",
+  "version": "0.0.1",
+  "description": "my server",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "BransonGitomeh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "sails-mongo": "^0.12.0",
+    "waterline": "^0.11.0"
+  },
+  "devDependencies": {
+    "sails-memory": "^0.10.6",
+    "sails-mysql": "^0.11.5"
+  }
+}
