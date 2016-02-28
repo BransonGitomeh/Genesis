@@ -9,8 +9,8 @@ module.exports = {
     }
   },
   adapters:{
-    // memory: require("sails-memory"),
-    // mysql: require("sails-mysql"),
+    memory: require("sails-memory"),
+    mysql: require("sails-mysql"),
     mongo: require("sails-mongo")
   },
   connections:{
