@@ -1,7 +1,7 @@
 module.exports = {
   identity: 'userprofile',
 
-  connection: 'prodMongo',
+  connection: 'memory',
 
   migrate: "safe",
 

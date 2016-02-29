@@ -11,11 +11,14 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "sails-memory": "^0.10.6",
     "sails-mongo": "^0.12.0",
     "sails-mysql": "^0.11.5",
     "waterline": "^0.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mithril": "^0.2.2-rc.1"
+  }
 }

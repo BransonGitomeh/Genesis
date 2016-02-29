@@ -1,5 +1,5 @@
 module.exports = {
-  production:false,
+  production:true,
   //autoswitch ports depending on environment
   port:function(){
     if(this.production == true){
@@ -24,9 +24,9 @@ module.exports = {
       password  : 'a32357377',
       database  : 'test'
     },
-    prodMongo:{
-      adapter: 'mongo',
-      url:"mongodb://genesisServer:a10101995@ds015398.mongolab.com:15398/genesis"
-    }
+    // prodMongo:{
+    //   adapter: 'mongo',
+    //   url:"mongodb://genesisServer:a10101995@ds015398.mongolab.com:15398/genesis"
+    // }
   }
 }
