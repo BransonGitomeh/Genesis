@@ -119,32 +119,32 @@
 			"/onlineChurch/register":__webpack_require__(68),
 
 
-			"/onlineChurch/admin":m.component(layout, {body: __webpack_require__(70)}),
+			"/onlineChurch/admin":m.component(layout, {body: __webpack_require__(71)}),
 
-			"/onlineChurch/admin/sermons":m.component(layout, {body: __webpack_require__(71)}),
-			"/onlineChurch/admin/newSermon":m.component(layout, {body: __webpack_require__(72)}),
-			"/onlineChurch/admin/messages/index":m.component(layout, {body: __webpack_require__(73)}),
-			"/onlineChurch/admin/members":m.component(layout, {body: __webpack_require__(89)}),
+			"/onlineChurch/admin/sermons":m.component(layout, {body: __webpack_require__(72)}),
+			"/onlineChurch/admin/newSermon":m.component(layout, {body: __webpack_require__(73)}),
+			"/onlineChurch/admin/messages/index":m.component(layout, {body: __webpack_require__(74)}),
+			"/onlineChurch/admin/members":m.component(layout, {body: __webpack_require__(75)}),
 
 
 
 			"/onlineChurch/admin/layout":__webpack_require__(2),
 
 
-			"/onlineChurch/forgotPassword":__webpack_require__(74),
-			"/onlineChurch/inputPassword/:identifier":__webpack_require__(76),
-			"/onlineChurch/verifyCode/:identifier":__webpack_require__(78),
+			"/onlineChurch/forgotPassword":__webpack_require__(76),
+			"/onlineChurch/inputPassword/:identifier":__webpack_require__(78),
+			"/onlineChurch/verifyCode/:identifier":__webpack_require__(80),
 
-			"/onlineChurch/giving":__webpack_require__(80),
-				"/onlineChurch/giving/offering":__webpack_require__(81),
-				"/onlineChurch/giving/thanksgiving":__webpack_require__(82),
-				"/onlineChurch/giving/tithe":__webpack_require__(83),
-				"/onlineChurch/giving/loveoffering":__webpack_require__(84),
-				"/onlineChurch/giving/firstfruits":__webpack_require__(85),
-				"/onlineChurch/giving/development":__webpack_require__(86),
+			"/onlineChurch/giving":__webpack_require__(82),
+				"/onlineChurch/giving/offering":__webpack_require__(83),
+				"/onlineChurch/giving/thanksgiving":__webpack_require__(84),
+				"/onlineChurch/giving/tithe":__webpack_require__(85),
+				"/onlineChurch/giving/loveoffering":__webpack_require__(86),
+				"/onlineChurch/giving/firstfruits":__webpack_require__(87),
+				"/onlineChurch/giving/development":__webpack_require__(88),
 
 			// main admin console
-			"/mainAdmin/makeChurch":__webpack_require__(87)
+			"/mainAdmin/makeChurch":__webpack_require__(89)
 	})
 
 
@@ -4099,7 +4099,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var input = __webpack_require__(57)
-	var memberForm = __webpack_require__(90);
+	var memberForm = __webpack_require__(70);
 	module.exports = {
 	        controller: function(args) {
 	            return {
@@ -4130,6 +4130,159 @@
 
 /***/ },
 /* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var navItem = __webpack_require__(56);
+	var input = __webpack_require__(57);
+	var url = "http://localhost:3000"
+
+	var event = {
+	  schema:{
+	    surname:m.prop(""),
+	    othernames:m.prop(""),
+	    dob:m.prop(""),
+	    gender:m.prop(""),
+	    nationality:m.prop(""),
+	    id_Passport:m.prop(""),
+	    maritalStatus:m.prop(""),
+	    email:m.prop(""),
+	    postalAddress:m.prop("")
+	  },
+	  vm:{
+	    sending:m.prop(false)
+	  }
+	}
+
+	module.exports = {
+	  controller:function(){
+	    //getting the data
+	    var data =  m.request({ method:"GET", url:url + "/members", background: true, initialValue: [] })
+	    data.then(m.redraw) //redraw to render the data gotten from the server
+	    return {
+	      churches:data,
+	      postChurch:function(){
+	      	var data = {
+	          surname:event.schema.surname(),
+	          othernames:event.schema.othernames(),
+	          dob:event.schema.dob(),
+	          gender:event.schema.gender(),
+	          nationality:event.schema.nationality(),
+	          id_Passport:event.schema.id_Passport(),
+	          maritalStatus:event.schema.maritalStatus(),
+	          email:event.schema.email(),
+	          postalAddress:event.schema.postalAddress()
+	        }
+	        console.log(data);
+	        m.request({method:"POST",url:url+"/members",data:data}).then(function(){ m.route( m.route() ) })
+	      },
+	      deleteAnEvent:function(id){
+	        m.request({method:"POST",url:url+"/memberDelete",data:{id:id}}).then(function(){ m.route( m.route() ) })
+	      },
+	      event:event.schema,
+	      vm:event.vm
+	    }
+	  },
+	  view:function(ctrl,args){
+	    return m(".app",[
+	      m("form",{
+	        class:"card-panelx",
+	        onsubmit:function(e){
+	          ctrl.postChurch()
+	          e.preventDefault();
+	        }
+	      },[
+
+	        m(".row",[
+	          m(".row",[
+	            m(".input-field col s12 l12 center",[
+	              m("img",{src:"/picture", class:"responsive-img valign profile-image-login"}),
+	              m("p",{class:"center login-form-text"},"Gathering registration Form"),
+	            ])
+	          ]),
+	          // m("h5",{class:"header center"},"Registration Form"),
+	          m(".row",[
+
+	            m(input,{
+	              label:"Your Surname",
+	              type:"text",
+	              value:ctrl.event.surname,
+	              icon:"mdi-social-person-outline prefix",
+	              sizes:"col s12 l6"
+	            }),
+
+	            m(input,{
+	              label:"Other Names",
+	              type:"text",
+	              value:ctrl.event.othernames,
+	              icon:"mdi-action-account-circle prefix",
+	              sizes:"col s12 l6"
+	            })
+	          ]),
+
+	        m(".row",[
+	          m(input,{
+	            label:"Date Of Birth",
+	            type:"text",
+	            value:ctrl.event.dob,
+	            icon:"mdi-action-event prefix",
+	            sizes:"col s12 l6"
+	          }),
+
+	          m(input,{
+	            label:"Gender",
+	            type:"text",
+	            value:ctrl.event.gender,
+	            icon:"mdi-action-picture-in-picture prefix",
+	            sizes:"col s12 l6"
+	          })
+	        ]),
+
+	        m(".row",[
+	          m(input,{
+	            label:"Nationality",
+	            type:"text",
+	            value:ctrl.event.nationality,
+	            icon:"mdi-content-flag prefix",
+	            sizes:"col s12 l6"
+	          }),
+
+	          m(input,{
+	            label:"ID / Passport number",
+	            type:"text",
+	            value:ctrl.event.id_passport,
+	            icon:"mdi-action-wallet-membership prefix",
+	            sizes:"col s12 l6"
+	          })
+	        ]),
+
+	        m(".row",[
+	          m(input,{
+	            label:"Email you use frequently",
+	            type:"text",
+	            value:ctrl.event.email,
+	            icon:"mdi-communication-email prefix",
+	            sizes:"col s12 l6"
+	          }),
+
+	          m(input,{
+	            label:"Postal Address",
+	            type:"text",
+	            value:ctrl.event.postalAddress,
+	            icon:"mdi-communication-quick-contacts-mail prefix",
+	            sizes:"col s12 l6"
+	          })
+	        ]),
+
+	        m("button",{class:"btn blue right"},"next")
+	        ])
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navItem = __webpack_require__(10);
@@ -4225,7 +4378,7 @@
 
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navItem = __webpack_require__(10);
@@ -4351,7 +4504,7 @@
 
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navItem = __webpack_require__(10);
@@ -4476,7 +4629,7 @@
 
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navItem = __webpack_require__(10);
@@ -4571,10 +4724,109 @@
 
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var forgot = __webpack_require__(75)
+	var navItem = __webpack_require__(10);
+	var input = __webpack_require__(57);
+	var url = "http://localhost:3000"
+
+	var event = {
+	  schema:{
+	    surname:m.prop(""),
+	    othernames:m.prop(""),
+	    dob:m.prop(""),
+	    gender:m.prop(""),
+	    nationality:m.prop(""),
+	    id_Passport:m.prop(""),
+	    maritalStatus:m.prop(""),
+	    email:m.prop(""),
+	    postalAddress:m.prop("")
+	  },
+	  vm:{
+	    sending:m.prop(false)
+	  }
+	}
+
+	module.exports = {
+	  controller:function(){
+	    //getting the data
+	    var data =  m.request({ method:"GET", url:url + "/members", background: true, initialValue: [] })
+	    data.then(m.redraw) //redraw to render the data gotten from the server
+	    return {
+	      churches:data,
+	      postChurch:function(){
+	      	var data = {
+	          surname:event.schema.surname(),
+	          othernames:event.schema.othernames(),
+	          dob:event.schema.dob(),
+	          gender:event.schema.gender(),
+	          nationality:event.schema.nationality(),
+	          id_Passport:event.schema.id_Passport(),
+	          maritalStatus:event.schema.maritalStatus(),
+	          email:event.schema.email(),
+	          postalAddress:event.schema.postalAddress()
+	        }
+	        console.log(data);
+	        m.request({method:"POST",url:url+"/members",data:data}).then(function(){ m.route( m.route() ) })
+	      },
+	      deleteAnEvent:function(id){
+	        m.request({method:"POST",url:url+"/memberDelete",data:{id:id}}).then(function(){ m.route( m.route() ) })
+	      },
+	      event:event.schema,
+	      vm:event.vm
+	    }
+	  },
+	  view:function(ctrl,args){
+	    return m(".events form",[
+
+	      m("h5",{class:"header center"},"Registered Church members"),
+	      m("table",{class:"bordered responsive-table"},[
+	        m("thead",[
+	          m("tr",[
+	            m("th","surname"),
+	            m("th","othernames"),
+	            m("th","dob"),
+	            m("th","gender"),
+	            m("th","nationality"),
+	            m("th","id/passport"),
+	            m("th","email"),
+	            m("th","postalAddress")
+	          ])
+	        ]),
+	        m("tbody",[
+	            ctrl.churches().map(function(item){
+	              return m("tr",[
+	                m("td",item.surname),
+	                m("td",item.othernames),
+	                m("td",item.dob),
+	                m("td",item.gender),
+	                m("td",item.nationality),
+	                m("td",item.id_passport),
+	                m("td",item.email),
+	                m("td",item.postalAddress),
+	                m("td",[
+	                  m("button",{
+	                    onclick:function(){
+	                      ctrl.deleteAnEvent(item.id)
+	                    }
+	                  },"remove")
+	                ])
+	              ])
+	            })
+
+	        ])
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var forgot = __webpack_require__(77)
 
 
 	module.exports = {
@@ -4590,7 +4842,7 @@
 
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var input = __webpack_require__(57)
@@ -4670,10 +4922,10 @@
 
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var forgot = __webpack_require__(77)
+	var forgot = __webpack_require__(79)
 
 
 	module.exports = {
@@ -4694,7 +4946,7 @@
 
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var input = __webpack_require__(57)
@@ -4894,10 +5146,10 @@
 
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var verify = __webpack_require__(79)
+	var verify = __webpack_require__(81)
 
 
 	module.exports = {
@@ -4913,7 +5165,7 @@
 
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var input = __webpack_require__(57)
@@ -5076,7 +5328,7 @@
 
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5153,7 +5405,7 @@
 
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5181,7 +5433,7 @@
 
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5209,7 +5461,7 @@
 
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5242,7 +5494,7 @@
 
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5270,7 +5522,7 @@
 
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5298,7 +5550,7 @@
 
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var footer = __webpack_require__(6)
@@ -5328,7 +5580,7 @@
 
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// var input = require("../forminput")
@@ -5336,7 +5588,7 @@
 
 	var JD = __webpack_require__(11);
 
-	var navItem = __webpack_require__(88)
+	var navItem = __webpack_require__(90)
 
 	var church = {};
 	module.exports = {
@@ -5571,7 +5823,7 @@
 
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5589,258 +5841,6 @@
 	            ])
 	        }
 	    }
-
-
-/***/ },
-/* 89 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var navItem = __webpack_require__(10);
-	var input = __webpack_require__(57);
-	var url = "http://localhost:3000"
-
-	var event = {
-	  schema:{
-	    surname:m.prop(""),
-	    othernames:m.prop(""),
-	    dob:m.prop(""),
-	    gender:m.prop(""),
-	    nationality:m.prop(""),
-	    id_Passport:m.prop(""),
-	    maritalStatus:m.prop(""),
-	    email:m.prop(""),
-	    postalAddress:m.prop("")
-	  },
-	  vm:{
-	    sending:m.prop(false)
-	  }
-	}
-
-	module.exports = {
-	  controller:function(){
-	    //getting the data
-	    var data =  m.request({ method:"GET", url:url + "/members", background: true, initialValue: [] })
-	    data.then(m.redraw) //redraw to render the data gotten from the server
-	    return {
-	      churches:data,
-	      postChurch:function(){
-	      	var data = {
-	          surname:event.schema.surname(),
-	          othernames:event.schema.othernames(),
-	          dob:event.schema.dob(),
-	          gender:event.schema.gender(),
-	          nationality:event.schema.nationality(),
-	          id_Passport:event.schema.id_Passport(),
-	          maritalStatus:event.schema.maritalStatus(),
-	          email:event.schema.email(),
-	          postalAddress:event.schema.postalAddress()
-	        }
-	        console.log(data);
-	        m.request({method:"POST",url:url+"/members",data:data}).then(function(){ m.route( m.route() ) })
-	      },
-	      deleteAnEvent:function(id){
-	        m.request({method:"POST",url:url+"/memberDelete",data:{id:id}}).then(function(){ m.route( m.route() ) })
-	      },
-	      event:event.schema,
-	      vm:event.vm
-	    }
-	  },
-	  view:function(ctrl,args){
-	    return m(".events form",[
-
-	      m("h5",{class:"header center"},"Registered Church members"),
-	      m("table",{class:"bordered responsive-table"},[
-	        m("thead",[
-	          m("tr",[
-	            m("th","surname"),
-	            m("th","othernames"),
-	            m("th","dob"),
-	            m("th","gender"),
-	            m("th","nationality"),
-	            m("th","id/passport"),
-	            m("th","email"),
-	            m("th","postalAddress")
-	          ])
-	        ]),
-	        m("tbody",[
-	            ctrl.churches().map(function(item){
-	              return m("tr",[
-	                m("td",item.surname),
-	                m("td",item.othernames),
-	                m("td",item.dob),
-	                m("td",item.gender),
-	                m("td",item.nationality),
-	                m("td",item.id_passport),
-	                m("td",item.email),
-	                m("td",item.postalAddress),
-	                m("td",[
-	                  m("button",{
-	                    onclick:function(){
-	                      ctrl.deleteAnEvent(item.id)
-	                    }
-	                  },"remove")
-	                ])
-	              ])
-	            })
-
-	        ])
-	      ])
-	    ])
-	  }
-	}
-
-
-/***/ },
-/* 90 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var navItem = __webpack_require__(56);
-	var input = __webpack_require__(57);
-	var url = "http://localhost:3000"
-
-	var event = {
-	  schema:{
-	    surname:m.prop(""),
-	    othernames:m.prop(""),
-	    dob:m.prop(""),
-	    gender:m.prop(""),
-	    nationality:m.prop(""),
-	    id_Passport:m.prop(""),
-	    maritalStatus:m.prop(""),
-	    email:m.prop(""),
-	    postalAddress:m.prop("")
-	  },
-	  vm:{
-	    sending:m.prop(false)
-	  }
-	}
-
-	module.exports = {
-	  controller:function(){
-	    //getting the data
-	    var data =  m.request({ method:"GET", url:url + "/members", background: true, initialValue: [] })
-	    data.then(m.redraw) //redraw to render the data gotten from the server
-	    return {
-	      churches:data,
-	      postChurch:function(){
-	      	var data = {
-	          surname:event.schema.surname(),
-	          othernames:event.schema.othernames(),
-	          dob:event.schema.dob(),
-	          gender:event.schema.gender(),
-	          nationality:event.schema.nationality(),
-	          id_Passport:event.schema.id_Passport(),
-	          maritalStatus:event.schema.maritalStatus(),
-	          email:event.schema.email(),
-	          postalAddress:event.schema.postalAddress()
-	        }
-	        console.log(data);
-	        m.request({method:"POST",url:url+"/members",data:data}).then(function(){ m.route( m.route() ) })
-	      },
-	      deleteAnEvent:function(id){
-	        m.request({method:"POST",url:url+"/memberDelete",data:{id:id}}).then(function(){ m.route( m.route() ) })
-	      },
-	      event:event.schema,
-	      vm:event.vm
-	    }
-	  },
-	  view:function(ctrl,args){
-	    return m(".app",[
-	      m("form",{
-	        class:"card-panelx",
-	        onsubmit:function(e){
-	          ctrl.postChurch()
-	          e.preventDefault();
-	        }
-	      },[
-
-	        m(".row",[
-	          m(".row",[
-	            m(".input-field col s12 l12 center",[
-	              m("img",{src:"/picture", class:"responsive-img valign profile-image-login"}),
-	              m("p",{class:"center login-form-text"},"Gathering registration Form"),
-	            ])
-	          ]),
-	          // m("h5",{class:"header center"},"Registration Form"),
-	          m(".row",[
-
-	            m(input,{
-	              label:"Your Surname",
-	              type:"text",
-	              value:ctrl.event.surname,
-	              icon:"mdi-social-person-outline prefix",
-	              sizes:"col s12 l6"
-	            }),
-
-	            m(input,{
-	              label:"Other Names",
-	              type:"text",
-	              value:ctrl.event.othernames,
-	              icon:"mdi-action-account-circle prefix",
-	              sizes:"col s12 l6"
-	            })
-	          ]),
-
-	        m(".row",[
-	          m(input,{
-	            label:"Date Of Birth",
-	            type:"text",
-	            value:ctrl.event.dob,
-	            icon:"mdi-action-event prefix",
-	            sizes:"col s12 l6"
-	          }),
-
-	          m(input,{
-	            label:"Gender",
-	            type:"text",
-	            value:ctrl.event.gender,
-	            icon:"mdi-action-picture-in-picture prefix",
-	            sizes:"col s12 l6"
-	          })
-	        ]),
-
-	        m(".row",[
-	          m(input,{
-	            label:"Nationality",
-	            type:"text",
-	            value:ctrl.event.nationality,
-	            icon:"mdi-content-flag prefix",
-	            sizes:"col s12 l6"
-	          }),
-
-	          m(input,{
-	            label:"ID / Passport number",
-	            type:"text",
-	            value:ctrl.event.id_passport,
-	            icon:"mdi-action-wallet-membership prefix",
-	            sizes:"col s12 l6"
-	          })
-	        ]),
-
-	        m(".row",[
-	          m(input,{
-	            label:"Email you use frequently",
-	            type:"text",
-	            value:ctrl.event.email,
-	            icon:"mdi-communication-email prefix",
-	            sizes:"col s12 l6"
-	          }),
-
-	          m(input,{
-	            label:"Postal Address",
-	            type:"text",
-	            value:ctrl.event.postalAddress,
-	            icon:"mdi-communication-quick-contacts-mail prefix",
-	            sizes:"col s12 l6"
-	          })
-	        ]),
-
-	        m("button",{class:"btn blue right"},"next")
-	        ])
-	      ])
-	    ])
-	  }
-	}
 
 
 /***/ }

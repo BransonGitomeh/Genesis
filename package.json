@@ -4,8 +4,8 @@
   "description": "my server",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "node index.js"
+    "test": "nodemon express-api/index.js",
+    "start": "node express-api/index.js"
   },
   "author": "BransonGitomeh",
   "license": "MIT",

@@ -1,8 +1,6 @@
 module.exports = {
   identity: 'event',
 
-  connection: 'memory',
-
   migrate: "safe",
 
   attributes: {

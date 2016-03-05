@@ -3,8 +3,6 @@ module.exports = {
 
   migrate: "safe",
 
-  connection:"memory",
-
   attributes:{
     firstname:{
       type:"string"

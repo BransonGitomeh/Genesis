@@ -5,10 +5,9 @@ var config = require("./config")
 
 //===========================
 var allowCrossDomain = function(req,res,next){
-	// console.log("a req came in")
-	console.log(req.method)
+	console.log(req.method + "               " + req.url)
 	if('OPTIONS' == req.method){
-		console.log("a cors req came in");
+		// console.log("a cors req came in");
 		res.header("Access-Control-Allow-Origin","*");
 		res.header("Access-Control-Allow-Methods","GET,PUT,DELETE,PATCH,OPTIONS");
 		res.header("Access-Control-Allow-Headers","Content-Type,Authorization,Content-Length,X-Requested-With");
@@ -40,17 +39,17 @@ module.exports = (collections,config,callback) => {
 	//innitialise the collections
 	console.log("reading all collections");
 	collections.map(function(collection){
-		// console.log(collection.connection)
 		collection.connection = config.adapter();
-		console.log(collection.connection);
+		// collection.connection = config.adapter();
 		var collectionInstance = waterlineInstance.Collection.extend(collection)
 		Waterline.loadCollection(collectionInstance)
 	})
-	console.log("innitializing the collections")
+	// console.log("configured all collections to use '" + config.adapter() + "' adapter");
+	console.log("innitializing the collections to '%s' adapter",config.adapter())
 	Waterline.initialize(config,function(err,models){
 		if(err) throw err;
 		app.locals.collections = models.collections
-		console.log("complete, calling back");
+		console.log("collections init complete, calling back");
 		callback(app) //returns an express app with models
 	})
 }

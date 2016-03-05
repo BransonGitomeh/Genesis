@@ -1,8 +1,6 @@
 module.exports = {
   identity: 'user',
 
-  connection: 'memory',
-
   migrate: "safe",
 
   attributes: {
