@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>The Gathering Church kenya</title>
+
+    <!-- CSS  -->
+    <link href="build/assets/js/materialize/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="build/assets/css/styles.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="build/assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="build/assets/js/materialize/dist/js/materialize.min.js"></script>
+
+    <!-- time stuff -->
+    <script src="build/assets/js/moment.min.js"></script>
+
+
+    </script>
+    <!-- View Engine -->
+    <script src="build/assets/js/mithril/mithril.min.js"></script>
+
+
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/example/css/normalize.css">
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/ideal-image-slider.css">
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/themes/default/default.css">
+    <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=421545291365240";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+        <script src="build/assets/Ideal-Image-Slider-1.5.0/ideal-image-slider.js"></script>
+
+
+
+        <script>
+            var config = {
+                "settings":{
+                    color:"blue darken-5",
+                    primaryColor:"orange",
+                    installationYear:"2015",
+                    currentYear:new Date().getFullYear()
+                },
+
+                "profile":{
+                    churchName:"The Gathering Church Kenya",
+                    institutionId:"56d04d45c59f6a40106760d2",
+                    type:"Church",
+                    slogans:[
+                        "Making Full Disciples of Jesus Christ",
+                        "Spreading the gospel"
+                    ],
+                    address:"PO. box 23333",
+                    phoneNumber:"0724736012",
+                    telephoneNumber:"020 133671212",
+                    email:"sirbranson67@gmail.com"
+                }
+            }
+
+            var session = {} //session data will be store here in memory and will be destroyed after logout..
+
+            var color = config.settings.color
+            var primaryColor = config.settings.primaryColor
+
+            var dev = true
+
+            if(!dev){
+              apiUrl = "http://warm-thicket-24680.herokuapp.com/v1/"
+            }else{
+              apiUrl = "http://localhost:4200/v1/"
+            }
+
+
+        </script>
+        <script src="build/churchia.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>Premier ECDE Teachers College</title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="build/css/materialize.min.css">
+
+  <link rel="stylesheet" href="build/css/styles.css">
+  <link rel="stylesheet" href="build/css/nivo-slider.css">
+
+  <script src="build/js/jquery.min.js"></script>
+  <script src="build/js/materialize.min.js"></script>
+  <script src="build/js/jquery.nivo.slider.pack.js"></script>
+  <script src="build/js/jquery.validate.min.js"></script>
+  <script src="build/js/pdfobject.min.js"></script>
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=421545291365240";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    var dev = true
+
+    if(!dev){
+      var apiUrl = "https://glacial-forest-94387.herokuapp.com/v1/"
+    }else{
+      var apiUrl = "http://branie-Inspiron-3521:4200/v1/"
+    }
+
+    var config = {
+      profile:{
+        id:"premierCollege"
+      }
+    }
+  </script>
+
+  <script src="build/js/mithril.min.js"></script>
+  <script src="build/homepage.js"></script>
+</body>
+</html>
