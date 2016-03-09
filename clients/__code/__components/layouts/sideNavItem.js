@@ -3,6 +3,7 @@ module.exports = {
     return m("li",[
       args.drops ? m("ul",{
         class:"collapsible collapsible-accordion",
+        "data-collapsible":"accordion",
         config:function(){
           $('.collapsible').collapsible()
         }

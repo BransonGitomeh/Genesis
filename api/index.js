@@ -4,7 +4,7 @@ var config = require("./config")
 var fs = require("fs")
 
 //read the collections
-fs.readdir("./express-api/collections",(err,files) => {
+fs.readdir("./api/collections",(err,files) => {
 	var collections = []
 	files.map((file) => {
 		collections.push(require("./collections/" + file))
@@ -15,7 +15,7 @@ fs.readdir("./express-api/collections",(err,files) => {
 		console.log("innitialized app");
 		console.log("detecting routes");
 		//snoop through all the files inside routes folder and get the [app.gets] to complete the routing
-		fs.readdir("./express-api/routes",(err,files) => {
+		fs.readdir("./api/routes",(err,files) => {
 			files.map((file) => require("./routes/" + file)(app,app.locals.collections))
 		})
 		console.log("starting listener");

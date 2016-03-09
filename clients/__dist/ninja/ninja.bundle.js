@@ -212,6 +212,7 @@ webpackJsonp([1,2],{
 	    return m("li",[
 	      args.drops ? m("ul",{
 	        class:"collapsible collapsible-accordion",
+	        "data-collapsible":"accordion",
 	        config:function(){
 	          $('.collapsible').collapsible()
 	        }
@@ -377,7 +378,7 @@ webpackJsonp([1,2],{
 	    return m("div",[
 	      m("div",{class:"card-panel"},[
 	        m("h1","welcome to ninja homepage"),
-	        m("h4","todo-list"),
+	        m("h5","todo-list"),
 	        m("ul",[
 	          m("li","make everyone farmiliar with wtf is happening")
 	        ])
@@ -396,7 +397,7 @@ webpackJsonp([1,2],{
 	  view:function(){
 	    return m("div",[
 	      m("div",{class:"card-panel"},[
-	        m("h1","welcome to ninja homepage")
+	        m("h1","view all churches")
 	      ])
 	    ])
 	  }

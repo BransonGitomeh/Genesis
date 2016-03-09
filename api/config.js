@@ -1,8 +1,9 @@
 module.exports = {
   production:false,
   devPort:3000,
-  devAdapter:"memory",
+  devAdapter:"localMYSQL",
   prodAdapter:"prodMongo",
+  devMigration:"drop",
   adapters:{
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
@@ -38,6 +39,13 @@ module.exports = {
       return process.env.PORT
     }else{
       return this.devPort
+    }
+  },
+  migration:function(){
+    if(this.production == true){
+      return "safe"
+    }else{
+      return this.devMigration
     }
   },
 }
