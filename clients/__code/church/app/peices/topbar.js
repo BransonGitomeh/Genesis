@@ -17,7 +17,7 @@ module.exports={
                       // services
                       m(".col l5 s12 white-text",[
 
-                              m("h4","Join Us this sunday at 9.00am"),
+                              m("h4","Join Us this monday at 9.00am"),
 
 
                           m(".divider"),

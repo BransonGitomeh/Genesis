@@ -11,7 +11,7 @@ module.exports={
 
                             m("p","We hope you have enjoyed Our Church! If you feel The Gathering Church has helped you out and want to support Our team, send us over a donation! Any amount would help support and continue development on this Church and is greatly appreciated."),
 
-                            m("a",{class:"center btn waves-effect waves-light red " + color,href:"/onlineChurch/giving",config:m.route},"Give")
+                            m("a",{class:"center btn waves-effect waves-light red " + color,href:"/onlineChurch/giving",config:m.route},"peana")
                         ]),
 
                         m(".col l3 s12 white-text",[

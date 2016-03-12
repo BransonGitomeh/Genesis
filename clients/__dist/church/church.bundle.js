@@ -346,11 +346,11 @@ webpackJsonp([0,2],[
 	                  	slider.start();
 	                  }
 	                },[
-	                  m("img",{src:"/build/assets/img/event21/children.jpg",alt:"slide 1"}),
-	                  m("img",{src:"/build/assets/img/event21/general.jpg",alt:"slide 1"}),
-	                  m("img",{src:"/build/assets/img/event21/pillars.jpg",alt:"slide 1"}),
-	                  m("img",{src:"/build/assets/img/event21/teneez.jpg",alt:"slide 1"}),
-	                  m("img",{src:"/build/assets/img/event21/ladies.jpg",alt:"slide 1"}),
+	                //  m("img",{src:"/build/assets/img/event21/children.jpg",alt:"slide 1"}),
+	                //  m("img",{src:"/build/assets/img/event21/general.jpg",alt:"slide 1"}),
+	                //  m("img",{src:"/build/assets/img/event21/pillars.jpg",alt:"slide 1"}),
+	                //  m("img",{src:"/build/assets/img/event21/teneez.jpg",alt:"slide 1"}),
+	                //  m("img",{src:"/build/assets/img/event21/ladies.jpg",alt:"slide 1"}),
 	                  // m("img",{src:"/build/assets/img/1.jpg",alt:"slide 1"}),
 	                ]),
 	              m("span",[
@@ -376,7 +376,7 @@ webpackJsonp([0,2],[
 	                  m("a",
 	                    {
 	                      class:"btn waves-block waves-" + primaryColor +" waves-effect " + color,
-	                      href:"http://gatheringchurchkenya.org/build/assets/docs/GatheringChurchyear2016Planner1.pdf"
+	                      //href:"http://gatheringchurchkenya.org/build/assets/docs/GatheringChurchyear2016Planner1.pdf"
 	                    },[
 	                      m("i",{
 	                        class:"mdi-file-cloud-download left"
@@ -497,7 +497,7 @@ webpackJsonp([0,2],[
 
 	                            m("p","We hope you have enjoyed Our Church! If you feel The Gathering Church has helped you out and want to support Our team, send us over a donation! Any amount would help support and continue development on this Church and is greatly appreciated."),
 
-	                            m("a",{class:"center btn waves-effect waves-light red " + color,href:"/onlineChurch/giving",config:m.route},"Give")
+	                            m("a",{class:"center btn waves-effect waves-light red " + color,href:"/onlineChurch/giving",config:m.route},"peana")
 	                        ]),
 
 	                        m(".col l3 s12 white-text",[
@@ -599,7 +599,7 @@ webpackJsonp([0,2],[
 	                      // services
 	                      m(".col l5 s12 white-text",[
 
-	                              m("h4","Join Us this sunday at 9.00am"),
+	                              m("h4","Join Us this monday at 9.00am"),
 
 
 	                          m(".divider"),

@@ -5,16 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon api/index.js",
-    "start": "node api/index.js"
+    "start": "node api/index.js && cd clients && webpack && webpack-dev-server"
   },
   "author": "BransonGitomeh",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mithril": "^0.2.3",
-    "path": "^0.12.7",
     "sails-memory": "^0.10.6",
     "sails-mongo": "^0.12.0",
     "sails-mysql": "^0.11.5",

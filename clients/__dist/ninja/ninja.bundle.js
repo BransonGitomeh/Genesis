@@ -12,13 +12,13 @@ webpackJsonp([1,2],{
 	m.route.mode = "hash";
 
 	m.route(document.body,"/",{
-			"/":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(98) }),
+			"/":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(97) }),
 
-			"/churchia/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(99) }),
-			"/churchia/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(100) }),
+			"/churchia/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(98) }),
+			"/churchia/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(99) }),
 
-			"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(101) }),
-			"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(102) }),
+			"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(100) }),
+			"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(101) }),
 
 	})
 
@@ -370,7 +370,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 98:
+/***/ 97:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -390,7 +390,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 99:
+/***/ 98:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -406,7 +406,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 100:
+/***/ 99:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -422,7 +422,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 101:
+/***/ 100:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -438,7 +438,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 102:
+/***/ 101:
 /***/ function(module, exports) {
 
 	module.exports = {

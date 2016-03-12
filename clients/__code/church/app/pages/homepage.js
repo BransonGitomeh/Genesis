@@ -76,11 +76,11 @@ module.exports = {
                   	slider.start();
                   }
                 },[
-                  m("img",{src:"/build/assets/img/event21/children.jpg",alt:"slide 1"}),
-                  m("img",{src:"/build/assets/img/event21/general.jpg",alt:"slide 1"}),
-                  m("img",{src:"/build/assets/img/event21/pillars.jpg",alt:"slide 1"}),
-                  m("img",{src:"/build/assets/img/event21/teneez.jpg",alt:"slide 1"}),
-                  m("img",{src:"/build/assets/img/event21/ladies.jpg",alt:"slide 1"}),
+                //  m("img",{src:"/build/assets/img/event21/children.jpg",alt:"slide 1"}),
+                //  m("img",{src:"/build/assets/img/event21/general.jpg",alt:"slide 1"}),
+                //  m("img",{src:"/build/assets/img/event21/pillars.jpg",alt:"slide 1"}),
+                //  m("img",{src:"/build/assets/img/event21/teneez.jpg",alt:"slide 1"}),
+                //  m("img",{src:"/build/assets/img/event21/ladies.jpg",alt:"slide 1"}),
                   // m("img",{src:"/build/assets/img/1.jpg",alt:"slide 1"}),
                 ]),
               m("span",[
@@ -106,7 +106,7 @@ module.exports = {
                   m("a",
                     {
                       class:"btn waves-block waves-" + primaryColor +" waves-effect " + color,
-                      href:"http://gatheringchurchkenya.org/build/assets/docs/GatheringChurchyear2016Planner1.pdf"
+                      //href:"http://gatheringchurchkenya.org/build/assets/docs/GatheringChurchyear2016Planner1.pdf"
                     },[
                       m("i",{
                         class:"mdi-file-cloud-download left"

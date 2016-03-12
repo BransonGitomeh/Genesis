@@ -1,9 +1,8 @@
 var express = require("express");
 var app  = express();
 var bodyParser = require("body-parser");
-var config = require("./config")
+var config = require("../config")
 
-//===========================
 var allowCrossDomain = function(req,res,next){
 	console.log(req.method + "               " + req.url)
 	if('OPTIONS' == req.method){
@@ -21,7 +20,6 @@ var allowCrossDomain = function(req,res,next){
 }
 
 app.use(allowCrossDomain)
-//==============================
 
 console.log("configuring parser");
 console.log("config body paring");
@@ -40,12 +38,12 @@ module.exports = (collections,config,callback) => {
 	console.log("reading all collections");
 	collections.map(function(collection){
 		collection.connection = config.adapter();
-		// collection.connection = config.adapter();
+		collection.migration = config.migration();
 		var collectionInstance = waterlineInstance.Collection.extend(collection)
 		Waterline.loadCollection(collectionInstance)
 	})
-	// console.log("configured all collections to use '" + config.adapter() + "' adapter");
 	console.log("innitializing the collections to '%s' adapter",config.adapter())
+	console.log("Collection migrations set to '%s'",config.migration());
 	Waterline.initialize(config,function(err,models){
 		if(err) throw err;
 		app.locals.collections = models.collections

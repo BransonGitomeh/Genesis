@@ -5,6 +5,5 @@ module.exports = {
                   m("div","form inputs to send a message")
                 ])
                 // custom component with unique content per page
-
         }
     }

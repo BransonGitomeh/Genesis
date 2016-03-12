@@ -1,7 +1,7 @@
 module.exports = {
   production:false,
   devPort:3000,
-  devAdapter:"localMYSQL",
+  devAdapter:"memory",
   prodAdapter:"prodMongo",
   devMigration:"drop",
   adapters:{
