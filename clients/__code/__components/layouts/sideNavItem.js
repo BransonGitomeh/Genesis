@@ -1,4 +1,9 @@
 module.exports = {
+  controller:function(){
+    return {
+      active:m.prop(false)
+    }
+  },
   view:function(ctrl,args){
     return m("li",[
       args.drops ? m("ul",{
@@ -10,7 +15,7 @@ module.exports = {
       },[
         m("li",{class:"bold"},[
           // header
-          m("a",{class:"collapsible-header waves-effect waves-cyan"},[
+          m("a",{class:"collapsible-header waves-effect waves-cyan " + (ctrl.active() === true ? "active" : "")},[
             m("i",{class:args.icon})
           ],args.text),
           //body
@@ -20,6 +25,9 @@ module.exports = {
                 args.drops.map(function(drop){
 
                   return m("li",{class:"waves-effect waves-block waves-blue"},[
+                    //implememntation to keep a sidebar dropdown dropped if a link inside it is active
+                    // (drop.url === m.route() ? ctrl.active(true) : ""),
+                    // (drop.url === m.route() ? m.redraw : ""),
                     m("a",{ //render a normal link
                       href:drop.url,
                       config:m.route,
