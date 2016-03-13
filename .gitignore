@@ -1,3 +1,4 @@
 /node_modules
 #add folders for images and other things that are big and dont need to go into git
 /clients/__dist/ninja/ninja.bundle.js
+/clients/__dist/church/church.bundle.js

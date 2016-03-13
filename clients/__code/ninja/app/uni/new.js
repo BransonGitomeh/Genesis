@@ -1,19 +1,36 @@
+var inputComponent = require('../../../__components/forminput');
 module.exports = {
   controller:function(){
     return {
-      universities:m.request({url:"http://localhost:3000/basic/getUniversities",method:"GET"})
+      schema:{
+        name:m.prop("")
+      }
     }
   },
   view:function(controller,atrrs){
-    return m("div",[
-      m("div",{class:"card-panel"},[
-          m("div",{
-            class:"btn waves-effect waves-block waves-light purple center",
-            onclick:function(){
-              m.request({url:"http://localhost:3000/test2/users",method:"GET"}).then(m.route( m.route() ))
-            }
-          },"initialize server with fake data")
-      ])
+    return m("form",{
+      class:"card-panel",
+      onsubmit:function(e){
+        m.request({
+          url:"http://localhost:3000/basic/makeUniversity",
+          method:"POST",
+          data:{
+            name:controller.schema.name()
+          }
+        }).then(m.route("/uni/all"))
+        e.preventDefault();
+      }
+    },[
+      m(inputComponent,{
+        label:"Name of new uni",
+        icon:"mdi-communication-business prefix",
+        type:"text",
+        value:controller.schema.name
+      }),
+        m("button",{
+            type:"submit",
+            class:"btn waves-effect waves-block waves-light purple center"
+        },"create school")
     ])
   }
 }

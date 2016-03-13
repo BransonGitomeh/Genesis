@@ -7,4 +7,12 @@ module.exports = function(app,db){
       res.send(universities)
     })
   })
+
+  app.post("/basic/makeUniversity",(req,res) => {
+    db.university.create(req.body).exec((err, createdUniversity)=>{
+      console.log(createdUniversity);
+      if(err) throw err;
+      res.send(createdUniversity)
+    })
+  })
 }
