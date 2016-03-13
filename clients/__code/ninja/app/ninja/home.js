@@ -42,16 +42,32 @@ m("nav",{class:"nav-wrapper green"},[
         ])
           ])
         ]),
-m("div",{class:"row"},[
-m("div",{class:"col s12 m7"},[
-  m("div",{class:"card yellow darken"},[
-    m("div",{class:"card-content white-text"},[
-      m("span",{class:"card-title"},"fuck off"),
-      m("p",{class:"flow-text"},"this is supposed to be the content")
-      ])
-    ])
-  ])
-]),
+        //nice cute card hehe
+        m("div",{class:"row"},[
+          m("div",{class:"col s12 m7"},[
+            m("div",{class:"card yellow darken-3"},[
+              m("div",{class:"card-content white-text"},[
+                m("span",{class:"card-title"},"fuck off"),
+                m("p",{class:"flow-text"},"this is supposed to be the content")
+              ])
+            ])
+          ])
+        ]),
+        //other cute card
+        m("row",[
+          m(".col s12 m6 l6",[
+            m(".card blue-grey darken-1",[
+              m(".card-content white-text",[
+                m("span",{class:"card-title"},"i am a card title"),
+                m("p","I am a very simple card. I am good at containing small bits of information.I am convenient because I require litt"),
+                m(".card-action",[
+                  m("a","link 1"),
+                  m("a","link-2")
+                ])
+              ])
+            ])
+          ])
+        ]),
 
         m("div",{
           class:"btn waves-effect waves-block waves-light purple center",
