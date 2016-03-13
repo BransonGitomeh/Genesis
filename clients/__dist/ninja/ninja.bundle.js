@@ -384,8 +384,10 @@ webpackJsonp([1,2],{
 	      m("div",{class:"card-panel"},[
 	        m("h1","welcome to ninja homepage"),
 	        m("h5","todo-list"),
-	        m("ul",[
-	          m("li","make everyone farmiliar with wtf is happening")
+	        m("ol",[
+	          m("li","Add ability to pull all existing universities to home.js"),
+	          m("li","Add ability to add a university from the home.js"),
+	          m("li","Add link to each university, to take you to their admin Ui")
 	        ]),
 	        m("table",[
 	          m("thead",[
