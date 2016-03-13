@@ -8,20 +8,20 @@ webpackJsonp([1,2],{
 
 	var ninjaUIConfig = __webpack_require__(95)
 	var churchUiConfig = __webpack_require__(96)
-	var uniAdminUiConfig = __webpack_require__(102)
+	var uniAdminUiConfig = __webpack_require__(97)
 
 	m.route.mode = "hash";
 
 	m.route(document.body,"/",{
-			"/":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(97) }),
+			"/":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(98) }),
 
-			"/churchia/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(98) }),
-			"/churchia/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(99) }),
+			"/churchia/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(99) }),
+			"/churchia/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(100) }),
 
-			"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(100) }),
-			"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(101) }),
+			"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(101) }),
+			"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(102) }),
 
-			"/uniadmin/:uniId":m(adminUi,{ config:uniAdminUiConfig, body:__webpack_require__(101) }),
+			"/uniadmin/:uniId":m(adminUi,{ config:uniAdminUiConfig, body:__webpack_require__(102) }),
 
 	})
 
@@ -377,6 +377,37 @@ webpackJsonp([1,2],{
 /***/ function(module, exports) {
 
 	module.exports = {
+	  logoText:"university admin",
+		color:"green",
+		topBarItems:[
+	    {url:"/",text:"Home",icon:"mdi-action-view-carousel right"},
+			// {url:"/Ninja",text:"Ninja"},
+			// {url:"/Church",icon:"mdi-notification-network-locked left",text:"Churches",drops:[
+	      // {url:"/test1",icon:"mdi-notification-event-note left",text:"test1"},
+
+	      // {url:"/test3",icon:"mdi-notification-event-note left",text:"test3"},
+	    // ]},
+	    // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
+		],
+		sideBarItems:[
+	    {text:"Noticeboard",icon:"mdi-image-movie-creation",drops:[
+	      {url:"/uni/new",text:"add"},
+	      {url:"/uni/all",text:"view board"},
+	      {url:"/uni/all",text:"view comments"}
+	    ]},
+	    // {text:"Colleges",url:"/onlineChurch/admin/sermons",icon:"mdi-av-my-library-books"},
+	    // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
+	    // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
+		]
+	}
+
+
+/***/ },
+
+/***/ 98:
+/***/ function(module, exports) {
+
+	module.exports = {
 	  controller:function(){
 	    return {
 	      universities:m.request({url:"http://localhost:3000/basic/getUniversities",method:"GET"})
@@ -385,13 +416,51 @@ webpackJsonp([1,2],{
 	  view:function(controller,atrrs){
 	    return m("div",[
 	      m("div",{class:"card-panel"},[
-	        m("h1","welcome to ninja homepage"),
+	        m("h1","welcome to ninja homepage motherfucker"),
 	        m("h5","todo-list"),
 	        m("ol",[
 	          m("strike","Add ability to pull all existing universities to home.js"),
+	          m("br"),
 	          m("li","Add ability to add a university from the home.js"),
-	          m("li","Add link to each university, to take you to their admin Ui")
+	          m("li","Add link to each university, to take you to their admin Ui"),
+	          m("li","ted comes to fuck up exponentially")
 	        ]),
+
+	        m("div",{class:"card-panel"},[
+	          m("blockquote","fuck you bitches")
+	          ]),
+
+	m("nav",{class:"nav-wrapper green"},[
+	        m("a",{class:"brand-logo left"},"LOGO"),
+	        m("ul",{class:"nav-mobile right hide-on-med-and-down"},[
+
+	          m("li",[
+	            m("a","branie")
+	          ]),
+
+	          m("li",[
+	            m("a","caroline")
+	          ]),
+
+	          m("li",[
+	            m("a","ted")
+	          ]),
+
+	          m("li",[
+	            m("a","awesome")
+	        ])
+	          ])
+	        ]),
+	m("div",{class:"row"},[
+	m("div",{class:"col s12 m7"},[
+	  m("div",{class:"card yellow darken"},[
+	    m("div",{class:"card-content white-text"},[
+	      m("span",{class:"card-title"},"fuck off"),
+	      m("p",{class:"flow-text"},"this is supposed to be the content")
+	      ])
+	    ])
+	  ])
+	]),
 
 	        m("div",{
 	          class:"btn waves-effect waves-block waves-light purple center",
@@ -436,7 +505,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 98:
+/***/ 99:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -452,7 +521,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 99:
+/***/ 100:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -468,7 +537,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 100:
+/***/ 101:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -484,7 +553,7 @@ webpackJsonp([1,2],{
 
 /***/ },
 
-/***/ 101:
+/***/ 102:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -495,37 +564,6 @@ webpackJsonp([1,2],{
 	      ])
 	    ])
 	  }
-	}
-
-
-/***/ },
-
-/***/ 102:
-/***/ function(module, exports) {
-
-	module.exports = {
-	  logoText:"university admin",
-		color:"green",
-		topBarItems:[
-	    {url:"/",text:"Home",icon:"mdi-action-view-carousel right"},
-			// {url:"/Ninja",text:"Ninja"},
-			// {url:"/Church",icon:"mdi-notification-network-locked left",text:"Churches",drops:[
-	      // {url:"/test1",icon:"mdi-notification-event-note left",text:"test1"},
-
-	      // {url:"/test3",icon:"mdi-notification-event-note left",text:"test3"},
-	    // ]},
-	    // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
-		],
-		sideBarItems:[
-	    {text:"Noticeboard",icon:"mdi-image-movie-creation",drops:[
-	      {url:"/uni/new",text:"add"},
-	      {url:"/uni/all",text:"view board"},
-	      {url:"/uni/all",text:"view comments"}
-	    ]},
-	    // {text:"Colleges",url:"/onlineChurch/admin/sermons",icon:"mdi-av-my-library-books"},
-	    // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
-	    // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
-		]
 	}
 
 
