@@ -3,6 +3,7 @@ var adminUi = __components.adminLayout
 
 var ninjaUIConfig = require("./ninjaAdminUiConfig")
 var churchUiConfig = require("./churchiaAdminUiConfig")
+var uniAdminUiConfig = require("./uniAdminUiConfig")
 
 m.route.mode = "hash";
 
@@ -14,5 +15,7 @@ m.route(document.body,"/",{
 
 		"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/new") }),
 		"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/all") }),
+
+		"/uniadmin/:uniId":m(adminUi,{ config:uniAdminUiConfig, body:require("./app/uni/all") }),
 
 })

@@ -8,6 +8,7 @@ webpackJsonp([1,2],{
 
 	var ninjaUIConfig = __webpack_require__(95)
 	var churchUiConfig = __webpack_require__(96)
+	var uniAdminUiConfig = __webpack_require__(102)
 
 	m.route.mode = "hash";
 
@@ -19,6 +20,8 @@ webpackJsonp([1,2],{
 
 			"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(100) }),
 			"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:__webpack_require__(101) }),
+
+			"/uniadmin/:uniId":m(adminUi,{ config:uniAdminUiConfig, body:__webpack_require__(101) }),
 
 	})
 
@@ -385,10 +388,20 @@ webpackJsonp([1,2],{
 	        m("h1","welcome to ninja homepage"),
 	        m("h5","todo-list"),
 	        m("ol",[
-	          m("li","Add ability to pull all existing universities to home.js"),
+	          m("strike","Add ability to pull all existing universities to home.js"),
 	          m("li","Add ability to add a university from the home.js"),
 	          m("li","Add link to each university, to take you to their admin Ui")
 	        ]),
+
+	        m("div",{
+	          class:"btn waves-effect waves-block waves-light purple center",
+	          onclick:function(){
+	            m.request({url:"http://localhost:3000/test2/users",method:"GET"}).then(m.route( m.route() ))
+	          }
+	        },"initialize server with fake data"),
+
+	        m("br"),
+
 	        m("table",[
 	          m("thead",[
 	            m("tr",[
@@ -404,7 +417,13 @@ webpackJsonp([1,2],{
 	                  m("td",university.id),
 	                  m("td",university.name),
 	                  m("td",university.createdAt),
-	                  m("td",university.updatedAt)
+	                  m("td",university.updatedAt),
+	                  m("td",[
+	                    m("a",{
+	                      href:"/uniadmin/" + university.id,
+	                      config:m.route
+	                    },"go to admin ui")
+	                  ])
 	                ])
 	              })
 	          ])
@@ -476,6 +495,37 @@ webpackJsonp([1,2],{
 	      ])
 	    ])
 	  }
+	}
+
+
+/***/ },
+
+/***/ 102:
+/***/ function(module, exports) {
+
+	module.exports = {
+	  logoText:"university admin",
+		color:"green",
+		topBarItems:[
+	    {url:"/",text:"Home",icon:"mdi-action-view-carousel right"},
+			// {url:"/Ninja",text:"Ninja"},
+			// {url:"/Church",icon:"mdi-notification-network-locked left",text:"Churches",drops:[
+	      // {url:"/test1",icon:"mdi-notification-event-note left",text:"test1"},
+
+	      // {url:"/test3",icon:"mdi-notification-event-note left",text:"test3"},
+	    // ]},
+	    // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
+		],
+		sideBarItems:[
+	    {text:"Noticeboard",icon:"mdi-image-movie-creation",drops:[
+	      {url:"/uni/new",text:"add"},
+	      {url:"/uni/all",text:"view board"},
+	      {url:"/uni/all",text:"view comments"}
+	    ]},
+	    // {text:"Colleges",url:"/onlineChurch/admin/sermons",icon:"mdi-av-my-library-books"},
+	    // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
+	    // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
+		]
 	}
 
 
