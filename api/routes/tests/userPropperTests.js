@@ -69,11 +69,37 @@ module.exports = function(app,db){
     })
   }
 
-  addUsersToUniversity = (req,res,next) => {
+  addUsersToAdminUniversity = (req,res,next) => {
     var user = req.progress.createdUser
     var university = req.progress.createdUniversity
 
-    db.user.update({id:user.id},{uni_admined:university.id,uni_joined:university.id}).exec((err,updated) => {if(err) throw err});
+    db.user.update({id:user.id},{uni_i_admin:university.id}).exec((err,updated) => {if(err) throw err});
+    next();
+  }
+
+  addStudentToUniversity = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var university = req.progress.createdUniversity
+
+    db.student.findOne({id:student.id}).exec((err,foundStudent) => {
+      if(err) throw err
+
+      foundStudent.my_universities.add(university.id)
+      foundStudent.save();
+    });
+    next();
+  }
+
+  addUsersToParentStudent = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var parent = req.progress.createdStudent
+
+    db.student.findOne({id:student.id}).exec((err,foundStudent) => {
+      if(err) throw err
+
+      foundStudent.guardians.add(parent.id)
+      foundStudent.save();
+    });
     next();
   }
 
@@ -162,6 +188,62 @@ module.exports = function(app,db){
     })
   }
 
+  selectCourse = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var course = req.progress.createdCourse
+
+    //make the stage offer it..itll apply automatically to the other join table
+    db.student.update({id:student.id},{course:course.id}).exec((err,foundStudent) => {
+        next();
+    })
+  }
+
+  selectLevel = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var level = req.progress.createdLevel
+
+    //make the stage offer it..itll apply automatically to the other join table
+    db.student.update({id:student.id},{level:level.id}).exec((err,foundStudent) => {
+        next();
+    })
+  }
+
+  selectStage = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var stage = req.progress.createdStage
+
+    //make the stage offer it..itll apply automatically to the other join table
+    db.student.update({id:student.id},{stage:stage.id}).exec((err,foundStudent) => {
+        next();
+    })
+  }
+
+  selectUnits = (req,res,next) => {
+    var student = req.progress.createdStudent
+    var stage = req.progress.createdStage
+
+    //make the stage offer it..itll apply automatically to the other join table
+    db.student.findOne({id:student.id}).populate("stage").exec((err,foundStudent) => {
+      // console.log(foundStudent);
+      db.stage.findOne({id:foundStudent.stage.id}).populate("units_i_offer").exec((err,stage) => {
+        // console.log(stage.units_i_offer);
+        stage.units_i_offer.map((unit)=> {
+          console.log(unit.id);
+          foundStudent.units_im_taking.add(unit.id)
+        })
+        // console.log(foundStudent.units_im_taking);
+        foundStudent.save((err)=>{
+          // if(err) throw err
+          next();
+        })
+      })
+      //find units held by the stage you are in
+
+    })
+  }
+
+  // selectUnits
+
   confirmSuccess = (req,res,next) => {
     var user = req.progress.createdUser
     var profile = req.progress.createdUserProfile
@@ -173,11 +255,11 @@ module.exports = function(app,db){
         db.university.findOne({id:university.id}).populate("admins").populate("students").populate("proschools").populate("departments").exec((err,university)=> {
           db.proschool.find().populate("uni").populate("courses").exec((err,proschools)=> {
             db.department.find().populate("uni").populate("units").exec((err,departments)=> {
-              db.course.find().populate("school").populate("levels").exec((err,courses)=> {
+              db.course.find().populate("school").populate("levels").populate("students").exec((err,courses)=> {
                 db.unit.find().populate("dep").populate("stages_doing_me").exec((err,units)=> {
                   db.level.find().populate("stages").populate("course").exec((err,levels)=> {
                     db.stage.find().populate("units_i_offer").exec((err,stages)=> {
-                      db.student.find().populate("profile").populate("user").populate("units_im_taking").exec((err,students)=> {
+                      db.student.find().populate("stage").populate("level").populate("course").populate("profile").populate("user").populate("units_im_taking").populate("my_universities").populate("guardians").exec((err,students)=> {
                         db.student_profile.find().populate("student").exec((err,students_profiles)=> {
 
                           resObject.user = user
@@ -218,10 +300,9 @@ module.exports = function(app,db){
     makeStudentProfileRelationship,
 
     makeUniversity,
-    addUsersToUniversity,
-    // addStudentToUniversity,
-    // addUsersToAdminUniversity,
-    // addUsersToParentStudent,
+    addStudentToUniversity,
+    addUsersToAdminUniversity,
+    addUsersToParentStudent,
 
     //departments....
     makeDepartments, //ie d
@@ -236,9 +317,9 @@ module.exports = function(app,db){
 
     assignUnitsStudents,
     //students
-    // selectCourse,
-    // selectLevel,
-    // selectStage,
+    selectCourse,
+    selectLevel,
+    selectStage,
     // selectUnits, //comes with cost so far
     //return the result
     confirmSuccess

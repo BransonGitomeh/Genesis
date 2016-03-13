@@ -16,6 +16,10 @@ module.exports = [{
       levels:{
         collection:"level",
         via:"course"
+      },
+      students:{
+        collection:"student",
+        via:"course"
       }
     }
   },{
@@ -26,6 +30,10 @@ module.exports = [{
       stages:{
         collection:"stage",
         via:"level"
+      },
+      students:{
+        collection:"student",
+        via:"level"
       }
     }
   },{
@@ -35,8 +43,11 @@ module.exports = [{
       level:{model:"level"},
       units_i_offer:{
         collection:"unit",
-        via:"stages_doing_me",
-        dominant:true
+        via:"stages_doing_me"
+      },
+      students:{
+        collection:"student",
+        via:"stage"
       }
     }
   }

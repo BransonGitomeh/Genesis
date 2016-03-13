@@ -1,7 +1,7 @@
-var webpack = require('webpack');
-var path = require("path");
+// var webpack = require('webpack');
+// var path = require("path");
 var CommonsChunkPlugin = new require("webpack/lib/optimize/CommonsChunkPlugin")
-var bower_dir = __dirname + '/bower_components';
+// var bower_dir = __dirname + '/bower_components';
 
 var config = {
   // addVendor: function (name, path) {

@@ -8,8 +8,14 @@ module.exports = [{
         via:"user"
       },
       profile:{model:"user_profile"},
-      uni_admined:{model:"university"},
-      uni_joined:{model:"university"}
+      uni_i_admin:{
+        collection:"university",
+        via:"admins"
+      },
+      my_students:{
+        collection:"student",
+        via:"guardians"
+      }
     }
   },{
     identity: 'user_profile',

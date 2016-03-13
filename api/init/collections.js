@@ -3,11 +3,11 @@ module.exports = function(){
   //routes shit here
   var collections = []
 
-  require("../collections/user/userCollections").map((collection) => collections.push(collection))
-  require("../collections/user/departmentCollections").map((collection) => collections.push(collection))
-  require("../collections/user/proSchoolCollections").map((collection) => collections.push(collection))
-  require("../collections/user/universityCollections").map((collection) => collections.push(collection))
-  require("../collections/user/studentCollections").map((collection) => collections.push(collection))
+  require("../collections/university/user").map((collection) => collections.push(collection))
+  require("../collections/university/department").map((collection) => collections.push(collection))
+  require("../collections/university/proSchool").map((collection) => collections.push(collection))
+  require("../collections/university/university").map((collection) => collections.push(collection))
+  require("../collections/university/student").map((collection) => collections.push(collection))
 
   return collections;
 }

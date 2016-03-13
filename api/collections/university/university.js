@@ -4,11 +4,11 @@ module.exports = [{
       name:"string",
       admins:{
         collection:"user",
-        via:"uni_admined"
+        via:"uni_i_admin"
       },
       students:{
-        collection:"user",
-        via:"uni_joined"
+        collection:"student",
+        via:"my_universities"
       },
       proschools:{
         collection:"proschool",
