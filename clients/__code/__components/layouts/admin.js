@@ -10,21 +10,21 @@ var topNavItem = require('./topNavItem');
 
 module.exports = {
   view:function(ctrl,args){
-    console.log(args.config.logoText);
+    console.log(args.config().logoText);
     return m(".app",[
       //header, the nav bar
       m("header",{id:"header",class:"page-topbar"},[
         m("div",{class:"navbar-fixed"},[
-          m("nav",{class:args.config.color},[
+          m("nav",{class:args.config().color},[
             m("div",{class:"nav-wrapper"},[
 
               m("h1",{class:"logo-wrapper"},[
-                m("a",{class:"brand-logo"},args.config.logoText ? args.config.logoText : "logoText here")
+                m("a",{class:"brand-logo"},args.config().logoText ? args.config().logoText : "logoText here")
               ]),
 
               m("ul",{class:"right"},[
 
-                args.config.topBarItems.map(function(item){
+                args.config().topBarItems.map(function(item){
                   return m(topNavItem,{
                     url:item.url,
                     icon:item.icon,
@@ -55,21 +55,21 @@ module.exports = {
           m("aside",{id:"left-sidebar-navx"},[
             m("ul",{id:"slide-out",class:"side-nav fixed leftside-navigation",style:"width: 240px"},[
               m(userCard,{
-                color:args.config.color
+                color:args.config().color
               }),
 
               // m("li",{class:"li-hover"},[
               //   m("p",{class:"ultra-small margin more-text"},"Welcome")
               // ]),
 
-              args.config.sideBarItems.map(function(item){
+              args.config().sideBarItems.map(function(item){
                 console.log(item.url)
                 return m(sideNavItem,{
                   link:item.url,
                   icon:item.icon,
                   text:item.text,
                   drops:item.drops,
-                  color:args.config.color
+                  color:args.config().color
                 })
               })
             ])

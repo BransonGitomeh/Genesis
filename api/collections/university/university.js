@@ -18,6 +18,7 @@ module.exports = [{
         collection:"department",
         via:"uni"
       },
+      noticeboard:{model:"noticeboard"}
     }
   }
 ]
