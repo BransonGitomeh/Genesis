@@ -15,6 +15,10 @@ m.route(document.body,"/",{
 		"/uni/new":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/new") }),
 		"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/all") }),
 
+		//playground
+		"/ninja/play/ted":m(adminUi,{ config:ninjaUIConfig, body:require("./app/ninja/play/ted") }),
+		"/ninja/play/caro":m(adminUi,{ config:ninjaUIConfig, body:require("./app/ninja/play/caro") }),
+
 		"/uniadmin/:uniName/:uniId":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("./app/uni/home") }),
 		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("./app/uni/noticeboard") }),
 

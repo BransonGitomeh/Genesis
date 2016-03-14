@@ -16,7 +16,6 @@ module.exports = {
   },
   view:function(controller,atrrs){
     return m("span",[
-      m(myComponent),
         m("form",{
           class:"card-panel",
           onsubmit:function(e){
@@ -58,9 +57,16 @@ module.exports = {
         m(".card-panel",[
           m(".row",[
             m(".col l12",[
+              controller.noticeboardItems().noticeboard_items ?
               controller.noticeboardItems().noticeboard_items.map(function(item){
-                return m("h5",item.id + " " + item.content + " " + item.title + " " + item.createdAt)
+                return m(myComponent,{
+                  id:item.id,
+                  title:item.title,
+                  content:item.content,
+                  args:item.createdAt
+                })
               })
+              : ""
             ])
           ])
         ])

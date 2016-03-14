@@ -21,6 +21,10 @@ module.exports = function(){
         {url:"/uni/new",text:"New"},
         {url:"/uni/all",text:"View all"}
       ]},
+      {text:"Play Ground",icon:"mdi-content-gesture",drops:[
+        {url:"/ninja/play/ted",text:"Ted"},
+        {url:"/ninja/play/caro",text:"Caro"}
+      ]},
       // {text:"Colleges",url:"/onlineChurch/admin/sermons",icon:"mdi-av-my-library-books"},
       // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
       // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}

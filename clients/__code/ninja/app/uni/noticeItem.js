@@ -1,17 +1,28 @@
 module.exports = {
-  view:function(){
+  view:function(ctrl,args){
     return m("div",{class:"card-panel"},[
-      m("h4",{class:"center"},"she awesome"),
+      m("h4",{class:"center"},args.title),
       m("div",{class:"divider"}),
-      m("p","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+      m("p",args.content),
       m("div",{class:"divider"}),
+      m("br"),
       m("div",{class:"row"},[
         m("div",{class:"col l6"},[
-          m("div","weird text"),
-          m("button",{class:"btn green"},"save")
+          // m("div","weird text"),
+          m("div","( " + moment.duration(moment(args.createdAt).diff(moment(new Date())),'milliseconds').humanize() + " ago"  + " )")
         ]),
         m("div",{class:"col l6"},[
-          m("div",{class:"right"},"weird text")
+          m("button",{
+            class:"btn red right",
+            onclick:function(){
+              m.request({
+                method:"GET",
+                url:"http://localhost:3000/basic/removeFromNoticeboard/" + args.id
+              }).then(m.route(m.route()))
+            }
+          },"remove")
+
+          // m("div",{class:"right"},"weird text")
         ]),
       ])
     ])

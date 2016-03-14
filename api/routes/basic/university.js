@@ -40,6 +40,16 @@ module.exports = function(app,db){
     })
   })
 
+  app.get("/basic/removeFromNoticeboard/:id",(req,res) => {
+    db.noticeboard_item.destroy({id:req.params.id}).exec((err)=>{
+      if(err) throw err;
+      var responce = {
+        status:"done"
+      }
+      res.send(responce)
+    })
+  })
+
 
   app.get("/basic/getNoticeboard/:uniId",(req,res) => {
     db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{

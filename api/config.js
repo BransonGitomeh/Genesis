@@ -1,17 +1,19 @@
 module.exports = {
   production:false,
   devPort:3000,
-  devAdapter:"memory",
+  devAdapter:"disk",
   prodAdapter:"prodMongo",
-  devMigration:"drop",
+  devMigration:"safe",
   adapters:{
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
+    disk: require("sails-disk"),
     // mongo: require("sails-mongo")
   },
   connections:{
     //just helps to have one adapter but with different settings each time, like to use two diffrent mySql databases
     memory:{ adapter:"memory" },
+    disk:{ adapter:"disk" },
     localMYSQL:{
       adapter    : 'mysql',
       host      : 'localhost',
