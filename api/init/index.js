@@ -38,15 +38,13 @@ module.exports = (collections,config,callback) => {
 	console.log("reading all collections");
 	collections.map(function(collection){
 		collection.connection = config.adapter();
-		collection.migration = config.migration();
-		console.log(collection)
+		collection.migrate = config.migration();
 		var collectionInstance = waterlineInstance.Collection.extend(collection)
 		Waterline.loadCollection(collectionInstance)
 	})
 	console.log("innitializing the collections to '%s' adapter",config.adapter())
 	console.log("Collection migrations set to '%s'",config.migration());
 	Waterline.initialize(config,function(err,models){
-		console.log(models)
 		if(err) throw err;
 		app.locals.collections = models.collections
 		console.log("collections init complete, calling back");

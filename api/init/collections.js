@@ -3,6 +3,8 @@ module.exports = function(){
   //routes shit here
   var collections = []
 
+  // require("../collections/university/test").map((collection) => collections.push(collection))
+
   require("../collections/university/user").map((collection) => collections.push(collection))
   require("../collections/university/department").map((collection) => collections.push(collection))
   require("../collections/university/proSchool").map((collection) => collections.push(collection))
