@@ -1,5 +1,5 @@
 var navItem = require('../../../peices/navItem');
-// var url = "http://localhost:3000"
+// var url = apiUrl + ""
 
 var event = {
   schema:{

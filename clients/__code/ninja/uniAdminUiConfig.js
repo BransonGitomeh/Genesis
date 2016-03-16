@@ -21,7 +21,7 @@ module.exports = function(){
   }
 
   // m.request({
-  //   url:"http://localhost:3000/basic/getUniversity/" + m.route.param("uniId"),
+  //   url:apiUrl + "/basic/getUniversity/" + m.route.param("uniId"),
   //   method:"GET",
   // }).then(function(res){
   //   console.log(res);

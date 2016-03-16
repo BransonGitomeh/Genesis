@@ -5,7 +5,7 @@ module.exports = {
   controller:function(){
     return {
       noticeboardItems:m.request({
-        url:"http://localhost:3000/basic/getNoticeboard/" + m.route.param("uniId"),
+        url:apiUrl + "/basic/getNoticeboard/" + m.route.param("uniId"),
         method:"GET"
       }),
       schema:{
@@ -20,7 +20,7 @@ module.exports = {
           class:"card-panel",
           onsubmit:function(e){
             m.request({
-              url:"http://localhost:3000/basic/addToNoticeboard/" + m.route.param("uniId"),
+              url:apiUrl + "/basic/addToNoticeboard/" + m.route.param("uniId"),
               method:"POST",
               data:{
                 title:controller.schema.title(),

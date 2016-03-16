@@ -2,7 +2,7 @@ var card = require('./caro_components/card');
 module.exports = {
   controller:function(){
     return {
-      universities:m.request({url:"http://localhost:3000/basic/getUniversities",method:"GET"})
+      universities:m.request({url:apiUrl + "/basic/getUniversities",method:"GET"})
     }
   },
   view:function(ctrl,args){

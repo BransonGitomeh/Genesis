@@ -1,7 +1,7 @@
 module.exports = {
   controller:function(){
     return {
-      universities:m.request({url:"http://localhost:3000/basic/getUniversities",method:"GET"})
+      universities:m.request({url:apiUrl + "/basic/getUniversities",method:"GET"})
     }
   },
   view:function(controller,atrrs){

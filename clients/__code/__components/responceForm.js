@@ -1,6 +1,6 @@
 var navItem = require('./navItem');
 var input = require('./forminput');
-// var url = "http://localhost:3000"
+// var url = apiUrl + ""
 
 var event = {
   schema:{

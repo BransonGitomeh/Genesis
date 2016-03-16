@@ -1,6 +1,6 @@
 var navItem = require('../../../../peices/navItem');
 var input = require('../../../../../../__components/forminput.js');
-// var url = "http://localhost:3000"
+// var url = apiUrl + ""
 
 var event = {
   schema:{

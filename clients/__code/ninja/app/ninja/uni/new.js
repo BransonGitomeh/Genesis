@@ -12,7 +12,7 @@ module.exports = {
       class:"card-panel",
       onsubmit:function(e){
         m.request({
-          url:"http://localhost:3000/basic/makeUniversity",
+          url:apiUrl + "/basic/makeUniversity",
           method:"POST",
           data:{
             name:controller.schema.name()

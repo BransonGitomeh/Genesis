@@ -18,7 +18,7 @@ module.exports = {
             onclick:function(){
               m.request({
                 method:"GET",
-                url:"http://localhost:3000/basic/removeFromNoticeboard/" + args.id
+                url:apiUrl + "/basic/removeFromNoticeboard/" + args.id
               }).then(m.route(m.route()))
             }
           },"remove") :""

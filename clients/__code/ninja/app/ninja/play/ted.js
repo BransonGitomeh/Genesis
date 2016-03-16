@@ -1,7 +1,7 @@
 module.exports = {
   controller:function(){
     return {
-      universities:m.request({url:"http://localhost:3000/basic/getUniversities",method:"GET"})
+      universities:m.request({url:apiUrl + "/basic/getUniversities",method:"GET"})
     }
   },
   view:function(controller,atrrs){
@@ -72,7 +72,7 @@ m("nav",{class:"nav-wrapper green"},[
         m("div",{
           class:"btn waves-effect waves-block waves-light purple center",
           onclick:function(){
-            m.request({url:"http://localhost:3000/test2/users",method:"GET"}).then(m.route( m.route() ))
+            m.request({url:apiUrl + "/test2/users",method:"GET"}).then(m.route( m.route() ))
           }
         },"initialize server with fake data"),
 

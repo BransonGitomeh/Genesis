@@ -4,7 +4,7 @@ module.exports = {
 		return {
 			items:m.request({
 				method:"GET",
-				url:"http://localhost:3000/basic/getNoticeboard/" + m.route.param("id")
+				url:apiUrl + "/basic/getNoticeboard/" + m.route.param("id")
 			})
 		}
 	},
