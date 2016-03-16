@@ -39,6 +39,7 @@ module.exports = (collections,config,callback) => {
 	collections.map(function(collection){
 		collection.connection = config.adapter();
 		collection.migration = config.migration();
+		console.log(collection)
 		var collectionInstance = waterlineInstance.Collection.extend(collection)
 		Waterline.loadCollection(collectionInstance)
 	})
