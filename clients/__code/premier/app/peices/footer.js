@@ -1,4 +1,4 @@
-var fbPage = require('../../../../__components/plugins/fbPage');
+// var fbPage = require('../../../../__components/plugins/fbPage');
 
 module.exports = {
   view: function(args){
@@ -7,17 +7,17 @@ module.exports = {
       m(".hide-on-med-and-up",[
         m("br"),
         m(".container",[
-          m(fbPage,{
-            height:"250px",
-            width:"100%",
-            page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
-            tabs:"timeline, events, messages",
-            smallHeader:"true",
-            adaptWidth:"true",
-            hideCover:"false",
-            showPosts:"false",
-            facePile:"true"
-          })
+          // m(fbPage,{
+          //   height:"250px",
+          //   width:"100%",
+          //   page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
+          //   tabs:"timeline, events, messages",
+          //   smallHeader:"true",
+          //   adaptWidth:"true",
+          //   hideCover:"false",
+          //   showPosts:"false",
+          //   facePile:"true"
+          // })
         ]),
         m("br")
       ]),

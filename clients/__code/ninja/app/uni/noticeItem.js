@@ -12,6 +12,7 @@ module.exports = {
           m("div","( " + moment.duration(moment(args.createdAt).diff(moment(new Date())),'milliseconds').humanize() + " ago"  + " )")
         ]),
         m("div",{class:"col l6"},[
+          args.deleteBtn === true ? 
           m("button",{
             class:"btn red right",
             onclick:function(){
@@ -20,7 +21,7 @@ module.exports = {
                 url:"http://localhost:3000/basic/removeFromNoticeboard/" + args.id
               }).then(m.route(m.route()))
             }
-          },"remove")
+          },"remove") :""
 
           // m("div",{class:"right"},"weird text")
         ]),

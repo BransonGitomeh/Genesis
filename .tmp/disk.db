@@ -10,43 +10,37 @@
     "stage": [],
     "university": [
       {
-        "name": "awesome",
-        "createdAt": "2016-03-14T19:45:30.219Z",
-        "updatedAt": "2016-03-14T19:45:30.261Z",
+        "name": "caroline university",
+        "createdAt": "2016-03-16T08:32:28.031Z",
+        "updatedAt": "2016-03-16T08:32:28.124Z",
         "id": 1,
         "noticeboard": 1
-      },
-      {
-        "name": "awesome universities",
-        "createdAt": "2016-03-14T20:11:51.637Z",
-        "updatedAt": "2016-03-14T20:11:51.664Z",
-        "id": 2,
-        "noticeboard": 2
       }
     ],
     "student": [],
     "student_profile": [],
     "noticeboard": [
       {
-        "createdAt": "2016-03-14T19:45:30.240Z",
-        "updatedAt": "2016-03-14T20:00:06.461Z",
+        "createdAt": "2016-03-16T08:32:28.085Z",
+        "updatedAt": "2016-03-16T08:56:52.134Z",
         "id": 1,
         "university": 1
-      },
-      {
-        "createdAt": "2016-03-14T20:11:51.651Z",
-        "updatedAt": "2016-03-14T20:11:51.682Z",
-        "id": 2,
-        "university": 2
       }
     ],
     "noticeboard_item": [
       {
-        "title": "awesome thing",
-        "content": "aweosme testing\n",
-        "createdAt": "2016-03-14T20:00:06.422Z",
-        "updatedAt": "2016-03-14T20:00:06.488Z",
-        "id": 10,
+        "title": "this is an aweosme title",
+        "createdAt": "2016-03-16T08:32:45.291Z",
+        "updatedAt": "2016-03-16T08:32:45.414Z",
+        "id": 1,
+        "myboard": 1
+      },
+      {
+        "title": "Awesome header 2",
+        "content": "this is an aweosme body and i love it",
+        "createdAt": "2016-03-16T08:56:52.109Z",
+        "updatedAt": "2016-03-16T08:56:52.154Z",
+        "id": 2,
         "myboard": 1
       }
     ],
@@ -516,15 +510,15 @@
     "level": {},
     "stage": {},
     "university": {
-      "id": 2
+      "id": 1
     },
     "student": {},
     "student_profile": {},
     "noticeboard": {
-      "id": 2
+      "id": 1
     },
     "noticeboard_item": {
-      "id": 10
+      "id": 2
     },
     "university_admins__user_uni_i_admin": {},
     "student_guardians__user_my_students": {},

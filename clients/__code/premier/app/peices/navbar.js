@@ -1,5 +1,5 @@
 var navitem = require('./navitem')
-var JD = require('../../../../__components/libs/jollyData');
+// var JD = require('../../../../../__components/libs/jollyData');
 
 module.exports = {
   view: function(args){
@@ -85,70 +85,7 @@ module.exports = {
                   alt:"menu"
                 })
               ]),
-              //------------------------------------------------------------------------------------
-              JD.loggedIn() ? //only sho if logged in
-              m("span",[
-
-
-              m("li",{class:"right"},[
-                m("a",{
-                   class:'dropdown-button',
-                   config:function(){
-                     $('.dropdown-button').dropdown({
-                        inDuration: 300,
-                        outDuration: 225,
-                        constrain_width: false, // Does not change width of dropdown to that of the activator
-                        alignment: 'left',
-                        hover: true, // Activate on hover
-                        gutter: 0, // Spacing from edge
-                        belowOrigin: true // Displays dropdown below the button
-                      });
-                   },
-                   "data-activates":"usercontrolls"
-                 },[
-                   m("i",{class:"mdi-navigation-arrow-drop-down right"}),
-                   m("span",JD.session().user.identifier)
-                 ])
-              ]),
-
-              m("ul",{ //wrapper arround the li links
-                class:"dropdown-content",
-                id:"usercontrolls"
-              },[
-                m("span",{
-                  onclick:function(){
-                    JD.invalidateSession();
-                  }
-                },[
-                  m("li",[
-                      m("a",{
-                        href:"/logout",
-                        config:m.route
-                      }, "Log Out")
-                    ])
-                ]),
-
-
-                    m("li",[
-                      m("a",{
-                        href:"/verify",
-                        config:m.route
-                      }, "My Fee Statement"),
-                    ]),
-
-                      m("li",[
-                        m("a",{
-                          href:"/verify",
-                          config:m.route
-                        }, "Verify Account")
-                    ])
-              ])
-            ])
-
-              : m("span"),
-
-              //-------------------------------------------------------------------------------------
-
+       
 
               m("ul",{class:"hide-on-med-and-down"},[
 
@@ -210,7 +147,7 @@ module.exports = {
                    }),
 
 
-                  console.log(JD.session()),
+                  // console.log(JD.session()),
                    m.component(navitem,{link:{
                      title:"Contact Us",
                      direction:"right",

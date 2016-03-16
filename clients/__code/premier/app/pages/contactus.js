@@ -4,26 +4,6 @@ var footer = require("../peices/footer");
 var sidebar = require("../peices/sidebar");
 // var pdfobject = require("../peices/pdfobject");
 
-var contactForm = require("../../../../__components/contactForm")
-
-var contactus={
-  getData:function(){
-    return{
-      name : m.prop(""),
-      age : m.prop(""),
-      email : m.prop(""),
-      location : m.prop(""),
-      phonenumber : m.prop(""),
-      message : m.prop("")
-    }
-  },
-  setData:function(data){
-    // console.log("asked to save");
-    // console.log(data);
-  }
-};
-
-
 
 module.exports = {
 
@@ -78,7 +58,7 @@ module.exports = {
 
             // contactForm here
 
-            m(contactForm)
+            // m(contactForm)
 
            ])
 

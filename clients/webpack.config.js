@@ -10,7 +10,7 @@ var config = {
   // },
   entry: {
     church:"./__code/church/route.js",
-    // premier:"./premier/route.js",
+    premier:"./__code/premier/route.js",
     ninja:"./__code/ninja/route.js"
   },
 
