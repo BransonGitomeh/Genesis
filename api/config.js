@@ -1,5 +1,5 @@
 module.exports = {
-  production:false,
+  production:true,
   devPort:3000,
   devAdapter:"disk",
   prodAdapter:"prodMongo",
