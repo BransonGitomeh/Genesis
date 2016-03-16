@@ -12,7 +12,7 @@ webpackJsonp([2],[
 	  "/":__webpack_require__(116),
 	  "/noticeboard/:id":m(layout,{body:__webpack_require__(118)}),
 	  "/contactus":__webpack_require__(119),
-	  // //academics
+	  //academics
 	  "/academics/ecd":__webpack_require__(120),
 	  "/academics/calender":__webpack_require__(121),
 	  "/academics/admissions":__webpack_require__(122),

@@ -8,7 +8,7 @@ m.route(document.body,'/',{
   "/":require('./app/pages/home'),
   "/noticeboard/:id":m(layout,{body:require('./app/pages/noticeboard')}),
   "/contactus":require('./app/pages/contactus'),
-  // //academics
+  //academics
   "/academics/ecd":require('./app/pages/ecd'),
   "/academics/calender":require('./app/pages/calender'),
   "/academics/admissions":require('./app/pages/admissions'),

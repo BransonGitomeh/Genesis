@@ -4,8 +4,11 @@
   "description": "my server",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon api/index.js",
-    "start": "node api/index.js && cd clients && webpack && webpack-dev-server"
+    "server": "nodemon api/index.js",
+    "webpack": "webpack",
+    "dev-server": "webpack-dev-server",
+    
+    "start": "node api/index.js"
   },
   "author": "BransonGitomeh",
   "license": "MIT",
@@ -19,6 +22,7 @@
     "waterline": "^0.11.0"
   },
   "devDependencies": {
-    "mithril": "^0.2.2-rc.1"
+    "mithril": "^0.2.2-rc.1",
+    "webpack": "^1.12.14"
   }
 }
