@@ -46,6 +46,7 @@ module.exports = (collections,config,callback) => {
 	console.log("innitializing the collections to '%s' adapter",config.adapter())
 	console.log("Collection migrations set to '%s'",config.migration());
 	Waterline.initialize(config,function(err,models){
+		console.log(models)
 		if(err) throw err;
 		app.locals.collections = models.collections
 		console.log("collections init complete, calling back");
