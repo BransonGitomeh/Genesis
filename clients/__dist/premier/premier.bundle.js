@@ -1,34 +1,36 @@
-webpackJsonp([2,3],{
-
-/***/ 0:
+webpackJsonp([2],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var layout = __webpack_require__(133)
+	var __components = __webpack_require__(90);
+	var adminUi = __components.adminLayout
+	var layout = __webpack_require__(110)
+
 	m.route.mode = "hash";
 
 	m.route(document.body,'/',{
-	  "/":__webpack_require__(110),
-	  "/noticeboard/:id":m(layout,{body:__webpack_require__(132)}),
-	  "/contactus":__webpack_require__(116),
+	  "/":__webpack_require__(116),
+	  "/noticeboard/:id":m(layout,{body:__webpack_require__(118)}),
+	  "/contactus":__webpack_require__(119),
 	  // //academics
-	  "/academics/ecd":__webpack_require__(117),
-	  "/academics/calender":__webpack_require__(119),
-	  "/academics/admissions":__webpack_require__(120),
-	  "/academics/examinations":__webpack_require__(121),
-	  "/academics/liblary":__webpack_require__(122),
+	  "/academics/ecd":__webpack_require__(120),
+	  "/academics/calender":__webpack_require__(121),
+	  "/academics/admissions":__webpack_require__(122),
+	  "/academics/examinations":__webpack_require__(123),
+	  "/academics/liblary":__webpack_require__(124),
 
 	  //operations
-	  "/operations/service_charter":__webpack_require__(123),
-	  "/operations/governance":__webpack_require__(124),
-	  "/operations/HR":__webpack_require__(125),
-	  "/operations/finance":__webpack_require__(126),
-	  "/operations/downloads":__webpack_require__(127),
+	  "/operations/service_charter":__webpack_require__(125),
+	  "/operations/governance":__webpack_require__(126),
+	  "/operations/HR":__webpack_require__(127),
+	  "/operations/finance":__webpack_require__(128),
+	  "/operations/downloads":__webpack_require__(129),
 
 	  //proffessional_development
-	  "/proffessional_development/ctdc":__webpack_require__(128),
-	  "/proffessional_development/shortcourses":__webpack_require__(129),
-	  "/proffessional_development/bronchure":__webpack_require__(130),
-	  "/proffessional_development/productinformation":__webpack_require__(131),
+	  "/proffessional_development/ctdc":__webpack_require__(130),
+	  "/proffessional_development/shortcourses":__webpack_require__(131),
+	  "/proffessional_development/bronchure":__webpack_require__(132),
+	  "/proffessional_development/productinformation":__webpack_require__(133),
 
 	  // "/register/student":require('./app/pages/student-register'),
 	  // "/verify/student/:identifier":require('./app/pages/student-verify'),
@@ -59,13 +61,425 @@ webpackJsonp([2,3],{
 	  // "/auth/Staff/forgot/:identifier":require("./app/pages/auth/Staff/forgot")
 
 
+	  "/uniadmin/:uniName/:uniId":m(adminUi,{ config:__webpack_require__(134), body:__webpack_require__(107) }),
+	  "/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:__webpack_require__(134), body:__webpack_require__(109) }),
 
 	});
 
 
 /***/ },
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 108:
+	module.exports = {
+	  adminLayout:__webpack_require__(91)
+	}
+
+
+/***/ },
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	*logoText {@param} - has text of the logo, on the left of the top bar
+	*sideBarItems {@array} - objects that will be used to create the sidebar
+	*
+	*/
+
+	var userCard = __webpack_require__(92);
+	var sideNavItem = __webpack_require__(93);
+	var topNavItem = __webpack_require__(94);
+
+	module.exports = {
+	  view:function(ctrl,args){
+	    console.log(args.config().logoText);
+	    return m(".app",[
+	      //header, the nav bar
+	      m("header",{id:"header",class:"page-topbar"},[
+	        m("div",{class:"navbar-fixed"},[
+	          m("nav",{class:args.config().color},[
+	            m("div",{class:"nav-wrapper"},[
+
+	              m("h1",{class:"logo-wrapper"},[
+	                m("a",{class:"brand-logo"},args.config().logoText ? args.config().logoText : "logoText here")
+	              ]),
+
+	              m("ul",{class:"right"},[
+
+	                args.config().topBarItems.map(function(item){
+	                  return m(topNavItem,{
+	                    url:item.url,
+	                    icon:item.icon,
+	                    text:item.text,
+	                    drops:item.drops
+	                  })
+	                })
+
+	              ]),
+
+	              m("a",{
+	                "data-activates":"slide-out",
+	                class:"sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"
+	              },[
+	                m("i",{class:"mdi-navigation-menu"})
+	              ])
+
+	            ])
+	          ])
+	        ])
+	      ]),
+
+	      //the main part of the body
+	      m("#main",[
+	        //sidebar-
+	        m("wrapper",[
+	          //left side-nav
+	          m("aside",{id:"left-sidebar-navx"},[
+	            m("ul",{id:"slide-out",class:"side-nav fixed leftside-navigation",style:"width: 240px"},[
+	              m(userCard,{
+	                color:args.config().color
+	              }),
+
+	              // m("li",{class:"li-hover"},[
+	              //   m("p",{class:"ultra-small margin more-text"},"Welcome")
+	              // ]),
+
+	              args.config().sideBarItems.map(function(item){
+	                console.log(item.url)
+	                return m(sideNavItem,{
+	                  link:item.url,
+	                  icon:item.icon,
+	                  text:item.text,
+	                  drops:item.drops,
+	                  color:args.config().color
+	                })
+	              })
+	            ])
+	          ]),
+
+	          //rest of the body
+	          m("section",{id:"content"},[
+	            m(".container",[
+	              // m("h1","side content side contentside contentside contentside content"),
+	              args.body ? m(args.body) : m("h1","body here")
+	            ])
+	          ])
+
+
+	        ])
+
+	      ])
+
+
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 92 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  view:function(ctrl,args){
+	    return m("li",{class:"user-details " + args.color + " darken-3"},[
+	      m(".row",[
+	        //pic image
+	        m(".col col s4 m4 l4",[
+	          m("img",{src:"http://www.imran.com/xyper_images/icon-user-default.png", class:"circle responsive-img profile-image"})
+	        ]),
+	        //dropdown and roal
+	        m(".col col s8 m8 l8 black-text",[
+	          m("a",{
+	            class:"btn-flat profile-dropdown-button waves-effect waves-light white-text profile-btn",
+	            config:function(){
+	              $('.profile-dropdown-button').dropdown({
+	                  inDuration: 300,
+	                  outDuration: 225,
+	                  constrain_width: false, // Does not change width of dropdown to that of the activator
+	                  hover: true, // Activate on hover
+	                  gutter: 0, // Spacing from edge
+	                  belowOrigin: true, // Displays dropdown below the button
+	                  alignment: 'left' // Displays dropdown with edge aligned to the left of button
+	              });
+	            },
+	            "data-activates":"profile-dropdown"
+	          },"Branie",[
+	            m("i",{class:"mdi-navigation-arrow-drop-down right"})
+	          ]),
+
+	          m("ul",{
+	            id:"profile-dropdown",
+	            class:"dropdown-content",
+	            style:"width: 128px; position: absolute; top: 57px; left: 101.234px; opacity: 1; display: none;"
+	          },[
+	            m("li",[
+	              m("a",[
+	                m("i",{class:"mdi-action-face-unlock"})
+	              ],"Profile")
+	            ]),
+	            m("li",[
+	              m("a",[
+	                m("i",{class:"mdi-action-settings"})
+	              ],"Settings")
+	            ]),
+
+	            m("li",{class:"divider"}),
+
+	            m("li",[
+	              m("a",[
+	                m("i",{class:"mdi-hardware-keyboard-tab"})
+	              ],"Log out")
+	            ]),
+
+	          ]),
+
+	          //roal
+	          m("p",{class:"user-roal white-text"},"Administrator")
+	        ])
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 93 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  controller:function(){
+	    return {
+	      active:m.prop(false)
+	    }
+	  },
+	  view:function(ctrl,args){
+	    return m("li",[
+	      args.drops ? m("ul",{
+	        class:"collapsible collapsible-accordion",
+	        "data-collapsible":"accordion",
+	        config:function(){
+	          $('.collapsible').collapsible()
+	        }
+	      },[
+	        m("li",{class:"bold"},[
+	          // header
+	          m("a",{class:"collapsible-header waves-effect waves-cyan " + (ctrl.active() === true ? "active" : "")},[
+	            m("i",{class:args.icon})
+	          ],args.text),
+	          //body
+	          m("div",{class:"collapsible-body"},[
+	            m("ul",[
+
+	                args.drops.map(function(drop){
+
+	                  return m("li",{class:"waves-effect waves-block waves-blue"},[
+	                    //implememntation to keep a sidebar dropdown dropped if a link inside it is active
+	                    // (drop.url === m.route() ? ctrl.active(true) : ""),
+	                    // (drop.url === m.route() ? m.redraw : ""),
+	                    m("a",{ //render a normal link
+	                      href:drop.url,
+	                      config:m.route,
+	                      class:(drop.url === m.route() ? "grey lighten-4" : "")
+	                    },[
+	                      m("i",{class:drop.icon}),
+	                      m("div",drop.text)
+	                    ])
+	                  ])
+
+	                })
+
+
+	            ])
+	          ])
+	        ])
+	      ]) : m("a",{ //render a normal link
+	        href:args.link,
+	        config:m.route,
+	        class:(args.link === m.route() ? args.color + "-grey lighten-5" : " " )
+	      },[
+	        m("i",{class:args.icon}),
+	        m("div",args.text)
+	      ]),
+	      ///////////////////
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 94 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  view:function(ctrl,args){
+	    return m("li",{class:args.url === m.route() ? "active" : " "},[
+	      m("a",{
+	        class:"waves-effect waves-block waves-light dropdown-button",
+	        href:args.url,
+	        config:m.route,
+	        "data-activates":args.text
+	      },[
+	        args.icon ? m("i",{class:args.icon}) : ""
+	      ],args.text ? args.text : ""),
+
+	      console.log(args.drops),
+
+	      args.drops ? m("ul",{
+	        id:args.text,
+	        class:"dropdown-content",
+	        config:function(){
+	          $('.dropdown-button').dropdown({
+	              inDuration: 300,
+	              outDuration: 225,
+	              constrain_width: false, // Does not change width of dropdown to that of the activator
+	              hover: true, // Activate on hover
+	              gutter: 0, // Spacing from edge
+	              belowOrigin: true, // Displays dropdown below the button
+	              alignment: 'left' // Displays dropdown with edge aligned to the left of button
+	            }
+	          );
+	        }
+	      },[
+	        args.drops.map(function(drop){
+	          return m("li",{
+	            class:drop.url === m.route() ? " active " : ""
+	          },[
+	            m("a",{
+	              class:"waves-effect waves-block waves-light",
+	              href:drop.url,
+	              config:m.route,
+	            },[
+	              m("i",{class:drop.icon})
+	            ],drop.text ? drop.text : "")
+	          ])
+	        })
+	      ]) : ""
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var myComponent = __webpack_require__(108)
+
+	var inputComponent = __webpack_require__(56);
+	module.exports = {
+	  view:function(controller,atrrs){
+	    return m(".card-panel",[
+	      m("h1","welcome to " + m.route.param("uniName") + "'s Admin Ui"),
+	      // m(myComponent)
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -102,79 +516,114 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 110:
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(111)
-	var sidebar = __webpack_require__(113)
-	var nivoslider = __webpack_require__(114)
-	var footer = __webpack_require__(115)
+	var myComponent = __webpack_require__(108)
 
-	var objectives = [
-	  {text:"To provide education geared toward development of the childs mental, physical and spiritual growth."},
-	  {text:" To provide accessible, affordable and quality childhood education to teachers"},
-	  {text:" To promote the national goals and objectives of Early Childhood Development Education to Rwanda."}
+	var inputComponent = __webpack_require__(56);
+	module.exports = {
+	  controller:function(){
+	    return {
+	      noticeboardItems:m.request({
+	        url:"http://localhost:3000/basic/getNoticeboard/" + m.route.param("uniId"),
+	        method:"GET"
+	      }),
+	      schema:{
+	        title:m.prop(""),
+	        content:m.prop("")
+	      }
+	    }
+	  },
+	  view:function(controller,atrrs){
+	    return m("span",[
+	        m("form",{
+	          class:"card-panel",
+	          onsubmit:function(e){
+	            m.request({
+	              url:"http://localhost:3000/basic/addToNoticeboard/" + m.route.param("uniId"),
+	              method:"POST",
+	              data:{
+	                title:controller.schema.title(),
+	                content:controller.schema.content()
+	              }
+	            }).then(m.route( m.route( ) ))
+	            e.preventDefault();
+	          }
+	        },[
+	          m("h1",{class:"center"},"New Noticeboard Item"),
+	          m(inputComponent,{
+	            label:"New Notice Header",
+	            icon:"mdi-communication-business prefix",
+	            type:"text",
+	            value:controller.schema.title
+	          }),
+
+	          m(inputComponent,{
+	            label:"New Notice Body",
+	            icon:"mdi-communication-business prefix",
+	            type:"textarea",
+	            value:controller.schema.content
+	          }),
+	            m("button",{
+	                type:"submit",
+	                class:"btn waves-effect waves-block waves-light green center"
+	            },"Create Notice")
+	        ]),
+
+	        m("br"),
+
+	        m("h1",{class:"center"},"Current Noticeboard Items"),
+
+	        m(".card-panel",[
+	          m(".row",[
+	            m(".col l12",[
+	              controller.noticeboardItems().noticeboard_items ?
+	              controller.noticeboardItems().noticeboard_items.map(function(item){
+	                return m(myComponent,{
+	                  id:item.id,
+	                  title:item.title,
+	                  content:item.content,
+	                  args:item.createdAt
+	                })
+	              })
+	              : ""
+	            ])
+	          ])
+	        ])
+	      ])
+	  }
+	}
 
 
-	];
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var navbar = __webpack_require__(111);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 	module.exports = {
-	  view:function(ctrl){
+	  view:function(ctrl,args){
 	    return m(".app",[
 	       m.component(navbar),
 
 	       m(".row",[
 	         //collumn 1 , the sidebar
-	         m(".col l3 s3 m3  hide-on-med-and-down",[
+	         m(".col l3 hide-on-med-and-down",[
 	           m.component(sidebar)
 	         ]),
 	         //the sider and everything else
-	         m(".col l9 s12 m12",[
-	           m.component(nivoslider),
-
-	           // m("h4",{class:"center blue-text"},"Welcome"),
-	           m(".card-panel",[
-	             m("p","Premier ECDE teachers college is an accredited Institution of high learning by the Rwanda government. It started in 2013 with 3 objectives:"),
-
-	             m("ol",[
-	               objectives.map(function(objective){
-	                return m("li",objective.text)
-	               })
-	             ]),
-
-	             m(".card-panels",[
-	                m("p","View a detailed product information on what we offer ",[
-	                  m("a",{
-	                    href:"/proffessional_development/productinformation",
-	                    config:m.route
-	                  },"here")
-	                ])
-	             ]),
-
-	             m(".row",[
-	                m(".col l6",[
-	                  m('h4',{class:"center"},"Mission"),
-	                  m("p","A model institution providing quality early childhood teacher education for africa and beyond.")
-	                ]),
-
-	                m(".col l6",[
-	                  m('h4',{class:"center"},"Vision"),
-	                  m("p","To attain world class standard in Early childhood teacher Education training, research and innovation for sustainable individual holistic growth.")
-	               ])
-	             ])
-
-	           ]),
-
-
-	         ]),
-
-
-
-
+	         m(".col l9",[
+	         	args.body ? m(args.body) : ""
+	         ])
+	         
 	       ]),
 
 	       m.component(footer)
+
 	     ])
 
 	  }
@@ -182,8 +631,7 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 111:
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navitem = __webpack_require__(112)
@@ -238,7 +686,7 @@ webpackJsonp([2,3],{
 	                          "links":[
 	                              { title:"Student", url:"/auth/Student/pass-1/",direction:'left' },
 	                              { title:"Staff", url:"/auth/Staff/pass-1/",direction:'left' },
-	                              { title:"Admin", url:"/auth/Admin/pass-1/",direction:'left' }
+	                              { title:"Admin", url:"/uniadmin/Premier/1",direction:'left' }
 	                           ],
 	                            "settings":{
 	                              direction:"right"
@@ -381,8 +829,7 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 112:
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -402,8 +849,43 @@ webpackJsonp([2,3],{
 
 
 /***/ },
+/* 113 */
+/***/ function(module, exports) {
 
-/***/ 113:
+	// var fbPage = require('../../../../__components/plugins/fbPage');
+
+	module.exports = {
+	  view: function(args){
+	    // return ("div","footer")
+	    return m("footer",{class:"page-footer blue"},[
+	      m(".hide-on-med-and-up",[
+	        m("br"),
+	        m(".container",[
+	          // m(fbPage,{
+	          //   height:"250px",
+	          //   width:"100%",
+	          //   page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
+	          //   tabs:"timeline, events, messages",
+	          //   smallHeader:"true",
+	          //   adaptWidth:"true",
+	          //   hideCover:"false",
+	          //   showPosts:"false",
+	          //   facePile:"true"
+	          // })
+	        ]),
+	        m("br")
+	      ]),
+
+	      m("div",{class:"footer-copyright"},"Copyright 2015. Premier ECDE Teachers College. P.O. BOX 3279 Kigali, Rwanda",[
+	        m("span",{class:"right"},"< SSU: 0.2.3 />")
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 114 */
 /***/ function(module, exports) {
 
 	// var JD = require('../../../../__components/libs/jollyData');
@@ -466,8 +948,126 @@ webpackJsonp([2,3],{
 
 
 /***/ },
+/* 115 */
+/***/ function(module, exports) {
 
-/***/ 114:
+	module.exports = {
+	  view:function(ctrl,args){
+	    var link = "documents/" + args.name;
+
+	    var customHeight;
+	    if(args.height){
+	      customHeight = args.height
+	    }else{
+	      customHeight="700px";
+	    }
+
+	    return m("div[id='PDFObject']",{
+	      config:function(){
+	        var myParams = {
+	          url: link,
+	          height:customHeight,
+	          pdfOpenParams: {
+	             navpanes: 0,
+	             statusbar: 1,
+	             view: "FitV",
+	             pagemode: "thumbs"
+	          }
+	        };
+
+	       PDFObject(myParams).embed('PDFObject');
+	      }
+	    },[
+	      m("p","It appears you dont have Adobe Reader or PDF support in this web browser. download the document ",[
+	        m("a",{href:link},"here")
+	      ])
+	    ])
+
+	  }
+	}
+
+
+/***/ },
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var navbar = __webpack_require__(111)
+	var sidebar = __webpack_require__(114)
+	var nivoslider = __webpack_require__(117)
+	var footer = __webpack_require__(113)
+
+	var objectives = [
+	  {text:"To provide education geared toward development of the childs mental, physical and spiritual growth."},
+	  {text:" To provide accessible, affordable and quality childhood education to teachers"},
+	  {text:" To promote the national goals and objectives of Early Childhood Development Education to Rwanda."}
+
+
+	];
+
+	module.exports = {
+	  view:function(ctrl){
+	    return m(".app",[
+	       m.component(navbar),
+
+	       m(".row",[
+	         //collumn 1 , the sidebar
+	         m(".col l3 s3 m3  hide-on-med-and-down",[
+	           m.component(sidebar)
+	         ]),
+	         //the sider and everything else
+	         m(".col l9 s12 m12",[
+	           m.component(nivoslider),
+
+	           // m("h4",{class:"center blue-text"},"Welcome"),
+	           m(".card-panel",[
+	             m("p","Premier ECDE teachers college is an accredited Institution of high learning by the Rwanda government. It started in 2013 with 3 objectives:"),
+
+	             m("ol",[
+	               objectives.map(function(objective){
+	                return m("li",objective.text)
+	               })
+	             ]),
+
+	             m(".card-panels",[
+	                m("p","View a detailed product information on what we offer ",[
+	                  m("a",{
+	                    href:"/proffessional_development/productinformation",
+	                    config:m.route
+	                  },"here")
+	                ])
+	             ]),
+
+	             m(".row",[
+	                m(".col l6",[
+	                  m('h4',{class:"center"},"Mission"),
+	                  m("p","A model institution providing quality early childhood teacher education for africa and beyond.")
+	                ]),
+
+	                m(".col l6",[
+	                  m('h4',{class:"center"},"Vision"),
+	                  m("p","To attain world class standard in Early childhood teacher Education training, research and innovation for sustainable individual holistic growth.")
+	               ])
+	             ])
+
+	           ]),
+
+
+	         ]),
+
+
+
+
+	       ]),
+
+	       m.component(footer)
+	     ])
+
+	  }
+	}
+
+
+/***/ },
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -513,51 +1113,51 @@ webpackJsonp([2,3],{
 
 
 /***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 115:
-/***/ function(module, exports) {
-
-	// var fbPage = require('../../../../__components/plugins/fbPage');
-
+	var noticeboard_item = __webpack_require__(108)
 	module.exports = {
-	  view: function(args){
-	    // return ("div","footer")
-	    return m("footer",{class:"page-footer blue"},[
-	      m(".hide-on-med-and-up",[
-	        m("br"),
-	        m(".container",[
-	          // m(fbPage,{
-	          //   height:"250px",
-	          //   width:"100%",
-	          //   page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
-	          //   tabs:"timeline, events, messages",
-	          //   smallHeader:"true",
-	          //   adaptWidth:"true",
-	          //   hideCover:"false",
-	          //   showPosts:"false",
-	          //   facePile:"true"
-	          // })
-	        ]),
-	        m("br")
-	      ]),
-
-	      m("div",{class:"footer-copyright"},"Copyright 2015. Premier ECDE Teachers College. P.O. BOX 3279 Kigali, Rwanda",[
-	        m("span",{class:"right"},"< SSU: 0.2.3 />")
-	      ])
-	    ])
-	  }
+		controller:function(){
+			return {
+				items:m.request({
+					method:"GET",
+					url:"http://localhost:3000/basic/getNoticeboard/" + m.route.param("id")
+				})
+			}
+		},
+		view:function(ctrl,args){
+			return m(".noticeboard",[
+	          m(".row",[
+	            m(".col l12",[
+	              ctrl.items().noticeboard_items.map(function(item){
+				     return m(noticeboard_item,{
+		                  id:item.id,
+		                  title:item.title,
+		                  content:item.content,
+		                  args:item.createdAt,
+		                  deleteBtn:false
+		                })
+				   })
+	            ])
+	          ])
+	        ])
+		}
 	}
 
 
-/***/ },
 
-/***/ 116:
+
+	           
+
+/***/ },
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
 
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -628,14 +1228,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 117:
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -669,55 +1268,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 118:
-/***/ function(module, exports) {
-
-	module.exports = {
-	  view:function(ctrl,args){
-	    var link = "documents/" + args.name;
-
-	    var customHeight;
-	    if(args.height){
-	      customHeight = args.height
-	    }else{
-	      customHeight="700px";
-	    }
-
-	    return m("div[id='PDFObject']",{
-	      config:function(){
-	        var myParams = {
-	          url: link,
-	          height:customHeight,
-	          pdfOpenParams: {
-	             navpanes: 0,
-	             statusbar: 1,
-	             view: "FitV",
-	             pagemode: "thumbs"
-	          }
-	        };
-
-	       PDFObject(myParams).embed('PDFObject');
-	      }
-	    },[
-	      m("p","It appears you dont have Adobe Reader or PDF support in this web browser. download the document ",[
-	        m("a",{href:link},"here")
-	      ])
-	    ])
-
-	  }
-	}
-
-
-/***/ },
-
-/***/ 119:
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -752,14 +1309,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 120:
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -795,14 +1351,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 121:
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -837,14 +1392,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 122:
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 	var working_hours = [
 	      {timeName:"Weekdays",duration:"8am-9pm"},
@@ -988,14 +1542,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 123:
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -1030,13 +1583,12 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 124:
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1167,13 +1719,12 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 125:
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1208,13 +1759,12 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 126:
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1249,15 +1799,14 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 127:
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// TODO make a nice table with b=versioning and cute download buttons and last updated list
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1343,13 +1892,12 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 128:
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1482,13 +2030,12 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 129:
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -1523,14 +2070,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 130:
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -1572,14 +2118,13 @@ webpackJsonp([2,3],{
 
 
 /***/ },
-
-/***/ 131:
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
+	var footer = __webpack_require__(113);
+	var sidebar = __webpack_require__(114);
+	var pdfobject = __webpack_require__(115);
 
 
 
@@ -1621,79 +2166,42 @@ webpackJsonp([2,3],{
 
 
 /***/ },
+/* 134 */
+/***/ function(module, exports) {
 
-/***/ 132:
-/***/ function(module, exports, __webpack_require__) {
+	module.exports = function(){
+	  var config = {
+	    logoText:m.route.param("uniName") + " Admin",
+	  	color:"blue",
+	  	topBarItems:[
+	      {url:"/",text:"Home",icon:"mdi-action-view-carousel right"},
+	  		// {url:"/Ninja",text:"Ninja"},
+	  		// {url:"/Church",icon:"mdi-notification-network-locked left",text:"Churches",drops:[
+	        // {url:"/test1",icon:"mdi-notification-event-note left",text:"test1"},
 
-	var noticeboard_item = __webpack_require__(108)
-	module.exports = {
-		controller:function(){
-			return {
-				items:m.request({
-					method:"GET",
-					url:"http://localhost:3000/basic/getNoticeboard/" + m.route.param("id")
-				})
-			}
-		},
-		view:function(ctrl,args){
-			return m(".noticeboard",[
-	          m(".row",[
-	            m(".col l12",[
-	              ctrl.items().noticeboard_items.map(function(item){
-				     return m(noticeboard_item,{
-		                  id:item.id,
-		                  title:item.title,
-		                  content:item.content,
-		                  args:item.createdAt,
-		                  deleteBtn:false
-		                })
-				   })
-	            ])
-	          ])
-	        ])
-		}
-	}
-
-
-
-
-	           
-
-/***/ },
-
-/***/ 133:
-/***/ function(module, exports, __webpack_require__) {
-
-	var navbar = __webpack_require__(111);
-	var footer = __webpack_require__(115);
-	var sidebar = __webpack_require__(113);
-	var pdfobject = __webpack_require__(118);
-
-	module.exports = {
-	  view:function(ctrl,args){
-	    return m(".app",[
-	       m.component(navbar),
-
-	       m(".row",[
-	         //collumn 1 , the sidebar
-	         m(".col l3 hide-on-med-and-down",[
-	           m.component(sidebar)
-	         ]),
-	         //the sider and everything else
-	         m(".col l9",[
-	         	args.body ? m(args.body) : ""
-	         ])
-	         
-	       ]),
-
-	       m.component(footer)
-
-	     ])
-
+	        // {url:"/test3",icon:"mdi-notification-event-note left",text:"test3"},
+	      // ]},
+	      // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
+	  	],
+	  	sideBarItems:[
+	      {text:"Noticeboard",icon:"mdi-image-movie-creation",url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard"},
+	      // {text:"Colleges",url:"/onlineChurch/admin/sermons",icon:"mdi-av-my-library-books"},
+	      // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
+	      // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
+	  	]
 	  }
+
+	  // m.request({
+	  //   url:"http://localhost:3000/basic/getUniversity/" + m.route.param("uniId"),
+	  //   method:"GET",
+	  // }).then(function(res){
+	  //   console.log(res);
+	  //
+	  // })
+
+	  return config
 	}
 
 
 /***/ }
-
-});
+]);

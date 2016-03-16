@@ -17,6 +17,16 @@ module.exports = {
           m(item,{
             text:"Noticeboard code for prem",
             type:"mithril",
+            complete:m.prop(true)
+          }),
+          m(item,{
+            text:"Add ninja uni admin to prem(no auth)",
+            type:"mithril",
+            complete:m.prop(false)
+          }),
+          m(item,{
+            text:"Polish for deployment",
+            type:"mithril",
             complete:m.prop(false)
           }),
           m(item,{

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<title>Premier ECDE Teachers College</title>
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>The Gathering Church kenya</title>
 
-  <!-- CSS  -->
+    <!-- CSS  -->
     <link href="../__dependencies/js/materialize/dist/css/materialize.min.css" rel="stylesheet">
     <link href="../__dependencies/css/styles.css" rel="stylesheet">
 
@@ -13,42 +16,47 @@
 
     <!-- time stuff -->
     <script src="../__dependencies/js/moment.min.js"></script>
-   
 
+    <!-- View Engine -->
+    <script src="../__dependencies/js/mithril/mithril.min.js"></script>
+
+    <link rel="stylesheet" href="../__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css">
+
+    <script src="../__dependencies/js/jquery.validate.min.js"></script>-->  
+    <script src="../__dependencies/js/pdfobject/pdfobject.min.js"></script>
     <link rel="stylesheet" href="../__dependencies/js/nivoslider/nivo-slider.css">
-
-  <script src="../__dependencies/js/nivoslider/jquery.nivo.slider.pack.js"></script>
-<!--   <script src="../__dependencies/js/jquery.validate.min.js"></script>-->  
-   <script src="../__dependencies/js/pdfobject/pdfobject.min.js"></script>
+    <script src="../__dependencies/js/nivoslider/jquery.nivo.slider.pack.js"></script>
 
 </head>
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=421545291365240";
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  <script>
-    var dev = true
+        <script src="../__dependencies/Ideal-Image-Slider-1.5.0/ideal-image-slider.js"></script>
 
-    if(!dev){
-      var apiUrl = "https://glacial-forest-94387.herokuapp.com/v1/"
-    }else{
-      var apiUrl = "http://branie-Inspiron-3521:4200/v1/"
-    }
+        <script>
+            // var url = "https://thawing-hamlet-56163.herokuapp.com"
+            var url = "http://localhost:3000"
+            var config = {
+                settings :{
+                  installationYear:"2015",
+                  currentYear:new Date().getFullYear()
+                },
+                profile:{
+                  churchName:"Gathering church kenya"
+                }
+            }
 
-    var config = {
-      profile:{
-        id:"premierCollege"
-      }
-    }
-  </script>
+            var color = "blue"
+            var primaryColor = "purple"
+        </script>
 
-  <script src="../__dependencies/js/mithril/mithril.min.js"></script>
-  <script src="../commons.js"></script>
-  <script src="./premier.bundle.js"></script>
-</body>
+        <script src="../commons.js"></script>
+        <script src="premier.bundle.js"></script>
+    </body>
 </html>

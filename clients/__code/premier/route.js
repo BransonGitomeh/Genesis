@@ -1,4 +1,7 @@
+var __components = require('../__components/index.js');
+var adminUi = __components.adminLayout
 var layout = require("./app/pages/layout")
+
 m.route.mode = "hash";
 
 m.route(document.body,'/',{
@@ -54,5 +57,7 @@ m.route(document.body,'/',{
   // "/auth/Staff/forgot/:identifier":require("./app/pages/auth/Staff/forgot")
 
 
+  "/uniadmin/:uniName/:uniId":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("../ninja/app/uni/home") }),
+  "/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("../ninja/app/uni/noticeboard") }),
 
 });

@@ -22,7 +22,7 @@
     "noticeboard": [
       {
         "createdAt": "2016-03-16T08:32:28.085Z",
-        "updatedAt": "2016-03-16T08:56:52.134Z",
+        "updatedAt": "2016-03-16T09:43:17.314Z",
         "id": 1,
         "university": 1
       }
@@ -41,6 +41,14 @@
         "createdAt": "2016-03-16T08:56:52.109Z",
         "updatedAt": "2016-03-16T08:56:52.154Z",
         "id": 2,
+        "myboard": 1
+      },
+      {
+        "title": "test header 1000",
+        "content": "awesomeness reinvented",
+        "createdAt": "2016-03-16T09:43:17.243Z",
+        "updatedAt": "2016-03-16T09:43:17.357Z",
+        "id": 3,
         "myboard": 1
       }
     ],
@@ -518,7 +526,7 @@
       "id": 1
     },
     "noticeboard_item": {
-      "id": 2
+      "id": 3
     },
     "university_admins__user_uni_i_admin": {},
     "student_guardians__user_my_students": {},
