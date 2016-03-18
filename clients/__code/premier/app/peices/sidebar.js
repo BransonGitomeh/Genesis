@@ -1,5 +1,5 @@
 // var JD = require('../../../../__components/libs/jollyData');
-// var fbPage = require('../../../../__components/plugins/fbPage');
+var fbPage = require('../../../__components/plugins/fbPage');
 
 module.exports = {
   view:function(ctrl,attrs){
@@ -10,7 +10,7 @@ module.exports = {
       {title:"Downloads", url:"/operations/downloads"},
       {title:"Library",url:"/academics/liblary"},
       {title:"Bronchure",url:"/proffessional_development/bronchure"},
-      {title:"NoticeBoard",url:"/noticeboard/1"},
+      {title:"NoticeBoard",url:"/noticeboard/56e9d9709075db1100815c52"},
       {title:"Service Charter",url:"/operations/service_charter"},
     ]
 
@@ -39,17 +39,17 @@ module.exports = {
       ]),
       //fb container
       m(".container",[
-        // m(fbPage,{
-        //   height:"250px",
-        //   width:"380px",
-        //   page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
-        //   tabs:"timeline, events, messages",
-        //   smallHeader:"true",
-        //   adaptWidth:"true",
-        //   hideCover:"false",
-        //   showPosts:"false",
-        //   facePile:"true"
-        // })
+        m(fbPage,{
+          height:"250px",
+          width:"380px",
+          page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
+          tabs:"timeline, events, messages",
+          smallHeader:"true",
+          adaptWidth:"true",
+          hideCover:"false",
+          showPosts:"false",
+          facePile:"true"
+        })
       ])
     ])
   ])

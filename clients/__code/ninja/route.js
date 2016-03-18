@@ -3,7 +3,7 @@ var adminUi = __components.adminLayout
 
 var ninjaUIConfig = require("./ninjaAdminUiConfig")
 var churchUiConfig = require("./churchiaAdminUiConfig")
-// var uniAdminUiConfig = require("./uniAdminUiConfig")
+var uniAdminUiConfig = require("../premier/uniAdminUiConfig")
 
 m.route.mode = "hash";
 
@@ -16,10 +16,26 @@ m.route(document.body,"/",{
 		"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/all") }),
 
 		//playground
-		"/ninja/play/ted":m(adminUi,{ config:ninjaUIConfig, body:require("./app/ninja/play/ted") }),
-		"/ninja/play/caro":m(adminUi,{ config:ninjaUIConfig, body:require("./app/ninja/play/caro") }),
+		"/ninja/play/ted":m(adminUi,{ 
+			config:ninjaUIConfig, 
+			body:require("./app/ninja/play/ted") 
+		}),
+		"/ninja/play/caro":m(adminUi,{ 
+			config:ninjaUIConfig, 
+			body:require("./app/ninja/play/caro") 
+		}),
 
-		"/uniadmin/:uniName/:uniId":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("./app/uni/home") }),
-		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("./app/uni/noticeboard") }),
+		"/uniadmin/:uniName/:uniId":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/home") 
+		}),
+		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/noticeboard") 
+		}),
+		"/uni/admins/:uniId":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/admins") 
+		})
 
 })

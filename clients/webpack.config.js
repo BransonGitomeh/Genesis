@@ -1,6 +1,6 @@
 // var webpack = require('webpack');
 // var path = require("path");
-var CommonsChunkPlugin = new require("webpack/lib/optimize/CommonsChunkPlugin")
+// var CommonsChunkPlugin = new require("webpack/lib/optimize/CommonsChunkPlugin")
 // var bower_dir = __dirname + '/bower_components';
 
 var config = {
@@ -16,10 +16,10 @@ var config = {
 
   plugins: [
       // extracts common code from the builds
-       new CommonsChunkPlugin({
-           filename: "commons.js",
-           name: "commons"
-       }),
+       // new CommonsChunkPlugin({
+       //     filename: "commons.js",
+       //     name: "commons"
+       // }),
 
       // concats all the external libs
       //  new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')

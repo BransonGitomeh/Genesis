@@ -6,6 +6,7 @@ module.exports = {
     },[
         m("a",{
                 href:attrs.link.url,
+                class:"left truncate",
                 config:m.route
               }, attrs.link.title)
     ])

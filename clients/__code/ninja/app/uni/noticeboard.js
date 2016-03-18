@@ -63,7 +63,8 @@ module.exports = {
                   id:item.id,
                   title:item.title,
                   content:item.content,
-                  args:item.createdAt
+                  args:item.createdAt,
+                  deleteBtn:true
                 })
               })
               : ""

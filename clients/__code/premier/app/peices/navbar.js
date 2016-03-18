@@ -50,7 +50,7 @@ module.exports = {
                           "links":[
                               { title:"Student", url:"/auth/Student/pass-1/",direction:'left' },
                               { title:"Staff", url:"/auth/Staff/pass-1/",direction:'left' },
-                              { title:"Admin", url:"/uniadmin/Premier/1",direction:'left' }
+                              { title:"Admin", url:"/uniadmin/Premier ECDE Teachers College/56e9d9709075db1100815c52",direction:'left' }
                            ],
                             "settings":{
                               direction:"right"

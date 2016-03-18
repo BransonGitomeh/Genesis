@@ -12,6 +12,20 @@ module.exports = function(app,db){
     })
   })
 
+  app.get("/basic/getAdmins/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("admins").exec((err, university)=>{
+      if(err) throw err;
+      res.send(university.admins)
+    })
+  })
+
+  app.get("/basic/revokeAdmin/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("admins").exec((err, university)=>{
+      if(err) throw err;
+      res.send(university.admins)
+    })
+  })
+
   app.get("/basic/getUniversity/:id",(req,res) => {
     db.university.findOne({id:req.params.id}).exec((err, universities)=>{
       if(err) throw err;
@@ -88,11 +102,13 @@ module.exports = function(app,db){
             })
 
           })
-        })
 
+        })
 
       })
 
     })
+
   })
+
 }

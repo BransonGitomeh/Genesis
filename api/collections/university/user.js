@@ -8,7 +8,7 @@ module.exports = [{
         via:"user"
       },
       profile:{model:"user_profile"},
-      uni_i_admin:{
+      unis_i_admin:{
         collection:"university",
         via:"admins"
       },

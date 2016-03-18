@@ -59,5 +59,6 @@ m.route(document.body,'/',{
 
   "/uniadmin/:uniName/:uniId":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("../ninja/app/uni/home") }),
   "/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("../ninja/app/uni/noticeboard") }),
+  "/uni/admins/:uniId":m(adminUi,{ config:require("./uniAdminUiConfig"), body:require("../ninja/app/uni/noticeboard") }),
 
 });

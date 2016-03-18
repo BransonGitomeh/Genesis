@@ -22,7 +22,7 @@ module.exports = {
                 controller.universities().map(function(university){
                   return m("tr",[
                     m("td",university.id),
-                    m("td",university.name),
+                    m("td",university.uniName  || university.name),
                     m("td",university.createdAt),
                     m("td",university.updatedAt),
                     m("td",[

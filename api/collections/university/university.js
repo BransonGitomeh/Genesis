@@ -4,7 +4,7 @@ module.exports = [{
       name:"string",
       admins:{
         collection:"user",
-        via:"uni_i_admin"
+        via:"unis_i_admin"
       },
       students:{
         collection:"student",
