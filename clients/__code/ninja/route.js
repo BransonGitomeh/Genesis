@@ -24,22 +24,26 @@ m.route(document.body,"/",{
 			config:ninjaUIConfig, 
 			body:require("./app/ninja/play/caro") 
 		}),
-
+		
 		"/uniadmin/:uniName/:uniId":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/home") 
 		}),
+		//view noticeboard
 		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/noticeboard") 
 		}),
+		// view admins
 		"/uni/admins/:uniName/:uniId":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/allAdmins") 
 		}),
+		// add admin
 		"/uni/admins/:uniName/:uniId/add":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/newAdmin") 
 		}),
+		//login for admin
 		"/uniLogin/:uniName/:uniId":require("./app/uni/login")
 })

@@ -1,9 +1,12 @@
 module.exports = {
-  production:false,
+  //switch
+  production:true,
+  //settings for development
   devPort:3000,
   devAdapter:"disk",
   prodAdapter:"prodMongo",
   devMigration:"safe",
+  //adapters n all that ish
   adapters:{
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
