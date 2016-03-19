@@ -12,6 +12,10 @@ module.exports = [{
         collection:"university",
         via:"admins"
       },
+      unis_im_revoked:{
+        collection:"university",
+        via:"revoked_admins"
+      },
       my_students:{
         collection:"student",
         via:"guardians"

@@ -12,17 +12,59 @@ module.exports = function(app,db){
     })
   })
 
-  app.get("/basic/getAdmins/:id",(req,res) => {
+  app.get("/basic/getRevokedAdmins/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
+      if(err) throw err;
+      res.send(university.revoked_admins)
+    })
+  })
+
+  app.get("/basic/getAdmins/:id",(req,res) => { 
     db.university.findOne({id:req.params.id}).populate("admins").exec((err, university)=>{
       if(err) throw err;
       res.send(university.admins)
     })
   })
 
-  app.get("/basic/revokeAdmin/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("admins").exec((err, university)=>{
+  app.post("/basic/revokeAdmin/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
       if(err) throw err;
-      res.send(university.admins)
+      university.admins.remove(req.body.userId)
+      university.revoked_admins.add(req.body.userId)
+      university.save((err) => {
+        var responce = {
+          status:"success"
+        }
+        res.send(responce)
+      })
+    })
+  })
+
+  app.post("/basic/restoreAdmin/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
+      if(err) throw err;
+      university.admins.add(req.body.userId)
+      university.revoked_admins.remove(req.body.userId)
+      university.save((err) => {
+        var responce = {
+          status:"success"
+        }
+        res.send(responce)
+      })
+    })
+  })
+
+  app.post("/basic/removeAdmin/:id",(req,res) => {
+    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
+      if(err) throw err;
+      university.admins.remove(req.body.userId)
+      university.revoked_admins.remove(req.body.userId)
+      university.save((err) => {
+        var responce = {
+          status:"success"
+        }
+        res.send(responce)
+      })
     })
   })
 

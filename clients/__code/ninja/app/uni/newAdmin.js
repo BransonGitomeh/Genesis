@@ -12,12 +12,11 @@ module.exports = {
         userIdentifier:m.prop(""),
         userUsername:m.prop(""),
         userPassword:m.prop(""),
-        confirmPassword:m.prop("")
+        confirmPassword:m.prop(""),
+        //for the search existing user form
+        existingUserIdentifier:m.prop(""),
       }
     }
-  //req.body.userIdentifier
-  //req.body.userUsername
-  //req.body.userPassword
   },
   view:function(controller,atrrs){
     return m(".row",[
@@ -34,7 +33,7 @@ module.exports = {
                 userUsername:controller.schema.userUsername(),
                 userPassword:controller.schema.userPassword()
               }
-            }).then(m.route( m.route( ) ))
+            }).then(m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
             e.preventDefault();
           }
         },[
@@ -76,58 +75,43 @@ module.exports = {
       ]),
 
       m("div",{class:"col l4"},[
-        m("form",{class:"card-panel"},[
+        m("form",{
+          class:"card-panel",
+          onsubmit:function(e){
+            e.preventDefault();
+            // var move = 
+            m.request({
+              url:apiUrl + "/basic/addExistingUserToAdmin/" + m.route.param("uniId"),
+              method:"POST",
+              data:{
+                identifier:controller.schema.existingUserIdentifier(),
+              }
+            }).then(function(res){
+              console.log(res)
+              //back to view all admins
+              if(res.result === false){
+                alert("no user with that email was found")
+              }else{
+                m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )
+              }
+            }) 
+            
+          }
+        },[
           m("h1",{class:"center"},"Search existing user"),
           m(inputComponent,{
             label:"Registered email",
             type:"text",
             sizes:"col l12 center",
-            value:controller.schema.title
+            value:controller.schema.existingUserIdentifier
           }),
             m("button",{
                 type:"submit",
+                dissabled:"true",
                 class:"btn waves-effect waves-block waves-light cyan"
             },"Search User")
         ])
-      ]),
-
-        
-
-        m(".col l12",[
-          // m("br"),
-
-          m("h1","Current Admins"),
-          m("table",[
-
-            m("thead",[
-              m("tr",[
-                m("td","id"),
-                m("td","email"),
-                m("td","createdAt")
-              ])
-            ]),
-
-            m("tbody",[
-              controller.admins().map(function(admin){
-                return m("tr",[
-                  m("td",admin.id),
-                  m("td",admin.identifier),
-                  m("td",admin.createdAt),
-                  m("td",[
-                    m("button",{
-                      class:"btn-flat waves-effect waves-cyan waves-block"
-                    },"revoke admin rights")
-                  ]),
-                  m("td",[
-                    m("button",{
-                      class:"btn-flat waves-effect waves-cyan waves-block"
-                    },"View activity")
-                  ])
-                ])
-              })
-            ])
-          ])
-        ])
       ])
+    ])
   }
 }

@@ -14,8 +14,7 @@ module.exports = {
               m("tr",[
                 m("th","id"),
                 m("th","name"),
-                m("th","createdAt"),
-                m("th","updatedAt")
+                m("th","createdAt")
               ])
             ]),
             m("tbody",[
@@ -24,12 +23,19 @@ module.exports = {
                     m("td",university.id),
                     m("td",university.uniName  || university.name),
                     m("td",university.createdAt),
-                    m("td",university.updatedAt),
                     m("td",[
                       m("a",{
-                        href:"/uniadmin/" + university.name + "/" + university.id,
-                        config:m.route
+                        href:"/uniadmin/" + (university.uniName  || university.name )+ "/" + university.id,
+                        config:m.route,
+                        target:"_blank"
                       },"Admin")
+                    ]),
+                    m("td",[
+                      m("a",{
+                        href:"/uniLogin/" + (university.uniName  || university.name )+ "/" + university.id,
+                        config:m.route,
+                        rel:"external",
+                      },"Login")
                     ])
                   ])
                 })

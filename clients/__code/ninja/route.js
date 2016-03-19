@@ -33,9 +33,13 @@ m.route(document.body,"/",{
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/noticeboard") 
 		}),
-		"/uni/admins/:uniId":m(adminUi,{ 
+		"/uni/admins/:uniName/:uniId":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/admins") 
-		})
-
+			body:require("./app/uni/allAdmins") 
+		}),
+		"/uni/admins/:uniName/:uniId/add":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/newAdmin") 
+		}),
+		"/uniLogin/:uniName/:uniId":require("./app/uni/login")
 })

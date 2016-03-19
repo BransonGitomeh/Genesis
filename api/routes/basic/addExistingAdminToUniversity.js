@@ -1,13 +1,12 @@
 //bodys for the post 
-//req.body.uniId
-//req.body.userId
+//req.body.identifier
 
 module.exports = (app,db) => {
   getUniversity = (req,res,next) => {
     req.progress = {};
     console.log(req.body)
 
-    db.university.findOne({id:req.body.uniId}).exec((err,foundUniversity) => {
+    db.university.findOne({id:req.params.uniId}).exec((err,foundUniversity) => {
       console.log(foundUniversity)
       req.progress.foundUniversity = foundUniversity;
       next()
@@ -15,10 +14,20 @@ module.exports = (app,db) => {
   };
 
   getUser = (req,res,next) => {
-    db.user.findOne({id:req.body.userId}).exec((err,foundUser) => {
-      console.log(foundUser)
-      req.progress.foundUser = foundUser;
-      next()
+    db.user.findOne({identifier:req.body.identifier}).exec((err,foundUser) => {
+      // if(err) throw err
+      if(foundUser){
+          console.log(foundUser)
+          req.progress.foundUser = foundUser
+          // res.send(req.progress)
+          next()
+      }else{
+        var responce = {
+          result:false
+        }
+
+        res.send(responce)
+      }
     })
   };
 
@@ -30,7 +39,7 @@ module.exports = (app,db) => {
       foundUser.unis_i_admin.add(university);
 
       foundUser.save((err) => {
-         if(err) throw err;
+         // if(err) throw err;
         next();
       })
       
@@ -45,8 +54,7 @@ module.exports = (app,db) => {
     db.user.findOne({id:user}).populate("unis_i_admin").exec((err,foundUser) => {
       db.university.findOne({id:university}).populate("admins").exec((err,foundUniversity) => {
       	var responce = {
-          university:foundUniversity,
-          user:foundUser
+          result:true
         }
 
         res.send(responce)
@@ -54,7 +62,7 @@ module.exports = (app,db) => {
     })
   };
 
-  app.post("/basic/userToAdmin",[
+  app.post("/basic/addExistingUserToAdmin/:uniId",[
     getUniversity,
     getUser,
     CombineUserToAdminUni,

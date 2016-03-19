@@ -22,15 +22,25 @@ module.exports = {
           m(item,{
             text:"Add ninja uni admin to prem(no auth)",
             type:"mithril",
-            complete:m.prop(false)
+            complete:m.prop(true)
           }),
           m(item,{
             text:"Polish for deployment",
             type:"mithril",
-            complete:m.prop(false)
+            complete:m.prop(true)
           }),
           m(item,{
             text:"Deploy",
+            type:"heroku",
+            complete:m.prop(true)
+          }),
+          m(item,{
+            text:"Add admin adding flow",
+            type:"heroku",
+            complete:m.prop(false)
+          }),
+          m(item,{
+            text:"Add password Login flow",
             type:"heroku",
             complete:m.prop(false)
           })

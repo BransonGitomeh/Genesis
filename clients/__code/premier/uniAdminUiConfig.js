@@ -14,7 +14,10 @@ module.exports = function(){
   	],
   	sideBarItems:[
       {text:"Noticeboard",icon:"mdi-image-movie-creation",url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard"},
-      {text:"Admins",url:"/uni/admins/" + m.route.param("uniId"),icon:"mdi-av-my-library-books"},
+      {icon:"mdi-av-my-library-books",text:"Admins",drops:[
+        {text:"All Admins",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
+        {text:"Add Admin",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add"}
+      ]},
       // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
       // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
   	]
