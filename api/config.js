@@ -1,6 +1,6 @@
 module.exports = {
   //switch
-  production:true,
+  production:false,
   //settings for development
   devPort:3000,
   devAdapter:"disk",

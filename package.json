@@ -4,16 +4,17 @@
   "description": "bad-ass node js",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon api/index.js",
+    "server": "nodemon api/index.js | bunyan -o short",
     "webpack": "webpack",
     "dev-server": "webpack-dev-server",
-    "testProduction":"NODE_ENV=production node api/index.js",
-    "start": "node api/index.js"
+    "testProduction": "NODE_ENV=production node api/index.js",
+    "start": "node api/index.js | bunyan"
   },
   "author": "BransonGitomeh",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "bunyan": "^1.8.0",
     "express": "^4.13.4",
     "sails-disk": "^0.10.9",
     "sails-memory": "^0.10.6",

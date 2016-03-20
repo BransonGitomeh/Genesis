@@ -18,6 +18,20 @@ module.exports = function(){
         {text:"All Admins",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
         {text:"Add Admin",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add"}
       ]},
+      {icon:"mdi-action-settings",text:"Configuration",drops:[
+        {text:"Schools",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/schools"},
+
+        // {text:"Courses"},
+        // {text:"Levels"},
+        // {text:"Stages"},
+        // {text:"Levels"},
+        // {text:"Tri-sems/sems"},
+        // {text:"Study-modes"},
+
+        {text:"Departments"},
+        // {text:"Units"},
+        
+      ]},
       // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
       // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
   	]

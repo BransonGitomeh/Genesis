@@ -76,7 +76,14 @@ module.exports = {
             complete:m.prop(false)
           })
         ])
-      ])
+      ]),
+      m("h1",m.route.param("sortby")),
+      m("h1",m.route.param("dir")),
+      m("h1",m.route.param("awesome")),
+      m("a",{
+        href:m.route() + "&awesome=awesomness",
+        config:m.route
+      },"test route")
     ])
   }
 }
