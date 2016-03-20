@@ -54,13 +54,20 @@ module.exports = {
 
       //]),
 
-      m("div",{class:"card-panel"},[
-        m("div",{class:"divider"}),
-        m("div",{class:"row"},[
-          m("div",{class:"col l3"},"coulmn 1"),
-          m("div",{class:"col l3"},"coulmn 2"),
-          m("div",{class:"col l3"},"coulmn 3"),
-          m("div",{class:"col l3"},"coulmn 4")
+      m("div",{class:"divider"}),
+      m("div",{class:"row"},[
+        m("div",{class:"col l4"},[
+          m("div",{class:"card-panel"},"column 1")
+        ]),
+        m("div",{class:"col l4"},[
+          m("div",{class:"card-panel"},"column 2")
+        ]),
+        m("div",{class:"col l4"},[
+          m("div",{class:"card-panel"},"column 3")
+        ]),
+        m("div",{class:"col l4"},[
+          m("div",{class:"card-panel"},"column 4")
+        ]),
         ])
       ]),
     ])
