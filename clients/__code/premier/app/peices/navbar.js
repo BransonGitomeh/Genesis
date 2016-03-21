@@ -69,9 +69,7 @@ module.exports = {
 
             m("ul",[
               m("a",{class: "brand-logo hide-on-large-only"},"Premier ECDE Teachers college"),
-              // <a class="button-collapse waves-effect waves-light" data-activates="ember337">
-              //   <i class="small mdi-navigation-menu"></i>
-              // </a>
+      
               m("a",{
                 class:"button-collapse waves-effect waves-light",
                 "data-activates":"side-nav",
@@ -89,11 +87,12 @@ module.exports = {
 
               m("ul",{class:"hide-on-med-and-down"},[
 
-                  m.component(navitem,{link:{
-                    title:"Welcome",
-                    direction:"left",
-                    url:"/"
-                  }}),
+                  m(navitem,{link:{
+                      title:"Welcome",
+                      direction:"left",
+                      url:"/"
+                    }
+                  }),
 
                   //create all the links on the navbar using the object on the top
                    dropdowns.map(function(newdropTitles){
@@ -147,12 +146,17 @@ module.exports = {
                    }),
 
 
-                  // console.log(JD.session()),
-                   m.component(navitem,{link:{
+                   m(navitem,{link:{
                      title:"Contact Us",
                      direction:"right",
                      url:"/contactus"
                    }}),
+
+                   m(navitem,{link:{
+                     title:"Noticeboard",
+                     direction:"right",
+                     url:"/noticeboard/" + appId
+                   }})
 
                  ])
              ]),
