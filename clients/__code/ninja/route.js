@@ -53,29 +53,34 @@ m.route(document.body,"/",{
 		//view all proffessional schools
 		"/uni/admin/:uniName/:uniId/schools":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/proffessionalSchoolsLayout"), 
+			body:require("./app/uni/config/schools/proffessionalSchoolsLayout"), 
 		}),
 
 		//viewing courses offered in a school ie IT
 		//**"/courses" in the end since this route can offer other things, maybe
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/coursesLayout"), 
+			body:require("./app/uni/config/courses/coursesLayout"), 
 		}),
 		//viewing all the levels of a certain course ie diploma etc
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/levelsLayout"), 
+			body:require("./app/uni/config/levels/levelsLayout"), 
 		}),
 		//viewing all the stages to be passed through in a level ie sem1 sem2 or in stages etc
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/stagesLayout"), 
+			body:require("./app/uni/config/stages/stagesLayout"), 
 		}),
-		//viewing all the units offered in a certain level.
+		//viewing all the units offered in a certain level...will ask for department to be selected
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units":m(adminUi,{ 
 			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/stagesLayout"), 
+			body:require("./app/uni/config/units/unitsSelectedLayout"), 
+		}),
+		//a selected department is there
+		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/config/units/unitsAvailableLayout"), 
 		}),
 
 
@@ -85,6 +90,4 @@ m.route(document.body,"/",{
 		"/uni/admin/:uniName/:uniId/departments":require("./app/uni/login"),
 		//view all units a department offers, and add
 		"/uni/admin/:uniName/:uniId/departments/:department_id":require("./app/uni/login")
-
-
 })

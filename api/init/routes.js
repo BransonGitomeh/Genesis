@@ -16,6 +16,8 @@ module.exports = function(){
   var makeNewUni = require("../routes/basic/makeNewUni")
   var loginUserToUni = require("../routes/basic/loginUserToUni")
   
+  var config = require("../routes/basic/universityConfig")
+  var configMaking = require("../routes/basic/makeConfig")
 
   routes.push(testUser)
   routes.push(test2)
@@ -27,6 +29,9 @@ module.exports = function(){
 
   routes.push(fetchRoutes)
   routes.push(loginUserToUni)
+
+  routes.push(config)
+  routes.push(configMaking)
 
   return routes;
 }

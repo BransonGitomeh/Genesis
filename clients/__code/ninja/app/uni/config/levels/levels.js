@@ -1,5 +1,4 @@
-var item = require('./item');
-var inputComponent = require('../../../../__components/forminput');
+var inputComponent = require('../../../../../__components/forminput');
 
 var levels = [
   {id:"1",text:"diploma"},
@@ -7,10 +6,35 @@ var levels = [
 ]
 
 module.exports = {
+  controller:function(){
+    return {
+      // schools:m.request({method:"GET","url:"}),
+      levels:m.request({
+        url:apiUrl + "/basic/getLevels/" + m.route.param("course_id"),
+        method:"GET"
+      }),
+      schema:{
+        name:m.prop()
+      }
+    }
+  },
   view:function(ctrl,args){
     return m("div",{class:"col l4"},[
-            m("form",{class:"row"},
+            m("form",{
+              class:"row",
+              onsubmit:function(e){
+                e.preventDefault()
+                m.request({
+                  url:apiUrl + "/basic/makeLevel/" + m.route.param("course_id"),
+                  method:"POST",
+                  data:{
+                    name:ctrl.schema.name()
+                  }
+                }).then(m.route( m.route( ) ))
+              }
+            },
                m(inputComponent,{
+                        value:ctrl.schema.name,
                         label:"Name of new Level",
                         icon:"mdi-image-exposure-plus-1 prefix",
                         type:"text",
@@ -29,12 +53,12 @@ module.exports = {
                 m("h4",{class:"task-card-title"},"Levels"),
                 // m("p",{class:"task-card-date"},"Some other management thing :-)"),
               ]),
-              levels.map(function(level){
+              ctrl.levels().levels.map(function(level){
                 return m("a",{
-                  class:"collection-item " + (m.route.param("level_id") === level.id ? "grey lighten-2" : ""),
+                  class:"collection-item waves-effect waves-dark " + (m.route.param("level_id") == level.id ? "grey lighten-2" : ""),
                   href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + m.route.param("school_id") + "/courses/" + m.route.param("course_id") + "/levels/" + level.id + "/stages",
                   config:m.route
-                },level.text)
+                },level.name)
               })
         ])
     ])

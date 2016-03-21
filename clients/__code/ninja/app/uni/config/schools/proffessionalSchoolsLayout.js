@@ -1,13 +1,13 @@
-var item = require('./item');
 var schools = require('./schools');
 
-
-var inputComponent = require('../../../../__components/forminput');
-var breadcrumb = require("./breadCrumb");
+var breadcrumb = require("../breadCrumb");
 
 var crumps = function(){
 	return [
-		{text:"Schools"},
+		{
+      text:"Schools",
+      url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools"
+    },
 	]
 }
 
