@@ -41,7 +41,7 @@ module.exports = {
       m(".container",[
         m(fbPage,{
           height:"250px",
-          width:"350px",
+          width:"300px",
           page:"https://web.facebook.com/Premier-ECDE-Teachers-College-1439285166325335/?fref=ts",
           tabs:"timeline, events, messages",
           smallHeader:"true",

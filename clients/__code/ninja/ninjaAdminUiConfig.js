@@ -21,6 +21,10 @@ module.exports = function(){
         {url:"/uni/new",text:"New"},
         {url:"/uni/all",text:"View all"}
       ]},
+      {text:"Secondary schools",icon:"mdi-image-movie-creation",drops:[
+        {url:"/uni/new",text:"New"},
+        {url:"/uni/all",text:"View all"}
+      ]},
       {text:"Play Ground",icon:"mdi-content-gesture",drops:[
         {url:"/ninja/play/ted",text:"Ted"},
         {url:"/ninja/play/caro",text:"Caro"}

@@ -50,7 +50,7 @@ module.exports = {
          m(".col l9",[
           //sections in the lib page
           m("section",[
-              m("h3",{class:"center blue-text"},"Online Library"),
+              m("h3",{class:"center blue-text"},"Library"),
               m("p","Welcome to our Library, the Library is accessable to users who can freely sample books from the shelves for the purpose of providing accurate, up to date information, sources and resources which support teaching, training, learning and research activities in the college.")
           ]),
 
@@ -90,48 +90,56 @@ module.exports = {
           m(".divider"),
 
           // E-Journals
-           m("section",[
-              m("h5",{class:"center"},"E-Journals"),
-             m("table",{class:"striped"},[
-                m("thead",[
-                  m("th","Source"),
-                  m("th","Reason For Recomendation")
+          m(".col l6",[
+              m("section",[
+                m("h5",{class:"center"},"E-Journals"),
+               m("table",{class:"striped"},[
+                  m("thead",[
+                    m("th","Source"),
+                    m("th","Reason For Recomendation")
+                  ]),
+
+                  m("tbody",[
+                    e_journal_sourses.map(function(source){
+                      return m("tr",[
+                        m("td",[
+                          m("a", {href:source.url}, source.name)
+                        ]),
+                        m("td",source.explanation)
+                      ])
+                    })
+                  ])
                 ]),
+            ]),
 
-                m("tbody",[
-                  e_journal_sourses.map(function(source){
-                    return m("tr",[
-                      m("td",[
-                        m("a", {href:source.url}, source.name)
-                      ]),
-                      m("td",source.explanation)
-                    ])
-                  })
-                ])
-              ]),
-          ]),
+            m(".divider"),
 
-          m(".divider"),
+            // online books
+            m("section",[
+                m("h5",{class:"center"},"External Links"),
+                m("p","External Links to other E-content will also be uploaded soon.")
+            ]),
 
-          // online books
-          m("section",[
-              m("h5",{class:"center"},"External Links"),
-              m("p","External Links to other E-content will also be uploaded soon.")
-          ]),
-
-          m(".divider"),
+            m(".divider"),
 
            // online books
-          m("section",[
-              m("h5",{class:"center"},"Our Library Rules and Regulations"),
-              m("p","The Library's prime purpose is to provide information services and materials to the PECDETC community. These library rules and regulations have been formulated to promote fair access and use of library resources and facilities. They shall apply to all library users including PECDETC staff.")
-          ]),
+            m("section",[
+                m("h5",{class:"center"},"Our Library Rules and Regulations"),
+                m("p","The Library's prime purpose is to provide information services and materials to the PECDETC community. These library rules and regulations have been formulated to promote fair access and use of library resources and facilities. They shall apply to all library users including PECDETC staff.")
+            ]),
 
-          m(".divider"),
+            m(".divider"),
 
-          m.component(pdfobject,{
-             name:"Library_Rules_and_Regulations.pdf"
+           m.component(pdfobject,{
+               name:"Library_Rules_and_Regulations.pdf"
            }),
+
+          ]),
+          m(".col l6",[
+
+          ])
+           
+          
          ])
 
        ]),

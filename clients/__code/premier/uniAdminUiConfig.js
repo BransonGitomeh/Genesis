@@ -1,7 +1,7 @@
 module.exports = function(){
   var config = {
     logoText:m.route.param("uniName") + " Admin",
-  	color:"pink",
+  	color:"blue",
   	topBarItems:[
       {url:"/",text:"Home",icon:"mdi-action-view-carousel right"},
   		// {url:"/Ninja",text:"Ninja"},

@@ -114,7 +114,8 @@ module.exports = function(app,db){
   app.get("/basic/getNoticeboard/:uniId",(req,res) => {
     db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
       db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("noticeboard_items").exec((err, foundNoticeboard)=>{
-        res.send(foundNoticeboard)
+        // setTimeOut(() => {},2000)
+        setTimeout(()=> res.send(foundNoticeboard), 2000);
       })
 
     })
