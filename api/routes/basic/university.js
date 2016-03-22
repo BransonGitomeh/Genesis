@@ -110,12 +110,32 @@ module.exports = function(app,db){
     })
   })
 
+  app.get("/basic/makeNoticeOld/:id",(req,res) => {
+    db.noticeboard_item.findOne({id:req.params.id}).populate("myboard").populate("oldboard").exec((err,notice)=>{
+      if(err) throw err;
+      db.noticeboard_item.update({id:req.params.id},{myboard:null,oldboard:notice.myboard.id}).exec((err,item)=>{
+        res.send(item)
+      })
+      
+    })
+  })
+
 
   app.get("/basic/getNoticeboard/:uniId",(req,res) => {
     db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
       db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("noticeboard_items").exec((err, foundNoticeboard)=>{
         // setTimeOut(() => {},2000)
-        setTimeout(()=> res.send(foundNoticeboard), 2000);
+        res.send(foundNoticeboard)
+      })
+
+    })
+  })
+
+  app.get("/basic/getNoticeboardOld/:uniId",(req,res) => {
+    db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
+      db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("old_noticeboard_items").exec((err, foundNoticeboard)=>{
+        // setTimeOut(() => {},2000)
+        res.send(foundNoticeboard)
       })
 
     })

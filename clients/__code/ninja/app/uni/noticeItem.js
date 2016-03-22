@@ -1,27 +1,48 @@
 module.exports = {
   view:function(ctrl,args){
-    return m("div",{class:"card-panel"},[
-      m("h4",{class:"center"},args.title),
-      m("div",{class:"divider"}),
-      m("p",args.content),
+    return m("div",{class:"card-panel row"},[
+      m("div",{class:"col l6"},[
+          m("h5",{class:"left"},args.title), 
+      ]),
+      m("div",{class:"col l6"},[
+          m("br"),
+          m("div",{class:"right"},"( shared " + moment.duration(moment(args.createdAt).diff(moment(new Date())),'milliseconds').humanize() + " ago"  + " )")
+      ]),
+
+      m("div",{class:"divider col l12"}),
+
+      m("div",{class:"col l12"},[
+        m("p",args.content)
+      ]),
+      
       m("div",{class:"divider"}),
       m("br"),
-      m("div",{class:"row"},[
-        m("div",{class:"col l6"},[
-          // m("div","weird text"),
-          m("div","( " + moment.duration(moment(args.createdAt).diff(moment(new Date())),'milliseconds').humanize() + " ago"  + " )")
-        ]),
-        m("div",{class:"col l6"},[
+      m("div",[
+        m("div",{class:"col l12"},[
           args.deleteBtn === true ? 
-          m("button",{
-            class:"btn red right",
-            onclick:function(){
-              m.request({
-                method:"GET",
-                url:apiUrl + "/basic/removeFromNoticeboard/" + args.id
-              }).then(m.route(m.route()))
-            }
-          },"remove") :""
+            m("span",[             
+              //remove
+              m("button",{
+                class:"btn red right",
+                onclick:function(){
+                  m.request({
+                    method:"GET",
+                    url:apiUrl + "/basic/removeFromNoticeboard/" + args.id
+                  }).then(m.route(m.route()))
+                }
+              },"remove"),
+              //make old
+              m("button",{
+                class:"btn-flat right",
+                onclick:function(){
+                  m.request({
+                    method:"GET",
+                    url:apiUrl + "/basic/makeNoticeOld/" + args.id
+                  }).then(m.route(m.route()))
+                }
+              },"move to old"),
+            ])
+          :""
 
           // m("div",{class:"right"},"weird text")
         ]),

@@ -5,6 +5,10 @@ module.exports = [{
       noticeboard_items:{
         collection:"noticeboard_item",
         via:"myboard"
+      },
+      old_noticeboard_items:{
+        collection:"noticeboard_item",
+        via:"oldboard"
       }
     }
   },{
@@ -12,7 +16,8 @@ module.exports = [{
     attributes: {
       title:"string",
       content:"string",
-      myboard:{model:"noticeboard"}
+      myboard:{model:"noticeboard"},
+      oldboard:{model:"noticeboard"}
     }
   }
 ]

@@ -1,5 +1,5 @@
 var myComponent = require("./noticeItem")
-
+var oldNotices = require("./oldNotices")
 var inputComponent = require('../../../__components/forminput');
 module.exports = {
   controller:function(){
@@ -56,7 +56,7 @@ module.exports = {
 
         m(".card-panel",[
           m(".row",[
-            m(".col l12",[
+            m(".col l8",[
               controller.noticeboardItems().noticeboard_items ?
               controller.noticeboardItems().noticeboard_items.map(function(item){
                 return m(myComponent,{
@@ -68,7 +68,10 @@ module.exports = {
                 })
               })
               : ""
-            ])
+            ]),
+            m(".col l4",
+              m(oldNotices)
+            )
           ])
         ])
       ])

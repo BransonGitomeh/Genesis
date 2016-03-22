@@ -8,7 +8,7 @@ m.route.mode = "hash";
 
 m.route(document.body,'/',{
   "/":require('./app/pages/home'),
-  "/noticeboard/:id":m(layout,{body:require('./app/pages/noticeboard')}),
+  "/noticeboard/:uniId":m(layout,{body:require('./app/pages/noticeboard')}),
   "/contactus":require('./app/pages/contactus'),
   //academics
   "/academics/ecd":require('./app/pages/ecd'),
