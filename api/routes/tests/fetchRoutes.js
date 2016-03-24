@@ -14,5 +14,11 @@ module.exports = function(app,db){
     })
   })
 
+  app.get("/fetch/files",(req,res) => {
+    var path = __dirname + "/../index.html"
+    console.log(path)
+    // res.sendFile(__dirname + "/../index.html")
+  })
+
 }
 //

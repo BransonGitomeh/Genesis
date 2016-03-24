@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
 
-    "Genesis":"node api/index.js | bunyan -o short & webpack & webpack-dev-server",
-    "genesis":"node api/index.js | bunyan -o short & webpack & webpack-dev-server",
+    "Genesis":"nodemon api/index.js | bunyan -o short & webpack & webpack-dev-server",
+    "genesis":"nodemon api/index.js | bunyan -o short & webpack & webpack-dev-server",
 
     "server": "nodemon api/index.js | bunyan -o short",
     "webpack": "webpack",
     "dev-server": "webpack-dev-server",
 
     "testProduction": "NODE_ENV=production node api/index.js",
-    
+
     "start": "node api/index.js | bunyan && webpack"
   },
   "author": "BransonGitomeh",
