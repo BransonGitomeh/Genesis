@@ -1,7 +1,7 @@
-var item = require('./todo-list/item');
+import  item from './todo-list/item'
 
-module.exports = {
-  view:function(controller,atrrs){
+var component = {
+  view:(controller,atrrs) => {
     return m(".row",[
       m("div",{class:"col l4 white-text"},[
         m("ul",{class:"collection with-header"},[
@@ -87,3 +87,5 @@ module.exports = {
     ])
   }
 }
+
+module.exports = component;
