@@ -13,27 +13,22 @@ module.exports = function(){
       // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
   	],
   	sideBarItems:[
-      {text:"Noticeboard",icon:"mdi-image-movie-creation",url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard"},
-      {text:"Admins",icon:"mdi-av-my-library-books",drops:[
-        {text:"All Admins",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
-        {text:"Add Admin",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add"}
+       {text:"View Board",url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard",icon:"mdi-image-movie-creation"},
+
+
+      {text:"System Users",icon:"mdi-av-my-library-books",drops:[
+        {text:"Admins",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
+        {text:"Registrars",url:"/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
+        {text:"Students",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/index"}
       ]},
+
       {text:"Configuration",icon:"mdi-action-settings",drops:[
         {text:"Schools",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/schools"},
-
-        // {text:"Courses"},
-        // {text:"Levels"},
-        // {text:"Stages"},
-        // {text:"Levels"},
-        // {text:"Tri-sems/sems"},
-        // {text:"Study-modes"},
-
-        {text:"Departments"},
-        // {text:"Units"},
+        {text:"Departments",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments"},
+        {text:"Study modes",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/study_modes"},
+        {text:"Tri-sems/sems",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/tri_sems"}
         
-      ]},
-      // {text:"844 Primary Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-communication-business"},
-      // {text:"844 High Schools",url:"/onlineChurch/admin/sermons",icon:"mdi-image-texture"}
+      ]}
   	]
   }
 

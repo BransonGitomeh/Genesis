@@ -18,7 +18,14 @@ module.exports = function(){
   
   var config = require("../routes/basic/universityConfig")
   var configMaking = require("../routes/basic/makeConfig")
+  var studentStuff = require("../routes/basic/student/index")
+  var feeIssues = require("../routes/basic/student/feeIssues")
+  var makeTrisemester = require("../routes/basic/configurations/makeTrisemester")
 
+  var newStudentStuff = require("../routes/basic/student/makeNewStudent")
+  routes.push(makeTrisemester)
+  routes.push(newStudentStuff)
+  routes.push(feeIssues)
   routes.push(testUser)
   routes.push(test2)
   routes.push(basic)
@@ -32,6 +39,8 @@ module.exports = function(){
 
   routes.push(config)
   routes.push(configMaking)
+
+  routes.push(studentStuff)
 
   return routes;
 }

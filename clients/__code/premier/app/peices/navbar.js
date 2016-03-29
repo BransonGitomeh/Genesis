@@ -5,7 +5,7 @@ module.exports = {
   view: function(args){
     // settings for the nav-bar
     var navColor = "blue";
-    dropIcon="material-icons right"
+    var dropIcon="material-icons right"
     //dynamic data
     var dropdowns = [{
       "Academics":[{
@@ -93,57 +93,57 @@ module.exports = {
                       url:"/"
                     }
                   }),
-
+                  console.log(dropdowns),
                   //create all the links on the navbar using the object on the top
-                   dropdowns.map(function(newdropTitles){
-                     for(dropTitle in newdropTitles){
+                   // dropdowns.map(function(newdropTitles){
+                   //   for(dropTitle in newdropTitles){
 
-                      //push the m(links) generated into an array that will be returned later
-                     navItems.push(
-                       m("li",{class:newdropTitles[dropTitle][0].settings.direction},[
-                         m("a",{
-                            class:'dropdown-button',
-                            config:function(){
-                              $('.dropdown-button').dropdown({
-                                 inDuration: 300,
-                                 outDuration: 225,
-                                 constrain_width: false, // Does not change width of dropdown to that of the activator
-                                 alignment: 'left',
-                                 hover: true, // Activate on hover
-                                 gutter: 0, // Spacing from edge
-                                 belowOrigin: true // Displays dropdown below the button
-                               });
-                            },
-                            "data-activates":dropTitle
-                          },[
-                            m("i",{class:"mdi-navigation-arrow-drop-down right"}),
-                            m("span",dropTitle)
-                          ])
-                       ]),
+                   //    //push the m(links) generated into an array that will be returned later
+                   //   navItems.push(
+                   //     m("li",{class:newdropTitles[dropTitle][0].settings.direction},[
+                   //       m("a",{
+                   //          class:'dropdown-button',
+                   //          config:function(){
+                   //            $('.dropdown-button').dropdown({
+                   //               inDuration: 300,
+                   //               outDuration: 225,
+                   //               constrain_width: false, // Does not change width of dropdown to that of the activator
+                   //               alignment: 'left',
+                   //               hover: true, // Activate on hover
+                   //               gutter: 0, // Spacing from edge
+                   //               belowOrigin: true // Displays dropdown below the button
+                   //             });
+                   //          },
+                   //          "data-activates":dropTitle
+                   //        },[
+                   //          m("i",{class:"mdi-navigation-arrow-drop-down right"}),
+                   //          m("span",dropTitle)
+                   //        ])
+                   //     ]),
 
-                       m("ul",{ //wrapper arround the li links
-                         class:"dropdown-content",
-                         id:dropTitle
-                       },[
-                         newdropTitles[dropTitle][0].links.map(function(droplink){ //dynamic links with a's inside
-                        //  console.log(droplink.url);
-                             return m("li",{
-                               class:(m.route() === droplink.url ? 'active': '')
-                             },[
-                               m("a",{
-                                 class:(m.route() === droplink.url ? 'active': ''),
-                                 href:droplink.url,
-                                 config:m.route
-                               }, droplink.title)
-                             ]);
-                           })
-                       ])
-                       );
+                   //     m("ul",{ //wrapper arround the li links
+                   //       class:"dropdown-content",
+                   //       id:dropTitle
+                   //     },[
+                   //       newdropTitles[dropTitle][0].links.map(function(droplink){ //dynamic links with a's inside
+                   //      //  console.log(droplink.url);
+                   //           return m("li",{
+                   //             class:(m.route() === droplink.url ? 'active': '')
+                   //           },[
+                   //             m("a",{
+                   //               class:(m.route() === droplink.url ? 'active': ''),
+                   //               href:droplink.url,
+                   //               config:m.route
+                   //             }, droplink.title)
+                   //           ]);
+                   //         })
+                   //     ])
+                   //     );
 
-                     }
-                     //return the array containing all the links in the dom
-                     return navItems
-                   }),
+                   //   }
+                   //   //return the array containing all the links in the dom
+                   //   return navItems
+                   // }),
 
 
                    m(navitem,{link:{
@@ -167,21 +167,21 @@ module.exports = {
                   url:"/"
                 }}),
 
-               dropdowns.map(function(newdropTitles){
-                 for(dropTitle in newdropTitles){
-                   newdropTitles[dropTitle][0].links.map(function(droplink){
+               // dropdowns.map(function(newdropTitles){
+               //   for(dropTitle in newdropTitles){
+               //     newdropTitles[dropTitle][0].links.map(function(droplink){
 
-                      sideItems.push(
-                        m.component(navitem,{link:{
-                          title:droplink.title,
-                          url:droplink.url
-                        }})
-                      )
-                   })
-                 }
+               //        sideItems.push(
+               //          m.component(navitem,{link:{
+               //            title:droplink.title,
+               //            url:droplink.url
+               //          }})
+               //        )
+               //     })
+               //   }
 
-                 return sideItems
-               }),
+               //   return sideItems
+               // }),
 
 
               //  m.component(navitem,{link:{

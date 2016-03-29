@@ -22,7 +22,34 @@ module.exports = [{
         collection:"department",
         via:"uni"
       },
+      study_sessions:{
+        collection:"study_session",
+        via:"uni"
+      },
+      tri_semesters:{
+        collection:"tri_semester",
+        via:"uni"
+      },
+      active_tri_semester:{model:"tri_semester"},
+
       noticeboard:{model:"noticeboard"}
+    }
+  },{
+    identity: 'study_session',
+    attributes: {
+      name:"string",
+      uni:{model:"university"},
+      students:{
+        collection:"student",
+        via:"study_mode"
+      }
+    }
+  },{
+    identity: 'tri_semester',
+    attributes: {
+      name:"string",
+      uni:{model:"university"},
+      university:{model:"university"}
     }
   }
 ]

@@ -26,6 +26,11 @@ module.exports = {
           // m("br"),
           //all admins
           m("h1","Current Admins"),
+          m("a",{
+            class:"btn blue right",
+            href:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
+            config:m.route
+          },"add admin"),
           m("table",[
 
             m("thead",[

@@ -85,10 +85,20 @@ module.exports = {
                   m("h4",{class:"task-card-title"},"Available Units"),
                   // m("p",{class:"task-card-date"},"Click to select add the unit to the semester"),
                 ]),
-                ctrl.units_selected().units_i_offer.map(function(unit){
+                ctrl.units_available().units.map(function(unit){
                   return m("a",{
                     class:"collection-item waves-effect waves-dark",
-                    href:"javaScript:void(0);"
+                    href:"javaScript:void(0);",
+                    onclick:() => {
+                      // alert("adding")
+                      m.request({
+                        url:apiUrl + "/basic/addUnitToStage/" + m.route.param("stage_id"),
+                        method:"POST",
+                        data:{
+                          unit_id:unit.id
+                        }
+                      }).then(m.route( m.route( ) ))
+                    }
                   },unit.name)
                 })
           ])
@@ -99,7 +109,7 @@ module.exports = {
                   m("h4",{class:"task-card-title"},"Selected Units"),
                   // m("p",{class:"task-card-date"},"Some other management thing :-)"),
                 ]),
-                ctrl.units_available().units.map(function(unit){
+                ctrl.units_selected().units_i_offer.map(function(unit){
                   return m("a",{
                     class:"collection-item waves-effect waves-dark",
                     href:"javaScript:void(0);"

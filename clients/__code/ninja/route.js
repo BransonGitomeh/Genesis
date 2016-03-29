@@ -33,6 +33,12 @@ m.route(document.body,"/",{
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/noticeboard") 
 		}),
+
+		"/uni/:uniName/:uniId/noticeboard/add":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/newnotice") 
+		}),
+
 		// view admins
 		"/uni/admins/:uniName/:uniId":m(adminUi,{ 
 			config:uniAdminUiConfig, 
@@ -55,6 +61,8 @@ m.route(document.body,"/",{
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/config/schools/proffessionalSchoolsLayout"), 
 		}),
+
+
 
 		//viewing courses offered in a school ie IT
 		//**"/courses" in the end since this route can offer other things, maybe
@@ -87,7 +95,66 @@ m.route(document.body,"/",{
 		//-----departments
 
 		//view all departments
-		"/uni/admin/:uniName/:uniId/departments":require("./app/uni/login"),
+		//view all proffessional schools
+		"/uni/admin/:uniName/:uniId/departments":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/config/departments/DepartmentsLayout"), 
+		}),
 		//view all units a department offers, and add
-		"/uni/admin/:uniName/:uniId/departments/:department_id":require("./app/uni/login")
+		"/uni/admin/:uniName/:uniId/departments/:department_id/units":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/config/units/unitsMakingLayout"), 
+		}),
+
+		//other settings
+		"/uni/admin/:uniName/:uniId/study_modes":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/config/study_modes/study_modesLayout"), 
+		}),
+		//view all units a department offers, and add
+		"/uni/admin/:uniName/:uniId/tri_sems":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/config/tri_sems/tri_semsLayout"), 
+		}),
+
+		//register student to all that stuff
+		"/uni/admin/:uniName/:uniId/Students/index":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/index"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/payments":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/payments"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/payments/:student_id":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/payment"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/selectCourse"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/selectLevel"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/selectStage"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/selectUnits"), 
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/enterOtherDetails"), 
+		}),
 })

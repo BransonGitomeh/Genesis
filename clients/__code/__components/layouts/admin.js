@@ -10,7 +10,6 @@ var topNavItem = require('./topNavItem');
 
 module.exports = {
   view:function(ctrl,args){
-    console.log(args.config().logoText);
     return m(".app",[
       //header, the nav bar
       m("header",{id:"header",class:"page-topbar"},[
@@ -22,8 +21,9 @@ module.exports = {
                 m("a",{class:"brand-logo"},args.config().logoText ? args.config().logoText : "logoText here")
               ]),
 
-              m("ul",{class:"right"},[
 
+
+              m("ul",{class:"right"},[
                 args.config().topBarItems.map(function(item){
                   return m(topNavItem,{
                     url:item.url,
@@ -35,13 +35,6 @@ module.exports = {
 
               ]),
 
-              m("a",{
-                "data-activates":"slide-out",
-                class:"sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"
-              },[
-                m("i",{class:"mdi-navigation-menu"})
-              ])
-
             ])
           ])
         ])
@@ -50,9 +43,10 @@ module.exports = {
       //the main part of the body
       m("#main",[
         //sidebar-
-        m("wrapper",[
+        m(".wrapper",[
           //left side-nav
-          m("aside",{id:"left-sidebar-navx"},[
+          m("aside",{id:"left-sidebar-nav"},[
+
             m("ul",{id:"slide-out",class:"side-nav fixed leftside-navigation",style:"width: 240px"},[
               m(userCard,{
                 color:args.config().color
@@ -73,8 +67,8 @@ module.exports = {
                 })
               })
             ])
-          ]),
 
+          ]),
           //rest of the body
           m("section",{id:"content"},[
             m(".container",[

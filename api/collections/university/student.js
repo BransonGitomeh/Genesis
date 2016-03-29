@@ -17,15 +17,38 @@ module.exports = [{
       },
       course:{model:"course"},
       level:{model:"level"},
-      stage:{model:"stage"}
+      stage:{model:"stage"},
+      study_mode:{model:"study_session"},
+
+      //payments
+      payments:{
+        collection:"payment",
+        via:"student"
+      }
     }
   },{
     identity: 'student_profile',
     attributes: {
-      student:{model:"user"},
+      student:{model:"student"},
       surname:"string",
       othernames:"string",
       dob:"string"
+    }
+  },{
+    identity: 'payment',
+    attributes: {
+      student:{model:"student"},
+      trisem:{model:"tri_semester"},
+      installments:{
+        collection:"installment",
+        via:"payment_i_belongTo"
+      }
+    }
+  },{
+    identity: 'installment',
+    attributes: {
+      ammount:"string",
+      payment_i_belongTo:{model:"payment"}
     }
   }
 ]

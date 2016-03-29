@@ -8,6 +8,7 @@ var config = {
   //   this.resolve.alias[name] = path;
   //   this.module.noParse.push(new RegExp('^' + name + '$'));
   // },
+  // cache: false,
   entry: {
     church:"./clients/__code/church/route.js",
     premier:"./clients/__code/premier/route.js",

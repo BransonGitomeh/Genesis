@@ -6,7 +6,7 @@ module.exports = function(app,db){
   })
 
   app.get("/basic/getUniversities",(req,res) => {
-    db.university.find().exec((err, universities)=>{
+    db.university.find().populate("departments").exec((err, universities)=>{
       if(err) throw err;
       res.send(universities)
     })
@@ -123,8 +123,9 @@ module.exports = function(app,db){
 
   app.get("/basic/getNoticeboard/:uniId",(req,res) => {
     db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
+      if(err) throw err;
       db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("noticeboard_items").exec((err, foundNoticeboard)=>{
-        // setTimeOut(() => {},2000)
+        if(err) throw err;
         res.send(foundNoticeboard)
       })
 
