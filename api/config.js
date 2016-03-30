@@ -59,7 +59,7 @@ module.exports = {
 
   ip:function(){
     if(this.production == true){
-      return (process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT)
+      return process.env.OPENSHIFT_NODEJS_IP;
     }else{
       return this.devPort
     }
@@ -67,7 +67,7 @@ module.exports = {
 
   host:function(){
     if(this.production == true){
-      return (process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT)
+      return process.env.OPENSHIFT_NODEJS_PORT
     }else{
       return this.devPort
     }
