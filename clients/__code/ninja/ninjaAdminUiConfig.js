@@ -17,10 +17,7 @@ module.exports = function(){
       //   {url:"/churchia/new",text:"New"},
       //   {url:"/churchia/all",text:"View all"}
       // ]},
-      {text:"Universities",icon:"mdi-image-movie-creation",drops:[
-        {url:"/uni/new",text:"New"},
-        {url:"/uni/all",text:"View all"}
-      ]}
+      {text:"Universities",url:"/uni/all",icon:"mdi-image-movie-creation"}
       // {text:"Secondary schools",icon:"mdi-image-movie-creation",drops:[
       //   {url:"/uni/new",text:"New"},
       //   {url:"/uni/all",text:"View all"}

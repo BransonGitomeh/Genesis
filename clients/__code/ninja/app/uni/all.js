@@ -8,7 +8,13 @@ module.exports = {
     return m("div",[
       m("div",{class:"card-panel"},[
           m("br"),
-
+          m("span",{class:"flow-text"},"All Registered Universities"),
+          m("a",{
+            class:"btn blue right",
+            href:"/uni/new",
+            config:m.route
+          },"create new"),
+          m("br"),
           m("table",[
             m("thead",[
               m("tr",[
@@ -28,14 +34,14 @@ module.exports = {
                         href:"/uniadmin/" + (university.uniName  || university.name )+ "/" + university.id,
                         config:m.route,
                         target:"_blank"
-                      },"Admin")
+                      },"Admin Ui")
                     ]),
                     m("td",[
                       m("a",{
                         href:"/uniLogin/" + (university.uniName  || university.name )+ "/" + university.id,
                         config:m.route,
                         rel:"external",
-                      },"Login")
+                      },"Login Screens")
                     ])
                   ])
                 })

@@ -8,14 +8,13 @@ module.exports = {
 
   prodAdapter:"prodMongo",
 
-  devMigration:"alter",
+  devMigration:"safe",
 
   //adapters n all that ish
   adapters:{
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
-    disk: require("sails-disk"),
-
+    disk: require("sails-disk")
   },
 
   connections:{

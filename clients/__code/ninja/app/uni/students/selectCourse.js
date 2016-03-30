@@ -42,17 +42,7 @@ module.exports = {
                     })
 
                   )
-                ),
-
-			m(".row margin",[
-                m(inputComponent,{
-                  value:ctrl.schema.identifier,
-                  label:"Email or Phone",
-                  icon:"mdi-hardware-phonelink prefix",
-                  type:"text",
-                  sizes:"s12 m12 l12"
-                })
-              ])
+                )
 		)
 	}
 }

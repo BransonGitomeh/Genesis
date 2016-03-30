@@ -34,7 +34,7 @@ module.exports = {
 						])
 					])
 				]),
-		
+
 			]),
 
 			ctrl.student().payments.map((payment)=>{

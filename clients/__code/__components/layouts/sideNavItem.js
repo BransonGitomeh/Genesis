@@ -31,7 +31,7 @@ module.exports = {
                     m("a",{ //render a normal link
                       href:drop.url,
                       config:m.route,
-                      class:(drop.url === m.route() ? "grey lighten-4" : "")
+                      class:(drop.url === m.route() ? " lighten-4" : "")
                     },[
                       m("i",{class:drop.icon}),
                       m("div",drop.text)
@@ -47,7 +47,7 @@ module.exports = {
       ]) : m("a",{ //render a normal link
         href:args.link,
         config:m.route,
-        class:(args.link === m.route() ? args.color + "-grey lighten-5" : " " )
+        class:(args.link === m.route() ? args.color + " lighten-5" : " " )
       },[
         m("i",{class:args.icon}),
         m("div",args.text)

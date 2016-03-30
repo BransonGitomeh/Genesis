@@ -45,10 +45,15 @@ module.exports = (app,db) => {
       	})
       }
 
-      getCourses(university.proschools[counter])
-
+      if(university.proschools[counter]){
+        getCourses(university.proschools[counter])
+      }else{
+        console.log("there is no single pschool registered, error here")
+        res.send(Collectedcourses)
+      }
+      
       function next(){
-      	console.log(Collectedcourses)
+      	// console.log(Collectedcourses)
       	res.send(Collectedcourses)
       	// console.log("completed all of them")
       }

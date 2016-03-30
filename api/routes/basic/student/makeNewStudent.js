@@ -17,44 +17,48 @@
 module.exports = (app,db) => {
   createStudent = (req,res,next) => {
   	req.progress = {}
-  	db.student.create({adm:req.body.adm,name:req.body.names}).exec(function(err,created){
+  	db.student.create({
+      adm:req.body.adm,
+      name:req.body.names,
+
+      course:req.body.course,
+      level:req.body.level,
+      stage:req.body.stage,
+      study_mode:req.body.study_mode
+    }).exec(function(err,created){
   		if(err) throw err;
   		// res.send(created)
+      console.log(created)
   		req.progress.createStudent = created;
   		next();
   	})
   };
 
   createRelationships = (req,res,next) => {
-  	var student = req.progress.createStudent.id
-
-  	db.student.update(
-  		{id:student},
-  		{
-  			course:req.body.course,
-  			level:req.body.level,
-  			stage:req.body.stage,
-  			study_mode:req.body.study_mode
-  		}
-  	).exec((err,student) => next())
+  	// var student = req.progress.createStudent
+    next()
+  	// db.student.findOne({id:student.id}).exec((err,student) => {
+   //    student.my_universities.add(req.params.uniid)
+   //    student.save((err) => )
+   //  })
   }
 
   connectPayments = (req,res,next) => {
     var student = req.progress.createStudent.id
     var counter = 0;
     function makePaymentConnection(student_id,tri_semesters,next){
-      //make payment, 
+      //make payment,
       //connect it to student
       //connect it to trisemester
       //save it
       //go to next trisemester
-      
+
       var trisem_id = tri_semesters[counter].id
 
       db.payment.create({student:student,trisem:trisem_id}).exec((err,payment)=>{
-        console.log(payment)
+        // console.log(payment)
         var length = tri_semesters.length - 1
-        console.log(length + " - " + counter)
+        // console.log(length + " - " + counter)
         if(counter === length){
           next()
         }else{
@@ -68,71 +72,129 @@ module.exports = (app,db) => {
       db.proschool.findOne({id:course.school.id}).populate("uni").exec((err,proschool)=>{
         db.university.findOne({id:proschool.uni.id}).populate("tri_semesters").exec((err,university)=>{
           makePaymentConnection(student,university.tri_semesters,next)
-          
+
         })
       })
     })
 
-    
+
   }
 
   respond = (req,res,next) => {
-  	db.student.find().populate("course").populate("level").populate("stage").populate("study_mode").exec((err,student) => res.send((student || err)))
+  	db.student.findOne({id:req.progress.createStudent.id})
+    .populate("course")
+    .populate("level")
+    .populate("stage")
+    .populate("study_mode")
+    .exec((err,student) => {
+      // console.log(student)
+      req.progress = {}
+      res.send((student || err))
+    })
   }
 
-  app.post("/basic/makeStudent",[
+  app.post("/basic/makeStudent/:uniId",[
   	createStudent,
   	createRelationships,
     connectPayments,
   	respond
   ])
 
-  app.get("/basic/getAllStudents",(req,res)=>{
-    db.student.find().populate("course").populate("level").populate("stage").populate("study_mode").exec((err,students)=>res.send((err||students)))
-  })
+
 //getting students inside courses in a school
 //passes through every pschool and course inside looking for those
   app.get("/basic/getAllStudents/:uniId",(req,res)=>{
 
+    // db.university.findOne({id:req.params.uniId}).populate("students").exec((err,university)=>{
+    //   res.send(university)
+    // })
     db.university.findOne({id:req.params.uniId})
     .populate("proschools")
     .exec((err,university)=>{
       var Allstudents = []
-      var length = university.proschools.length - 1;
+      var length = university.proschools.length;
       var counter = 0;
-
+    
       function getCourses(proschool){
-        console.log(proschool)
-
+        // console.log(proschool)
+    
         db.proschool.findOne({id:proschool.id}).populate("courses").exec((err,foundProschool)=>{
-          var courses_length = foundProschool.courses.length - 1
+          var courses_length = foundProschool.courses.length
           var courses_counter = 0
-
+    
           function getStudents(course){
             // console.log(course)
             db.course.findOne({id:course.id}).populate("students").exec((err,course)=>{
-              course.students.map((student)=>{
-                db.student.findOne({id:student.id}).populate("course").populate("level").populate("stage").populate("study_mode").exec((err,foundStudent)=>{
-                  console.log(foundStudent)
-                  Allstudents.push(foundStudent)
-                })
-              })
-              // console.log(course.students)
+              var length = course.students.length;
+              var counter = 0
+    
+              function getStudents(student){
+                // console.log(student)
+                db.student.findOne({id:student.id})
+                .populate("course")
+                .populate("level")
+                .populate("stage")
+                .populate("study_mode")
+                .exec((err,foundStudent)=>{
 
+                  console.log(foundStudent.id)
+
+                  Allstudents.push(foundStudent)
+    
+                  if(counter === length - 1){
+                    console.log("found all the students")
+                    res.send(Allstudents)
+                  }else{
+                    console.log("moving to the next student in the ")
+                    counter ++
+                    //check if there is another student
+                    if(course.students[counter]){
+                      getStudents(course.students[counter])
+                    }else{
+                      res.send(Allstudents)
+                    }
+                  }
+    
+                })
+              }
+    
+              //check if the array has another student
+              if(course.students[counter]){
+                getStudents(course.students[counter])
+              }else{
+                res.send(Allstudents)
+              }
+    
+    
+              course.students.map((student)=>{
+              
+                db.student.findOne({id:student.id})
+                .populate("course")
+                .populate("level")
+                .populate("stage")
+                .populate("study_mode")
+                .exec((err,foundStudent)=>{
+                  // console.log(foundStudent)
+                  // Allstudents.push(foundStudent)
+                })
+              
+              })
+    
+    
               if(courses_length - 1 == courses_counter){
                 //move to next proschool
-
+    
                 if(length - 1 == counter){
                 //move to next proschool
                   console.log("finifhed all proschools")
-                  console.log(Allstudents)
+                  // console.log(Allstudents)
                 }else{
                   counter ++
                   console.log(length + " = " + counter)
                   // getCourses(university.proschools[counter])
-
+    
                   if(university.proschools[counter]){
-                    console.log(university.proschools[counter])
+                    // console.log(university.proschools[counter])
                     getCourses(university.proschools[counter])
                   }else{
                     // counter ++
@@ -141,37 +203,37 @@ module.exports = (app,db) => {
                     // console.log("there is o other pschool in that school")
                   }
                 }
-
+    
               }else{
                 courses_counter ++
-                console.log(courses_length + " = " + courses_counter)
+                // console.log(courses_length + " = " + courses_counter)
                 // getStudents((proschool.courses[courses_counter]))
-
+    
                  if(foundProschool.courses[courses_counter]){
                     // console.log(foundProschool.courses[courses_counter])
                      getStudents(foundProschool.courses[courses_counter])
                   }else{
                     counter ++
-
+    
                     if(university.proschools[counter]){
-                      console.log(university.proschools[counter])
+                      // console.log(university.proschools[counter])
                       getCourses(university.proschools[counter])
                     }else{
                       // counter ++
                       // getCourses(university.proschools[counter])
                       // console.log(university.proschools[counter])
-                      res.send(Allstudents)
-                      console.log("there is o other pschool in that school")
+                      // res.send(Allstudents)
+                      console.log("pschool scan complete")
                     }
                     // console.log(foundProschool)
                   }
               }
-
+    
             })
           }
-
+    
           // console.log(foundProschool)
-
+    
           if(foundProschool.courses[courses_counter]){
             // console.log(foundProschool.courses[courses_counter])
              getStudents(foundProschool.courses[courses_counter])
@@ -179,18 +241,18 @@ module.exports = (app,db) => {
             counter ++
             // getCourses(university.proschools[counter])
             // console.log(foundProschool)
-            console.log("there are no more pschools here")
-            res.send(Allstudents)
+            // console.log("there are no more pschools here")
+            // res.send(Allstudents)
           }
-         
+    
         })
       }
-
-      
-
-
+    
+    
+    
+    
       if(university.proschools[counter]){
-        console.log(university.proschools[counter])
+        // console.log(university.proschools[counter])
         getCourses(university.proschools[counter])
       }else{
         // counter ++
@@ -199,7 +261,7 @@ module.exports = (app,db) => {
         console.log("there are no pschools in this school")
         res.send(Allstudents)
       }
-
+    
     })
 
 
