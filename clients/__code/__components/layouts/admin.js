@@ -9,6 +9,9 @@ var sideNavItem = require('./sideNavItem');
 var topNavItem = require('./topNavItem');
 
 module.exports = {
+  controller:()=>{
+     m.redraw.strategy("all")
+  },
   view:function(ctrl,args){
     return m(".app",[
       //header, the nav bar

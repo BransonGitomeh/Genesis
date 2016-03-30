@@ -13,16 +13,8 @@ require("./init/index.js")(collections,config,function(app){
 	routeFiles.map((routeFile) => routeFile(app,app.locals.collections))
 	log.info("Attemting to start server")
 
-	if(config.production === true){
-		app.listen(config.port(),'127.0.0.1',511,(err) => {
-			if(err) throw err
-			log.info("Api  :smile: @-> http://localhost:%s",config.port())
-		})
-	}else{
-		app.listen(config.port(),'127.0.0.1',511,(err) => {
-			if(err) throw err
-			log.info("Api  :smile: @-> 127.0.0.1:%s",config.port())
-		})
-	}
-	
+	app.listen(config.port(),config.ip(),511,(err) => {
+		if(err) throw err
+		log.info("Api  :smile: @-> http://localhost:%s",config.port())
+	})
 })

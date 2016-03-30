@@ -6,6 +6,7 @@ var bunyan = require('bunyan');
 var waterlineInstance = require("waterline")
 
 var log = bunyan.createLogger({name: "core"});
+
 var allowCrossDomain = function(req,res,next){
 	log.info(req.method + "               " + req.url)
 	if('OPTIONS' == req.method){
@@ -23,6 +24,7 @@ var allowCrossDomain = function(req,res,next){
 }
 
 log.info("Innitialized Cors support");
+
 app.use(allowCrossDomain)
 
 log.info("Configuring body-parser");
