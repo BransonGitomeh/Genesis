@@ -5,59 +5,17 @@
 //units
 
 module.exports = (app,db) => {
-  // app.get("/basic/makeStudent",(req,res) => {
-  //   db.student.create({name:"branie"}).exec((err, university)=>{
-  //     if(err) throw err;
-  //     res.send(university)
-  //   })
-  // })
-
-  app.get("/basic/getStudents",(req,res) => {
-    db.student.find().exec((err, university)=>{
-      if(err) throw err;
-      res.send(university)
-    })
-  })
-
   app.get("/basic/getUniCourses/:uniId",(req,res) => {
-    db.university.findOne({id:req.params.uniId}).populate("proschools").exec((err, university)=>{
-      if(err) throw err;
-      // res.send(university)
-
-      var length = university.proschools.length
-      var  counter = 0;
-      var Collectedcourses = []
-      // console.log(university.proschools[counter])
-
-      function getCourses(proschool){
-      	// console.log(proschool)
-      	db.proschool.findOne({id:proschool.id}).populate("courses").exec((err,school)=>{
-      		// console.log(school.courses)
-
-      		school.courses.map((course)=> Collectedcourses.push(course))
-
-      		if(counter >= length - 1){
-      			next()
-      		}else{
-      			counter ++
-      			getCourses(university.proschools[counter])
-      		}
-      	})
-      }
-
-      if(university.proschools[counter]){
-        getCourses(university.proschools[counter])
-      }else{
-        console.log("there is no single pschool registered, error here")
+    db.university.findOne({id:req.params.uniId})
+      .populate("proschools.courses")
+      .exec((err, university)=>{
+        var Collectedcourses = []
+        university.proschools.map((proschool)=>{
+          proschool.courses.map((course)=>{
+           Collectedcourses.push(course)
+          })
+        })
         res.send(Collectedcourses)
-      }
-      
-      function next(){
-      	// console.log(Collectedcourses)
-      	res.send(Collectedcourses)
-      	// console.log("completed all of them")
-      }
-
     })
   })
 

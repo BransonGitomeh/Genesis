@@ -28,11 +28,20 @@ m.route(document.body,"/",{
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/home") 
 		}),
+
+		//finance search page
+		"/uni/:uniName/:uniId/finance/search":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/finance/search") 
+		}),
+
 		//view noticeboard
 		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/noticeboard") 
 		}),
+
+
 
 		"/uni/:uniName/:uniId/noticeboard/add":m(adminUi,{ 
 			config:uniAdminUiConfig, 
@@ -61,8 +70,6 @@ m.route(document.body,"/",{
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/config/schools/proffessionalSchoolsLayout"), 
 		}),
-
-
 
 		//viewing courses offered in a school ie IT
 		//**"/courses" in the end since this route can offer other things, maybe

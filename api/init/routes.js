@@ -14,6 +14,8 @@ module.exports = function(){
   var addExistingAdminToUniversity = require("../routes/basic/addExistingAdminToUniversity")
 
   var makeNewUni = require("../routes/basic/makeNewUni")
+  var searchStudent = require("../routes/basic/configurations/searchStudent")
+
   var loginUserToUni = require("../routes/basic/loginUserToUni")
   
   var config = require("../routes/basic/universityConfig")
@@ -23,6 +25,8 @@ module.exports = function(){
   var makeTrisemester = require("../routes/basic/configurations/makeTrisemester")
 
   var newStudentStuff = require("../routes/basic/student/makeNewStudent")
+
+  routes.push(searchStudent)
   routes.push(makeTrisemester)
   routes.push(newStudentStuff)
   routes.push(feeIssues)

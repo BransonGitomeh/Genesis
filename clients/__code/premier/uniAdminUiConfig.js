@@ -13,7 +13,16 @@ module.exports = function(){
       // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
   	],
   	sideBarItems:[
-       {text:"View Board",url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard",icon:"mdi-image-movie-creation"},
+      {
+        text:"View Board",
+        url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard",
+        icon:"mdi-image-movie-creation"
+      },
+      {
+        text:"Finance",
+        url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/finance/search?q=''",
+        icon:"mdi-editor-attach-money"
+      },
 
 
       {text:"System Users",icon:"mdi-av-my-library-books",drops:[
