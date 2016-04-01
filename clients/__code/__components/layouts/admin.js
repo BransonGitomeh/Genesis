@@ -60,7 +60,6 @@ module.exports = {
               // ]),
 
               args.config().sideBarItems.map(function(item){
-                console.log(item.url)
                 return m(sideNavItem,{
                   link:item.url,
                   icon:item.icon,

@@ -135,6 +135,11 @@ m.route(document.body,"/",{
 			body:require("./app/uni/students/payments"), 
 		}),
 
+		"/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id":m(adminUi,{ 
+			config:uniAdminUiConfig, 
+			body:require("./app/uni/students/viewpayments"), 
+		}),
+
 		"/uni/admin/:uniName/:uniId/Students/payments/:student_id":m(adminUi,{ 
 			config:uniAdminUiConfig, 
 			body:require("./app/uni/students/payment"), 

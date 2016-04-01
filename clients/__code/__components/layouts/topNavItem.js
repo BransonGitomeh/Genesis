@@ -10,7 +10,6 @@ module.exports = {
         args.icon ? m("i",{class:args.icon}) : ""
       ],args.text ? args.text : ""),
 
-      console.log(args.drops),
 
       args.drops ? m("ul",{
         id:args.text,

@@ -1,4 +1,4 @@
-var getAllStudents = require("../student/student.js")
+var getAllStudents = require("../student/student.js").getAllStudents
 var lunr = require("lunr")
 var _ = require("underscore")
 

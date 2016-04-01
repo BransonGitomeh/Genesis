@@ -10,6 +10,7 @@ module.exports = {
       attrs.icon ? m("i",{class:attrs.icon}) : m("span"),
       m("textarea[required]",{
         id:attrs.label + ctrl.uniqId(),
+        // value:attrs.value(),
         name:attrs.label,
         type:attrs.type,
         class:"materialize-textarea",
@@ -23,6 +24,7 @@ module.exports = {
       attrs.icon ? m("i",{class:attrs.icon}) : m("span"),
       m("input[required]",{
         id:attrs.label + ctrl.uniqId(),
+        // value:attrs.value(),
         name:attrs.label,
         type:attrs.type,
         "aria-required":"true",

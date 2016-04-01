@@ -18,7 +18,7 @@ module.exports = {
 		}
 	},
 	view:(ctrl,args)=>{
-		return m(".container",[
+		return m(".containerx card-panel",[
 			m("form",{
 				class:"row margin",
 				onsubmit:(e)=>{
@@ -64,7 +64,7 @@ module.exports = {
 		            			m("td",result.study_mode.name),
 		            			m("td",[
 									m("a",{
-										href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/payments/" + result.id,
+										href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/viewpayments/" + result.id,
 										config:m.route
 									},"view payments")
 								]),

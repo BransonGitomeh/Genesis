@@ -28,78 +28,94 @@ module.exports = {
 	view:(ctrl,args)=>{
 		return m(".row",[
 					m("div",{class:"col s12 m12 l12"},[
-						m("h5",{class:"center"},ctrl.payment().trisem.name ),
+						// m("h5",ctrl.payment().trisem.name ),
 
-						m("form",{
-							class:"row",
-							onsubmit:(e)=>{
-								e.preventDefault();
-								m.request({
-									method:"POST",
-									url:apiUrl + "/basic/addInstalment/" + args.payment_id,
-									data:{
-										ammount:ctrl.schema.ammount(),
-										receipt:ctrl.schema.receiptNo()
-									}
-								}).then((res)=>m.route( m.route( ) ))
-							}
-						},[
-							m("div",{class:"col l3"},[
-								m("b",ctrl.payment().trisem.name)
-							]),
+						// m("form",{
+						// 	class:"row",
+						// 	onsubmit:(e)=>{
+						// 		e.preventDefault();
+						// 		m.request({
+						// 			method:"POST",
+						// 			url:apiUrl + "/basic/addInstalment/" + args.payment_id,
+						// 			data:{
+						// 				ammount:ctrl.schema.ammount(),
+						// 				receipt:ctrl.schema.receiptNo()
+						// 			}
+						// 		}).then((res)=>m.route( m.route( ) ))
+						// 	}
+						// },[
+						// 	// m("div",{class:"col l3"},[
+						// 	// 	m("b",ctrl.payment().trisem.name)
+						// 	// ]),
 
-			                m(inputComponent,{
-			                  value:ctrl.schema.ammount,
-			                  label:"Installment ammount",
-			                  icon:"mdi-editor-attach-money prefix",
-			                  type:"text",
-			                  sizes:"s12 m12 l3"
-			                }),
+			   //              m(inputComponent,{
+			   //                value:ctrl.schema.ammount,
+			   //                label:"Installment ammount",
+			   //                icon:"mdi-editor-attach-money prefix",
+			   //                type:"text",
+			   //                sizes:"s12 m12 l3"
+			   //              }),
 
-			                m(inputComponent,{
-			                  value:ctrl.schema.receiptNo,
-			                  label:"Receipt Number",
-			                  icon:"mdi-editor-insert-drive-file prefix",
-			                  type:"text",
-			                  sizes:"s12 m12 l3"
-			                }),
+			   //              m(inputComponent,{
+			   //                value:ctrl.schema.receiptNo,
+			   //                label:"Receipt Number",
+			   //                icon:"mdi-editor-insert-drive-file prefix",
+			   //                type:"text",
+			   //                sizes:"s12 m12 l3"
+			   //              }),
 
-			                m("div",{class:"s12 m12 l3"},[
-			                	m("br"),
-			                	m("button",{class:"btn blue col l3 waves-effect waves-block waves-light"},"submit")
-			                ])
-			            ]),
-
-			            m("table",{class:"col s12 m12 l12"},[
+			   //              m("div",{class:"s12 m12 l3"},[
+			   //              	m("br"),
+			   //              	m("button",{class:"btn blue col l3 waves-effect waves-block waves-light"},"submit")
+			   //              ])
+			   //          ]),
+			   m("table",{class:"col s12 m12 l12 stripped"},[
 							m("thead",[
 								m("tr",[
 									// m("th","ID"),
-									m("th","ammount"),
-									m("th","receiptNo"),
-									m("th","date")
+									m("th",{class:"grey white-text"},ctrl.payment().trisem.name)
+								])
+							])
+				]),
+
+			            m("table",{class:"col s12 m12 l12 stripped"},[
+							m("thead",[
+								m("tr",[
+									// m("th","ID"),
+									m("th","Date"),
+									m("th","Ammount"),
+									m("th","Receipt")
 								])
 							]),
-							ctrl.payment().installments.map((installment)=>{
-								return m("tr",[
-									// m("td",installment.id),
-									m("td",installment.ammount),
-									m("td",installment.receipt),
-									m("td",installment.createdAt)
-								])
-							}),
-							m(".divider"),
-							m("br")
-							
+							m("tbody",[
+								ctrl.payment().installments.map((installment)=>{
+									return m("tr",[
+										// m("td",installment.id),
+										m("td",installment.createdAt),
+										m("td",installment.ammount),
+										m("td",installment.receipt)
+									])
+								})
+							]),
+
+							m("tr",[
+									m("td",{colspan:2,class:"right"},m("b","Total:")),
+									m("td",m("b",ctrl.payment().sum))
+							])						
 						])
 					]),
 
-					m(".col l12",[
-						m("tr",[
-								m("td",{class:"right"},m("i","total paid in this tri-semester :")),
-								m("td",m("b",ctrl.payment().sum))
-						])
-					])
-					
+					// m(".col l12",[
+					// 	m("tr",[
+					// 			m("td",{colspan:3}),
+					// 			m("td",ctrl.payment().sum)
+					// 	])
+					// ]),
+
+					m("br"),
+					m("br"),
+					m("br"),
+					m("br")
 		])
 										
 				

@@ -27,7 +27,7 @@ module.exports = (app,db) => {
 
   app.get("/basic/getfeePayments/:student_id",(req,res) => {
     db.student.findOne({id:req.params.student_id})
-    .populate("payments")
+    .populate("payments.installments")
     .populate("level")
     .populate("course")
     .populate("stage")

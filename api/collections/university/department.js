@@ -21,6 +21,10 @@ module.exports = [{
           collection:"student",
           via:"units_im_taking"
         },
+        students_that_have_done_me_before:{
+          collection:"student",
+          via:"units_ive_done_before"
+        },
         cost:"string"
       }
     }

@@ -20,6 +20,14 @@ module.exports = [{
       students:{
         collection:"student",
         via:"course"
+      },
+      payments_made_to_me:{
+        collection:"payment",
+        via:"course_paid_to"
+      },
+      students_that_have_done_me_before:{
+        collection:"student",
+        via:"courses_ive_done_before"
       }
     }
   },{
@@ -34,6 +42,14 @@ module.exports = [{
       students:{
         collection:"student",
         via:"level"
+      },
+      payments_made_to_me:{
+        collection:"payment",
+        via:"level_paid_to"
+      },
+      students_that_have_done_me_before:{
+        collection:"student",
+        via:"levels_ive_done_before"
       }
     }
   },{
@@ -48,6 +64,14 @@ module.exports = [{
       students:{
         collection:"student",
         via:"stage"
+      },
+      payments_made_to_me:{
+        collection:"payment",
+        via:"stage_paid_to"
+      },
+      students_that_have_done_me_before:{
+        collection:"student",
+        via:"stages_ive_done_before"
       }
     }
   }

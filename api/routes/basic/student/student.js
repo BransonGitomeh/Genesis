@@ -22,4 +22,39 @@ function getAllStudents(db,uniId,callback){
   
 }
 
-module.exports = getAllStudents
+function makePaymentTotri_sem(
+	db,
+	tri_sem_id,
+	student_id,
+	paymentAmmount,
+	course,
+	level,
+	stage,
+	receiptNo,
+	callback){
+	//make a payment
+	//make connet that to student and trisem
+	//save it
+	db.payment.create({
+		student_who_made_me:student_id,
+		tri_semesters_i_was_paid_to:tri_sem_id,
+		course_paid_to:course,
+        level_paid_to:level,
+        stage_paid_to:stage,
+		ammount:paymentAmmount,
+		receipt:receiptNo
+	}).exec((err,createdPayment)=>{
+
+		db.student.findOne({id:student_id}).exec((err,student)=>{
+
+			student.payments_i_have_made.add(createdPayment);
+			student.save((err),callback)
+		})
+		// callback(createdPayment)
+	})
+}
+
+module.exports = {
+	getAllStudents:getAllStudents,
+	makePaymentTotri_sem:makePaymentTotri_sem
+}
