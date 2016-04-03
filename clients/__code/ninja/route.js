@@ -15,48 +15,48 @@ m.route(document.body,"/",{
 		"/uni/all":m(adminUi,{ config:ninjaUIConfig, body:require("./app/uni/all") }),
 
 		//playground
-		"/ninja/play/ted":m(adminUi,{ 
-			config:ninjaUIConfig, 
-			body:require("./app/ninja/play/ted") 
+		"/ninja/play/ted":m(adminUi,{
+			config:ninjaUIConfig,
+			body:require("./app/ninja/play/ted")
 		}),
-		"/ninja/play/caro":m(adminUi,{ 
-			config:ninjaUIConfig, 
-			body:require("./app/ninja/play/caro") 
+		"/ninja/play/caro":m(adminUi,{
+			config:ninjaUIConfig,
+			body:require("./app/ninja/play/caro")
 		}),
-		
-		"/uniadmin/:uniName/:uniId":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/home") 
+
+		"/uniadmin/:uniName/:uniId":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/home")
 		}),
 
 		//finance search page
-		"/uni/:uniName/:uniId/finance/search":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/finance/search") 
+		"/uni/:uniName/:uniId/finance/search":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/finance/search")
 		}),
 
 		//view noticeboard
-		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/noticeboard") 
+		"/uni/:uniName/:uniId/noticeboard":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/noticeboard")
 		}),
 
 
 
-		"/uni/:uniName/:uniId/noticeboard/add":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/newnotice") 
+		"/uni/:uniName/:uniId/noticeboard/add":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/newnotice")
 		}),
 
 		// view admins
-		"/uni/admins/:uniName/:uniId":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/allAdmins") 
+		"/uni/admins/:uniName/:uniId":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/allAdmins")
 		}),
 		// add admin
-		"/uni/admins/:uniName/:uniId/add":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/newAdmin") 
+		"/uni/admins/:uniName/:uniId/add":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/newAdmin")
 		}),
 		//login for admin
 		"/uniLogin/:uniName/:uniId":require("./app/uni/login"),
@@ -66,107 +66,145 @@ m.route(document.body,"/",{
 		//-----proffessional schools
 
 		//view all proffessional schools
-		"/uni/admin/:uniName/:uniId/schools":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/schools/proffessionalSchoolsLayout"), 
+		"/uni/admin/:uniName/:uniId/schools":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/schools/proffessionalSchoolsLayout"),
 		}),
 
 		//viewing courses offered in a school ie IT
 		//**"/courses" in the end since this route can offer other things, maybe
-		"/uni/admin/:uniName/:uniId/schools/:school_id/courses":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/courses/coursesLayout"), 
+		"/uni/admin/:uniName/:uniId/schools/:school_id/courses":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/courses/coursesLayout"),
 		}),
-		//viewing all the levels of a certain course ie diploma etc
-		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/levels/levelsLayout"), 
-		}),
+
 		//viewing all the stages to be passed through in a level ie sem1 sem2 or in stages etc
-		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/stages/stagesLayout"), 
+		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/stages/stagesLayout"),
 		}),
 		//viewing all the units offered in a certain level...will ask for department to be selected
-		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/units/unitsSelectedLayout"), 
+		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/units/unitsSelectedLayout"),
 		}),
-		//a selected department is there
-		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/units/unitsAvailableLayout"), 
-		}),
+
 
 
 		//-----departments
 
 		//view all departments
 		//view all proffessional schools
-		"/uni/admin/:uniName/:uniId/departments":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/departments/DepartmentsLayout"), 
+		"/uni/admin/:uniName/:uniId/departments/:school_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/departments/DepartmentsLayout"),
 		}),
+
 		//view all units a department offers, and add
-		"/uni/admin/:uniName/:uniId/departments/:department_id/units":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/units/unitsMakingLayout"), 
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/depChoice/DepartmentsLayout"),
+		}),
+
+		//view its courses
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/courses/coursesLayout"),
+		}),
+
+		//viewing all the levels of a certain course ie diploma etc
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/levels/levelsLayout"),
+		}),
+
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/stages/stagesLayout"),
+		}),
+
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/units/unitsSelectedLayout"),
+		}),
+
+		//a selected department is there
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/units/unitsAvailableLayout"),
+		}),
+		//view its units
+		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/units/unitsMakingLayout"),
 		}),
 
 		//other settings
-		"/uni/admin/:uniName/:uniId/study_modes":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/study_modes/study_modesLayout"), 
+		"/uni/admin/:uniName/:uniId/study_modes":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/study_modes/study_modesLayout"),
 		}),
 		//view all units a department offers, and add
-		"/uni/admin/:uniName/:uniId/tri_sems":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/config/tri_sems/tri_semsLayout"), 
+		"/uni/admin/:uniName/:uniId/tri_sems":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/config/tri_sems/tri_semsLayout"),
 		}),
 
 		//register student to all that stuff
-		"/uni/admin/:uniName/:uniId/Students/index":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/index"), 
+		"/uni/admin/:uniName/:uniId/Students/index":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/index"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/payments":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/payments"), 
+		"/uni/admin/:uniName/:uniId/Students/payments":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/payments"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/viewpayments"), 
+		"/uni/admin/:uniName/:uniId/Students/config/:student_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/config"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/payments/:student_id":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/payment"), 
+		"/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/viewpayments"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/selectCourse"), 
+		"/uni/admin/:uniName/:uniId/Students/config/:student_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/config"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/selectLevel"), 
+		"/uni/admin/:uniName/:uniId/Students/payments/:student_id":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/payment"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/selectStage"), 
+		"/uni/admin/:uniName/:uniId/Students":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/selectCourse"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/selectUnits"), 
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/selectLevel"),
 		}),
 
-		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode":m(adminUi,{ 
-			config:uniAdminUiConfig, 
-			body:require("./app/uni/students/enterOtherDetails"), 
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/selectStage"),
+		}),
+
+
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/selectUnits"),
+		}),
+
+		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode":m(adminUi,{
+			config:uniAdminUiConfig,
+			body:require("./app/uni/students/enterOtherDetails"),
 		}),
 })

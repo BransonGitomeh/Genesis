@@ -10,7 +10,7 @@ module.exports = {
     return {
       // schools:m.request({method:"GET","url:"}),
       schools:m.request({
-        url:apiUrl + "/basic/getDepartments/" + m.route.param("uniId"),
+        url:apiUrl + "/basic/getDepartments/" + m.route.param("school_id"),
         method:"GET"
       }),
       schema:{
@@ -25,7 +25,7 @@ module.exports = {
               onsubmit:function(e){
                 e.preventDefault()
                 m.request({
-                  url:apiUrl + "/basic/makeDepartments/" + m.route.param("uniId"),
+                  url:apiUrl + "/basic/makeDepartments/" + m.route.param("school_id"),
                   method:"POST",
                   data:{
                     name:ctrl.schema.name()
@@ -53,12 +53,12 @@ module.exports = {
                 m("h4",{class:"task-card-title"},"Departments"),
                 // m("p",{class:"task-card-date"},"Some other management thing :-)"),
               ]),
-              ctrl.schools().departments.map(function(school){
+              ctrl.schools().departments.map(function(department){
                 return m("a",{
-                  class:"collection-item waves-effect waves-dark " + (m.route.param("department_id") == school.id ? "grey lighten-2" : ""),
-                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "departments/" + school.id + "/units",
+                  class:"collection-item waves-effect waves-dark " + (m.route.param("department_id") == department.id ? "grey lighten-2" : ""),
+                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + department.id,
                   config:m.route
-                },school.name)
+                },department.name)
               })
         ])
     ])

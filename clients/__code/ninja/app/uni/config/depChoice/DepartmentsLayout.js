@@ -1,9 +1,10 @@
-var schools = require('../schools/schools');
-var courses = require('../courses/courses');
-var levels = require('./levels');
+var departments = require('../departments/departments');
+var choices = require('./choices');
 
 
 var breadcrumb = require("../breadCrumb");
+
+var schools = require('../schools/schools');
 
 var crumps = function(){
 	return [
@@ -19,14 +20,6 @@ var crumps = function(){
 			text:"Choice",
 			url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id"),
 		},
-		{
-			text:"Courses",
-			url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id") + "/courses"
-		},
-		{
-			text:"Levels",
-			url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id") + "/courses/" + m.route.param("course_id") + "/levels"
-		},
 	]
 }
 
@@ -34,8 +27,10 @@ module.exports = {
   view:function(controller,atrrs){
     return m(".row",
     	m(breadcrumb,{crumps:crumps()}),
-    	m(courses),
-    	m(levels)
+      m(schools),
+    	m(departments),
+      m(choices)
+    	// m(schools)
     )
   }
 }

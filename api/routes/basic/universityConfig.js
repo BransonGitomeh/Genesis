@@ -16,10 +16,10 @@ module.exports = function(app,db){
     })
   })
 
-  app.get("/basic/getCourses/:id",(req,res) => {
-    db.proschool.findOne({id:req.params.id}).populate("courses").exec((err, proschools)=>{
+  app.get("/basic/getCourses/:department_id",(req,res) => {
+    db.department.findOne({id:req.params.department_id}).populate("courses").exec((err, department)=>{
       if(err) throw err;
-      res.send(proschools)
+      res.send(department)
     })
   })
 
@@ -51,8 +51,28 @@ module.exports = function(app,db){
     })
   })
 
-  app.get("/basic/getDepartments/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("departments").exec((err, university)=>{
+  app.get("/basic/studentsConfiguration/:student_id",(req,res) => {
+    db.student.findOne({id:req.params.student_id})
+    .populate("level")
+    .populate("course")
+    .populate("units_im_taking")
+    .populate("stage.units_i_offer")
+    .exec((err, level)=>{
+      if(err) throw err;
+      res.send(level)
+    })
+  })
+
+  app.get("/basic/getUnitsInCourse/:stage_id",(req,res) => {
+    db.stage.findOne({id:req.params.id})
+      .populate("units_i_offer").exec((err, level)=>{
+      if(err) throw err;
+      res.send(level)
+    })
+  })
+
+  app.get("/basic/getDepartments/:school_id",(req,res) => {
+    db.proschool.findOne({id:req.params.school_id}).populate("departments").exec((err, university)=>{
       if(err) throw err;
       res.send(university)
     })

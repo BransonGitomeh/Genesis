@@ -29,7 +29,7 @@ module.exports = {
         method:"GET"
       }),
       departments:m.request({
-        url:apiUrl + "/basic/getDepartments/" + m.route.param("uniId"),
+        url:apiUrl + "/basic/getDepartments/" + m.route.param("school_id"),
         method:"GET"
       }),
     }
@@ -78,7 +78,7 @@ module.exports = {
                   )
                 )
               ),
-              
+
 
               m("ul",{class:"collection with-header"},[
                 m("li",{class:"collection-header blue white-text"},[

@@ -3,9 +3,9 @@ module.exports = [{
     attributes: {
       name:"string",
       uni:{model:"university"},
-      courses:{
-        collection:"course",
-        via:"school"
+      departments:{
+        collection:"department",
+        via:"proschool"
       }
     }
   },{
@@ -13,6 +13,7 @@ module.exports = [{
     attributes: {
       name:"string",
       school:{model:"proschool"},
+      department:{model:"department"},
       levels:{
         collection:"level",
         via:"course"

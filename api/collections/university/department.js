@@ -3,6 +3,12 @@ module.exports = [{
     attributes: {
       name:"string",
       uni:{model:"university"},
+
+      proschool:{model:"proschool"},
+      courses:{
+        collection:"course",
+        via:"department"
+      },
       units:{
         collection:"unit",
         via:"dep"

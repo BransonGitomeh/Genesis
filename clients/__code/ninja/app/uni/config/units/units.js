@@ -14,7 +14,8 @@ module.exports = {
         method:"GET"
       }),
       schema:{
-        name:m.prop()
+        name:m.prop(),
+        cost:m.prop()
       }
     }
   },
@@ -28,7 +29,8 @@ module.exports = {
                   url:apiUrl + "/basic/makeUnits/" + m.route.param("department_id"),
                   method:"POST",
                   data:{
-                    name:ctrl.schema.name()
+                    name:ctrl.schema.name(),
+                    cost:ctrl.schema.cost()
                   }
                 }).then(m.route( m.route( ) ))
               }
@@ -36,13 +38,21 @@ module.exports = {
                m(inputComponent,{
                         value:ctrl.schema.name,
                         label:"Name of new Unit",
-                        icon:"mdi-image-exposure-plus-1 prefix",
                         type:"text",
                         sizes:"s12 m12 l10",
                   }),
+              m(inputComponent,{
+                           value:ctrl.schema.cost,
+                           label:"Cost of the unit",
+                           type:"text",
+                           sizes:"s12 m12 l10",
+                     }),
                   m(".col l2",
                     m("br"),
-                    m(".btn-floating waves-effect waves-light ",
+                    m("button",{
+                      type:"submit",
+                      class:"btn-floating waves-effect waves-light"
+                    },
                       m("i",{class:"mdi-content-send blue"})
                     )
                   )
@@ -56,41 +66,16 @@ module.exports = {
               ctrl.schools().units.map(function(school){
                 return m("a",{
                   class:"collection-item waves-effect waves-dark waves-block " + (m.route.param("school_id") == school.id ? "grey lighten-2" : ""),
-                  id:school.id + "parent",
-                  onclick:()=>{
-                    alert("clicked link")
-                  },
-                  config:() => {
-                     $("#" + school.id).hide();
-
-                     $("#" + school.id + "parent").hover(function(){
-                          $("#" + school.id).show();
-
-                          console.log("enter hover " + school.name)
-                      }, function() {
-                        $("#" + school.id).hide();
-                          // $(this).removeClass("current").stop(true, true).css("display", "none");
-                          console.log("exit hover " + school.name)
-                      });
-                  }
+                  id:school.id + "parent"
                 },school.name,[
-                    m("a",{
-                      class:"secondary-content btn-floating waves-block waves-light waves-effect blue",
-                      "data-activates":'options' + school.id,
-                      id:school.id,
-                      onclick:(e)=>{
-                        // e.preventDefault();
-                        // alert("clicked button")
-                        // e.preventDefault();
-                        e.stopPropagation();
-                        $("#" + school.id).show();
-                      }
-                    },[
-                      m("i",{class:"mdi-action-settings"}),
-                    ])
+                  m("a",{class:"secondary-content"},[
+                    m("span",{class:"ultra-small"},school.cost ? school.cost : "")
+                  ])
                 ])
               })
         ])
     ])
   }
 }
+
+// <a href="#" class="secondary-content"><span class="ultra-small">Monday</span></a>

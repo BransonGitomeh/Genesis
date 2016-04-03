@@ -29,7 +29,7 @@ module.exports = {
       //   method:"GET"
       // }),
       departments:m.request({
-        url:apiUrl + "/basic/getDepartments/" + m.route.param("uniId"),
+        url:apiUrl + "/basic/getDepartments/" + m.route.param("school_id"),
         method:"GET"
       }),
     }
@@ -58,7 +58,8 @@ module.exports = {
                     onchange:function(e){
                       // console.log(e)
                       // alert(e.target.value)
-                      m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + m.route.param("school_id") + "/courses/" + m.route.param("course_id") + "/levels/" + m.route.param("level_id") + "/stages/" + m.route.param("stage_id")  + "/units/" + e.target.value)
+
+                      m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id") + "/courses/" + m.route.param("course_id") + "/levels/" + + m.route.param("level_id") + "/stages/" + m.route.param("stage_id") + "/units/" + e.target.value)
                     }
                   },
 
@@ -77,7 +78,7 @@ module.exports = {
                   )
                 )
               ),
-              
+
 
               m("ul",{class:"collection with-header"},[
                 m("li",{class:"collection-header blue white-text"},[

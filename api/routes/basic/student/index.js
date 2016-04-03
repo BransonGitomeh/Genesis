@@ -7,15 +7,37 @@
 module.exports = (app,db) => {
   app.get("/basic/getUniCourses/:uniId",(req,res) => {
     db.university.findOne({id:req.params.uniId})
-      .populate("proschools.courses")
+      .populate("proschools.departments.courses")
       .exec((err, university)=>{
         var Collectedcourses = []
+
         university.proschools.map((proschool)=>{
-          proschool.courses.map((course)=>{
-           Collectedcourses.push(course)
+          proschool.departments.map((dep)=>{
+            dep.courses.map((course)=>{
+              Collectedcourses.push(course)
+            })
           })
         })
+        
         res.send(Collectedcourses)
+    })
+  })
+
+  app.post("/basic/AddUnitToStudent/:student_id",(req,res) => {
+    db.student.findOne({id:req.params.student_id}).exec((err,student)=>{
+      student.units_im_taking.add(req.body.unit_id)
+      student.save((err)=>{
+        res.send((err||student))
+      })
+    })
+  })
+
+  app.post("/basic/RemoveUnitFromStudent/:student_id",(req,res) => {
+    db.student.findOne({id:req.params.student_id}).exec((err,student)=>{
+      student.units_im_taking.remove(req.body.unit_id)
+      student.save((err)=>{
+        res.send((err||student))
+      })
     })
   })
 
@@ -82,12 +104,12 @@ module.exports = (app,db) => {
       db.student.findOne({id:student_id})
       .populate("tri_semesters_i_pay_for")
       .populate("payments_i_have_made")
-      .exec((err,studentFound)=>{ 
+      .exec((err,studentFound)=>{
         res.send(studentFound)
       })
     })
     // db,tri_sem_id,student_id,paymentAmmount,callback
-    
+
   })
 
 

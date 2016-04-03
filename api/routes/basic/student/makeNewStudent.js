@@ -30,7 +30,7 @@ module.exports = (app,db) => {
   		// res.send(created)
       // console.log(created)
   		req.progress.createStudent = created;
-  	
+
       //save this records in the students hostory of stuff done before
       db.course.findOne({id:req.body.course}).exec((err,course)=> {
         course.students_that_have_done_me_before.add(created.id)
@@ -54,9 +54,9 @@ module.exports = (app,db) => {
 
       //find the activesem and make it available to the student, register him to it
       db.course.findOne({id:req.body.course})
-      .populate("school.uni.active_tri_semester").exec((err,course)=> {
-
-        created.tri_semesters_i_pay_for.add(course.school.uni.active_tri_semester.id);
+      .populate("department.proschool.uni.active_tri_semester").exec((err,course)=> {
+        console.log(course)
+        created.tri_semesters_i_pay_for.add(course.department.proschool.uni.active_tri_semester.id);
         created.levels_ive_done_before.add(req.body.level);
         created.stages_ive_done_before.add(req.body.stage);
         created.courses_ive_done_before.add(req.body.course);
@@ -108,13 +108,19 @@ module.exports = (app,db) => {
       })
     }
 
-    db.course.findOne({id:req.body.course}).populate("school").exec((err,course)=>{
-      db.proschool.findOne({id:course.school.id}).populate("uni").exec((err,proschool)=>{
-        db.university.findOne({id:proschool.uni.id}).populate("tri_semesters").exec((err,university)=>{
-          makePaymentConnection(student,university.tri_semesters,next)
+    // db.course.findOne({id:req.body.course}).populate("school").exec((err,course)=>{
+    //   db.proschool.findOne({id:course.school.id}).populate("uni").exec((err,proschool)=>{
+    //     db.university.findOne({id:proschool.uni.id}).populate("tri_semesters").exec((err,university)=>{
+    //
+    //
+    //     })
+    //   })
+    // })
 
-        })
-      })
+    db.course.findOne({id:req.body.course})
+    .populate("department.proschool.uni.tri_semesters")
+    .exec((err,course)=>{
+      makePaymentConnection(student,course.department.proschool.uni.tri_semesters,next)
     })
 
 
@@ -144,10 +150,10 @@ module.exports = (app,db) => {
 //getting students inside courses in a school
 //passes through every pschool and course inside looking for those
   app.get("/basic/getAllStudents/:uniId",(req,res)=>{
-    
+
     require("./student").getAllStudents(db,req.params.uniId,(students)=>{
       res.send(students)
     })
-    
+
   })
 }

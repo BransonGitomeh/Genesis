@@ -46,6 +46,12 @@ module.exports = {
 										href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/payments/" + student.id,
 										config:m.route
 									},"view payments")
+								]),
+								m("td",[
+									m("a",{
+										href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + student.id,
+										config:m.route
+									},"Configuration")
 								])
 							])
 						})

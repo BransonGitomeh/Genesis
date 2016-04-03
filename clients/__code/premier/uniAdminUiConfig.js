@@ -33,10 +33,10 @@ module.exports = function(){
 
       {text:"Configuration",icon:"mdi-action-settings",drops:[
         {text:"Schools",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/schools"},
-        {text:"Departments",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments"},
+        // {text:"Departments",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments"},
         {text:"Study modes",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/study_modes"},
-        {text:"Tri-sems/sems",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/tri_sems"}
-        
+        {text:"Tri-Semesters",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/tri_sems"}
+
       ]}
   	]
   }

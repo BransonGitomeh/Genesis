@@ -10,7 +10,7 @@ module.exports = {
     return {
       // schools:m.request({method:"GET","url:"}),
       courses:m.request({
-        url:apiUrl + "/basic/getCourses/" + m.route.param("school_id"),
+        url:apiUrl + "/basic/getCourses/" + m.route.param("department_id"),
         method:"GET"
       }),
       schema:{
@@ -25,7 +25,7 @@ module.exports = {
               onsubmit:function(e){
                 e.preventDefault()
                 m.request({
-                  url:apiUrl + "/basic/makeCourse/" + m.route.param("school_id"),
+                  url:apiUrl + "/basic/makeCourse/" + m.route.param("department_id"),
                   method:"POST",
                   data:{
                     name:ctrl.schema.name()
@@ -56,7 +56,7 @@ module.exports = {
               ctrl.courses().courses.map(function(course){
                 return m("a",{
                   class:"collection-item waves-effect waves-dark " + (m.route.param("course_id") == course.id ? "grey lighten-2" : ""),
-                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + m.route.param("school_id") + "/courses/" + course.id + "/levels",
+                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id") + "/courses/" + course.id + "/levels",
                   config:m.route
                 },course.name)
               })

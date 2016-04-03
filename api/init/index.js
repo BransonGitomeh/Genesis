@@ -25,7 +25,11 @@ var allowCrossDomain = function(req,res,next){
 
 log.info("Innitialized Cors support");
 
+//cross domain
 app.use(allowCrossDomain)
+
+//static assets
+app.use(express.static(__dirname + 'public/'));
 
 log.info("Configuring body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));

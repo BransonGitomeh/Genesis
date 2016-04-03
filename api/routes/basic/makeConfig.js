@@ -2,7 +2,11 @@ module.exports = function(app,db){
 
   app.post("/basic/makeUnits/:department_id",(req,res) => {
     // console.log(req.params.department_id)
-    db.unit.create({name:req.body.name,dep:req.params.department_id}).exec((err,craetedUnit) => {
+    db.unit.create({
+      name:req.body.name,
+      cost:req.body.cost,
+      dep:req.params.department_id
+    }).exec((err,craetedUnit) => {
       if(err) throw err;
       res.send(craetedUnit)
     })
@@ -78,16 +82,16 @@ module.exports = function(app,db){
       db.proschool.create({name:req.body.name,uni:university.id}).exec(function(err,proschool){
         res.send(proschool);
       })
-      
+
     })
   })
 
-  app.post("/basic/makeCourse/:id",(req,res) => {
-    db.proschool.findOne({id:req.params.id}).populate("courses").exec((err, proschool)=>{
+  app.post("/basic/makeCourse/:department_id",(req,res) => {
+    db.department.findOne({id:req.params.department_id}).exec((err, department)=>{
       if(err) throw err;
 
-      db.course.create({name:req.body.name,school:proschool.id}).exec(function(err,proschool){
-        res.send(proschool);
+      db.course.create({name:req.body.name,department:department.id}).exec(function(err,department){
+        res.send(department);
       })
     })
   })
@@ -125,15 +129,15 @@ module.exports = function(app,db){
     })
   })
 
-  app.get("/basic/getDepartments/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("departments").exec((err, university)=>{
+  app.get("/basic/getDepartments/:school_id",(req,res) => {
+    db.proschool.findOne({id:req.params.school_id}).populate("departments").exec((err, university)=>{
       if(err) throw err;
       res.send(university)
     })
   })
 
-  app.post("/basic/makeDepartments/:uni_id",(req,res) => {
-    db.department.create({name:req.body.name,uni:req.params.uni_id}).exec((err, department)=>{
+  app.post("/basic/makeDepartments/:school_id",(req,res) => {
+    db.department.create({name:req.body.name,proschool:req.params.school_id}).exec((err, department)=>{
       if(err) throw err;
       res.send(department)
     })

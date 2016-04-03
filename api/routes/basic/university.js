@@ -1,9 +1,11 @@
 //put tests for api's here to keep them away from the normal api's
+var express = require("express")
 
 module.exports = function(app,db){
-  app.get("/",(req,res) => {
-    res.send("In the begining there was the word, and the word was with God, and the word was God")
-  })
+  // app.get("/",(req,res) => {
+  //   res.send("In the begining there was the word, and the word was with God, and the word was God")
+  //   // express.static('public')
+  // })
 
   app.get("/basic/getUniversities",(req,res) => {
     db.university.find().populate("departments").exec((err, universities)=>{

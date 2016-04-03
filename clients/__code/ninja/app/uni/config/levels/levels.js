@@ -56,7 +56,7 @@ module.exports = {
               ctrl.levels().levels.map(function(level){
                 return m("a",{
                   class:"collection-item waves-effect waves-dark " + (m.route.param("level_id") == level.id ? "grey lighten-2" : ""),
-                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + m.route.param("school_id") + "/courses/" + m.route.param("course_id") + "/levels/" + level.id + "/stages",
+                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + m.route.param("school_id") + "/choices/" + m.route.param("department_id") + "/courses/" + m.route.param("course_id") + "/levels/" + level.id,
                   config:m.route
                 },level.name)
               })

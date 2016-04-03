@@ -56,7 +56,7 @@ module.exports = {
               ctrl.schools().proschools.map(function(school){
                 return m("a",{
                   class:"collection-item waves-effect waves-dark " + (m.route.param("school_id") == school.id ? "grey lighten-2" : ""),
-                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + school.id + "/courses",
+                  href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments/" + school.id,
                   config:m.route
                 },school.name)
               })
@@ -64,3 +64,5 @@ module.exports = {
     ])
   }
 }
+// "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "schools/" + school.id + "/courses",
+// /uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/" + "departments"
