@@ -1,12 +1,4 @@
-//makes a new user
-
-//req.body.userIdentifier
-//req.body.userUsername
-//req.body.userPassword
-
-module.exports = (app,db) => {
   makeUser = (req,res,next) => {
-  	
     db.user.create({
     	identifier:req.body.userIdentifier,
     	password:req.body.userPassword
@@ -77,14 +69,4 @@ module.exports = (app,db) => {
   	})
   };
 
-  app.post("/basic/addNewAdminToUniversity/:id",[
-  	getUniversity,
-
-  	makeUser,
-  	makeUserProfile,
-  	combineUserAndProfile,
-  	addUserToAdminTheUni,
-  	
-  	respond
-  ])
-}
+module.exports = [getUniversity,makeUser,makeUserProfile,combineUserAndProfile,addUserToAdminTheUni,respond]

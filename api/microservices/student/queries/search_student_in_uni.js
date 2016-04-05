@@ -1,13 +1,12 @@
-var getAllStudents = require("../student/student.js").getAllStudents
+var getAllStudents = require("../support/student.js").getAllStudents
+
 var lunr = require("lunr")
 var _ = require("underscore")
 
-
-module.exports = (app,db) => {
-	app.post("/saerchStudent/:uniId",(req,res) => {
+module.exports = (req,res) => {
 		var searchTerm = req.body.searchTerm;
 
-		getAllStudents(db,req.params.uniId,(students)=>{
+		getAllStudents(req.db,req.params.uniId,(students)=>{
 
 			var searchEngine = lunr(function(){
 			    this.field('adm', { boost: 10 })
@@ -21,13 +20,11 @@ module.exports = (app,db) => {
 
 			resultsIds.map((result)=>{
 				resultObjects.push(_.find(students, function(item) {
-				    return item.id == result.ref; 
+				    return item.id == result.ref;
 				}));
 			})
-			
+
 			res.send(resultObjects)
 		})
 
-	})
-}
-
+	}
