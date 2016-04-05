@@ -2,13 +2,6 @@
 
 module.exports = function(app,db){
 
-  app.get("/basic/getUnis",(req,res) => {
-    db.university.find().exec((err, universities)=>{
-      if(err) throw err;
-      res.send(universities)
-    })
-  })
-
   app.get("/basic/getSchools/:id",(req,res) => {
     db.university.findOne({id:req.params.id}).populate("proschools").exec((err, universities)=>{
       if(err) throw err;
@@ -53,7 +46,7 @@ module.exports = function(app,db){
 
   app.get("/basic/studentsConfiguration/:student_id",(req,res) => {
     db.student.findOne({id:req.params.student_id})
-    .populate("level")
+    .populate("level.stages")
     .populate("course")
     .populate("units_im_taking")
     .populate("stage.units_i_offer")

@@ -1,180 +1,82 @@
-//put tests for api's here to keep them away from the normal api's
-var express = require("express")
-
 module.exports = function(app,db){
-  // app.get("/",(req,res) => {
-  //   res.send("In the begining there was the word, and the word was with God, and the word was God")
-  //   // express.static('public')
-  // })
-
-  app.get("/basic/getUniversities",(req,res) => {
-    db.university.find().populate("departments").exec((err, universities)=>{
-      if(err) throw err;
-      res.send(universities)
-    })
+  app.get("/",(req,res) => {
+    res.send("In the begining there was the word, and the word was with God, and the word was God")
+    // express.static('public')
   })
 
-  app.get("/basic/getRevokedAdmins/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
-      if(err) throw err;
-      res.send(university.revoked_admins)
-    })
-  })
+  app.get(
+    "/uniStats/:uniId",
+    require('../../microservices/institution/queries/get_stats')
+  )
+  
+  app.get(
+    "/basic/getUniversities",
+    require('../../microservices/institution/queries/getall')
+  )
 
-  app.get("/basic/getAdmins/:id",(req,res) => { 
-    db.university.findOne({id:req.params.id}).populate("admins").exec((err, university)=>{
-      if(err) throw err;
-      res.send(university.admins)
-    })
-  })
+  app.get(
+    "/basic/getRevokedAdmins/:id",
+    require('../../microservices/institution/roles/admins/get_revoked')
+  )
 
-  app.post("/basic/revokeAdmin/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
-      if(err) throw err;
-      university.admins.remove(req.body.userId)
-      university.revoked_admins.add(req.body.userId)
-      university.save((err) => {
-        var responce = {
-          status:"success"
-        }
-        res.send(responce)
-      })
-    })
-  })
+  app.get(
+    "/basic/getAdmins/:id",
+    require('../../microservices/institution/roles/admins/get_all_admins')
+  )
 
-  app.post("/basic/restoreAdmin/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
-      if(err) throw err;
-      university.admins.add(req.body.userId)
-      university.revoked_admins.remove(req.body.userId)
-      university.save((err) => {
-        var responce = {
-          status:"success"
-        }
-        res.send(responce)
-      })
-    })
-  })
+  app.post(
+    "/basic/revokeAdmin/:id",
+    require('../../microservices/institution/roles/admins/revoke_admin')
+  )
 
-  app.post("/basic/removeAdmin/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).populate("revoked_admins").exec((err, university)=>{
-      if(err) throw err;
-      university.admins.remove(req.body.userId)
-      university.revoked_admins.remove(req.body.userId)
-      university.save((err) => {
-        var responce = {
-          status:"success"
-        }
-        res.send(responce)
-      })
-    })
-  })
+  app.post(
+    "/basic/restoreAdmin/:id",
+    require('../../microservices/institution/roles/admins/restore_admin')
+  )
 
-  app.get("/basic/getUniversity/:id",(req,res) => {
-    db.university.findOne({id:req.params.id}).exec((err, universities)=>{
-      if(err) throw err;
-      res.send(universities)
-    })
-  })
+  app.post(
+    "/basic/removeAdmin/:id",
+    require('../../microservices/institution/roles/admins/remove_admin')
+  )
 
-  app.post("/basic/addToNoticeboard/:uniId",(req,res) => {
-    db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
+  app.get(
+    "/basic/getUniversity/:id",
+    require('../../microservices/institution/queries/get_single_uni')
+  )
 
-      db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).exec((err, foundNoticeboard)=>{
+  app.post(
+    "/basic/addToNoticeboard/:uniId",
+    require('../../microservices/institution/noticeboard/add_to_noticeboard')
+  )
 
-        db.noticeboard_item.create(req.body).exec((err, createdNoticeboardItem)=>{
+  app.get(
+    "/basic/removeFromNoticeboard/:id",
+    require('../../microservices/institution/noticeboard/remove_from_noticeboard')
+  )
 
-          foundNoticeboard.noticeboard_items.add(createdNoticeboardItem.id)
+  app.get(
+    "/basic/makeNoticeOld/:id",
+    require('../../microservices/institution/noticeboard/make_old')
+  )
 
-          foundNoticeboard.save((err)=>{
-            if(err) throw err;
+  app.get(
+    "/basic/returnOldNotice/:id",
+    require('../../microservices/institution/noticeboard/undo_old')
+  )
 
-            db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("noticeboard_items").exec((err, secondndfoundNoticeboard)=>{
-              res.send(secondndfoundNoticeboard)
-            })
+  app.get(
+    "/basic/getNoticeboard/:uniId",
+    require('../../microservices/institution/noticeboard/get_items_in_single_board')
+  )
 
-          })
+  app.get(
+    "/basic/getNoticeboardOld/:uniId",
+    require('../../microservices/institution/noticeboard/get_old_items_in_board')
+  )
 
-        })
-
-      })
-
-    })
-  })
-
-  app.get("/basic/removeFromNoticeboard/:id",(req,res) => {
-    db.noticeboard_item.destroy({id:req.params.id}).exec((err)=>{
-      if(err) throw err;
-      var responce = {
-        status:"done"
-      }
-      res.send(responce)
-    })
-  })
-
-  app.get("/basic/makeNoticeOld/:id",(req,res) => {
-    db.noticeboard_item.findOne({id:req.params.id}).populate("myboard").populate("oldboard").exec((err,notice)=>{
-      if(err) throw err;
-      db.noticeboard_item.update({id:req.params.id},{myboard:null,oldboard:notice.myboard.id}).exec((err,item)=>{
-        res.send(item)
-      })
-      
-    })
-  })
-
-
-  app.get("/basic/getNoticeboard/:uniId",(req,res) => {
-    db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
-      if(err) throw err;
-      db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("noticeboard_items").exec((err, foundNoticeboard)=>{
-        if(err) throw err;
-        res.send(foundNoticeboard)
-      })
-
-    })
-  })
-
-  app.get("/basic/getNoticeboardOld/:uniId",(req,res) => {
-    db.university.findOne({id:req.params.uniId}).populate("noticeboard").exec((err, foundUniversity)=>{
-      db.noticeboard.findOne({id:foundUniversity.noticeboard.id}).populate("old_noticeboard_items").exec((err, foundNoticeboard)=>{
-        // setTimeOut(() => {},2000)
-        res.send(foundNoticeboard)
-      })
-
-    })
-  })
-
-  app.post("/basic/makeUniversity",(req,res) => {
-    db.university.create(req.body).exec((err, createdUniversity)=>{
-
-      db.noticeboard.create().exec((err, createdNoticeboard) => {
-
-        db.university.update({id:createdUniversity.id},{noticeboard:createdNoticeboard.id}).exec((err) => {
-          db.noticeboard.update({id:createdNoticeboard.id},{university:createdUniversity.id}).exec((err) => {
-
-            db.noticeboard.findOne({id:createdNoticeboard.id}).populate("university").exec((err, foundNoticeboard) => {
-
-              db.university.findOne({id:createdUniversity.id}).populate("noticeboard").exec((err, foundUniversity) => {
-
-                var responce = {
-                  university:foundUniversity,
-                  noticeboard:foundNoticeboard
-                }
-
-                res.send(responce)
-
-              })
-
-            })
-
-          })
-
-        })
-
-      })
-
-    })
-
-  })
+  app.post(
+    "/basic/makeUniversity",
+    require('../../microservices/institution/make_new_institution')
+  )
 
 }

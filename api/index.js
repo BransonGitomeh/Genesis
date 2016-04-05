@@ -21,7 +21,7 @@ require("./init/index.js")(collections,config,function(app){
 		if(err) throw err
 
 		log.info("Api  :smile: @-> http://localhost:%s",config.port())
-
+		
 	})
-	
+
 })

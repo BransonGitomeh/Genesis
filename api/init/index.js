@@ -23,13 +23,16 @@ var allowCrossDomain = function(req,res,next){
 	}
 }
 
+
+
+
+
+
 log.info("Innitialized Cors support");
 
 //cross domain
 app.use(allowCrossDomain)
 
-//static assets
-app.use(express.static(__dirname + 'public/'));
 
 log.info("Configuring body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -55,6 +58,14 @@ module.exports = (collections,config,callback) => {
 	Waterline.initialize(config,function(err,models){
 		if(err) throw err;
 		app.locals.collections = models.collections
+
+		var addDbToReq = function(req,res,next){
+			req.db = models.collections
+			next()
+		}
+
+		app.use(addDbToReq)
+
 		log.info("Backend config complete, next()");
 		callback(app) //returns an express app with models
 	})
