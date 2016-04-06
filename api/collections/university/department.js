@@ -33,5 +33,10 @@ module.exports = [{
         },
         cost:"string"
       }
+    },{
+      identity: 'request',
+      attributes: {
+        req:"string",
+      }
     }
 ]

@@ -51,7 +51,7 @@ module.exports = {
 
             m("ul",{class:"collection with-header"},[
               m("li",{class:"collection-header blue white-text"},[
-                m("h4",{class:"task-card-title"},"Stages"),
+                m("h4",{class:"task-card-title"},"Semesters"),
                 // m("p",{class:"task-card-date"},"Some other management thing :-)"),
               ]),
               ctrl.stages().stages.map(function(stage){

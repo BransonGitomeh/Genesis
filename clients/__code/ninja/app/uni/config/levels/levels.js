@@ -35,7 +35,7 @@ module.exports = {
             },
                m(inputComponent,{
                         value:ctrl.schema.name,
-                        label:"Name of new Level",
+                        label:"Name of new Stage",
                         icon:"mdi-image-exposure-plus-1 prefix",
                         type:"text",
                         sizes:"s12 m12 l10",
@@ -50,7 +50,7 @@ module.exports = {
 
             m("ul",{class:"collection with-header"},[
               m("li",{class:"collection-header blue white-text"},[
-                m("h4",{class:"task-card-title"},"Levels"),
+                m("h4",{class:"task-card-title"},"Stages"),
                 // m("p",{class:"task-card-date"},"Some other management thing :-)"),
               ]),
               ctrl.levels().levels.map(function(level){

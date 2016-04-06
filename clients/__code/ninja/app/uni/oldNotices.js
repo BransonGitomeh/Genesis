@@ -12,7 +12,15 @@ module.exports = {
                 	),
                 	controller.notices().old_noticeboard_items.map(function(notice){
 	                	return m("li",{class:"collection-item"},notice.title,[
-	                		m("a",{class:"secondary-content btn-floating blue"},[
+	                		m("a",{
+	                			class:"secondary-content btn-floating blue",
+	                			onclick(){
+	                				m.request({
+					                   method:"GET",
+					                   url:apiUrl + "/basic/returnOldNotice/" + notice.id
+					                }).then(m.route(m.route()))
+	                			}
+	                		},[
 	                			m("i",{class:"mdi-av-replay"})
 	                		]),
 	                		m("br"),

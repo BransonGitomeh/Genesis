@@ -28,9 +28,6 @@ log.info("Innitialized Cors support");
 //cross domain
 app.use(allowCrossDomain)
 
-//static assets
-app.use(express.static(__dirname + 'public/'));
-
 log.info("Configuring body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -52,9 +49,18 @@ module.exports = (collections,config,callback) => {
 	log.info("Collections '%s Adapter' && '%s Migration'",config.adapter(),config.migration())
 
 	log.info("Innitializing waterline...")
+	
 	Waterline.initialize(config,function(err,models){
 		if(err) throw err;
 		app.locals.collections = models.collections
+
+		var addDbToReq = function(req,res,next){
+			req.db = models.collections
+			next()
+		}
+
+		app.use(addDbToReq)
+
 		log.info("Backend config complete, next()");
 		callback(app) //returns an express app with models
 	})

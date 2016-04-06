@@ -1,4 +1,4 @@
-var myComponent = require("./noticeItem")
+var noticeItem = require("./noticeItem")
 var oldNotices = require("./oldNotices")
 var inputComponent = require('../../../__components/forminput');
 module.exports = {
@@ -29,16 +29,16 @@ module.exports = {
 
           m(".row",[
             m(".col l8",[
-              controller.noticeboardItems().noticeboard_items ?
-              controller.noticeboardItems().noticeboard_items.map(function(item){
-                return m(myComponent,{
-                  id:item.id,
-                  title:item.title,
-                  content:item.content,
-                  args:item.createdAt,
-                  deleteBtn:true
+              controller.noticeboardItems().noticeboard_items 
+              ? controller.noticeboardItems().noticeboard_items.map(function(item){
+                  return m(noticeItem,{
+                    id:item.id,
+                    title:item.title,
+                    content:item.content,
+                    args:item.createdAt,
+                    deleteBtn:true
+                  })
                 })
-              })
               : ""
             ]),
             m(".col l4",

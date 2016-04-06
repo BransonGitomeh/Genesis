@@ -55,9 +55,9 @@ module.exports = {
                 color:args.config().color
               }),
 
-              // m("li",{class:"li-hover"},[
-              //   m("p",{class:"ultra-small margin more-text"},"Welcome")
-              // ]),
+              m("li",{class:"li-hover"},[
+                m("p",{class:"ultra-small margin more-text"},"Welcome")
+              ]),
 
               args.config().sideBarItems.map(function(item){
                 return m(sideNavItem,{

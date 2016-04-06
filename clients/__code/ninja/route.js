@@ -8,6 +8,7 @@ m.route.mode = "hash";
 
 m.route(document.body,"/",{
 		"/":m(adminUi,{ config:ninjaUIConfig, body:require("./app/ninja/home") }),
+
 		"/churchia/new":m(adminUi,{ config:ninjaUIConfig, body:require("./app/churchia/new") }),
 		"/churchia/all":m(adminUi,{ config:ninjaUIConfig, body:require("./app/churchia/all") }),
 

@@ -14,9 +14,14 @@ module.exports = function(){
   	],
   	sideBarItems:[
       {
-        text:"View Board",
+        text:"Dashboard",
+        url:"/uniadmin/" + m.route.param("uniName") + "/" + m.route.param("uniId"),
+        icon:"mdi-action-view-carousel"
+      },
+      {
+        text:"Noticeboard",
         url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard",
-        icon:"mdi-image-movie-creation"
+        icon:"mdi-action-assignment"
       },
       {
         text:"Finance",
@@ -24,12 +29,21 @@ module.exports = function(){
         icon:"mdi-editor-attach-money"
       },
 
+      {
+        text:"Students",
+        url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/index",
+        icon:"mdi-action-perm-identity"
+      },
 
-      {text:"System Users",icon:"mdi-av-my-library-books",drops:[
-        {text:"Admins",url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
-        {text:"Registrars",url:"/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
-        {text:"Students",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/index"}
-      ]},
+      {
+        text:"Admins",
+        url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId"),
+        icon:"mdi-action-assignment-ind"
+      },
+      // {text:"System Users",icon:"mdi-av-my-library-books",drops:[
+      //   {text:"Registrars",url:"/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
+      // ]},
+
 
       {text:"Configuration",icon:"mdi-action-settings",drops:[
         {text:"Schools",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/schools"},
