@@ -1,5 +1,5 @@
 module.exports = (req,res) => {
-  db.student.findOne({id:req.params.student_id})
+  req.db.student.findOne({id:req.params.student_id})
   .populate("level.stages")
   .populate("course")
   .populate("units_im_taking")

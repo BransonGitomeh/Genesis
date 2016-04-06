@@ -23,16 +23,10 @@ var allowCrossDomain = function(req,res,next){
 	}
 }
 
-
-
-
-
-
 log.info("Innitialized Cors support");
 
 //cross domain
 app.use(allowCrossDomain)
-
 
 log.info("Configuring body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -55,6 +49,7 @@ module.exports = (collections,config,callback) => {
 	log.info("Collections '%s Adapter' && '%s Migration'",config.adapter(),config.migration())
 
 	log.info("Innitializing waterline...")
+	
 	Waterline.initialize(config,function(err,models){
 		if(err) throw err;
 		app.locals.collections = models.collections

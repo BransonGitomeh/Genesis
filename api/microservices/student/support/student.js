@@ -9,14 +9,6 @@ function getAllStudents(db,uniId,callback){
 		   .exec((err,university)=>{
 	   	var Allstudents = []
 
-			//  	university.proschools.map((proschool)=>{
-	   // 		proschool.courses.map((course)=>{
-	   // 			course.students.map((student)=>{
-	   // 				Allstudents.push(student)
-	   // 			})
-	   // 		})
-			//  	})
-
 			university.proschools.map((school)=>{
 				school.departments.map((department)=>{
 					department.courses.map((course)=>{

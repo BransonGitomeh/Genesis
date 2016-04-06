@@ -1,6 +1,6 @@
 makeTri_semester = (req,res,next) => {
   req.progress = {}
-  db.tri_semester.create({name:req.body.name,uni:req.params.uniId}).exec((err, tri_semester)=>{
+  req.db.tri_semester.create({name:req.body.name,uni:req.params.uniId}).exec((err, tri_semester)=>{
     if(err) throw err;
     req.progress.tri_semester = tri_semester
     // res.send(tri_semester)
@@ -10,7 +10,7 @@ makeTri_semester = (req,res,next) => {
 
 getUniWithProschools = (req,res,next) => {
   // req.progress = {}
-  db.university.findOne({id:req.params.uniId}).populate("proschools").exec((err,uni)=>{
+  req.db.university.findOne({id:req.params.uniId}).populate("proschools").exec((err,uni)=>{
     // console.log(uni)
     if(err) throw err
     req.progress.foundUni = uni;
@@ -26,7 +26,7 @@ getAllCourses = (req,res,next) => {
   var proschool_counter = 0
 
   function getCourses(proschool){
-    db.proschool.findOne({id:proschool.id}).populate("courses").exec((err,proschool)=>{
+    req.db.proschool.findOne({id:proschool.id}).populate("courses").exec((err,proschool)=>{
       // console.log(proschool)
       proschool.courses.map((course)=>req.progress.courses.push(course))
       if(err) throw err
@@ -51,7 +51,7 @@ getAllStudentsInCourses = (req,res,next) => {
   var courses_counter = 0
 
   function getStudents(course){
-    db.course.findOne({id:course.id}).populate("students").exec((err,course)=>{
+    req.db.course.findOne({id:course.id}).populate("students").exec((err,course)=>{
       // console.log(course)
       course.students.map((student)=>req.progress.students.push(student))
       if(err) throw err
@@ -75,8 +75,8 @@ makePaymentObjects = (req,res,next) => {
   var counter = 0
 
   function makeObjects(student){
-    db.payment.create({trisem:req.progress.tri_semester.id}).exec((err,payment)=>{
-      db.student.findOne({id:student.id}).exec((err,student)=>{
+    req.db.payment.create({trisem:req.progress.tri_semester.id}).exec((err,payment)=>{
+      req.db.student.findOne({id:student.id}).exec((err,student)=>{
         console.log(student)
         student.payments.add(payment.id)
 
@@ -104,7 +104,7 @@ makePaymentObjects = (req,res,next) => {
 }
 
 respond = (req,res,next) => {
-  db.student.find().populate("payments").exec((err,foundStudents)=>{
+  req.db.student.find().populate("payments").exec((err,foundStudents)=>{
     if(err) throw err;
     res.send(foundStudents)
   })

@@ -1,5 +1,5 @@
   makeUser = (req,res,next) => {
-    db.user.create({
+    req.db.user.create({
     	identifier:req.body.userIdentifier,
     	password:req.body.userPassword
     }).exec((err, createdUser) => {
@@ -11,7 +11,7 @@
   };
 
   makeUserProfile = (req,res,next) => {
-    db.user_profile.create({username:req.body.userUsername}).exec((err, createdProfile) => {
+    req.db.user_profile.create({username:req.body.userUsername}).exec((err, createdProfile) => {
       if(err) throw err;
       req.progress.createdProfile = createdProfile
 
@@ -20,10 +20,10 @@
   };
 
   combineUserAndProfile = (req,res,next) => {
-    db.user.update({id:req.progress.createdUser.id},{profile:req.progress.createdProfile}).exec((err,updatedUser) => {
+    req.db.user.update({id:req.progress.createdUser.id},{profile:req.progress.createdProfile}).exec((err,updatedUser) => {
     	if(err) throw err
 
-    	db.user_profile.update({id:req.progress.createdProfile.id},{user:req.progress.createdUser.id}).exec((err,updatedProfile) => {
+    	req.db.user_profile.update({id:req.progress.createdProfile.id},{user:req.progress.createdUser.id}).exec((err,updatedProfile) => {
     		if(err) throw err
     		next()
     	})
@@ -31,7 +31,7 @@
   };
 
   addUserToAdminTheUni = (req,res,next) => {
-    db.university.findOne({id:req.params.id}).exec((err, university)=>{
+    req.db.university.findOne({id:req.params.id}).exec((err, university)=>{
       if(err) throw err;
 
       university.admins.add(req.progress.createdUser.id)
@@ -45,7 +45,7 @@
 
   getUniversity = (req,res,next) => {
   	req.progress = {};
-    db.university.findOne(req.params.id).populate("admins").exec((err, foundUniversity) => {
+    req.db.university.findOne(req.params.id).populate("admins").exec((err, foundUniversity) => {
       if(err) throw err;
       req.progress.foundUniversity = foundUniversity
       // res.send(universities)
@@ -54,9 +54,9 @@
   };
 
   respond = (req,res,next) => {
-  	db.university.findOne({id:req.progress.foundUniversity.id}).populate("admins").exec((err, foundUniversity) => {
-  		db.user.findOne({id:req.progress.createdUser.id}).populate("profile").exec((err, foundUser) => {
-  			db.user_profile.findOne({id:req.progress.createdProfile.id}).populate("user").exec((err, foundProfile) => {
+  	req.db.university.findOne({id:req.progress.foundUniversity.id}).populate("admins").exec((err, foundUniversity) => {
+  		req.db.user.findOne({id:req.progress.createdUser.id}).populate("profile").exec((err, foundUser) => {
+  			req.db.user_profile.findOne({id:req.progress.createdProfile.id}).populate("user").exec((err, foundProfile) => {
 	  			var responce = {
 			    	university:foundUniversity,
 			    	newUser:foundUser,

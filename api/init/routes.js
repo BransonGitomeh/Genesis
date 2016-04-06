@@ -2,7 +2,7 @@ module.exports = function(){
 
   var routes = []
 
-  routes.push(require("../routes/basic/university"))
-  
+  routes.push(require("../router"))
+
   return routes;
 }

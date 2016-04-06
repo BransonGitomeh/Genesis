@@ -1,7 +1,7 @@
 checkUserCreds = (req,res,next) => {
   req.progress = {};
 
-  db.user.findOne({identifier:req.body.identifier}).exec((err,foundUser) => {
+  req.db.user.findOne({identifier:req.body.identifier}).exec((err,foundUser) => {
     if(err) throw err;
       if(foundUser){
         req.progress.foundUser = foundUser;
@@ -28,7 +28,7 @@ checkUserCreds = (req,res,next) => {
 };
 
 getUniversityWithAdmins = (req,res,next) => {
-  db.university.findOne({id:req.params.uniId}).populate("admins").populate("revoked_admins").exec((err,foundUniversity) => {
+  req.db.university.findOne({id:req.params.uniId}).populate("admins").populate("revoked_admins").exec((err,foundUniversity) => {
     req.progress.foundUniversity = foundUniversity;
     next()
   })

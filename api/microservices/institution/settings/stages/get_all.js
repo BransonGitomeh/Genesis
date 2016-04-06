@@ -1,6 +1,7 @@
 module.exports = (req,res) => {
-  db.level.findOne({id:req.params.id}).populate("stages").exec((err, level)=>{
+  req.db.level.findOne({id:req.params.level_id}).populate("stages").exec((err, level)=>{
     if(err) throw err;
+    console.log(level)
     res.send(level)
   })
 }

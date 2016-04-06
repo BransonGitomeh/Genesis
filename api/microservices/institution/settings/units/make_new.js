@@ -1,6 +1,6 @@
 module.exports = (req,res) => {
   // console.log(req.params.department_id)
-  db.unit.create({
+  req.db.unit.create({
     name:req.body.name,
     cost:req.body.cost,
     dep:req.params.department_id
