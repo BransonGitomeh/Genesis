@@ -50,7 +50,7 @@ module.exports = {
 
             m("ul",{class:"collection with-header"},[
               m("li",{class:"collection-header blue white-text"},[
-                m("h4",{class:"task-card-title"},"Study Sessions"),
+                m("h4",{class:"task-card-title"},"Study Modes"),
                 // m("p",{class:"task-card-date"},"Some other management thing :-)"),
               ]),
               ctrl.schools().study_sessions.map(function(school){

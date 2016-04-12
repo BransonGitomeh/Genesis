@@ -63,6 +63,11 @@ module.exports = [{
         via:"tri_semesters_i_pay_for"
       },
 
+      unit_registrations:{
+        collection:"unit_registration",
+        via:"tri_semester"
+      },
+
       payments_made_to_me:{
         collection:"payment",
         via:"tri_semesters_i_was_paid_to"

@@ -12,8 +12,17 @@ module.exports = {
   },
   view:function(controller,atrrs){
     return m("span",[
+       m("nav",[
+            m(".nav-wrapper blue",[
+            m(".col s6",[
+              m("a",{class:"breadcrumb"},"Dashboard"),
+              m("a",{class:"breadcrumb"},"Noticeboard"),
+              m("a",{class:"breadcrumb"},"New")
+            ])
+          ])
+        ]),
         m("form",{
-          class:"card-panel",
+          class:"container",
           onsubmit:function(e){
             m.request({
               url:apiUrl + "/basic/addToNoticeboard/" + m.route.param("uniId"),
@@ -26,7 +35,7 @@ module.exports = {
             e.preventDefault();
           }
         },[
-          m("h1",{class:"center"},"New Noticeboard Item"),
+          // m("h1",{class:"center"},"New Noticeboard Item"),
           m(inputComponent,{
             label:"New Notice Header",
             icon:"mdi-communication-business prefix",

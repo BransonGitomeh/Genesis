@@ -1,36 +1,43 @@
 module.exports = {
-	view(){
-		return m(".input-field col s12 l12",
-                  m("select",{
-                    config:function(){
-                      $('select').material_select();
-                    },
-                    onchange:function(e){
-                      // console.log(e)
-                      // alert(e.target.value)
-                      ctrl.schema.selectedCourse(e.target.value)
-                      // alert(ctrl.schema.selectedCourse())
+	controller(){
+		return {
+			departments:m.request({
+				method:"GET",
+				url:apiUrl + "/student/getDepartmentsAndCourses/" + m.route.param("student_id")
+			})
+		}
+	},
+	view(ctrl,args){
+		return m("div",[
+			m("h5","Courses Available"),
+			ctrl.departments().availableCourses.map((course)=>{
+				return ("ul",[
+					m("li",course.name,[
+						m("button",{
+							onclick:(e)=>{
+								m.request({
+									method:"GET",
+									url:apiUrl + "/student/addCourseToMyself/" + m.route.param("student_id") + "/" + course.id
+								}).then(m.route( m.route( ) ))
+							}
+						},"select")
+					])
+				])
+			}),
+			m("h5","Courses registered to"),
+			ctrl.departments().selectedCourses.map((course)=>{
+				return m("li",course.name,[
+					m("button",{
+							onclick:(e)=>{
+								m.request({
+									method:"GET",
+									url:apiUrl + "/student/RemoveCourseFromMyself/" + m.route.param("student_id") + "/" + course.id
+								}).then(m.route( m.route( ) ))
+							}
+						},"remove")
+				])
+			})
+		])
 
-                      // alert(m.route.buildQueryString("Object",1))
-                      m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/" + e.target.value + "/selectLevel",{test1:"working"})
-                    }
-                  },
-
-                    m("option",{
-                      value:"",
-                      disabled:true,
-                      selected:true,
-                    },"Department with courses")
-
-                    // ctrl.courses().map(function(drop){
-                    //   return m("option",{
-                    //     value:drop.id,
-                    //     selected:(m.route.param("selectedDepartment") == drop.id ? true : false)
-                    //   },drop.name)
-                    // })
-
-                  )
-            )
-                
 	}
 }

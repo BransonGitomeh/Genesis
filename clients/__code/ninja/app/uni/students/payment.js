@@ -2,217 +2,227 @@ var paymentCard = require("./payment-card")
 var inputComponent = require('../../../../__components/forminput');
 
 var model = {
-	student:() => {
+	student: () => {
 		return m.request({
-			method:"GET",
-			url:apiUrl + "/basic/getMyTriSems/" + m.route.param("student_id")
+			method: "GET",
+			url: apiUrl + "/basic/getMyTriSems/" + m.route.param("student_id")
 		})
 	}
 }
 module.exports = {
-	controller:(args)=>{
+	controller: (args) => {
 		return {
-			student:model.student(),
-			schema:{
-				trisem:m.prop(""),
-				course:m.prop(""),
-				level:m.prop(""),
-				stage:m.prop(""),
-				
-				ammount:m.prop(""),
-				receiptNo:m.prop("")
+			student: model.student(),
+			schema: {
+				trisem: m.prop(""),
+				course: m.prop(""),
+				level: m.prop(""),
+				stage: m.prop(""),
+
+				ammount: m.prop(""),
+				receiptNo: m.prop("")
 			}
 		}
 	},
-	view:(ctrl,args)=>{
-		return m(".app row",[
+	view: (ctrl, args) => {
+		return m("span", {
+			class: "row"
+		}, [
+			m("nav", [
+				m(".nav-wrapper blue", [
+					m(".col s6", [
+						m("a", {
+							class: "breadcrumb"
+						}, "Dashboard"),
+						m("a", {
+							class: "breadcrumb"
+						}, "All Students"),
+						m("a", {
+							class: "breadcrumb"
+						}, "New Payment"),
+					])
+				])
+			]),
 
-			m(".card-panel",[
-				// m("h1",{class:"center"},"Student's Payment report(ksh " + ctrl.student().sums + ")"),
+			// m("h4", {
+			// 	class: "center"
+			// }, m("u", "Enter a payment")),
 
-				m("table",[
-					m("tbody",[
-						m("tr",[
-							m("td",{class:"left"},"Admission Number :",m("b",ctrl.student().adm)),
-							m("td",{class:"center"},"Names :",m("b",ctrl.student().name)),
-							m("td",{class:"right"},"stage :",m("b",ctrl.student().stage.name))
-						]),
-						m("tr",[
-							m("td",{class:"left"},"Course :",m("b",ctrl.student().course.name)),
-							m("td",{class:"center"},"Study mode :",m("b",ctrl.student().study_mode.name)),
-							m("td",{class:"right"},"Level :",m("b",ctrl.student().level.name))
+			m(".container", [
+
+				m("br"),
+
+				m("div", [
+					m("table", {
+						class: "stripped"
+					}, [
+						m("thead", []),
+						m("tbody", [
+							m("tr", [
+								m("td", m("b", "Admission Number")),
+								m("td", ctrl.student().adm),
+								m("td", m("b", "Names")),
+								m("td", ctrl.student().name),
+								m("td", m("b", "Course")),
+								m("td", ctrl.student().course.name),
+							]),
+							m("tr", [
+
+								m("td", m("b", "Study Mode")),
+								m("td", ctrl.student().study_mode.name),
+								m("td", m("b", "Level")),
+								m("td", ctrl.student().level.name),
+								m("td", m("b", "Stage")),
+								m("td", ctrl.student().stage.name)
+							])
+
 						])
 					])
+
 				]),
 
-			]),
-
-m("div",{class:"card-panel"},[
+				m("div", [
 
 
-	m(".input-field col s12 l3",[
+					m(".input-field col s12 l4", [
 
-			m("select",{
-					
-                    config:function(){
-                      $('select').material_select();
-                    },
-                    onchange:function(e){
-                      ctrl.schema.trisem(e.target.value)
-                    }
-                  },
+						m("select", {
 
-                    m("option",{
-                      value:"",
-                      disabled:true,
-                      selected:true,
-                    },"Select Tri-semester"),
+								config: function() {
+									$('select').material_select();
+								},
+								onchange: function(e) {
+									ctrl.schema.trisem(e.target.value)
+								}
+							},
 
-                    ctrl.student().tri_semesters_i_pay_for.map(function(drop){
-                      return m("option",{
-                        value:drop.id,
-                        selected:(m.route.param("selectedDepartment") == drop.id ? true : false)
-                      },drop.name)
-                    })
+							m("option", {
+								value: "",
+								disabled: true,
+								selected: true,
+							}, "Select Tri-semester"),
 
-                  )
-			]),
+							ctrl.student().tri_semesters_i_pay_for.map(function(drop) {
+								return m("option", {
+									value: drop.id,
+									selected: (m.route.param("selectedDepartment") == drop.id ? true : false)
+								}, drop.name)
+							})
 
-	m(".input-field col s12 l3",[
+						)
+					]),
 
-			m("select",{
-					
-                    config:function(){
-                      $('select').material_select();
-                    },
-                    onchange:function(e){
-                      ctrl.schema.course(e.target.value);
-                      // alert(ctrl.schema.trisem() + ctrl.schema.course())
-                    }
-                  },
 
-                    m("option",{
-                      value:"",
-                      disabled:true,
-                      selected:true,
-                    },"Select course/class/form"),
 
-                    ctrl.student().courses_ive_done_before.map(function(drop){
-                      return m("option",{
-                        value:drop.id,
-                        selected:(m.route.param("selectedDepartment") == drop.id ? true : false)
-                      },drop.name)
-                    })
+					m(".input-field col s12 l8", [
 
-                  )
-			]),
+						m("select", {
 
-	m(".input-field col s12 l3",[
+								config: function() {
+									$('select').material_select();
+								},
+								onchange: function(e) {
+									// console.log(ctrl.student().levels_ive_done_before)
 
-			m("select",{
-					
-                    config:function(){
-                      $('select').material_select();
-                    },
-                    onchange:function(e){
-                      ctrl.schema.level(e.target.value);
-                      // alert(ctrl.schema.trisem() + ctrl.schema.course() + ctrl.schema.level())
-                    }
-                  },
+									ctrl.student().stages_ive_done_before.map((stage) => {
+										if (stage.id === e.target.value) {
+											ctrl.schema.course(stage.level.course.id);
+											ctrl.schema.level(stage.level.id);
+											ctrl.schema.stage(stage.id);
+										}
+									})
 
-                    m("option",{
-                      value:"",
-                      disabled:true,
-                      selected:true,
-                    },"Select level/stream"),
+									// alert(ctrl.schema.trisem() + ctrl.schema.course() + ctrl.schema.level())
+								}
+							},
 
-                    ctrl.student().levels_ive_done_before.map(function(drop){
-                      return m("option",{
-                        value:drop.id,
-                        selected:(m.route.param("selectedDepartment") == drop.id ? true : false)
-                      },drop.name)
-                    })
+							m("option", {
+								value: "",
+								disabled: true,
+								selected: true,
+							}, "Select semester to pay to"),
 
-                  )
-			]),
+							ctrl.student().stages_ive_done_before.map(function(stage) {
+								return m("option", {
+									value: stage.id,
+									selected: (m.route.param("selectedDepartment") == stage.id ? true : false)
+								}, stage.level.course.name + " - " + stage.level.name + " - " + stage.name)
+							})
 
-	m(".input-field col s12 l3",[
+						)
+					]),
 
-			m("select",{
-					
-                    config:function(){
-                      $('select').material_select();
-                    },
-                    onchange:function(e){
-                      ctrl.schema.stage(e.target.value);
-                      // alert(ctrl.schema.trisem() + ctrl.schema.course() + ctrl.schema.level() + ctrl.schema.sem())
-                    }
-                  },
+					m("form", {
+						onsubmit: (e) => {
+							e.preventDefault();
+							m.request({
+								method: "POST",
+								url: apiUrl + "/basic/makePaymentToStudent/" + m.route.param("student_id"),
+								data: {
+									trisem_id: ctrl.schema.trisem(),
+									stage_id: ctrl.schema.stage(),
+									course_id: ctrl.schema.course(),
+									level_id: ctrl.schema.level(),
 
-                    m("option",{
-                      value:"",
-                      disabled:true,
-                      selected:true,
-                    },"Select stage/semester/term"),
+									ammount: ctrl.schema.ammount(),
+									receipt: ctrl.schema.receiptNo()
+								}
+							}).then((res) => m.route(m.route()))
+						}
+					}, [
+						// m("div",{class:"col l3"},[
+						// 	m("b",ctrl.payment().trisem.name)
+						// ]),
 
-                    ctrl.student().stages_ive_done_before.map(function(drop){
-                      return m("option",{
-                        value:drop.id,
-                        selected:(m.route.param("selectedDepartment") == drop.id ? true : false)
-                      },drop.name)
-                    })
+						m(inputComponent, {
+							value: ctrl.schema.ammount,
+							label: "Installment ammount",
+							// icon:"mdi-editor-attach-money prefix",
+							type: "text",
+							sizes: "s12 m12 l4"
+						}),
 
-                  )
-			]),
+						m(inputComponent, {
+							value: ctrl.schema.receiptNo,
+							label: "Receipt Number",
+							// icon:"mdi-editor-insert-drive-file prefix",
+							type: "text",
+							sizes: "s12 m12 l4"
+						}),
 
-			m("form",{
-				class:"row",
-							onsubmit:(e)=>{
-								e.preventDefault();
-								m.request({
-									method:"POST",
-									url:apiUrl + "/basic/makePaymentToStudent/" + m.route.param("student_id"),
-									data:{
-										trisem_id:ctrl.schema.trisem(),
-										stage_id:ctrl.schema.stage(),
-										course_id:ctrl.schema.course(),
-										level_id:ctrl.schema.level(),
+						m(inputComponent, {
+							value: ctrl.schema.receiptNo,
+							label: "Date",
+							// icon:"mdi-editor-insert-drive-file prefix",
+							type: "text",
+							sizes: "s12 m12 l4"
+						}),
 
-										ammount:ctrl.schema.ammount(),
-										receipt:ctrl.schema.receiptNo()
-									}
-								}).then((res)=>m.route( m.route( ) ))
-							}
-						},[
-							// m("div",{class:"col l3"},[
-							// 	m("b",ctrl.payment().trisem.name)
-							// ]),
+						m("div", {
+							class: "s12 m12 l4"
+						}, [
+							m("br"),
+							m("br"),
+							m("button", {
+								class: "btn blue col l3 waves-effect waves-block waves-light"
+							}, "submit")
+						]),
 
-			                m(inputComponent,{
-			                  value:ctrl.schema.ammount,
-			                  label:"Installment ammount",
-			                  // icon:"mdi-editor-attach-money prefix",
-			                  type:"text",
-			                  sizes:"s12 m12 l6"
-			                }),
-
-			                m(inputComponent,{
-			                  value:ctrl.schema.receiptNo,
-			                  label:"Receipt Number",
-			                  // icon:"mdi-editor-insert-drive-file prefix",
-			                  type:"text",
-			                  sizes:"s12 m12 l6"
-			                }),
-
-			                m("div",{class:"s12 m12 l3"},[
-			                	m("br"),
-			                	m("button",{class:"btn blue col l3 waves-effect waves-block waves-light right"},"submit")
-			                ])
-			            ])
+						m("div", {
+							class: "s12 m12 l4"
+						}, [
+							m("br"),
+							m("br"),
+							m("button", {
+								class: "btn blue right col l3 waves-effect waves-block waves-light",
+								onclick: () => {
+									window.history.back();
+								}
+							}, "back")
+						])
+					])
+				])
 			])
-
-	
-
 		])
-	  }
+	}
 }

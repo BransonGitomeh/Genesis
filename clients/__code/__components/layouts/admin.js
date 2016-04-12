@@ -73,12 +73,32 @@ module.exports = {
           ]),
           //rest of the body
           m("section",{id:"content"},[
-            m(".container",[
-              // m("h1","side content side contentside contentside contentside content"),
-              args.body ? m(args.body) : m("h1","body here")
+            args.body ? m(args.body) : m("h1","body here")
+            // m("",[
+            //   // m("h1","side content side contentside contentside contentside content"),
+              
+            // ])
+          ]),
+          // <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a
+          
+
+          // <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          //   <a class="btn-floating btn-large red">
+          //     <i class="material-icons">mode_edit</i>
+          //   </a>
+          // </div>
+
+          m(".fixed-action-btn",{
+            onclick:()=>{
+              window.history.back()
+            }
+          },[
+            m("a",{
+            class:"btn-floating btn-large waves-effect waves-light blue"
+          },[
+              m("i",{class:"mdi-hardware-keyboard-backspace"})
             ])
           ])
-
 
         ])
 

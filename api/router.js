@@ -1,5 +1,5 @@
-module.exports = function(app,db){
-  app.get("/",(req,res) => {
+module.exports = function(app, db) {
+  app.get("/", (req, res) => {
     res.send("In the begining there was the word, and the word was with God, and the word was God")
   })
 
@@ -126,6 +126,11 @@ module.exports = function(app,db){
   app.get(
     "/basic/getUnitsOffered/:id",
     require('./microservices/institution/settings/units/get_offered')
+  )
+
+  app.get(
+    "/basic/getUnitsOfferedVersusStudent/:semester_id/:student_id",
+    require('./microservices/institution/settings/units/get_offered_vs_student')
   )
 
   app.get(
@@ -268,4 +273,56 @@ module.exports = function(app,db){
     require('./microservices/student/make_new')
   )
 
+  app.get(
+    "/student/getDepartmentsAndCourses/:student_id",
+    require('./microservices/institution/queries/allCourses')
+  )
+
+  // student add course
+  app.get(
+      "/student/addCourseToMyself/:student_id/:course_id",
+      require('./microservices/student/queries/addCourseToMyself')
+    )
+    //student remove course
+  app.get(
+      "/student/RemoveCourseFromMyself/:student_id/:course_id",
+      require('./microservices/student/queries/RemoveCourseFromMyself')
+    )
+    // student add level
+  app.get(
+      "/student/addLevelToMyself/:student_id/:level_id",
+      require('./microservices/student/queries/addLevelToMyself')
+    )
+    //student remove level
+  app.get(
+      "/student/RemoveLevelFromMyself/:student_id/:level_id",
+      require('./microservices/student/queries/RemoveLevelFromMyself')
+    )
+    // student add stage
+  app.get(
+      "/student/addStageToMyself/:student_id/:stage_id",
+      require('./microservices/student/queries/addStageToMyself')
+    )
+    //student remove stage
+  app.get(
+    "/student/RemoveStageFromMyself/:student_id/:stage_id",
+    require('./microservices/student/queries/RemoveStageFromMyself')
+  )
+
+  //student add unit
+  app.get(
+    "/student/AddUnitToMyself/:student_id/:unit_id/:semester_id/:tri_semester_id",
+    require('./microservices/student/queries/AddUnitToMyself')
+  )
+
+  //student remove unit
+  app.get(
+      "/student/RemoveUnitFromMyself/:student_id/:unit_id/:semester_id/:tri_semester_id",
+      require('./microservices/student/queries/RemoveUnitFromMyself')
+    )
+    //get my units
+  app.get(
+    "/student/getMyUnits/:student_id",
+    require('./microservices/student/units/get_my_units')
+  )
 }

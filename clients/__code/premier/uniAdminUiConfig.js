@@ -35,11 +35,11 @@ module.exports = function(){
         icon:"mdi-action-perm-identity"
       },
 
-      {
-        text:"Admins",
-        url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId"),
-        icon:"mdi-action-assignment-ind"
-      },
+      // {
+      //   text:"Admins",
+      //   url:"/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId"),
+      //   icon:"mdi-action-assignment-ind"
+      // },
       // {text:"System Users",icon:"mdi-av-my-library-books",drops:[
       //   {text:"Registrars",url:"/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId")},
       // ]},

@@ -1,122 +1,139 @@
 var paymentCard = require("./payment-card")
 
 var model = {
-	student:() => {
+	payments: () => {
 		return m.request({
-			method:"GET",
-			url:apiUrl + "/basic/getMyPayments/" + m.route.param("student_id")
+			method: "GET",
+			url: apiUrl + "/basic/getMyPayments/" + m.route.param("student_id")
 		})
 	}
 }
 module.exports = {
-	controller:(args)=>{
+	controller: (args) => {
 		return {
-			student:model.student()
+			payments: model.payments()
 		}
 	},
-	view:(ctrl,args)=>{
-		return m(".invoice",[
+	view: (ctrl, args) => {
+		return m(".container", [
 
-			m(".invoice-header",[
-				m(".row-section",[
-					m(".col s12 m6 l6",[
-						m("br"),
-						m("img",{src:"akssksks"})
-						
-					]),
-					m(".col s12 m6 l6",[
-						m(".invoce-company-address right-align",[
-							m("p",[
-								m("span",{class:"strong"},ctrl.student().name),
-								m("br"),
-								m("span",ctrl.student().adm),
-								m("br"),
-								m("span",ctrl.student().stage.name),
-								m("br"),
-								m("span",ctrl.student().course.name),
-								m("br"),
-								m("span",ctrl.student().study_mode.name),
-								m("br"),
-								m("span",ctrl.student().level.name)
+			m(".invoice-header", [
+				m(".row-section", [
+					m("br"),
+					m("h5",{class:"center"},m.route.param("uniName")),
+					m("h5",{class:"center"},"Student Financial Statement"),
+					m("br"),
+					m("table", {
+						class: "striped"
+					}, [
+						m("thead", []),
+						m("tbody", [
+							m("tr", [
+								m("td", m("b", "Names")),
+								m("td", ctrl.payments().student.name),
+
+								m("td", m("b", "Admission Number")),
+								m("td", ctrl.payments().student.adm),
+
+								m("td", m("b", "Course")),
+								m("td", ctrl.payments().student.course),
+							]),
+							m("tr", [
+
+								m("td", m("b", "Study Mode")),
+								m("td", ctrl.payments().student.study_mode),
+								m("td", m("b", "Stage")),
+								m("td", ctrl.payments().student.level),
+								m("td", m("b", "Semester")),
+								m("td", ctrl.payments().student.stage)
 							])
+
 						])
-					])
+					]),
+					m("br"),
+					m("br")
 				]),
-				m(".row",[
-					m(".col s12 m3 l3 blue white-text",[
-						m("h4","Financial Statement")
+				m(".row", [
+					m(".col s12 m3 l12 blue white-text", [
+						m("h4", "Financial Statement")
 					]),
-					m(".col s12 m9 l9 invoice-brief blue white-text",[
-						m(".row",[
-							m(".col s12 m3 l3",[
-								m("p",{class:"strong"},"Total Paid"),
-								m("h4",{class:"header"},"RWF." + ctrl.student().sums)
-							]),
-							m(".col s12 m3 l3",[
-								m("p",{class:"strong"},"Invoice Number"),
-								m("h4",{class:"header"},"RWF." + ctrl.student().sums)
-							]),
-							m(".col s12 m3 l3",[
-								m("p",{class:"strong"},"Date"),
-								m("h4",{class:"header"},"RWF." + ctrl.student().sums)
-							])
-						])
-					]),
-					m("br"),
-					m("br"),
-					m(".invoice-table container",[
-						m(".row",[
-							m("table",{class:"striped"},[
-								m("thead",[
-									m("tr",[
-										m("th","semester"),
-										m("th","course_paid_to"),
-										m("th","level_paid_to"),
-										m("th","stage_paid_to"),
-										m("th","receipt"),
-										m("th","ammount")
+					m(".invoice-table container", [
+						m(".row", [
+							m("table", {
+								class: "striped"
+							}, [
+								m("thead", [
+									m("tr", [
+										m("th", "Semester"),
+										m("th", "Units selected"),
+										m("th", "Cost of units"),
+										m("th", "Payments made"),
+										m("th", "Receipt Number")
 									])
 								]),
-								m("tbody",[
-									ctrl.student().payments_i_have_made.map((payment)=>{
-										return m("tr",[
-											m("td",payment.tri_semesters_i_was_paid_to ? payment.tri_semesters_i_was_paid_to.name : ""),
-											m("td",payment.course_paid_to ? payment.course_paid_to.name : ""),
-											m("td",payment.level_paid_to ? payment.level_paid_to.name : ""),
-											m("td",payment.stage_paid_to ? payment.stage_paid_to.name : ""),
-											m("td",payment.receipt),
-											m("td",payment.ammount),
-										])
+								m("tbody", [
+									ctrl.payments().stages.map((stage) => {
+										return [
+											m("tr", [
+												m("td", stage.name),
+												m("td", [
+													m("ul", [
+														stage.unitsSelected.map((unit) => {
+															return m("li", unit.unit)
+														})
+													])
+												]),
+												m("td", [
+													m("ul", [
+														stage.unitsSelected.map((unit) => {
+															return m("li", unit.cost)
+														})
+													])
+												]),
+												m("td", [
+													m("ul", [
+														stage.myPaymentsInThisSem.map((payment) => {
+															return m("li", payment.ammount)
+														})
+													])
+												]),
+												m("td", [
+													m("ul", [
+														stage.myPaymentsInThisSem.map((payment) => {
+															return m("li", payment.receiptNo)
+														})
+													])
+												])
+
+											]),
+											m("tr", [
+												m("td", " "),
+												m("td", " "),
+												m("td", m("b", "TOTAL: " + stage.UnitsCharges)),
+												m("td", m("b", "TOTAL:" + stage.TotalPayments))
+											])
+										]
 									})
 								])
-							])			
+							])
+						])
+					]),
+					// the totals area
+					m(".col s12 m3 l12", [
+						m(".row", [
+							m(".col s12 m3 l3 blue white-text right", [
+								// m("h4",{class:"header"},"Total Paid: " + ctrl.payments().sums)
+							])
 						])
 					])
+
+				]),
+				m("br"),
+				m("br"),
+				m(".col s12 m3 l6 blue white-text right", [
+					m("h5", " Total Payments: " + ctrl.payments().overall.totalPaid + " Balance: " + ctrl.payments().overall.totalBalance)
 				])
 			])
 		])
-	  }
+	}
 }
-
-
-//             <div class="invoice-footer">
-//               <div class="row">
-//                 <div class="col s12 m6 l6">
-//                   <p class="strong">Payment Method</p>
-//                   <p>Please make the cheque to: AMANDA ORTON</p>
-//                   <p class="strong">Terms &amp; Condition</p>
-//                   <ul>
-//                     <li>You know, being a test pilot isn't always the healthiest business in the world.</li>
-//                     <li>We predict too much for the next year and yet far too little for the next 10.</li>
-//                   </ul>
-//                 </div>
-//                 <div class="col s12 m6 l6 center-align">
-//                   <p>Approved By</p>
-//                   <img src="images/signature-scan.png" alt="signature">
-//                   <p class="header">AMANDA ORTON</p>
-//                   <p>Managing Director</p>
-//                 </div>
-//               </div>
-//             </div>
-            
-//           </div>
