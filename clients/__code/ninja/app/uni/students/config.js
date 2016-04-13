@@ -10,9 +10,14 @@ module.exports = {
 			method: "GET",
 			url: apiUrl + "/student/getDepartmentsAndCourses/" + m.route.param("student_id")
 		})
+		var getTri_semesters = m.request({
+			method: "GET",
+			url: apiUrl + "/basic/getTri_semesters/" + m.route.param("uniId")
+		})
 		return {
 			selected: m.prop(false),
-			results: availableTrisemesters
+			results: availableTrisemesters,
+			getTri_semesters:getTri_semesters
 		}
 	},
 	view(ctrl, args) {
@@ -25,7 +30,8 @@ module.exports = {
 						},
 						onchange: function(e) {
 							// ctrl.schema.trisem(e.target.value)
-							m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value)
+							console.log(ctrl.getTri_semesters().active_tri_semester.id)
+							m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value + "/" + ctrl.getTri_semesters().active_tri_semester.id)
 						}
 					},
 

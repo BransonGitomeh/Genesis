@@ -177,7 +177,7 @@ m.route(document.body, "/", {
 		body: require("./app/uni/students/config"),
 	}),
 
-	"/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id": m(adminUi, {
+	"/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id/:tri_sem_id": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/students/config_units"),
 	}),

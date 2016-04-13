@@ -17,7 +17,7 @@ module.exports = {
 		})
 		var availableUnits = m.request({
 			method: "GET",
-			url: apiUrl + "/basic/getUnitsOfferedVersusStudent/" + m.route.param("semester_id") + "/" + m.route.param("student_id")
+			url: apiUrl + "/basic/getUnitsOfferedVersusStudent/" + m.route.param("semester_id") + "/" + m.route.param("student_id") + "/" + m.route.param("tri_sem_id")
 		})
 
 		var selectedUnits = m.request({
@@ -46,6 +46,8 @@ module.exports = {
 							// ctrl.schema.trisem(e.target.value)
 							ctrl.selectedTrisem(e.target.value)
 							// alert(ctrl.selectedTrisem())
+						    m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + m.route.param("semester_id")+ "/" + e.target.value)
+
 						}
 					},
 
@@ -59,7 +61,7 @@ module.exports = {
 						return m("option", {
 							value: stage.id,
 							// disabled:true,
-							selected: (stage.id === ctrl.getTri_semesters().active_tri_semester.id ? true : false)
+							selected: (stage.id === m.route.param("tri_sem_id") ? true : false)
 						}, stage.name)
 					})
 
@@ -72,7 +74,9 @@ module.exports = {
 						},
 						onchange: function(e) {
 							// ctrl.schema.trisem(e.target.value)
-							m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value)
+							// m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value)
+							m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value + "/" + m.route.param("tri_sem_id"))
+
 						}
 					},
 
@@ -108,12 +112,12 @@ module.exports = {
 								if (unit.selected === false) {
 									m.request({
 										method: "GET",
-										url: apiUrl + "/student/AddUnitToMyself/" + m.route.param("student_id") + "/" + unit.id + "/" + m.route.param("semester_id") + "/" + (ctrl.selectedTrisem() || ctrl.getTri_semesters().active_tri_semester.id)
+										url: apiUrl + "/student/AddUnitToMyself/" + m.route.param("student_id") + "/" + unit.id + "/" + m.route.param("semester_id") + "/" + m.route.param("tri_sem_id")
 									}).then(m.route(m.route()))
 								} else {
 									m.request({
 										method: "GET",
-										url: apiUrl + "/student/RemoveUnitFromMyself/" + m.route.param("student_id") + "/" + unit.id + "/" + m.route.param("semester_id") + "/" + (ctrl.selectedTrisem() || ctrl.getTri_semesters().active_tri_semester.id)
+										url: apiUrl + "/student/RemoveUnitFromMyself/" + m.route.param("student_id") + "/" + unit.id + "/" + m.route.param("semester_id") + "/" + m.route.param("tri_sem_id")
 									}).then(m.route(m.route()))
 								}
 

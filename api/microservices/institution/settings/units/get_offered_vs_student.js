@@ -15,7 +15,7 @@ module.exports = (req, res) => {
 			req.db.unit_registration.find({
 					student: req.params.student_id,
 					stage: req.params.semester_id,
-					tri_semester: level.level.course.department.proschool.uni.active_tri_semester.id
+					tri_semester:  req.params.tri_sem_id
 				})
 				.populate("unit")
 				.exec((err, unit_registration) => {

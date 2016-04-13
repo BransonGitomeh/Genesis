@@ -129,7 +129,7 @@ module.exports = function(app, db) {
   )
 
   app.get(
-    "/basic/getUnitsOfferedVersusStudent/:semester_id/:student_id",
+    "/basic/getUnitsOfferedVersusStudent/:semester_id/:student_id/:tri_sem_id",
     require('./microservices/institution/settings/units/get_offered_vs_student')
   )
 
