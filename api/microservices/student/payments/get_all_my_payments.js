@@ -1,12 +1,12 @@
 var seneca = require("seneca")()
 
 module.exports = (req, res) => {
-	// import the students micro-service
-	var student = require("./student_ms")(req.db),paymentLog,unitsRegistered
-	//register the ms's that i want
-	seneca.use(student.getUnits)
-	seneca.use(student.getAllUnitRegistrations)
-	seneca.use(student.getPayments)
+	//import the sevice directory
+	var student_services = require("./student_ms")(req.db)
+		//register all the services in it
+	for (x in student_services) {
+		seneca.use(student_services[x])
+	}
 
 	// ask for all the charges for the units registered
 	seneca.act({
@@ -23,13 +23,21 @@ module.exports = (req, res) => {
 			studentId: req.params.student_id
 		}, (err, paymentLog) => {
 			if (err) return console.error
+				// get the students details
+			seneca.act({
+				role: 'student',
+				cmd: 'getDetails',
+				studentId: req.params.student_id
+			}, (err, studentDetails) => {
+				if (err) return console.error
 
-			res.send({
-				payments_log:paymentLog,
-				units_log:unitsRegistered,
-				balance:unitsRegistered.totalCost - paymentLog.totalPayments 
+				res.send({
+					studentDetails: studentDetails.result,
+					payments_log: paymentLog,
+					units_log: unitsRegistered,
+					balance: unitsRegistered.totalCost - paymentLog.totalPayments
+				})
 			})
 		})
-
 	})
 }

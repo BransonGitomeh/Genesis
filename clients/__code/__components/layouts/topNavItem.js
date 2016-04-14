@@ -5,7 +5,11 @@ module.exports = {
         class:"waves-effect waves-block waves-light dropdown-button",
         href:args.url,
         config:m.route,
-        "data-activates":args.text
+        "data-activates":args.text,
+        onclick:()=>{
+          // alert("backing")
+          (typeof(args.onClick) === "function" ? args.onClick() : "")
+        }
       },[
         args.icon ? m("i",{class:args.icon}) : ""
       ],args.text ? args.text : ""),

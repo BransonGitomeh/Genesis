@@ -58,3 +58,6 @@ Materialize
   }
   
   ******************************************************************************
+
+
+echo "INSERT INTO foo VALUES('001', 'c1', 'very'), ('000', 'c1', 'Hypertable'), ('001', 'c2', 'easy'), ('000', 'c2', 'is');" | ht shell --batch

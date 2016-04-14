@@ -5,16 +5,6 @@ module.exports = (db) => {
 				role: "student",
 				cmd: "getUnits",
 			}, (args, respond) => {
-				//clean all registrations
-				// db.unit_registration.find().exec((err, students)=>{
-				// 	students.map((student)=>{
-				// 		db.unit_registration.destroy({id:student.id}).exec((err)=>{
-				// 			console.log("deleted" + student.id)
-				// 		})
-				// 	})
-					
-				// })
-
 				db.student.findOne({
 						id: args.studentId
 					})
@@ -105,6 +95,38 @@ module.exports = (db) => {
 							totalPayments: sum
 						})
 					})
+			})
+		},
+
+		getStudentsDetails: function(options) {
+			this.add({
+				role: "student",
+				cmd: "getDetails"
+			}, (args, respond) => {
+				db.student.findOne({
+						id: args.studentId
+					})
+					.populate("course")
+					.populate("level")
+					.populate("stage")
+					.populate("study_mode")
+					.exec((err, student) => {
+						// console.log(student)
+
+						var finalStudent = {
+							course: student.course.name,
+							level: student.level.name,
+							stage: student.stage.name,
+							study_mode: student.level.name,
+							name: student.name,
+							id: student.id
+						}
+						respond(null, {
+							result: finalStudent
+						})
+					})
+
+
 			})
 		}
 	}

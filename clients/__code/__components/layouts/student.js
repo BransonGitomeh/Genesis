@@ -53,7 +53,7 @@ module.exports = {
                 m(topNavItem, {
                   url: "#",
                   icon: "mdi-hardware-keyboard-backspace",
-                  onClick: ()=>{
+                  onClick: () => {
                     window.history.back()
                   }
                 })
@@ -109,21 +109,6 @@ module.exports = {
           }, [
             args.body ? m(args.body) : m("h1", "body here")
           ])
-
-
-          // m(".fixed-action-btn", {
-          //   onclick: () => {
-          //     window.history.back()
-          //   }
-          // }, [
-          //   m("a", {
-          //     class: "btn-floating btn-large waves-effect waves-light blue"
-          //   }, [
-          //     m("i", {
-          //       class: "mdi-hardware-keyboard-backspace"
-          //     })
-          //   ])
-          // ])
 
         ])
 

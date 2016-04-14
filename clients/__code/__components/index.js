@@ -1,3 +1,4 @@
 module.exports = {
-  adminLayout:require("./layouts/admin")
+  adminLayout:require("./layouts/admin"),
+  studentLayout:require("./layouts/student")
 }

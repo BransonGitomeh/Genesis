@@ -1,8 +1,10 @@
 var __components = require('../__components/index.js');
 var adminUi = __components.adminLayout
+var studentUi = __components.studentLayout
 
 var ninjaUIConfig = require("./ninjaAdminUiConfig")
 var uniAdminUiConfig = require("../premier/uniAdminUiConfig")
+var uniStudentUiConfig = require("../premier/uniStudentUiConfig")
 
 m.route.mode = "hash";
 
@@ -35,9 +37,20 @@ m.route(document.body, "/", {
 		config: ninjaUIConfig,
 		body: require("./app/ninja/play/ted")
 	}),
+
 	"/ninja/play/caro": m(adminUi, {
 		config: ninjaUIConfig,
 		body: require("./app/ninja/play/caro")
+	}),
+
+	// student portal routes
+	"/uni/admin/:uniName/:uniId/Student/:student_id": m(studentUi, {
+		config: uniStudentUiConfig,
+	}),
+
+	"/uni/admin/:uniName/:uniId/Student/:student_id/finance": m(studentUi, {
+		config: uniStudentUiConfig,
+		body: require("./app/uni/students/portal/finance")
 	}),
 
 	"/uniadmin/:uniName/:uniId": m(adminUi, {
@@ -56,8 +69,6 @@ m.route(document.body, "/", {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/noticeboard")
 	}),
-
-
 
 	"/uni/:uniName/:uniId/noticeboard/add": m(adminUi, {
 		config: uniAdminUiConfig,

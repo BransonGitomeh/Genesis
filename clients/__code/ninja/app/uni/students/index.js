@@ -1,10 +1,15 @@
 module.exports = {
 	controller: (args) => {
+		var getTri_semesters = m.request({
+			method: "GET",
+			url: apiUrl + "/basic/getTri_semesters/" + m.route.param("uniId")
+		})
 		return {
 			students: m.request({
 				method: "GET",
 				url: apiUrl + "/basic/getAllStudents/" + m.route.param("uniId")
-			})
+			}),
+			getTri_semesters: getTri_semesters
 		}
 	},
 	view: (ctrl, args) => {
@@ -22,7 +27,7 @@ module.exports = {
 				])
 			]),
 			m("br"),
-			// m(".flow-text center","All Students"),
+
 			m("div", {
 				class: "container"
 			}, [
@@ -70,9 +75,15 @@ module.exports = {
 								]),
 								m("td", [
 									m("a", {
-										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + student.id,
+										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + student.id + "/units/" + student.stage.id + "/" + ctrl.getTri_semesters().active_tri_semester.id,
 										config: m.route
-									}, "Configuration")
+									}, "Configure Units")
+								]),
+								m("td", [
+									m("a", {
+										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Student/" + student.id,
+										config: m.route
+									}, "Student Portal")
 								])
 							])
 						})
