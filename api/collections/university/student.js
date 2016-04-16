@@ -131,12 +131,15 @@ module.exports = [{
     student_who_made_me: {
       model: "student"
     },
+
     course_paid_to: {
       model: "course"
     },
+
     level_paid_to: {
       model: "level"
     },
+
     stage_paid_to: {
       model: "stage"
     },
@@ -144,6 +147,8 @@ module.exports = [{
     tri_semesters_i_was_paid_to: {
       model: "tri_semester"
     }
+
+
   }
 }, {
   identity: 'installment',
@@ -152,5 +157,10 @@ module.exports = [{
     payment_i_belongTo: {
       model: "payment"
     }
+  }
+},{
+  identity: 'request',
+  attributes: {
+    req: "string"
   }
 }]

@@ -49,8 +49,8 @@ module.exports = function(){
         {text:"Schools",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/schools"},
         // {text:"Departments",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/departments"},
         {text:"Study modes",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/study_modes"},
-        {text:"Tri-Semesters",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/tri_sems"}
-
+        {text:"Tri-Semesters",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/tri_sems"},
+        {text:"Payment-methods",url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/payment-methods"}
       ]}
   	]
   }

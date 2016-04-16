@@ -25,18 +25,18 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 	})
 
 	/*
-	*a service directory stores services that are related to one another,
-	*this is just to organise the services into groves that can be moved independently
-	*
-	*currrently you need to pass the db into a service directory for it to have db access
-	*i future i wish to split every data store so it is independent
-	*
-	*a service directory can have its own service directory too to increase controll etc
-	*
-	*services are allowed to call one another even outside their service directories to increase code re-use as much as possible
-	*
-	*routing remains intact for back words compatibility , till no more requests head to them
-	*/
+	 *a service directory stores services that are related to one another,
+	 *this is just to organise the services into groves that can be moved independently
+	 *
+	 *currrently you need to pass the db into a service directory for it to have db access
+	 *i future i wish to split every data store so it is independent
+	 *
+	 *a service directory can have its own service directory too to increase controll etc
+	 *
+	 *services are allowed to call one another even outside their service directories to increase code re-use as much as possible
+	 *
+	 *routing remains intact for back words compatibility , till no more requests head to them
+	 */
 
 	//import a sevice directory
 	var student_services = require("./microservices/service_router.js")(app.locals.collections);
@@ -44,20 +44,22 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 	for (x in student_services) seneca.use(student_services[x])
 
 	/*
-	*a post mist be used to access a service, the args,
-	*target and command for that service  must be in the body of the post
-	*this allows the entire process to be transfered securely via https and
-	*for other mechanisms to be employed to encrypt the body for more security,
-	*this just eases everything
-	*/
+	 *a post must be used to access a service, the args,
+	 *target and command for that service  must be in the body of the post
+	 *this allows the entire process to be transfered securely via https and
+	 *for other mechanisms to be employed to encrypt the body for more security,
+	 *this just eases everything
+	 */
 	app.post("/services", (req, res) => {
 
-		if(!(req.body.role && req.body.cmd)) {
+		if (!(req.body.role && req.body.cmd)) {
 			res.status(401)
 			res.send("oops, you need to specify role and cmd")
-		}else{
+		} else {
 			seneca.act(req.body, (err, result) => res.send(err || result))
 		}
 	})
+
+	
 
 })

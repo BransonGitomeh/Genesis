@@ -177,6 +177,11 @@ m.route(document.body, "/", {
 		body: require("./app/uni/config/tri_sems/tri_semsLayout"),
 	}),
 
+	"/uni/admin/:uniName/:uniId/payment-methods": m(adminUi, {
+		config: uniAdminUiConfig,
+		body: require("./app/uni/config/payments/payment_methodsLayout"),
+	}),
+
 	//register student to all that stuff
 	"/uni/admin/:uniName/:uniId/Students/index": m(adminUi, {
 		config: uniAdminUiConfig,
