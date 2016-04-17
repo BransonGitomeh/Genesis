@@ -96,10 +96,11 @@ module.exports = [{
 
     university: {
       model: "university"
+    },
+    
+    payments: {
+      collection: "payment",
+      via:"payment_method"
     }
-    // payments: {
-    //   collection: "payment",
-    //   via:"pay_method"
-    // }
   }
 }]

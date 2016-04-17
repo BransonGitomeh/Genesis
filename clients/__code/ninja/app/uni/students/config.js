@@ -3,6 +3,7 @@ var courses = require("./config/courses")
 var stages = require("./config/stages")
 var semesters = require("./config/semesters")
 var units = require("./config/units")
+var studentInfo = require("./studentInfo")
 
 module.exports = {
 	controller: () => {
@@ -21,8 +22,8 @@ module.exports = {
 		}
 	},
 	view(ctrl, args) {
-		return m(".app row", [
-
+		return m(".app row container", [
+			m(studentInfo),
 			m(".input-field col s12 l12", [
 				m("select", {
 						config: function() {

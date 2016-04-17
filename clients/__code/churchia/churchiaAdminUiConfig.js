@@ -1,7 +1,7 @@
 module.exports = function() {
   var config = {
-    logoText: "Ninja admin Ui",
-    color: "purple",
+    logoText: m.route.param("churchName") + " Admin Ui",
+    color: "orange",
     topBarItems: [{
         url: "/",
         text: "Dashboard",
@@ -21,13 +21,29 @@ module.exports = function() {
       //   {url:"/churchia/all",text:"View all"}
       // ]},
       {
-        text: "Universities",
-        url: "/uni/all",
-        icon: "mdi-image-movie-creation"
+        text: "Dashboard",
+        url: "/churchAdmin/" + m.route.param("churchName") + "/" + m.route.param("churchId"),
+        icon: "mdi-action-view-carousel"
       }, {
-        text: "Churches",
+        text: "Noticeboard",
+        url: "/churchAdmin/" + m.route.param("churchName") + "/" + m.route.param("churchId") + "/Noticeboard",
+        icon: "mdi-action-assignment"
+      }, {
+        text: "Sermons",
         url: "/churchia/all",
         icon: "mdi-av-my-library-books"
+      }, {
+        text: "Church members",
+        url: "/churchia/all",
+        icon: "mdi-action-perm-identity"
+      }, {
+        text: "Admins",
+        url: "/churchia/all",
+        icon: "mdi-communication-business"
+      }, {
+        text: "Site configuration",
+        url: "/churchia/all",
+        icon: "mdi-action-settings"
       }
 
       // {text:"Secondary schools",icon:"mdi-image-movie-creation",drops:[

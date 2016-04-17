@@ -1,4 +1,5 @@
 var paymentCard = require("./payment-card")
+var studentInfo = require("./studentInfo")
 
 var model = {
 	payments: () => {
@@ -15,25 +16,8 @@ module.exports = {
 		}
 	},
 	view: (ctrl, args) => {
-		return m(".container", [
-
-			m(".col s12 m3 l12 blue white-text card-panel", [
-				m(".row", [
-					m("h4", {
-						class: "center"
-					}, m.route.param("uniName")),
-					m("h4", {
-						class: "center"
-					}, "Financial statement"),
-					m(".span", [
-						m(".col l3", m("b", "Study_mode: "), ctrl.payments().studentDetails.study_mode),
-						m(".col l3", m("b", "Name: "), ctrl.payments().studentDetails.name),
-						m(".col l2", m("b", "Course: "), ctrl.payments().studentDetails.course),
-						m(".col l2", m("b", "Level: "), ctrl.payments().studentDetails.level),
-						m(".col l2", m("b", "Stage: "), ctrl.payments().studentDetails.stage)
-					]),
-				])
-			]),
+		return m(".container row", [
+			args ? "" : m(studentInfo),
 			m(".invoice-header card-panel", [
 				m(".row", [
 
@@ -46,9 +30,7 @@ module.exports = {
 						])
 					]),
 
-					m("h5", {
-						class: "center"
-					}, "Charges"),
+					m("h5", "Charges"),
 					m("table", {
 						class: "striped"
 					}, [
@@ -81,7 +63,7 @@ module.exports = {
 
 					m(".col s12 m3 l12", [
 						m(".row", [
-							m(".col s12 m3 l2 blue white-text right", [
+							m(".col s12 m3 l3 blue white-text right", [
 								m("h6", {
 									class: "header"
 								}, "Total Charges: " + ctrl.payments().units_log.totalCost)
@@ -89,9 +71,7 @@ module.exports = {
 						])
 					]),
 
-					m("h5", {
-						class: "center"
-					}, "Payments"),
+					m("h5", "Payments"),
 					m("table", {
 						class: "striped"
 					}, [
@@ -101,7 +81,8 @@ module.exports = {
 								m("th", "course"),
 								m("th", "level"),
 								m("th", "receipt"),
-								m("th", "date"),
+								// m("th", "date"),
+								m("th", "channel"),
 								m("th", "ammount"),
 							])
 						]),
@@ -113,7 +94,8 @@ module.exports = {
 									m("td", payment.course),
 									m("td", payment.level),
 									m("td", payment.receipt),
-									m("td", payment.date),
+									// m("td", payment.date),
+									m("td", payment.channel + " - " + payment.location),
 									m("td", payment.ammount)
 
 								])
@@ -122,21 +104,20 @@ module.exports = {
 					]),
 					m(".col s12 m3 l12", [
 						m(".row", [
-							m(".col s12 m3 l2 blue white-text right", [
+							m(".col s12 m3 l3 blue white-text right", [
 								m("h6", {
 									class: "header"
 								}, "Total payments: " + ctrl.payments().payments_log.totalPayments)
 							])
 						])
 					]),
-				]),
-				m("br"),
-				m("br"),
-				m(".col s12 m3 l6 blue white-text right", [
-					m("h6", "Balance: " + ctrl.payments().balance)
-				]),
-				m("br"),
-				m("br"),
+
+					m("br"),
+					m("br"),
+					m(".col s12 m3 l3 blue white-text right", [
+						m("h6", "Current Balance: " + ctrl.payments().balance)
+					])
+				])
 			])
 		])
 	}

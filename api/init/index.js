@@ -60,12 +60,11 @@ module.exports = (collections, config, callback) => {
 		if (err) throw err;
 		app.locals.collections = models.collections
 
-		var addDbToReq = function(req, res, next) {
+
+		app.use(function(req, res, next) {
 			req.db = models.collections
 			next()
-		}
-
-		app.use(addDbToReq)
+		})
 
 		// save the request and time taken and the status to be able to get analytics later
 		//log request time
@@ -73,6 +72,7 @@ module.exports = (collections, config, callback) => {
 			var start = Date.now();
 			res.on('finish', function() {
 				var duration = Date.now() - start;
+
 				// log duration
 				models.collections.request.create({
 					start: start,
@@ -81,19 +81,17 @@ module.exports = (collections, config, callback) => {
 					statusCode: res.statusCode,
 					ip: req.connection.remoteAddress
 				}).exec((err, created) => {
-						// console.log(created)
+					// console.log(created)
 				})
 
-				log.info(req.method + " " + req.url + "--->(" + duration + "ms)")
-
+				log.info(res.statusCode  +  " " + req.method + "(" + duration + ")")
 			});
-
-
 
 			next();
 		});
 
 		log.info("Backend config complete, next()");
-		callback(app) //returns an express app with models
+		//returns an express app with models
+		callback(app)
 	})
 }

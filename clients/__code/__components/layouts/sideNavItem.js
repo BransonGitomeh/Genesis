@@ -13,9 +13,9 @@ module.exports = {
           $('.collapsible').collapsible()
         }
       },[
-        m("li",{class:"bold"},[
+        m("li",{class:"bold waves-effect waves-block waves-light"},[
           // header
-          m("a",{class:"collapsible-header waves-effect waves-cyan " + (ctrl.active() === true ? "active" : "")},[
+          m("a",{class:"collapsible-header" + (ctrl.active() === true ? "active" : "")},[
             m("i",{class:args.icon})
           ],args.text),
           //body

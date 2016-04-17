@@ -12,6 +12,7 @@ module.exports = (db) => {
 					.populate("unit_registrations.tri_semester")
 					.populate("unit_registrations.stage.level.course")
 					.populate("unit_registrations.tri_semester")
+					// .populate("unit_registrations.payment_method")
 					.exec((err, studentFound) => {
 
 						// console.log(studentFound.unit_registrations)
@@ -74,16 +75,20 @@ module.exports = (db) => {
 					.populate("payments_i_have_made.tri_semesters_i_was_paid_to")
 					.populate("payments_i_have_made.course_paid_to")
 					.populate("payments_i_have_made.level_paid_to")
+					.populate("payments_i_have_made.payment_method")
 					.exec((err, student) => {
 						// console.log(student)
 						var payments = [];
 						var sum = 0;
 						student.payments_i_have_made.map((payment) => {
+							console.log()
 							payments.push({
 								trimester: payment.tri_semesters_i_was_paid_to.name,
 								course: payment.course_paid_to.name,
 								level: payment.level_paid_to.name,
 								ammount: Number(payment.ammount),
+								channel:(payment.payment_method ? payment.payment_method.name : ""),
+								location:(payment.payment_method ? payment.payment_method.location : ""),
 								receipt: payment.receipt,
 								date: payment.createdAt
 							})
@@ -125,8 +130,6 @@ module.exports = (db) => {
 							result: finalStudent
 						})
 					})
-
-
 			})
 		}
 	}

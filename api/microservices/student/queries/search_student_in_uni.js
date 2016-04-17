@@ -24,7 +24,7 @@ module.exports = (req,res) => {
 				}));
 			})
 
-			res.send(resultObjects)
+			res.send((resultObjects.length > 0 ? resultObjects : students.splice(0,10)))
 		})
 
 	}

@@ -29,7 +29,7 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 	 *this is just to organise the services into groves that can be moved independently
 	 *
 	 *currrently you need to pass the db into a service directory for it to have db access
-	 *i future i wish to split every data store so it is independent
+	 *i future i wish to split every sevice with its own data store so it is independent
 	 *
 	 *a service directory can have its own service directory too to increase controll etc
 	 *
@@ -58,8 +58,6 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 		} else {
 			seneca.act(req.body, (err, result) => res.send(err || result))
 		}
+		
 	})
-
-	
-
 })

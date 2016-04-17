@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 		.populate("level.course.department.proschool.uni.active_tri_semester")
 		.exec((err, level) => {
 			if (err) throw err;
-			console.dir()
+			console.dir(level)
 
 			console.log("awesomeness")
 			req.db.unit_registration.find({

@@ -19,21 +19,6 @@ module.exports = {
 	},
 	view: (ctrl, args) => {
 		return m("span", [
-			m("nav", [
-				m(".nav-wrapper blue", [
-					m(".col s6", [
-						m("a", {
-							class: "breadcrumb"
-						}, "Dashboard"),
-						m("a", {
-							class: "breadcrumb"
-						}, "Finance"),
-						m("a", {
-							class: "breadcrumb"
-						}, "Student Search")
-					])
-				])
-			]),
 			m("form", {
 				class: "row margin container",
 				onsubmit: (e) => {
@@ -52,10 +37,10 @@ module.exports = {
 				}),
 				m(".searchButton", [
 					m("br"),
-					m("button", {
-						class: "btn blue",
+					m("div", {
+						class: "btn blue col l2",
 						type: "submit"
-					}, "search")
+					}, "Search")
 				])
 			]),
 
@@ -83,30 +68,15 @@ module.exports = {
 							m("td", result.study_mode.name),
 							m("td", [
 								m("a", {
-									href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/payments/" + result.id,
-									config: m.route
-								}, "Add a payment")
-							]),
-							m("td", [
-								m("a", {
 									href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/viewpayments/" + result.id,
 									config: m.route
 								}, "View payments")
 							]),
-							m("td", [
-								m("a", {
-									href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + result.id,
-									config: m.route
-								}, "Configuration")
-							])
 						])
 					})
 
 				])
-			]),
-
-			// m("br"),
-			// ctrl.schema.searchTerm() === "" ? m(".flow-text center", "Search for a student here..") : ""
+			])
 		])
 	}
 }

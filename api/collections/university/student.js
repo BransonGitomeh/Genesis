@@ -26,7 +26,7 @@ module.exports = [{
     course: {
       model: "course"
     },
-    
+
     level: {
       model: "level"
     },
@@ -85,7 +85,7 @@ module.exports = [{
       via: "students_that_have_done_me_before"
     }
   }
-},{
+}, {
   identity: 'unit_registration',
   attributes: {
     unit: {
@@ -97,10 +97,10 @@ module.exports = [{
     student: {
       model: "student"
     },
-    tri_semester:{
-      model:"tri_semester"
+    tri_semester: {
+      model: "tri_semester"
     }
-    
+
   }
 }, {
   identity: 'student_profile',
@@ -146,9 +146,11 @@ module.exports = [{
 
     tri_semesters_i_was_paid_to: {
       model: "tri_semester"
+    },
+
+    payment_method: {
+      model: "payment_method"
     }
-
-
   }
 }, {
   identity: 'installment',
@@ -158,7 +160,7 @@ module.exports = [{
       model: "payment"
     }
   }
-},{
+}, {
   identity: 'request',
   attributes: {
     req: "string"

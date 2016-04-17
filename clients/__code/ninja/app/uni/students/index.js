@@ -61,37 +61,19 @@ module.exports = {
 								m("td", student.level ? student.level.name : ""),
 								m("td", student.stage ? student.stage.name : ""),
 								m("td", student.study_mode ? student.study_mode.name : ""),
-								m("td", [
-									m("a", {
-										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/payments/" + student.id,
-										config: m.route
-									}, "Add a payment")
-								]),
+								
 								m("td", [
 									m("a", {
 										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/viewpayments/" + student.id,
 										config: m.route
 									}, "View payments")
 								]),
-								m("td", [
-									m("a", {
-										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + student.id + "/units/" + student.stage.id + "/" + ctrl.getTri_semesters().active_tri_semester.id,
-										config: m.route
-									}, "Configure Units")
-								]),
-								m("td", [
-									m("a", {
-										href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Student/" + student.id,
-										config: m.route
-									}, "Student Portal")
-								])
+								
 							])
 						})
 					])
-
 				])
 			])
-
 		])
 	}
 }

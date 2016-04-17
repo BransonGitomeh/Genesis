@@ -24,16 +24,16 @@ module.exports = function(){
         icon:"mdi-action-assignment"
       },
       {
-        text:"Finance",
-        url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/finance/search?q=''",
-        icon:"mdi-editor-attach-money"
-      },
-
-      {
         text:"Students",
-        url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/index",
+        url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/search?q=''",
         icon:"mdi-action-perm-identity"
       },
+
+      // {
+      //   text:"Students",
+      //   url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/index",
+      //   icon:"mdi-action-perm-identity"
+      // },
 
       // {
       //   text:"Admins",

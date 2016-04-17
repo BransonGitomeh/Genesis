@@ -1,9 +1,12 @@
 var __components = require('../__components/index.js');
 var adminUi = __components.adminLayout
 var studentUi = __components.studentLayout
+var churchUi = __components.churchAdminLayout
+
 
 var ninjaUIConfig = require("./ninjaAdminUiConfig")
 var uniAdminUiConfig = require("../premier/uniAdminUiConfig")
+var churchiaAdminUiConfig = require("../churchia/churchiaAdminUiConfig")
 var uniStudentUiConfig = require("../premier/uniStudentUiConfig")
 
 m.route.mode = "hash";
@@ -58,8 +61,23 @@ m.route(document.body, "/", {
 		body: require("./app/uni/home")
 	}),
 
+	"/churchAdmin/:churchName/:churchId": m(churchUi, {
+		config: churchiaAdminUiConfig,
+		body: require("./app/churchia/home")
+	}),
+
+	"/churchAdmin/:churchName/:churchId/Noticeboard": m(churchUi, {
+		config: churchiaAdminUiConfig,
+		body: require("./app/churchia/noticeboard/all")
+	}),
+
+	"/churchAdmin/:churchName/:churchId/Noticeboard/new": m(churchUi, {
+		config: churchiaAdminUiConfig,
+		body: require("./app/churchia/noticeboard/new")
+	}),
+
 	//finance search page
-	"/uni/:uniName/:uniId/finance/search": m(adminUi, {
+	"/uni/:uniName/:uniId/Students/search": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/finance/search")
 	}),
