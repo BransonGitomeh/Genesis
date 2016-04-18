@@ -38,7 +38,6 @@ module.exports = {
 
     fullProduction:{
         adapter: 'mongo',
-        // url: "mongodb://Branie:Branie@ds011331.mlab.com:11331/genesis_production",
         url:"mongodb://server:a10101995@ds013221.mlab.com:13221/premier"
       }
   },
