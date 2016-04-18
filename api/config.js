@@ -55,11 +55,14 @@ module.exports = {
           process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
           process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
           process.env.OPENSHIFT_APP_NAME;
+
+       var connection = "mongodb://" + process.env.OPENSHIFT_MONGODB_DB_HOST + ":" + process.env.OPENSHIFT_MONGODB_DB_PORT + "/" + process.env.OPENSHIFT_APP_NAME 
+       console.log(connection)
       }
 
       this.connections.openShiftMongo = {
         adapter: 'mongo',
-        url: connection_string,
+        url: connection,
         // user: 'admin', // or omit if not relevant
         // password: 'j3HrDJuFCTvR', // or omit if not relevant
         // database: 'myapp' // or omit if not relevant
