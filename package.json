@@ -6,7 +6,7 @@
   "scripts": {
     "Genesis": "nodemon api/index.js | bunyan -o short & webpack --info false & webpack-dev-server --info false",
     "genesis": "nodemon api/index.js | bunyan -o short & webpack --info false & webpack-dev-server --info false",
-    "production_logger": "rhc tail -a myapp",
+    "production_logger": "rhc tail -a premier",
     "server": "nodemon api/index.js | bunyan -o short",
     "webpack": "webpack",
     "dev-server": "webpack-dev-server",

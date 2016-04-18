@@ -55,7 +55,6 @@ module.exports = {
         url:"mongodb://server:a10101995@ds013221.mlab.com:13221/premier"
       };
 
-
       return "fullProduction"
     } else {
       return this.devAdapter
