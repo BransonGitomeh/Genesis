@@ -6,7 +6,7 @@ module.exports = {
 
   devAdapter: "fullProduction",
 
-  prodAdapter: "fullProduction",
+  prodAdapter: "prodMongo",
 
   devMigration: "safe",
 
