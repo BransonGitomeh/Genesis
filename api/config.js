@@ -1,17 +1,18 @@
 module.exports = {
   //switch
-  production: false,
+  production: true,
 
   devPort: 3000,
 
-  devAdapter: "my_cassandra_connection",
+  devAdapter: "localMongo",
 
-  prodAdapter: "prodMongo",
+  prodAdapter: "openShiftMongo",
 
-  devMigration: "drop",
+  devMigration: "safe",
 
   //adapters n all that ish
   adapters: {
+    sails_postgresql: require("sails-postgresql"),
     mongo: require("sails-mongo"),
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
@@ -30,8 +31,9 @@ module.exports = {
       port: 27017, // defaults to 27017 if omitted
       // user: 'username_here', // or omit if not relevant
       // password: 'password_here', // or omit if not relevant
-      // database: 'database_name_here' // or omit if not relevant 
+      // database: 'database_name_here' // or omit if not relevant
     },
+
     disk: {
       adapter: "disk"
     },
@@ -54,8 +56,17 @@ module.exports = {
       // cassandra driver options
       contactPoints: ['127.0.0.1'],
       keyspace: 'excelsior'
+    },
+    sails_postgresql: {
+      adapter: "sails_postgresql",
+      database: 'databaseName',
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      port: 5432,
+      poolSize: 10,
+      ssl: false
     }
-
   },
 
 
@@ -68,8 +79,17 @@ module.exports = {
       this.connections.prodMongo = {
         adapter: 'mongo',
         url: "mongodb://genesisServer:a10101995@ds015398.mongolab.com:15398/genesis"
-      }
-      return "prodMongo"
+      };
+
+      this.connections.openShiftMongo = {
+          adapter: 'mongo',
+          url: "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/",
+          user: 'admin', // or omit if not relevant
+          password: 'j3HrDJuFCTvR', // or omit if not relevant
+          database: 'myapp' // or omit if not relevant
+        };
+
+        return "openShiftMongo"
     } else {
       return this.devAdapter
     }
