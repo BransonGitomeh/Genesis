@@ -12,12 +12,10 @@ module.exports = {
 
   //adapters n all that ish
   adapters: {
-    sails_postgresql: require("sails-postgresql"),
     mongo: require("sails-mongo"),
     memory: require("sails-memory"),
     mysql: require("sails-mysql"),
     disk: require("sails-disk"),
-    cassandra: require("sails-cassandra")
   },
 
   connections: {
@@ -36,36 +34,6 @@ module.exports = {
 
     disk: {
       adapter: "disk"
-    },
-    localMYSQL: {
-      adapter: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      user: 'Branson',
-      password: 'a32357377',
-      database: 'test'
-    },
-    my_cassandra_connection: {
-
-      adapter: 'cassandra',
-
-      // typical sails/waterline options (see comment below)
-      user: 'username',
-      password: 'password',
-
-      // cassandra driver options
-      contactPoints: ['127.0.0.1'],
-      keyspace: 'excelsior'
-    },
-    sails_postgresql: {
-      adapter: "sails_postgresql",
-      database: 'databaseName',
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      port: 5432,
-      poolSize: 10,
-      ssl: false
     }
   },
 
