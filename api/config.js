@@ -49,15 +49,23 @@ module.exports = {
         url: "mongodb://genesisServer:a10101995@ds015398.mongolab.com:15398/genesis"
       };
 
-      this.connections.openShiftMongo = {
-          adapter: 'mongo',
-          url: "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/",
-          user: 'admin', // or omit if not relevant
-          password: 'j3HrDJuFCTvR', // or omit if not relevant
-          database: 'myapp' // or omit if not relevant
-        };
+      if (process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
+       var connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+          process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+          process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+          process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+          process.env.OPENSHIFT_APP_NAME;
+      }
 
-        return "openShiftMongo"
+      this.connections.openShiftMongo = {
+        adapter: 'mongo',
+        url: connection_string,
+        // user: 'admin', // or omit if not relevant
+        // password: 'j3HrDJuFCTvR', // or omit if not relevant
+        // database: 'myapp' // or omit if not relevant
+      };
+
+      return "openShiftMongo"
     } else {
       return this.devAdapter
     }
