@@ -183,6 +183,11 @@ m.route(document.body, "/", {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/config/units/unitsMakingLayout"),
 	}),
+	//view prices of a unit
+	"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units/:unit_id/prices": m(adminUi, {
+		config: uniAdminUiConfig,
+		body: require("./app/uni/config/prices/pricesLayout"),
+	}),
 
 	//other settings
 	"/uni/admin/:uniName/:uniId/study_modes": m(adminUi, {
@@ -250,7 +255,7 @@ m.route(document.body, "/", {
 
 	"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode": m(adminUi, {
 		config: uniAdminUiConfig,
-		body: require("./app/uni/students/selectUnits"),
+		body: require("./app/uni/students/selectStudyMode"),
 	}),
 
 	"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode": m(adminUi, {

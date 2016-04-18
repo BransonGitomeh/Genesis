@@ -27,7 +27,7 @@ module.exports = {
 					m(card, {
 						title: "Total Cash paid in",
 						number: ctrl.uniStats().result.totalFinance + " Rw.f",
-						color: "brown"
+						color: "blue darken-1"
 					})
 				])
 			])

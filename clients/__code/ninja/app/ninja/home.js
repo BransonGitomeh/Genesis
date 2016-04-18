@@ -1,52 +1,44 @@
-var  item = require('./todo-list/item');
+var item = require('./todo-list/item');
+var card = require("./card")
 
 module.exports = {
-  view:(controller,atrrs) => {
-    return m(".row",[
-      // m("div",{class:"col l4 white-text"},[
-      //   m("ul",{class:"collection with-header"},[
-      //     m("li",{class:"collection-header purple"},[
-      //       m("h4",{class:"task-card-title"},"Premier tasks"),
-      //       m("p",{class:"task-card-date"},"University/school management thing"),
-      //     ]),
-      //     m(item,{
-      //       text:"Collect premmier peices back to genesis",
-      //       type:"webpack",
-      //       complete:m.prop(true)
-      //     })
-      //   ])
-      // ]),
-      // m("div",{class:"col l4 white-text"},[
-      //   m("ul",{class:"collection with-header"},[
-      //     m("li",{class:"collection-header brown"},[
-      //       m("h4",{class:"task-card-title"},"Churchia tasks"),
-      //       m("p",{class:"task-card-date"},"Church management thing"),
-      //     ]),
-      //     m(item,{
-      //       text:"make server endpoints for churchia",
-      //       type:"webpack",
-      //       complete:m.prop(false)
-      //     })
-      //   ])
-      // ]),
-      // m("div",{class:"col l4 white-text"},[
-      //   m("ul",{class:"collection with-header"},[
-      //     m("li",{class:"collection-header black"},[
-      //       m("h4",{class:"task-card-title"},"Dedash tasks"),
-      //       m("p",{class:"task-card-date"},"Some other management thing :-)"),
-      //     ]),
-      //     m(item,{
-      //       text:"Import into genesis",
-      //       type:"webpack",
-      //       complete:m.prop(false)
-      //     }),
-      //     m(item,{
-      //       text:"start public ui",
-      //       type:"mithril",
-      //       complete:m.prop(false)
-      //     })
-      //   ])
-      // ])
-    ])
-  }
+      controller: () => {
+            return {
+                  stats: m.request({
+                        method: "post",
+                        url: apiUrl + "/services",
+                        data: {
+                              role: "app",
+                              cmd: "get_stats"
+                        }
+                  })
+            }
+      },
+      view: (ctrl, args) => {
+            var stats = ctrl.stats()
+            return m(".row", [
+                  m(".card-stats", [
+
+                        m(".row", [
+                              m(card, {
+                                    title: "All requests",
+                                    number: stats.requests,
+                                    color: "purple"
+                              }),
+
+                              m(card, {
+                                    title: "Universities",
+                                    number: stats.universities,
+                                    color: "purple darken-2"
+                              }),
+
+                              m(card, {
+                                    title: "Churches",
+                                    number: stats.churches,
+                                    color: "purple darken-3"
+                              })
+                        ])
+                  ])
+            ])
+      }
 }

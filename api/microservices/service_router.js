@@ -162,22 +162,22 @@ module.exports = function(db) {
 					})
 					.populate("stage.level.course")
 					.exec((err, unit_registrations) => {
-							unit_registrations.map((registration) => {
+						unit_registrations.map((registration) => {
 
-										var y = !!_.where(semesters, {
-											id: registration.stage.id
-										}).length;
+							var y = !!_.where(semesters, {
+								id: registration.stage.id
+							}).length;
 
-										// console.log(y)
-										if (y === false) {
-											semesters.push({
-														id: registration.stage.id,
-														name: registration.stage.name,
-														level: {
-															id: registration.stage.level.id,
-															name: registration.stage.level.name,
-															course: {
-																id: registration.stage.level.course.id,
+							// console.log(y)
+							if (y === false) {
+								semesters.push({
+									id: registration.stage.id,
+									name: registration.stage.name,
+									level: {
+										id: registration.stage.level.id,
+										name: registration.stage.level.name,
+										course: {
+											id: registration.stage.level.course.id,
 											name: registration.stage.level.course.name
 										}
 									}
@@ -480,7 +480,7 @@ module.exports = function(db) {
 						.populate("noticeboard.noticeboard_items")
 						.exec((err, church) => {
 							if (err) console.error
-							// console.log(church)
+								// console.log(church)
 							res(err, {
 								result: (church ? church.noticeboard.noticeboard_items : "")
 							})
@@ -566,11 +566,89 @@ module.exports = function(db) {
 						})
 						.populate("noticeboard.noticeboard_items")
 						.exec((err, church) => {
-					
+
 							res(err, {
 								old_noticeboard_items: church.noticeboard.old_noticeboard_items
 							})
 						})
+				})
+		},
+		app: function(options) {
+			this.add({
+					role: "app",
+					cmd: "get_stats"
+				}, (args, res) => {
+					db.request.count().exec(function(err, requests) {
+						db.university.count().exec(function(err, universities) {
+							db.church.count().exec(function(err, churches) {
+								res(err, {
+									requests: requests,
+									universities: universities,
+									churches: churches
+								})
+							})
+						})
+					})
+				}),
+
+				//units having multiple price points
+				//and an active price point
+				//so that registrations can take the active price as the price
+				this.add({
+					role: "unit",
+					cmd: "add_price"
+				}, (args, res) => {
+					db.price.create({
+						unit: args.unit_id,
+						ammount: args.ammount
+					}).exec((err, price) => {
+						res(err, {
+							result: price
+						})
+					})
+				}),
+
+				this.add({
+					role: "unit",
+					cmd: "get_prices"
+				}, (args, res) => {
+					db.unit.findOne({
+							id: args.unit_id
+						})
+						.populate("other_prices")
+						.exec((err, unit) => {
+							res(err, {
+								result: unit
+							})
+						})
+				}),
+
+				this.add({
+					role: "unit",
+					cmd: "make_price_active"
+				}, (args, res) => {
+					db.unit.update({
+						id: args.unit_id
+					}, {
+						price: args.price_id
+					}).exec((err, unit) => {
+						res(err, {
+							result: unit
+						})
+					})
+				}),
+
+				this.add({
+					role: "unit",
+					cmd: "destroy_price"
+				}, (args, res) => {
+					db.price.destroy({
+						id: args.price_id
+					}).exec((err, unit) => {
+						res(err, {
+							result: unit
+						})
+					})
 				})
 		}
 	}

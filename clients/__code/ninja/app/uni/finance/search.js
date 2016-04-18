@@ -30,10 +30,10 @@ module.exports = {
 			}, [
 				m(inputComponent, {
 					value: ctrl.schema.searchTerm,
-					label: "Student admission number",
+					label: "Student ADM.no / Name",
 					icon: "mdi-action-search prefix",
 					type: "text",
-					sizes: "s12 m12 l10",
+					sizes: "s12 m12 l8",
 				}),
 				m(".searchButton", [
 					m("br"),
@@ -41,7 +41,12 @@ module.exports = {
 						class: "btn blue col l2",
 						type: "submit"
 					}, "Search")
-				])
+				]),
+				m("a", {
+					class: "btn right blue",
+					href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students",
+					config: m.route
+				}, "New Student")
 			]),
 
 			m("table", {

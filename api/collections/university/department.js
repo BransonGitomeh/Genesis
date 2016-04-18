@@ -41,7 +41,20 @@ module.exports = [{
       collection: "unit_registration",
       via: "unit"
     },
+    other_prices: {
+      collection: "price",
+      via: "unit"
+    },
+    price: {
+      model: "price"
+    },
     cost: "string"
+  }
+}, {
+  identity: 'price',
+  attributes: {
+    ammount: "string",
+    unit:{model:"unit"}
   }
 }, {
   identity: 'request',
