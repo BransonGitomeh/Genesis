@@ -1,6 +1,6 @@
 module.exports = {
   //switch
-  production: false,
+  production: (process.env.NODE_ENV ? true : false),
 
   devPort: 3000,
 
