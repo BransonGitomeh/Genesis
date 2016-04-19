@@ -6,29 +6,31 @@ var adminConfig = require("./uniAdminUiConfig")
 
 m.route.mode = "hash";
 
-m.route(document.body,'/',{
-  "/":require('./app/pages/home'),
-  "/noticeboard/:uniId":m(layout,{body:require('./app/pages/noticeboard')}),
-  "/contactus":require('./app/pages/contactus'),
+m.route(document.body, '/', {
+  "/": require('./app/pages/home'),
+  "/noticeboard/:uniId": m(layout, {
+    body: require('./app/pages/noticeboard')
+  }),
+  "/contactus": require('./app/pages/contactus'),
   //academics
-  "/academics/ecd":require('./app/pages/ecd'),
-  "/academics/calender":require('./app/pages/calender'),
-  "/academics/admissions":require('./app/pages/admissions'),
-  "/academics/examinations":require('./app/pages/examinations'),
-  "/academics/liblary":require('./app/pages/liblary'),
+  "/academics/ecd": require('./app/pages/ecd'),
+  "/academics/calender": require('./app/pages/calender'),
+  "/academics/admissions": require('./app/pages/admissions'),
+  "/academics/examinations": require('./app/pages/examinations'),
+  "/academics/liblary": require('./app/pages/liblary'),
 
   //operations
-  "/operations/service_charter":require('./app/pages/service_charter'),
-  "/operations/governance":require('./app/pages/governance'),
-  "/operations/HR":require('./app/pages/hr'),
-  "/operations/finance":require('./app/pages/finance'),
-  "/operations/downloads":require('./app/pages/downloads'),
+  "/operations/service_charter": require('./app/pages/service_charter'),
+  "/operations/governance": require('./app/pages/governance'),
+  "/operations/HR": require('./app/pages/hr'),
+  "/operations/finance": require('./app/pages/finance'),
+  "/operations/downloads": require('./app/pages/downloads'),
 
   //proffessional_development
-  "/proffessional_development/ctdc":require('./app/pages/ctdc'),
-  "/proffessional_development/shortcourses":require('./app/pages/shortcourses'),
-  "/proffessional_development/bronchure":require('./app/pages/bronchure'),
-  "/proffessional_development/productinformation":require('./app/pages/productinformation'),
+  "/proffessional_development/ctdc": require('./app/pages/ctdc'),
+  "/proffessional_development/shortcourses": require('./app/pages/shortcourses'),
+  "/proffessional_development/bronchure": require('./app/pages/bronchure'),
+  "/proffessional_development/productinformation": require('./app/pages/productinformation'),
 
   // "/register/student":require('./app/pages/student-register'),
   // "/verify/student/:identifier":require('./app/pages/student-verify'),
@@ -59,18 +61,29 @@ m.route(document.body,'/',{
   // "/auth/Staff/forgot/:identifier":require("./app/pages/auth/Staff/forgot")
 
 
-  "/uniadmin/:uniName/:uniId":m(adminUi,{ config:adminConfig, body:require("../ninja/app/uni/home") }),
-  "/uni/:uniName/:uniId/noticeboard":m(adminUi,{ config:adminConfig, body:require("../ninja/app/uni/noticeboard") }),
-  "/uni/admins/:uniId":m(adminUi,{ config:adminConfig, body:require("../ninja/app/uni/noticeboard") }),
-    // view admins
-    "/uni/admins/:uniName/:uniId":m(adminUi,{ 
-      config:adminConfig, 
-      body:require("../ninja/app/uni/allAdmins") 
-    }),
-    // add admin
-    "/uni/admins/:uniName/:uniId/add":m(adminUi,{ 
-      config:adminConfig, 
-      body:require("../ninja/app/uni/newAdmin") 
-    }),
-    "/uniLogin/:uniName/:uniId":require("../ninja/app/uni/login")
+  "/uniadmin/:uniName/:uniId": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/home")
+  }),
+  "/uni/:uniName/:uniId/noticeboard": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/noticeboard")
+  }),
+  "/uni/admins/:uniId": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/noticeboard")
+  }),
+  // view admins
+  "/uni/admins/:uniName/:uniId": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/allAdmins")
+  }),
+
+  // add admin
+  "/uni/admins/:uniName/:uniId/add": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/newAdmin")
+  }),
+
+  "/uniLogin/:uniName/:uniId": require("../ninja/app/uni/login")
 });

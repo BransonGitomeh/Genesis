@@ -1,6 +1,6 @@
 module.exports = {
   //switch
-  production: true,
+  production: false,
 
   devPort: 3000,
 
@@ -31,9 +31,6 @@ module.exports = {
   //code to figure out environment and return the correct vars
   adapter: function() {
     if (this.production == true) {
-      //import the adapter
-      // this.adapters.mongo = require("sails-mongo")
-      //import the connection data
       this.connections.prodMongo = {
         adapter: 'mongo',
         url: "mongodb://genesisServer:a10101995@ds015398.mongolab.com:15398/genesis"
@@ -41,7 +38,6 @@ module.exports = {
 
       this.connections.fullProduction = {
         adapter: 'mongo',
-        // url: "mongodb://Branie:Branie@ds011331.mlab.com:11331/genesis_production",
         url:"mongodb://server:a10101995@ds013221.mlab.com:13221/premier"
       };
 
@@ -55,7 +51,7 @@ module.exports = {
   //autoswitch ports depending on environment
   port: function() {
     if (this.production == true) {
-      return (process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT)
+      return ( process.env.OPENSHIFT_NODEJS_PORT)
     } else {
       return this.devPort
     }

@@ -2,7 +2,7 @@ var config = {
 
   entry: {
     // church: "./clients/__code/churchia/router.js",
-    // premier: "./clients/__code/premier/route.js",
+    premier: "./clients/__code/premier/route.js",
     ninja: "./clients/__code/ninja/route.js",
     // homepage: "./clients/__code/homepage/router.js"
   },

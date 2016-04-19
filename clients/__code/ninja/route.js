@@ -103,6 +103,18 @@ m.route(document.body, "/", {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/newAdmin")
 	}),
+
+	// view admins
+	"/uni/registrars/:uniName/:uniId": m(adminUi, {
+		config: uniAdminUiConfig,
+		body: require("./app/uni/allRegistras")
+	}),
+	// add admin
+	"/uni/registrars/:uniName/:uniId/add": m(adminUi, {
+		config: uniAdminUiConfig,
+		body: require("./app/uni/newRegistras")
+	}),
+
 	//login for admin
 	"/uniLogin/:uniName/:uniId": require("./app/uni/login"),
 
@@ -250,8 +262,6 @@ m.route(document.body, "/", {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/students/selectStage"),
 	}),
-
-
 
 	"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode": m(adminUi, {
 		config: uniAdminUiConfig,
