@@ -14,6 +14,7 @@ module.exports = (req,res) => {
     .populate("tri_semesters_i_pay_for")
     .populate("payments_i_have_made")
     .exec((err,studentFound)=>{
+      console.log(studentFound)
       res.send(studentFound)
     })
   })

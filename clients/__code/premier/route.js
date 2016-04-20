@@ -85,5 +85,137 @@ m.route(document.body, '/', {
     body: require("../ninja/app/uni/newAdmin")
   }),
 
-  "/uniLogin/:uniName/:uniId": require("../ninja/app/uni/login")
+  "/uniLogin/:uniName/:uniId": require("../ninja/app/uni/login"),
+
+  "/uni/:uniName/:uniId/Students/search": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/finance/search")
+  }),
+
+  "/uni/admin/:uniName/:uniId/schools": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/schools/proffessionalSchoolsLayout"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/departments/:school_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/departments/DepartmentsLayout"),
+  }),
+
+  //view all units a department offers, and add
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/depChoice/DepartmentsLayout"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/courses/coursesLayout"),
+  }),
+
+  //viewing all the levels of a certain course ie diploma etc
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/levels/levelsLayout"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/stages/stagesLayout"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/units/unitsSelectedLayout"),
+  }),
+
+  //a selected department is there
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/units/unitsAvailableLayout"),
+  }),
+  //view its units
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/units/unitsMakingLayout"),
+  }),
+  //view prices of a unit
+  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units/:unit_id/prices": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/prices/pricesLayout"),
+  }),
+
+  //other settings
+  "/uni/admin/:uniName/:uniId/study_modes": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/study_modes/study_modesLayout"),
+  }),
+  //view all units a department offers, and add
+  "/uni/admin/:uniName/:uniId/tri_sems": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/tri_sems/tri_semsLayout"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/payment-methods": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/config/payments/payment_methodsLayout"),
+  }),
+
+  //register student to all that stuff
+  "/uni/admin/:uniName/:uniId/Students/index": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/index"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/config"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id/:tri_sem_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/config_units"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/viewpayments"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/config"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/payments/:student_id": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/payment"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/selectCourse"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/selectLevel"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/selectStage"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/selectStudyMode"),
+  }),
+
+  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/students/enterOtherDetails"),
+  }),
+
+
 });

@@ -223,10 +223,10 @@ m.route(document.body, "/", {
 		body: require("./app/uni/students/index"),
 	}),
 
-	"/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
-		config: uniAdminUiConfig,
-		body: require("./app/uni/students/config"),
-	}),
+	// "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
+	// 	config: uniAdminUiConfig,
+	// 	body: require("./app/uni/students/config"),
+	// }),
 
 	"/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id/:tri_sem_id": m(adminUi, {
 		config: uniAdminUiConfig,
@@ -238,10 +238,10 @@ m.route(document.body, "/", {
 		body: require("./app/uni/students/viewpayments"),
 	}),
 
-	"/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
-		config: uniAdminUiConfig,
-		body: require("./app/uni/students/config"),
-	}),
+	// "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
+	// 	config: uniAdminUiConfig,
+	// 	body: require("./app/uni/students/config"),
+	// }),
 
 	"/uni/admin/:uniName/:uniId/Students/payments/:student_id": m(adminUi, {
 		config: uniAdminUiConfig,

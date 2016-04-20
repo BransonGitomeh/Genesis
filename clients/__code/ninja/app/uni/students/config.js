@@ -18,7 +18,7 @@ module.exports = {
 		return {
 			selected: m.prop(false),
 			results: availableTrisemesters,
-			getTri_semesters:getTri_semesters
+			getTri_semesters: getTri_semesters
 		}
 	},
 	view(ctrl, args) {

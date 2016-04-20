@@ -1,3 +1,5 @@
+// uniAdminUiConfig
+
 module.exports = function() {
   var config = {
     logoText: m.route.param("uniName") + " Admin",

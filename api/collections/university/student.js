@@ -99,6 +99,9 @@ module.exports = [{
     },
     tri_semester: {
       model: "tri_semester"
+    },
+    price:{
+      model:"price"
     }
 
   }

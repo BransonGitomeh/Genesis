@@ -47,23 +47,22 @@ module.exports = {
 							onchange: function(e) {
 								// ctrl.schema.trisem(e.target.value)
 								ctrl.selectedTrisem(e.target.value)
-									// alert(ctrl.selectedTrisem())
 								m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + m.route.param("semester_id") + "/" + e.target.value)
-
 							}
 						},
 
 						m("option", {
 							value: "",
-							disabled: true,
+							// disabled: true,
 							selected: true,
 						}, "Select trimester"),
 
 						ctrl.getTri_semesters().tri_semesters.map(function(stage) {
+							console.log(stage.id + " " + m.route.param("tri_sem_id"))
 							return m("option", {
 								value: stage.id,
 								// disabled:true,
-								selected: (stage.id === m.route.param("tri_sem_id") ? true : false)
+								selected: (stage.id == m.route.param("tri_sem_id") ? true : false)
 							}, stage.name)
 						})
 
@@ -75,16 +74,13 @@ module.exports = {
 								$('select').material_select();
 							},
 							onchange: function(e) {
-								// ctrl.schema.trisem(e.target.value)
-								// m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value)
 								m.route("/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/config/" + m.route.param("student_id") + "/units/" + e.target.value + "/" + m.route.param("tri_sem_id"))
-
 							}
 						},
 
 						m("option", {
 							value: "",
-							disabled: true,
+							// disabled: true,
 							selected: true,
 						}, "Select Semester to register to"),
 
@@ -92,7 +88,7 @@ module.exports = {
 							return m("option", {
 								value: stage.id,
 								// disabled:true,
-								selected: (stage.id === m.route.param("semester_id") ? true : false)
+								selected: (stage.id == m.route.param("semester_id") ? true : false)
 							}, stage.level.course.name + " - " + stage.level.name + " - " + stage.name)
 						})
 

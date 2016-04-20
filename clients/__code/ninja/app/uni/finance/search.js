@@ -75,7 +75,7 @@ module.exports = {
 								m("a", {
 									href: "/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Students/viewpayments/" + result.id,
 									config: m.route
-								}, "View payments")
+								}, "more details...")
 							]),
 						])
 					})

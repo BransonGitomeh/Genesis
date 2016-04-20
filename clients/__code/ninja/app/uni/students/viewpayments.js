@@ -36,12 +36,13 @@ module.exports = {
 					}, [
 						m("thead", [
 							m("tr", [
-								m("th", "tri-semester"),
-								m("th", "course"),
-								m("th", "stage"),
-								m("th", "semester"),
-								m("th", "unit name"),
-								m("th", "unit cost")
+								m("th", "Semester"),
+								m("th", "Course"),
+								m("th", "Level"),
+								m("th", "Semester"),
+								m("th", "Unit"),
+								m("th", "Date of registration"),
+								m("th", "Cost")
 							])
 						]),
 						m("tbody", [
@@ -53,11 +54,10 @@ module.exports = {
 									m("td", unit.level),
 									m("td", unit.stage),
 									m("td", unit.unit),
+									m("td", moment(unit.date).format('MM/DD/YYYY')),
 									m("td", unit.cost)
 								])
 							})
-
-
 						])
 					]),
 
@@ -77,13 +77,13 @@ module.exports = {
 					}, [
 						m("thead", [
 							m("tr", [
-								m("th", "tri-semester"),
-								m("th", "course"),
-								m("th", "level"),
-								m("th", "receipt"),
-								// m("th", "date"),
-								m("th", "channel"),
-								m("th", "ammount"),
+								m("th", "Semester"),
+								m("th", "Course"),
+								m("th", "Level"),
+								m("th", "Reciept issued"),
+								m("th", "Payment record date"),
+								m("th", "Channel"),
+								m("th", "Payment Ammount"),
 							])
 						]),
 						m("tbody", [
@@ -94,7 +94,7 @@ module.exports = {
 									m("td", payment.course),
 									m("td", payment.level),
 									m("td", payment.receipt),
-									// m("td", payment.date),
+									m("td", moment(payment.date).format('MM/DD/YYYY')),
 									m("td", payment.channel + " - " + payment.location),
 									m("td", payment.ammount)
 

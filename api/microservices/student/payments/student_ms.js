@@ -8,26 +8,24 @@ module.exports = (db) => {
 				db.student.findOne({
 						id: args.studentId
 					})
-					.populate("unit_registrations.unit")
+					.populate("unit_registrations.price")
 					.populate("unit_registrations.tri_semester")
 					.populate("unit_registrations.stage.level.course")
 					.populate("unit_registrations.tri_semester")
-					// .populate("unit_registrations.payment_method")
+					.populate("unit_registrations.unit")
 					.exec((err, studentFound) => {
-
-						// console.log(studentFound.unit_registrations)
 						var units = []
 						studentFound.unit_registrations.map((registration) => {
-							// console.log(registration.tri_semester)
+							// console.log(registration)
 							units.push({
 								tri_semester: registration.tri_semester.name,
 								course: registration.stage.level.course.name,
 								level: registration.stage.level.name,
 								stage: registration.stage.name,
 								unit: registration.unit.name,
-								cost: registration.unit.cost
+								date: registration.createdAt,
+								cost: registration.price ? registration.price.ammount : ""
 							})
-
 						})
 
 						respond(null, {
@@ -81,14 +79,14 @@ module.exports = (db) => {
 						var payments = [];
 						var sum = 0;
 						student.payments_i_have_made.map((payment) => {
-							console.log()
+							// console.log(payment)
 							payments.push({
-								trimester: payment.tri_semesters_i_was_paid_to.name,
-								course: payment.course_paid_to.name,
-								level: payment.level_paid_to.name,
+								trimester: payment.tri_semesters_i_was_paid_to ? payment.tri_semesters_i_was_paid_to.name : "",
+								course: payment.course_paid_to ? payment.course_paid_to.name : "",
+								level: payment.level_paid_to ? payment.level_paid_to.name : "",
 								ammount: Number(payment.ammount),
-								channel:(payment.payment_method ? payment.payment_method.name : ""),
-								location:(payment.payment_method ? payment.payment_method.location : ""),
+								channel: (payment.payment_method ? payment.payment_method.name : ""),
+								location: (payment.payment_method ? payment.payment_method.location : ""),
 								receipt: payment.receipt,
 								date: payment.createdAt
 							})

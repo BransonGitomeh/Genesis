@@ -79,12 +79,15 @@ module.exports = (collections, config, callback) => {
 					body: req.body,
 					duration: duration,
 					statusCode: res.statusCode,
-					ip: req.connection.remoteAddress
+					ip: req.connection.remoteAddress,
+					url:req.url
 				}).exec((err, created) => {
 					// console.log(created)
+					// console.log(created.url)
 				})
 
-				log.info(res.statusCode  +  " " + req.method + "(" + duration + ")")
+				log.info(res.statusCode + " - " + req.method + " - " +  req.url + "(" + duration + ")") 
+				 req.method === "POST" ?  log.info(req.body) : ""
 			});
 
 			next();

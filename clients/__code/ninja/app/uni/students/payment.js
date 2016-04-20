@@ -130,12 +130,18 @@ module.exports = {
 										onchange: function(e) {
 											// console.log(ctrl.student().levels_ive_done_before)
 
-											ctrl.student().stages_ive_done_before.map((stage) => {
-												if (stage.id === e.target.value) {
-													ctrl.schema.course(stage.level.course.id);
-													ctrl.schema.level(stage.level.id);
-													ctrl.schema.stage(stage.id);
+											ctrl.payable_semesters().map((sem) => {
+												// console.log(sem.id  + " === " + e.target.value)
+												// console.log(ctrl.payable_semesters())
+												console.log(sem.id)
+												console.log(e.target.value)
+												if (sem.id == e.target.value) {
+													// console.log(sem)
+													ctrl.schema.course(sem.level.course.id);
+													ctrl.schema.level(sem.level.id);
+													ctrl.schema.stage(sem.id);
 												}
+
 											})
 
 											// alert(ctrl.schema.trisem() + ctrl.schema.course() + ctrl.schema.level())
@@ -208,7 +214,9 @@ module.exports = {
 								value: ctrl.schema.receiptNo,
 								label: "Date",
 								// icon:"mdi-editor-insert-drive-file prefix",
-								type: "text",
+								type: "date",
+								selectableMonths: true,
+								years: 15,
 								sizes: "s12 m12 l4"
 							}),
 

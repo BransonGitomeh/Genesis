@@ -591,6 +591,31 @@ module.exports = function(db) {
 					})
 				}),
 
+				this.add({
+					role: "app",
+					cmd: "get_requests"
+				}, (args, res) => {
+					var creaedAts = []
+					var durations = []
+					db.request.find().exec(function(err, requests) {
+						requests.map((request) => {
+							if (request.duration < 500) {
+								var requestString = request.url
+								for (x in request.body){
+									//send everything to the graph
+									requestString = requestString + " - " + request.body[x]
+								}
+								creaedAts.push(requestString)
+								durations.push(request.duration)
+							}
+						})
+						res(err, {
+							creaedAts: creaedAts,
+							durations: durations
+						})
+					})
+				}),
+
 				//units having multiple price points
 				//and an active price point
 				//so that registrations can take the active price as the price
@@ -598,13 +623,50 @@ module.exports = function(db) {
 					role: "unit",
 					cmd: "add_price"
 				}, (args, res) => {
-					db.price.create({
-						unit: args.unit_id,
-						ammount: args.ammount
-					}).exec((err, price) => {
-						res(err, {
-							result: price
-						})
+
+					this.act({
+						role: "unit",
+						cmd: "get_prices",
+						unit_id: args.unit_id
+					}, (err, result) => {
+						db.unit.findOne({
+								id: args.unit_id
+							})
+							.populate("other_prices")
+							.exec((err, unit) => {
+								console.log(unit)
+								if (unit.price) {
+									console.log("this unit")
+									db.price.create({
+										unit: args.unit_id,
+										ammount: args.ammount
+									}).exec((err, price) => {
+										res(err, {
+											result: price
+										})
+									})
+								} else {
+									db.price.create({
+										unit: args.unit_id,
+										ammount: args.ammount
+									}).exec((err, newprice) => {
+
+										//call service for making the service active
+										this.act({
+											role: "unit",
+											cmd: "make_price_active",
+											unit_id: args.unit_id,
+											price_id: newprice.id
+										}, (err, newDefaultPrice) => {
+											res(err, {
+												result: "success"
+											})
+
+										})
+
+									})
+								}
+							})
 					})
 				}),
 

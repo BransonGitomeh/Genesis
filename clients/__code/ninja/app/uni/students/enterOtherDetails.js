@@ -7,9 +7,6 @@ var selectStudyMode = require("./selectors/selectStudyMode")
 module.exports = {
   controller: (args) => {
     return {
-
-      
-
       schema: {
         adm: m.prop(""),
         name: m.prop(""),

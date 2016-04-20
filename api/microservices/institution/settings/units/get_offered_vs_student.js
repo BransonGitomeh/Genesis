@@ -9,16 +9,14 @@ module.exports = (req, res) => {
 		.populate("level.course.department.proschool.uni.active_tri_semester")
 		.exec((err, level) => {
 			if (err) throw err;
-			console.dir(level)
-
-			console.log("awesomeness")
 			req.db.unit_registration.find({
 					student: req.params.student_id,
 					stage: req.params.semester_id,
 					tri_semester:  req.params.tri_sem_id
 				})
-				.populate("unit")
+				.populate("unit.price")
 				.exec((err, unit_registration) => {
+					console.log(unit_registration)
 					//this are the units the student has registered to, ever for that semester in question
 					//use this versus the units offered by the stage
 					// console.log(unit_registration)
@@ -52,5 +50,3 @@ module.exports = (req, res) => {
 
 		})
 }
-
-// http://localhost:3000/basic/getUnitsOfferedVersusStudent/570a904cb1a9b99a0d2fc9ae/570a91e8d2c1ba591332a97f
