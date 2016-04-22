@@ -1,8 +1,8 @@
 var config = {
   entry: {
     // church:"./__code/church/route.js",
-    premier:"./__code/premier/route.js",
-    ninja:"./__code/ninja/route.js"
+    premier:"./premier/route.js",
+    ninja:"./ninja/route.js"
   },
 
   output:{
@@ -21,6 +21,5 @@ var config = {
     alias: {}
   }
 }
-
 
 module.exports = config;

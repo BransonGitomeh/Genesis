@@ -1,0 +1,17 @@
+{
+  "name": "premier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "genesis":"nodemon api/index.js & webpack clients/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://56f1b6c27628e17e61000052@premier-sirbranson.rhcloud.com/~/git/premier.git/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

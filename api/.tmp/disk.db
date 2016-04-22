@@ -2,9 +2,35 @@
   "data": {
     "user": [],
     "user_profile": [],
-    "department": [],
-    "unit": [],
-    "price": [],
+    "department": [
+      {
+        "name": "dep",
+        "proschool": 1,
+        "createdAt": "2016-04-22T22:41:47.309Z",
+        "updatedAt": "2016-04-22T22:41:47.310Z",
+        "id": 1
+      }
+    ],
+    "unit": [
+      {
+        "name": "unit 1",
+        "cost": null,
+        "dep": 1,
+        "createdAt": "2016-04-22T22:42:36.799Z",
+        "updatedAt": "2016-04-22T22:42:41.217Z",
+        "id": 1,
+        "price": 1
+      }
+    ],
+    "price": [
+      {
+        "unit": 1,
+        "ammount": "2000",
+        "createdAt": "2016-04-22T22:42:41.197Z",
+        "updatedAt": "2016-04-22T22:42:41.197Z",
+        "id": 1
+      }
+    ],
     "request": [
       {
         "start": 1461363254030,
@@ -170,35 +196,3385 @@
         "createdAt": "2016-04-22T22:14:18.011Z",
         "updatedAt": "2016-04-22T22:14:18.011Z",
         "id": 15
+      },
+      {
+        "start": 1461364278919,
+        "body": {},
+        "duration": 56,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-22T22:31:19.022Z",
+        "updatedAt": "2016-04-22T22:31:19.022Z",
+        "id": 16
+      },
+      {
+        "start": 1461364279407,
+        "body": {},
+        "duration": 13,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-22T22:31:19.426Z",
+        "updatedAt": "2016-04-22T22:31:19.426Z",
+        "id": 17
+      },
+      {
+        "start": 1461364279447,
+        "body": {},
+        "duration": 14,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-22T22:31:19.465Z",
+        "updatedAt": "2016-04-22T22:31:19.465Z",
+        "id": 18
+      },
+      {
+        "start": 1461364279448,
+        "body": {},
+        "duration": 34,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-22T22:31:19.484Z",
+        "updatedAt": "2016-04-22T22:31:19.484Z",
+        "id": 19
+      },
+      {
+        "start": 1461364279452,
+        "body": {},
+        "duration": 42,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-22T22:31:19.496Z",
+        "updatedAt": "2016-04-22T22:31:19.496Z",
+        "id": 20
+      },
+      {
+        "start": 1461364279453,
+        "body": {},
+        "duration": 55,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-22T22:31:19.513Z",
+        "updatedAt": "2016-04-22T22:31:19.513Z",
+        "id": 21
+      },
+      {
+        "start": 1461364279457,
+        "body": {},
+        "duration": 65,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-22T22:31:19.527Z",
+        "updatedAt": "2016-04-22T22:31:19.527Z",
+        "id": 22
+      },
+      {
+        "start": 1461364279459,
+        "body": {},
+        "duration": 84,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-22T22:31:19.550Z",
+        "updatedAt": "2016-04-22T22:31:19.550Z",
+        "id": 23
+      },
+      {
+        "start": 1461364279567,
+        "body": {},
+        "duration": 6,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-22T22:31:19.576Z",
+        "updatedAt": "2016-04-22T22:31:19.576Z",
+        "id": 24
+      },
+      {
+        "start": 1461364279568,
+        "body": {},
+        "duration": 17,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-22T22:31:19.594Z",
+        "updatedAt": "2016-04-22T22:31:19.594Z",
+        "id": 25
+      },
+      {
+        "start": 1461364279570,
+        "body": {},
+        "duration": 41,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-22T22:31:19.614Z",
+        "updatedAt": "2016-04-22T22:31:19.614Z",
+        "id": 26
+      },
+      {
+        "start": 1461364279571,
+        "body": {},
+        "duration": 71,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja.bundle.js",
+        "createdAt": "2016-04-22T22:31:19.645Z",
+        "updatedAt": "2016-04-22T22:31:19.645Z",
+        "id": 27
+      },
+      {
+        "start": 1461364282782,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-22T22:31:22.786Z",
+        "updatedAt": "2016-04-22T22:31:22.786Z",
+        "id": 28
+      },
+      {
+        "start": 1461364282822,
+        "body": {},
+        "duration": 7,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-22T22:31:22.832Z",
+        "updatedAt": "2016-04-22T22:31:22.832Z",
+        "id": 29
+      },
+      {
+        "start": 1461364409544,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-22T22:33:29.549Z",
+        "updatedAt": "2016-04-22T22:33:29.549Z",
+        "id": 30
+      },
+      {
+        "start": 1461364409888,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-22T22:33:29.896Z",
+        "updatedAt": "2016-04-22T22:33:29.896Z",
+        "id": 31
+      },
+      {
+        "start": 1461364409931,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-22T22:33:29.942Z",
+        "updatedAt": "2016-04-22T22:33:29.942Z",
+        "id": 32
+      },
+      {
+        "start": 1461364409953,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-22T22:33:29.960Z",
+        "updatedAt": "2016-04-22T22:33:29.960Z",
+        "id": 33
+      },
+      {
+        "start": 1461364409954,
+        "body": {},
+        "duration": 19,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-22T22:33:29.975Z",
+        "updatedAt": "2016-04-22T22:33:29.975Z",
+        "id": 34
+      },
+      {
+        "start": 1461364409955,
+        "body": {},
+        "duration": 32,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-22T22:33:29.989Z",
+        "updatedAt": "2016-04-22T22:33:29.989Z",
+        "id": 35
+      },
+      {
+        "start": 1461364410005,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-22T22:33:30.010Z",
+        "updatedAt": "2016-04-22T22:33:30.010Z",
+        "id": 36
+      },
+      {
+        "start": 1461364410027,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-22T22:33:30.037Z",
+        "updatedAt": "2016-04-22T22:33:30.037Z",
+        "id": 37
+      },
+      {
+        "start": 1461364410029,
+        "body": {},
+        "duration": 28,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-22T22:33:30.059Z",
+        "updatedAt": "2016-04-22T22:33:30.059Z",
+        "id": 38
+      },
+      {
+        "start": 1461364410075,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-22T22:33:30.090Z",
+        "updatedAt": "2016-04-22T22:33:30.090Z",
+        "id": 39
+      },
+      {
+        "start": 1461364410076,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-22T22:33:30.106Z",
+        "updatedAt": "2016-04-22T22:33:30.106Z",
+        "id": 40
+      },
+      {
+        "start": 1461364410085,
+        "body": {},
+        "duration": 46,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja.bundle.js",
+        "createdAt": "2016-04-22T22:33:30.134Z",
+        "updatedAt": "2016-04-22T22:33:30.134Z",
+        "id": 41
+      },
+      {
+        "start": 1461364412864,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-22T22:33:32.869Z",
+        "updatedAt": "2016-04-22T22:33:32.869Z",
+        "id": 42
+      },
+      {
+        "start": 1461364412890,
+        "body": {},
+        "duration": 3,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-22T22:33:32.895Z",
+        "updatedAt": "2016-04-22T22:33:32.895Z",
+        "id": 43
+      },
+      {
+        "start": 1461364451506,
+        "body": {},
+        "duration": 7,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-22T22:34:11.516Z",
+        "updatedAt": "2016-04-22T22:34:11.516Z",
+        "id": 44
+      },
+      {
+        "start": 1461364451898,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-22T22:34:11.903Z",
+        "updatedAt": "2016-04-22T22:34:11.903Z",
+        "id": 45
+      },
+      {
+        "start": 1461364451930,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-22T22:34:11.934Z",
+        "updatedAt": "2016-04-22T22:34:11.934Z",
+        "id": 46
+      },
+      {
+        "start": 1461364451956,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-22T22:34:11.966Z",
+        "updatedAt": "2016-04-22T22:34:11.966Z",
+        "id": 47
+      },
+      {
+        "start": 1461364451957,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-22T22:34:11.992Z",
+        "updatedAt": "2016-04-22T22:34:11.992Z",
+        "id": 48
+      },
+      {
+        "start": 1461364451958,
+        "body": {},
+        "duration": 50,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-22T22:34:12.015Z",
+        "updatedAt": "2016-04-22T22:34:12.015Z",
+        "id": 49
+      },
+      {
+        "start": 1461364452032,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-22T22:34:12.045Z",
+        "updatedAt": "2016-04-22T22:34:12.045Z",
+        "id": 50
+      },
+      {
+        "start": 1461364452037,
+        "body": {},
+        "duration": 44,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-22T22:34:12.084Z",
+        "updatedAt": "2016-04-22T22:34:12.084Z",
+        "id": 51
+      },
+      {
+        "start": 1461364452040,
+        "body": {},
+        "duration": 59,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-22T22:34:12.101Z",
+        "updatedAt": "2016-04-22T22:34:12.101Z",
+        "id": 52
+      },
+      {
+        "start": 1461364452115,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-22T22:34:12.133Z",
+        "updatedAt": "2016-04-22T22:34:12.133Z",
+        "id": 53
+      },
+      {
+        "start": 1461364452150,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-22T22:34:12.157Z",
+        "updatedAt": "2016-04-22T22:34:12.157Z",
+        "id": 54
+      },
+      {
+        "start": 1461364452152,
+        "body": {},
+        "duration": 28,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja.bundle.js",
+        "createdAt": "2016-04-22T22:34:12.181Z",
+        "updatedAt": "2016-04-22T22:34:12.181Z",
+        "id": 55
+      },
+      {
+        "start": 1461364453018,
+        "body": {},
+        "duration": 38,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-22T22:34:13.057Z",
+        "updatedAt": "2016-04-22T22:34:13.057Z",
+        "id": 56
+      },
+      {
+        "start": 1461364453015,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 134,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:34:13.151Z",
+        "updatedAt": "2016-04-22T22:34:13.151Z",
+        "id": 57
+      },
+      {
+        "start": 1461364453028,
+        "body": {},
+        "duration": 136,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-22T22:34:13.165Z",
+        "updatedAt": "2016-04-22T22:34:13.165Z",
+        "id": 58
+      },
+      {
+        "start": 1461364452979,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 265,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:34:13.247Z",
+        "updatedAt": "2016-04-22T22:34:13.247Z",
+        "id": 59
+      },
+      {
+        "start": 1461364781372,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-22T22:39:41.377Z",
+        "updatedAt": "2016-04-22T22:39:41.377Z",
+        "id": 60
+      },
+      {
+        "start": 1461364781736,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-22T22:39:41.739Z",
+        "updatedAt": "2016-04-22T22:39:41.739Z",
+        "id": 61
+      },
+      {
+        "start": 1461364781756,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-22T22:39:41.765Z",
+        "updatedAt": "2016-04-22T22:39:41.765Z",
+        "id": 62
+      },
+      {
+        "start": 1461364781783,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-22T22:39:41.786Z",
+        "updatedAt": "2016-04-22T22:39:41.786Z",
+        "id": 63
+      },
+      {
+        "start": 1461364781806,
+        "body": {},
+        "duration": 6,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-22T22:39:41.814Z",
+        "updatedAt": "2016-04-22T22:39:41.814Z",
+        "id": 64
+      },
+      {
+        "start": 1461364781808,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-22T22:39:41.837Z",
+        "updatedAt": "2016-04-22T22:39:41.837Z",
+        "id": 65
+      },
+      {
+        "start": 1461364781810,
+        "body": {},
+        "duration": 42,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-22T22:39:41.857Z",
+        "updatedAt": "2016-04-22T22:39:41.857Z",
+        "id": 66
+      },
+      {
+        "start": 1461364781811,
+        "body": {},
+        "duration": 62,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-22T22:39:41.875Z",
+        "updatedAt": "2016-04-22T22:39:41.875Z",
+        "id": 67
+      },
+      {
+        "start": 1461364781893,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-22T22:39:41.897Z",
+        "updatedAt": "2016-04-22T22:39:41.897Z",
+        "id": 68
+      },
+      {
+        "start": 1461364781911,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-22T22:39:41.915Z",
+        "updatedAt": "2016-04-22T22:39:41.915Z",
+        "id": 69
+      },
+      {
+        "start": 1461364781932,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-22T22:39:41.936Z",
+        "updatedAt": "2016-04-22T22:39:41.936Z",
+        "id": 70
+      },
+      {
+        "start": 1461364781951,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja.bundle.js",
+        "createdAt": "2016-04-22T22:39:41.962Z",
+        "updatedAt": "2016-04-22T22:39:41.962Z",
+        "id": 71
+      },
+      {
+        "start": 1461364782588,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 80,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:39:42.675Z",
+        "updatedAt": "2016-04-22T22:39:42.675Z",
+        "id": 72
+      },
+      {
+        "start": 1461364782696,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-22T22:39:42.701Z",
+        "updatedAt": "2016-04-22T22:39:42.701Z",
+        "id": 73
+      },
+      {
+        "start": 1461364782571,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 153,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:39:42.726Z",
+        "updatedAt": "2016-04-22T22:39:42.726Z",
+        "id": 74
+      },
+      {
+        "start": 1461364782697,
+        "body": {},
+        "duration": 45,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-22T22:39:42.743Z",
+        "updatedAt": "2016-04-22T22:39:42.743Z",
+        "id": 75
+      },
+      {
+        "start": 1461364885128,
+        "body": {},
+        "duration": 5,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniversities",
+        "createdAt": "2016-04-22T22:41:25.135Z",
+        "updatedAt": "2016-04-22T22:41:25.135Z",
+        "id": 76
+      },
+      {
+        "start": 1461364890590,
+        "body": {
+          "name": "bae"
+        },
+        "duration": 160,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeUniversity",
+        "createdAt": "2016-04-22T22:41:30.753Z",
+        "updatedAt": "2016-04-22T22:41:30.753Z",
+        "id": 77
+      },
+      {
+        "start": 1461364890797,
+        "body": {},
+        "duration": 6,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniversities",
+        "createdAt": "2016-04-22T22:41:30.808Z",
+        "updatedAt": "2016-04-22T22:41:30.808Z",
+        "id": 78
+      },
+      {
+        "start": 1461364892458,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 85,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:41:32.549Z",
+        "updatedAt": "2016-04-22T22:41:32.549Z",
+        "id": 79
+      },
+      {
+        "start": 1461364894204,
+        "body": {},
+        "duration": 47,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboard/1",
+        "createdAt": "2016-04-22T22:41:34.254Z",
+        "updatedAt": "2016-04-22T22:41:34.254Z",
+        "id": 80
+      },
+      {
+        "start": 1461364894393,
+        "body": {},
+        "duration": 47,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboardOld/1",
+        "createdAt": "2016-04-22T22:41:34.442Z",
+        "updatedAt": "2016-04-22T22:41:34.442Z",
+        "id": 81
+      },
+      {
+        "start": 1461364895230,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 76,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-22T22:41:35.316Z",
+        "updatedAt": "2016-04-22T22:41:35.316Z",
+        "id": 82
+      },
+      {
+        "start": 1461364897774,
+        "body": {},
+        "duration": 33,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:41:37.810Z",
+        "updatedAt": "2016-04-22T22:41:37.810Z",
+        "id": 83
+      },
+      {
+        "start": 1461364897857,
+        "body": {},
+        "duration": 22,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:41:37.884Z",
+        "updatedAt": "2016-04-22T22:41:37.884Z",
+        "id": 84
+      },
+      {
+        "start": 1461364900459,
+        "body": {},
+        "duration": 9,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:41:40.480Z",
+        "updatedAt": "2016-04-22T22:41:40.480Z",
+        "id": 85
+      },
+      {
+        "start": 1461364903815,
+        "body": {
+          "name": "school"
+        },
+        "duration": 26,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeSchool/1",
+        "createdAt": "2016-04-22T22:41:43.845Z",
+        "updatedAt": "2016-04-22T22:41:43.845Z",
+        "id": 86
+      },
+      {
+        "start": 1461364903908,
+        "body": {},
+        "duration": 17,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:41:43.927Z",
+        "updatedAt": "2016-04-22T22:41:43.927Z",
+        "id": 87
+      },
+      {
+        "start": 1461364905178,
+        "body": {},
+        "duration": 17,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:41:45.200Z",
+        "updatedAt": "2016-04-22T22:41:45.200Z",
+        "id": 88
+      },
+      {
+        "start": 1461364905262,
+        "body": {},
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:41:45.281Z",
+        "updatedAt": "2016-04-22T22:41:45.281Z",
+        "id": 89
+      },
+      {
+        "start": 1461364907307,
+        "body": {
+          "name": "dep"
+        },
+        "duration": 13,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeDepartments/1",
+        "createdAt": "2016-04-22T22:41:47.324Z",
+        "updatedAt": "2016-04-22T22:41:47.324Z",
+        "id": 90
+      },
+      {
+        "start": 1461364907376,
+        "body": {},
+        "duration": 31,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:41:47.418Z",
+        "updatedAt": "2016-04-22T22:41:47.418Z",
+        "id": 91
+      },
+      {
+        "start": 1461364907388,
+        "body": {},
+        "duration": 24,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:41:47.435Z",
+        "updatedAt": "2016-04-22T22:41:47.435Z",
+        "id": 92
+      },
+      {
+        "start": 1461364908538,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:41:48.550Z",
+        "updatedAt": "2016-04-22T22:41:48.550Z",
+        "id": 93
+      },
+      {
+        "start": 1461364908566,
+        "body": {},
+        "duration": 20,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:41:48.588Z",
+        "updatedAt": "2016-04-22T22:41:48.588Z",
+        "id": 94
+      },
+      {
+        "start": 1461364910190,
+        "body": {},
+        "duration": 11,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:41:50.206Z",
+        "updatedAt": "2016-04-22T22:41:50.206Z",
+        "id": 95
+      },
+      {
+        "start": 1461364921353,
+        "body": {
+          "name": "course"
+        },
+        "duration": 28,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeCourse/1",
+        "createdAt": "2016-04-22T22:42:01.385Z",
+        "updatedAt": "2016-04-22T22:42:01.385Z",
+        "id": 96
+      },
+      {
+        "start": 1461364921425,
+        "body": {},
+        "duration": 14,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:01.442Z",
+        "updatedAt": "2016-04-22T22:42:01.442Z",
+        "id": 97
+      },
+      {
+        "start": 1461364923208,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:03.241Z",
+        "updatedAt": "2016-04-22T22:42:03.241Z",
+        "id": 98
+      },
+      {
+        "start": 1461364923301,
+        "body": {},
+        "duration": 9,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:42:03.317Z",
+        "updatedAt": "2016-04-22T22:42:03.317Z",
+        "id": 99
+      },
+      {
+        "start": 1461364925732,
+        "body": {
+          "name": "leve"
+        },
+        "duration": 25,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeLevel/1",
+        "createdAt": "2016-04-22T22:42:05.759Z",
+        "updatedAt": "2016-04-22T22:42:05.759Z",
+        "id": 100
+      },
+      {
+        "start": 1461364925801,
+        "body": {},
+        "duration": 19,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:05.823Z",
+        "updatedAt": "2016-04-22T22:42:05.823Z",
+        "id": 101
+      },
+      {
+        "start": 1461364925808,
+        "body": {},
+        "duration": 35,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:42:05.845Z",
+        "updatedAt": "2016-04-22T22:42:05.845Z",
+        "id": 102
+      },
+      {
+        "start": 1461364927172,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:07.186Z",
+        "updatedAt": "2016-04-22T22:42:07.186Z",
+        "id": 103
+      },
+      {
+        "start": 1461364927230,
+        "body": {},
+        "duration": 46,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:42:07.278Z",
+        "updatedAt": "2016-04-22T22:42:07.278Z",
+        "id": 104
+      },
+      {
+        "start": 1461364927356,
+        "body": {},
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:42:07.377Z",
+        "updatedAt": "2016-04-22T22:42:07.377Z",
+        "id": 105
+      },
+      {
+        "start": 1461364930177,
+        "body": {
+          "name": "semester"
+        },
+        "duration": 23,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeStage/1",
+        "createdAt": "2016-04-22T22:42:10.205Z",
+        "updatedAt": "2016-04-22T22:42:10.205Z",
+        "id": 106
+      },
+      {
+        "start": 1461364930253,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:10.264Z",
+        "updatedAt": "2016-04-22T22:42:10.264Z",
+        "id": 107
+      },
+      {
+        "start": 1461364930287,
+        "body": {},
+        "duration": 53,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:42:10.349Z",
+        "updatedAt": "2016-04-22T22:42:10.349Z",
+        "id": 108
+      },
+      {
+        "start": 1461364930294,
+        "body": {},
+        "duration": 49,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:42:10.359Z",
+        "updatedAt": "2016-04-22T22:42:10.359Z",
+        "id": 109
+      },
+      {
+        "start": 1461364931602,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:11.616Z",
+        "updatedAt": "2016-04-22T22:42:11.616Z",
+        "id": 110
+      },
+      {
+        "start": 1461364931634,
+        "body": {},
+        "duration": 17,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOffered/1",
+        "createdAt": "2016-04-22T22:42:11.653Z",
+        "updatedAt": "2016-04-22T22:42:11.653Z",
+        "id": 111
+      },
+      {
+        "start": 1461364934296,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOffered/1",
+        "createdAt": "2016-04-22T22:42:14.307Z",
+        "updatedAt": "2016-04-22T22:42:14.307Z",
+        "id": 112
+      },
+      {
+        "start": 1461364934385,
+        "body": {},
+        "duration": 9,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:14.396Z",
+        "updatedAt": "2016-04-22T22:42:14.396Z",
+        "id": 113
+      },
+      {
+        "start": 1461364934415,
+        "body": {},
+        "duration": 26,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:14.442Z",
+        "updatedAt": "2016-04-22T22:42:14.442Z",
+        "id": 114
+      },
+      {
+        "start": 1461364935747,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:15.760Z",
+        "updatedAt": "2016-04-22T22:42:15.760Z",
+        "id": 115
+      },
+      {
+        "start": 1461364935774,
+        "body": {},
+        "duration": 13,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:15.792Z",
+        "updatedAt": "2016-04-22T22:42:15.792Z",
+        "id": 116
+      },
+      {
+        "start": 1461364937357,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:17.373Z",
+        "updatedAt": "2016-04-22T22:42:17.373Z",
+        "id": 117
+      },
+      {
+        "start": 1461364937405,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:17.421Z",
+        "updatedAt": "2016-04-22T22:42:17.421Z",
+        "id": 118
+      },
+      {
+        "start": 1461364938675,
+        "body": {},
+        "duration": 13,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:18.691Z",
+        "updatedAt": "2016-04-22T22:42:18.691Z",
+        "id": 119
+      },
+      {
+        "start": 1461364956796,
+        "body": {
+          "name": "unit 1"
+        },
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeUnits/1",
+        "createdAt": "2016-04-22T22:42:36.819Z",
+        "updatedAt": "2016-04-22T22:42:36.819Z",
+        "id": 120
+      },
+      {
+        "start": 1461364956855,
+        "body": {},
+        "duration": 9,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:36.867Z",
+        "updatedAt": "2016-04-22T22:42:36.867Z",
+        "id": 121
+      },
+      {
+        "start": 1461364958267,
+        "body": {},
+        "duration": 15,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:38.292Z",
+        "updatedAt": "2016-04-22T22:42:38.292Z",
+        "id": 122
+      },
+      {
+        "start": 1461364958312,
+        "body": {
+          "role": "unit",
+          "cmd": "get_prices",
+          "unit_id": "1"
+        },
+        "duration": 20,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:42:38.336Z",
+        "updatedAt": "2016-04-22T22:42:38.336Z",
+        "id": 123
+      },
+      {
+        "start": 1461364961178,
+        "body": {
+          "role": "unit",
+          "cmd": "add_price",
+          "unit_id": "1",
+          "ammount": "2000"
+        },
+        "duration": 65,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:42:41.245Z",
+        "updatedAt": "2016-04-22T22:42:41.245Z",
+        "id": 124
+      },
+      {
+        "start": 1461364961301,
+        "body": {},
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:41.318Z",
+        "updatedAt": "2016-04-22T22:42:41.318Z",
+        "id": 125
+      },
+      {
+        "start": 1461364961306,
+        "body": {
+          "role": "unit",
+          "cmd": "get_prices",
+          "unit_id": "1"
+        },
+        "duration": 35,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:42:41.342Z",
+        "updatedAt": "2016-04-22T22:42:41.342Z",
+        "id": 126
+      },
+      {
+        "start": 1461364964061,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 60,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-22T22:42:44.126Z",
+        "updatedAt": "2016-04-22T22:42:44.126Z",
+        "id": 127
+      },
+      {
+        "start": 1461364965689,
+        "body": {},
+        "duration": 48,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:42:45.738Z",
+        "updatedAt": "2016-04-22T22:42:45.738Z",
+        "id": 128
+      },
+      {
+        "start": 1461364965850,
+        "body": {},
+        "duration": 46,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:42:45.897Z",
+        "updatedAt": "2016-04-22T22:42:45.897Z",
+        "id": 129
+      },
+      {
+        "start": 1461364968033,
+        "body": {},
+        "duration": 7,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getAdmins/1",
+        "createdAt": "2016-04-22T22:42:48.042Z",
+        "updatedAt": "2016-04-22T22:42:48.042Z",
+        "id": 130
+      },
+      {
+        "start": 1461364968081,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getRevokedAdmins/1",
+        "createdAt": "2016-04-22T22:42:48.090Z",
+        "updatedAt": "2016-04-22T22:42:48.090Z",
+        "id": 131
+      },
+      {
+        "start": 1461364970136,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:50.149Z",
+        "updatedAt": "2016-04-22T22:42:50.149Z",
+        "id": 132
+      },
+      {
+        "start": 1461364972228,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:52.246Z",
+        "updatedAt": "2016-04-22T22:42:52.246Z",
+        "id": 133
+      },
+      {
+        "start": 1461364972267,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:52.292Z",
+        "updatedAt": "2016-04-22T22:42:52.292Z",
+        "id": 134
+      },
+      {
+        "start": 1461364973094,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:53.111Z",
+        "updatedAt": "2016-04-22T22:42:53.111Z",
+        "id": 135
+      },
+      {
+        "start": 1461364973149,
+        "body": {},
+        "duration": 14,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:53.164Z",
+        "updatedAt": "2016-04-22T22:42:53.164Z",
+        "id": 136
+      },
+      {
+        "start": 1461364973909,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:42:53.924Z",
+        "updatedAt": "2016-04-22T22:42:53.924Z",
+        "id": 137
+      },
+      {
+        "start": 1461364976134,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:56.150Z",
+        "updatedAt": "2016-04-22T22:42:56.150Z",
+        "id": 138
+      },
+      {
+        "start": 1461364976168,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:56.182Z",
+        "updatedAt": "2016-04-22T22:42:56.182Z",
+        "id": 139
+      },
+      {
+        "start": 1461364977460,
+        "body": {},
+        "duration": 15,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:42:57.477Z",
+        "updatedAt": "2016-04-22T22:42:57.477Z",
+        "id": 140
+      },
+      {
+        "start": 1461364977509,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:42:57.518Z",
+        "updatedAt": "2016-04-22T22:42:57.518Z",
+        "id": 141
+      },
+      {
+        "start": 1461364978495,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:58.506Z",
+        "updatedAt": "2016-04-22T22:42:58.506Z",
+        "id": 142
+      },
+      {
+        "start": 1461364979683,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:42:59.702Z",
+        "updatedAt": "2016-04-22T22:42:59.702Z",
+        "id": 143
+      },
+      {
+        "start": 1461364979727,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:42:59.750Z",
+        "updatedAt": "2016-04-22T22:42:59.750Z",
+        "id": 144
+      },
+      {
+        "start": 1461364981224,
+        "body": {},
+        "duration": 15,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getCourses/1",
+        "createdAt": "2016-04-22T22:43:01.241Z",
+        "updatedAt": "2016-04-22T22:43:01.241Z",
+        "id": 145
+      },
+      {
+        "start": 1461364981283,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:01.293Z",
+        "updatedAt": "2016-04-22T22:43:01.293Z",
+        "id": 146
+      },
+      {
+        "start": 1461364981339,
+        "body": {},
+        "duration": 36,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:01.376Z",
+        "updatedAt": "2016-04-22T22:43:01.376Z",
+        "id": 147
+      },
+      {
+        "start": 1461364983041,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOffered/1",
+        "createdAt": "2016-04-22T22:43:03.051Z",
+        "updatedAt": "2016-04-22T22:43:03.051Z",
+        "id": 148
+      },
+      {
+        "start": 1461364983095,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:43:03.105Z",
+        "updatedAt": "2016-04-22T22:43:03.105Z",
+        "id": 149
+      },
+      {
+        "start": 1461364986696,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOffered/1",
+        "createdAt": "2016-04-22T22:43:06.706Z",
+        "updatedAt": "2016-04-22T22:43:06.706Z",
+        "id": 150
+      },
+      {
+        "start": 1461364986736,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:43:06.767Z",
+        "updatedAt": "2016-04-22T22:43:06.767Z",
+        "id": 151
+      },
+      {
+        "start": 1461364986744,
+        "body": {},
+        "duration": 56,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:43:06.804Z",
+        "updatedAt": "2016-04-22T22:43:06.804Z",
+        "id": 152
+      },
+      {
+        "start": 1461364987765,
+        "body": {
+          "unit_id": 1
+        },
+        "duration": 105,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/addUnitToStage/1",
+        "createdAt": "2016-04-22T22:43:07.876Z",
+        "updatedAt": "2016-04-22T22:43:07.876Z",
+        "id": 153
+      },
+      {
+        "start": 1461364987932,
+        "body": {},
+        "duration": 11,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOffered/1",
+        "createdAt": "2016-04-22T22:43:07.947Z",
+        "updatedAt": "2016-04-22T22:43:07.947Z",
+        "id": 154
+      },
+      {
+        "start": 1461364987978,
+        "body": {},
+        "duration": 22,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsAvailable/1",
+        "createdAt": "2016-04-22T22:43:08.008Z",
+        "updatedAt": "2016-04-22T22:43:08.008Z",
+        "id": 155
+      },
+      {
+        "start": 1461364987986,
+        "body": {},
+        "duration": 18,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:43:08.036Z",
+        "updatedAt": "2016-04-22T22:43:08.037Z",
+        "id": 156
+      },
+      {
+        "start": 1461364990586,
+        "body": {},
+        "duration": 17,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getSchools/1",
+        "createdAt": "2016-04-22T22:43:10.608Z",
+        "updatedAt": "2016-04-22T22:43:10.608Z",
+        "id": 157
+      },
+      {
+        "start": 1461364990625,
+        "body": {},
+        "duration": 19,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getDepartments/1",
+        "createdAt": "2016-04-22T22:43:10.649Z",
+        "updatedAt": "2016-04-22T22:43:10.649Z",
+        "id": 158
+      },
+      {
+        "start": 1461364993156,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 59,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-22T22:43:13.225Z",
+        "updatedAt": "2016-04-22T22:43:13.225Z",
+        "id": 159
+      },
+      {
+        "start": 1461364995262,
+        "body": {},
+        "duration": 33,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:15.298Z",
+        "updatedAt": "2016-04-22T22:43:15.298Z",
+        "id": 160
+      },
+      {
+        "start": 1461364995365,
+        "body": {},
+        "duration": 31,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:15.399Z",
+        "updatedAt": "2016-04-22T22:43:15.399Z",
+        "id": 161
+      },
+      {
+        "start": 1461364997592,
+        "body": {},
+        "duration": 30,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:17.629Z",
+        "updatedAt": "2016-04-22T22:43:17.629Z",
+        "id": 162
+      },
+      {
+        "start": 1461364997613,
+        "body": {},
+        "duration": 44,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:17.661Z",
+        "updatedAt": "2016-04-22T22:43:17.661Z",
+        "id": 163
+      },
+      {
+        "start": 1461364997730,
+        "body": {},
+        "duration": 36,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:17.773Z",
+        "updatedAt": "2016-04-22T22:43:17.773Z",
+        "id": 164
+      },
+      {
+        "start": 1461364997757,
+        "body": {},
+        "duration": 36,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:17.794Z",
+        "updatedAt": "2016-04-22T22:43:17.794Z",
+        "id": 165
+      },
+      {
+        "start": 1461364999226,
+        "body": {},
+        "duration": 23,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:19.252Z",
+        "updatedAt": "2016-04-22T22:43:19.252Z",
+        "id": 166
+      },
+      {
+        "start": 1461364999209,
+        "body": {},
+        "duration": 42,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:19.268Z",
+        "updatedAt": "2016-04-22T22:43:19.268Z",
+        "id": 167
+      },
+      {
+        "start": 1461364999288,
+        "body": {},
+        "duration": 19,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:19.313Z",
+        "updatedAt": "2016-04-22T22:43:19.313Z",
+        "id": 168
+      },
+      {
+        "start": 1461364999450,
+        "body": {},
+        "duration": 24,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:19.476Z",
+        "updatedAt": "2016-04-22T22:43:19.476Z",
+        "id": 169
+      },
+      {
+        "start": 1461364999431,
+        "body": {},
+        "duration": 79,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:19.512Z",
+        "updatedAt": "2016-04-22T22:43:19.512Z",
+        "id": 170
+      },
+      {
+        "start": 1461364999496,
+        "body": {},
+        "duration": 46,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:19.543Z",
+        "updatedAt": "2016-04-22T22:43:19.543Z",
+        "id": 171
+      },
+      {
+        "start": 1461365001290,
+        "body": {},
+        "duration": 51,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:21.342Z",
+        "updatedAt": "2016-04-22T22:43:21.342Z",
+        "id": 172
+      },
+      {
+        "start": 1461365001321,
+        "body": {},
+        "duration": 64,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:21.393Z",
+        "updatedAt": "2016-04-22T22:43:21.393Z",
+        "id": 173
+      },
+      {
+        "start": 1461365001366,
+        "body": {},
+        "duration": 25,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:21.408Z",
+        "updatedAt": "2016-04-22T22:43:21.408Z",
+        "id": 174
+      },
+      {
+        "start": 1461365001445,
+        "body": {},
+        "duration": 10,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:21.458Z",
+        "updatedAt": "2016-04-22T22:43:21.458Z",
+        "id": 175
+      },
+      {
+        "start": 1461365001536,
+        "body": {},
+        "duration": 50,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:21.589Z",
+        "updatedAt": "2016-04-22T22:43:21.589Z",
+        "id": 176
+      },
+      {
+        "start": 1461365001542,
+        "body": {},
+        "duration": 45,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:21.602Z",
+        "updatedAt": "2016-04-22T22:43:21.602Z",
+        "id": 177
+      },
+      {
+        "start": 1461365001510,
+        "body": {},
+        "duration": 78,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:21.619Z",
+        "updatedAt": "2016-04-22T22:43:21.619Z",
+        "id": 178
+      },
+      {
+        "start": 1461365001567,
+        "body": {},
+        "duration": 70,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:21.639Z",
+        "updatedAt": "2016-04-22T22:43:21.639Z",
+        "id": 179
+      },
+      {
+        "start": 1461365005533,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:25.543Z",
+        "updatedAt": "2016-04-22T22:43:25.543Z",
+        "id": 180
+      },
+      {
+        "start": 1461365009064,
+        "body": {
+          "name": "evening"
+        },
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeStudy_session/1",
+        "createdAt": "2016-04-22T22:43:29.082Z",
+        "updatedAt": "2016-04-22T22:43:29.082Z",
+        "id": 181
+      },
+      {
+        "start": 1461365009128,
+        "body": {},
+        "duration": 21,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:29.150Z",
+        "updatedAt": "2016-04-22T22:43:29.150Z",
+        "id": 182
+      },
+      {
+        "start": 1461365010401,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 70,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:43:30.474Z",
+        "updatedAt": "2016-04-22T22:43:30.474Z",
+        "id": 183
+      },
+      {
+        "start": 1461365010368,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 157,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:43:30.527Z",
+        "updatedAt": "2016-04-22T22:43:30.527Z",
+        "id": 184
+      },
+      {
+        "start": 1461365013882,
+        "body": {},
+        "duration": 16,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:33.906Z",
+        "updatedAt": "2016-04-22T22:43:33.906Z",
+        "id": 185
+      },
+      {
+        "start": 1461365013865,
+        "body": {},
+        "duration": 39,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:33.919Z",
+        "updatedAt": "2016-04-22T22:43:33.919Z",
+        "id": 186
+      },
+      {
+        "start": 1461365013890,
+        "body": {},
+        "duration": 56,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:33.948Z",
+        "updatedAt": "2016-04-22T22:43:33.948Z",
+        "id": 187
+      },
+      {
+        "start": 1461365013937,
+        "body": {},
+        "duration": 28,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:33.968Z",
+        "updatedAt": "2016-04-22T22:43:33.968Z",
+        "id": 188
+      },
+      {
+        "start": 1461365014030,
+        "body": {},
+        "duration": 17,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:34.049Z",
+        "updatedAt": "2016-04-22T22:43:34.049Z",
+        "id": 189
+      },
+      {
+        "start": 1461365014038,
+        "body": {},
+        "duration": 38,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:34.078Z",
+        "updatedAt": "2016-04-22T22:43:34.078Z",
+        "id": 190
+      },
+      {
+        "start": 1461365014016,
+        "body": {},
+        "duration": 86,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:34.105Z",
+        "updatedAt": "2016-04-22T22:43:34.105Z",
+        "id": 191
+      },
+      {
+        "start": 1461365014065,
+        "body": {},
+        "duration": 38,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:34.119Z",
+        "updatedAt": "2016-04-22T22:43:34.119Z",
+        "id": 192
+      },
+      {
+        "start": 1461365018087,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:43:38.119Z",
+        "updatedAt": "2016-04-22T22:43:38.119Z",
+        "id": 193
+      },
+      {
+        "start": 1461365018158,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:43:38.168Z",
+        "updatedAt": "2016-04-22T22:43:38.168Z",
+        "id": 194
+      },
+      {
+        "start": 1461365018187,
+        "body": {},
+        "duration": 24,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:43:38.217Z",
+        "updatedAt": "2016-04-22T22:43:38.217Z",
+        "id": 195
+      },
+      {
+        "start": 1461365018189,
+        "body": {},
+        "duration": 25,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:43:38.233Z",
+        "updatedAt": "2016-04-22T22:43:38.233Z",
+        "id": 196
+      },
+      {
+        "start": 1461365033521,
+        "body": {
+          "adm": "100/200",
+          "names": "Branson Gitomeh Kuria",
+          "course": "1",
+          "level": "1",
+          "stage": "1",
+          "study_mode": "1"
+        },
+        "duration": 107,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeStudent/1",
+        "createdAt": "2016-04-22T22:43:53.714Z",
+        "updatedAt": "2016-04-22T22:43:53.714Z",
+        "id": 197
+      },
+      {
+        "start": 1461365033843,
+        "body": {},
+        "duration": 48,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:43:53.893Z",
+        "updatedAt": "2016-04-22T22:43:53.893Z",
+        "id": 198
+      },
+      {
+        "start": 1461365033854,
+        "body": {},
+        "duration": 208,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getAllStudents/1",
+        "createdAt": "2016-04-22T22:43:54.076Z",
+        "updatedAt": "2016-04-22T22:43:54.076Z",
+        "id": 199
+      },
+      {
+        "start": 1461365035976,
+        "body": {},
+        "duration": 140,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:43:56.118Z",
+        "updatedAt": "2016-04-22T22:43:56.118Z",
+        "id": 200
+      },
+      {
+        "start": 1461365078097,
+        "body": {},
+        "duration": 142,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:44:38.257Z",
+        "updatedAt": "2016-04-22T22:44:38.257Z",
+        "id": 201
+      },
+      {
+        "start": 1461365087290,
+        "body": {
+          "name": "jan-april-2016"
+        },
+        "duration": 77,
+        "statusCode": 500,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeTri_semester/1",
+        "createdAt": "2016-04-22T22:44:47.372Z",
+        "updatedAt": "2016-04-22T22:44:47.372Z",
+        "id": 202
+      },
+      {
+        "start": 1461365087442,
+        "body": {},
+        "duration": 36,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:44:47.487Z",
+        "updatedAt": "2016-04-22T22:44:47.487Z",
+        "id": 203
+      },
+      {
+        "start": 1461365089214,
+        "body": {
+          "tri_semester_id": 1
+        },
+        "duration": 69,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/makeTri_semesterActive/1",
+        "createdAt": "2016-04-22T22:44:49.289Z",
+        "updatedAt": "2016-04-22T22:44:49.289Z",
+        "id": 204
+      },
+      {
+        "start": 1461365089349,
+        "body": {},
+        "duration": 27,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:44:49.383Z",
+        "updatedAt": "2016-04-22T22:44:49.383Z",
+        "id": 205
+      },
+      {
+        "start": 1461365092510,
+        "body": {},
+        "duration": 23,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:44:52.535Z",
+        "updatedAt": "2016-04-22T22:44:52.535Z",
+        "id": 206
+      },
+      {
+        "start": 1461365095313,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 13,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:44:55.334Z",
+        "updatedAt": "2016-04-22T22:44:55.334Z",
+        "id": 207
+      },
+      {
+        "start": 1461365108069,
+        "body": {
+          "role": "finance",
+          "cmd": "create_payment_chanel",
+          "channel_name": "mpesa",
+          "uni_id": "1",
+          "channel_number": "6543",
+          "location": "mobile"
+        },
+        "duration": 36,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:08.110Z",
+        "updatedAt": "2016-04-22T22:45:08.110Z",
+        "id": 208
+      },
+      {
+        "start": 1461365108163,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 18,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:08.185Z",
+        "updatedAt": "2016-04-22T22:45:08.185Z",
+        "id": 209
+      },
+      {
+        "start": 1461365120551,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 202,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-22T22:45:20.760Z",
+        "updatedAt": "2016-04-22T22:45:20.760Z",
+        "id": 210
+      },
+      {
+        "start": 1461365122079,
+        "body": {},
+        "duration": 54,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:22.137Z",
+        "updatedAt": "2016-04-22T22:45:22.137Z",
+        "id": 211
+      },
+      {
+        "start": 1461365122253,
+        "body": {},
+        "duration": 49,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:22.306Z",
+        "updatedAt": "2016-04-22T22:45:22.306Z",
+        "id": 212
+      },
+      {
+        "start": 1461365124235,
+        "body": {},
+        "duration": 64,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:24.303Z",
+        "updatedAt": "2016-04-22T22:45:24.303Z",
+        "id": 213
+      },
+      {
+        "start": 1461365124211,
+        "body": {},
+        "duration": 135,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:24.351Z",
+        "updatedAt": "2016-04-22T22:45:24.351Z",
+        "id": 214
+      },
+      {
+        "start": 1461365124432,
+        "body": {},
+        "duration": 61,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:24.494Z",
+        "updatedAt": "2016-04-22T22:45:24.494Z",
+        "id": 215
+      },
+      {
+        "start": 1461365124408,
+        "body": {},
+        "duration": 123,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:24.532Z",
+        "updatedAt": "2016-04-22T22:45:24.532Z",
+        "id": 216
+      },
+      {
+        "start": 1461365126063,
+        "body": {},
+        "duration": 47,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:26.130Z",
+        "updatedAt": "2016-04-22T22:45:26.130Z",
+        "id": 217
+      },
+      {
+        "start": 1461365126017,
+        "body": {},
+        "duration": 101,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:26.158Z",
+        "updatedAt": "2016-04-22T22:45:26.158Z",
+        "id": 218
+      },
+      {
+        "start": 1461365126186,
+        "body": {},
+        "duration": 28,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:45:26.227Z",
+        "updatedAt": "2016-04-22T22:45:26.227Z",
+        "id": 219
+      },
+      {
+        "start": 1461365126347,
+        "body": {},
+        "duration": 78,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:26.430Z",
+        "updatedAt": "2016-04-22T22:45:26.430Z",
+        "id": 220
+      },
+      {
+        "start": 1461365126403,
+        "body": {},
+        "duration": 25,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:26.456Z",
+        "updatedAt": "2016-04-22T22:45:26.456Z",
+        "id": 221
+      },
+      {
+        "start": 1461365126486,
+        "body": {},
+        "duration": 15,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:45:26.504Z",
+        "updatedAt": "2016-04-22T22:45:26.504Z",
+        "id": 222
+      },
+      {
+        "start": 1461365128931,
+        "body": {},
+        "duration": 19,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:28.954Z",
+        "updatedAt": "2016-04-22T22:45:28.954Z",
+        "id": 223
+      },
+      {
+        "start": 1461365128912,
+        "body": {},
+        "duration": 94,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:29.011Z",
+        "updatedAt": "2016-04-22T22:45:29.011Z",
+        "id": 224
+      },
+      {
+        "start": 1461365128979,
+        "body": {},
+        "duration": 28,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:45:29.038Z",
+        "updatedAt": "2016-04-22T22:45:29.038Z",
+        "id": 225
+      },
+      {
+        "start": 1461365128984,
+        "body": {},
+        "duration": 25,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:45:29.149Z",
+        "updatedAt": "2016-04-22T22:45:29.149Z",
+        "id": 226
+      },
+      {
+        "start": 1461365129271,
+        "body": {},
+        "duration": 42,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:29.315Z",
+        "updatedAt": "2016-04-22T22:45:29.315Z",
+        "id": 227
+      },
+      {
+        "start": 1461365129279,
+        "body": {},
+        "duration": 68,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:45:29.348Z",
+        "updatedAt": "2016-04-22T22:45:29.348Z",
+        "id": 228
+      },
+      {
+        "start": 1461365129370,
+        "body": {},
+        "duration": 36,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:45:29.408Z",
+        "updatedAt": "2016-04-22T22:45:29.408Z",
+        "id": 229
+      },
+      {
+        "start": 1461365129253,
+        "body": {},
+        "duration": 154,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:29.425Z",
+        "updatedAt": "2016-04-22T22:45:29.425Z",
+        "id": 230
+      },
+      {
+        "start": 1461365131401,
+        "body": {},
+        "duration": 23,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getLevels/1",
+        "createdAt": "2016-04-22T22:45:31.427Z",
+        "updatedAt": "2016-04-22T22:45:31.427Z",
+        "id": 231
+      },
+      {
+        "start": 1461365131381,
+        "body": {},
+        "duration": 104,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniCourses/1",
+        "createdAt": "2016-04-22T22:45:31.488Z",
+        "updatedAt": "2016-04-22T22:45:31.488Z",
+        "id": 232
+      },
+      {
+        "start": 1461365131413,
+        "body": {},
+        "duration": 74,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStages/1",
+        "createdAt": "2016-04-22T22:45:31.510Z",
+        "updatedAt": "2016-04-22T22:45:31.510Z",
+        "id": 233
+      },
+      {
+        "start": 1461365131450,
+        "body": {},
+        "duration": 88,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getStudy_sessions/1",
+        "createdAt": "2016-04-22T22:45:31.540Z",
+        "updatedAt": "2016-04-22T22:45:31.540Z",
+        "id": 234
+      },
+      {
+        "start": 1461365140190,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 94,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-22T22:45:40.291Z",
+        "updatedAt": "2016-04-22T22:45:40.291Z",
+        "id": 235
+      },
+      {
+        "start": 1461365142262,
+        "body": {},
+        "duration": 203,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:45:42.470Z",
+        "updatedAt": "2016-04-22T22:45:42.470Z",
+        "id": 236
+      },
+      {
+        "start": 1461365142523,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 88,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:42.619Z",
+        "updatedAt": "2016-04-22T22:45:42.619Z",
+        "id": 237
+      },
+      {
+        "start": 1461365146031,
+        "body": {},
+        "duration": 57,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:45:46.095Z",
+        "updatedAt": "2016-04-22T22:45:46.095Z",
+        "id": 238
+      },
+      {
+        "start": 1461365146173,
+        "body": {},
+        "duration": 54,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getMyUnits/1",
+        "createdAt": "2016-04-22T22:45:46.230Z",
+        "updatedAt": "2016-04-22T22:45:46.230Z",
+        "id": 239
+      },
+      {
+        "start": 1461365146122,
+        "body": {},
+        "duration": 201,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOfferedVersusStudent/1/1/1",
+        "createdAt": "2016-04-22T22:45:46.325Z",
+        "updatedAt": "2016-04-22T22:45:46.325Z",
+        "id": 240
+      },
+      {
+        "start": 1461365146004,
+        "body": {},
+        "duration": 375,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getDepartmentsAndCourses/1",
+        "createdAt": "2016-04-22T22:45:46.382Z",
+        "updatedAt": "2016-04-22T22:45:46.382Z",
+        "id": 241
+      },
+      {
+        "start": 1461365146438,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 83,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:46.528Z",
+        "updatedAt": "2016-04-22T22:45:46.528Z",
+        "id": 242
+      },
+      {
+        "start": 1461365148158,
+        "body": {},
+        "duration": 48,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/AddUnitToMyself/1/1/1/1",
+        "createdAt": "2016-04-22T22:45:48.207Z",
+        "updatedAt": "2016-04-22T22:45:48.207Z",
+        "id": 243
+      },
+      {
+        "start": 1461365148328,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:45:48.352Z",
+        "updatedAt": "2016-04-22T22:45:48.352Z",
+        "id": 244
+      },
+      {
+        "start": 1461365148387,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getMyUnits/1",
+        "createdAt": "2016-04-22T22:45:48.410Z",
+        "updatedAt": "2016-04-22T22:45:48.410Z",
+        "id": 245
+      },
+      {
+        "start": 1461365148372,
+        "body": {},
+        "duration": 189,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOfferedVersusStudent/1/1/1",
+        "createdAt": "2016-04-22T22:45:48.562Z",
+        "updatedAt": "2016-04-22T22:45:48.562Z",
+        "id": 246
+      },
+      {
+        "start": 1461365148286,
+        "body": {},
+        "duration": 341,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getDepartmentsAndCourses/1",
+        "createdAt": "2016-04-22T22:45:48.628Z",
+        "updatedAt": "2016-04-22T22:45:48.628Z",
+        "id": 247
+      },
+      {
+        "start": 1461365148670,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 74,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:48.746Z",
+        "updatedAt": "2016-04-22T22:45:48.746Z",
+        "id": 248
+      },
+      {
+        "start": 1461365150386,
+        "body": {},
+        "duration": 195,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:45:50.582Z",
+        "updatedAt": "2016-04-22T22:45:50.583Z",
+        "id": 249
+      },
+      {
+        "start": 1461365150666,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 77,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:45:50.753Z",
+        "updatedAt": "2016-04-22T22:45:50.753Z",
+        "id": 250
+      },
+      {
+        "start": 1461365172565,
+        "body": {
+          "role": "university",
+          "cmd": "get_trisemesters",
+          "id": "1",
+          "mode": "simple"
+        },
+        "duration": 38,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:12.608Z",
+        "updatedAt": "2016-04-22T22:46:12.608Z",
+        "id": 251
+      },
+      {
+        "start": 1461365172639,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 42,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:12.686Z",
+        "updatedAt": "2016-04-22T22:46:12.686Z",
+        "id": 252
+      },
+      {
+        "start": 1461365172586,
+        "body": {
+          "role": "studentInfo",
+          "cmd": "get_semesters_payable_to",
+          "studentId": "1"
+        },
+        "duration": 200,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:12.789Z",
+        "updatedAt": "2016-04-22T22:46:12.789Z",
+        "id": 253
+      },
+      {
+        "start": 1461365172729,
+        "body": {},
+        "duration": 107,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyTriSems/1",
+        "createdAt": "2016-04-22T22:46:12.838Z",
+        "updatedAt": "2016-04-22T22:46:12.838Z",
+        "id": 254
+      },
+      {
+        "start": 1461365172887,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 87,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:12.982Z",
+        "updatedAt": "2016-04-22T22:46:12.982Z",
+        "id": 255
+      },
+      {
+        "start": 1461365191785,
+        "body": {
+          "role": "finance",
+          "cmd": "pick_payment_for_student",
+          "student_id": "1",
+          "tri_sem_id": "1",
+          "stage_id": 1,
+          "course_id": 1,
+          "level_id": 1,
+          "payment_channel": "1",
+          "paymentAmmount": "2000",
+          "receiptNo": "asdsad"
+        },
+        "duration": 44,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:31.832Z",
+        "updatedAt": "2016-04-22T22:46:31.832Z",
+        "id": 256
+      },
+      {
+        "start": 1461365191905,
+        "body": {
+          "role": "university",
+          "cmd": "get_trisemesters",
+          "id": "1",
+          "mode": "simple"
+        },
+        "duration": 103,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:32.012Z",
+        "updatedAt": "2016-04-22T22:46:32.012Z",
+        "id": 257
+      },
+      {
+        "start": 1461365191924,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 149,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:32.077Z",
+        "updatedAt": "2016-04-22T22:46:32.077Z",
+        "id": 258
+      },
+      {
+        "start": 1461365191920,
+        "body": {
+          "role": "studentInfo",
+          "cmd": "get_semesters_payable_to",
+          "studentId": "1"
+        },
+        "duration": 257,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:32.181Z",
+        "updatedAt": "2016-04-22T22:46:32.181Z",
+        "id": 259
+      },
+      {
+        "start": 1461365191956,
+        "body": {},
+        "duration": 288,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyTriSems/1",
+        "createdAt": "2016-04-22T22:46:32.247Z",
+        "updatedAt": "2016-04-22T22:46:32.247Z",
+        "id": 260
+      },
+      {
+        "start": 1461365192298,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 108,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:32.410Z",
+        "updatedAt": "2016-04-22T22:46:32.410Z",
+        "id": 261
+      },
+      {
+        "start": 1461365194120,
+        "body": {},
+        "duration": 269,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:46:34.395Z",
+        "updatedAt": "2016-04-22T22:46:34.395Z",
+        "id": 262
+      },
+      {
+        "start": 1461365194442,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 98,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:34.549Z",
+        "updatedAt": "2016-04-22T22:46:34.549Z",
+        "id": 263
+      },
+      {
+        "start": 1461365199326,
+        "body": {
+          "role": "university",
+          "cmd": "get_trisemesters",
+          "id": "1",
+          "mode": "simple"
+        },
+        "duration": 77,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:39.405Z",
+        "updatedAt": "2016-04-22T22:46:39.405Z",
+        "id": 264
+      },
+      {
+        "start": 1461365199371,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 125,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:39.498Z",
+        "updatedAt": "2016-04-22T22:46:39.498Z",
+        "id": 265
+      },
+      {
+        "start": 1461365199355,
+        "body": {
+          "role": "studentInfo",
+          "cmd": "get_semesters_payable_to",
+          "studentId": "1"
+        },
+        "duration": 197,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:39.554Z",
+        "updatedAt": "2016-04-22T22:46:39.554Z",
+        "id": 266
+      },
+      {
+        "start": 1461365199380,
+        "body": {},
+        "duration": 254,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyTriSems/1",
+        "createdAt": "2016-04-22T22:46:39.636Z",
+        "updatedAt": "2016-04-22T22:46:39.636Z",
+        "id": 267
+      },
+      {
+        "start": 1461365199700,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 95,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:39.798Z",
+        "updatedAt": "2016-04-22T22:46:39.798Z",
+        "id": 268
+      },
+      {
+        "start": 1461365216760,
+        "body": {
+          "role": "finance",
+          "cmd": "pick_payment_for_student",
+          "student_id": "1",
+          "tri_sem_id": "1",
+          "stage_id": 1,
+          "course_id": 1,
+          "level_id": 1,
+          "payment_channel": "1",
+          "paymentAmmount": "23",
+          "receiptNo": "aweosmness"
+        },
+        "duration": 33,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:56.798Z",
+        "updatedAt": "2016-04-22T22:46:56.798Z",
+        "id": 269
+      },
+      {
+        "start": 1461365216860,
+        "body": {
+          "role": "university",
+          "cmd": "get_trisemesters",
+          "id": "1",
+          "mode": "simple"
+        },
+        "duration": 54,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:56.916Z",
+        "updatedAt": "2016-04-22T22:46:56.916Z",
+        "id": 270
+      },
+      {
+        "start": 1461365216964,
+        "body": {
+          "role": "finance",
+          "cmd": "get_payment_channels_in_a_uni",
+          "uni_id": "1"
+        },
+        "duration": 112,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:57.078Z",
+        "updatedAt": "2016-04-22T22:46:57.078Z",
+        "id": 271
+      },
+      {
+        "start": 1461365216878,
+        "body": {
+          "role": "studentInfo",
+          "cmd": "get_semesters_payable_to",
+          "studentId": "1"
+        },
+        "duration": 243,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:57.129Z",
+        "updatedAt": "2016-04-22T22:46:57.129Z",
+        "id": 272
+      },
+      {
+        "start": 1461365216970,
+        "body": {},
+        "duration": 155,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyTriSems/1",
+        "createdAt": "2016-04-22T22:46:57.154Z",
+        "updatedAt": "2016-04-22T22:46:57.154Z",
+        "id": 273
+      },
+      {
+        "start": 1461365217184,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 71,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:57.258Z",
+        "updatedAt": "2016-04-22T22:46:57.258Z",
+        "id": 274
+      },
+      {
+        "start": 1461365219457,
+        "body": {},
+        "duration": 224,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:46:59.684Z",
+        "updatedAt": "2016-04-22T22:46:59.684Z",
+        "id": 275
+      },
+      {
+        "start": 1461365219734,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 71,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:46:59.812Z",
+        "updatedAt": "2016-04-22T22:46:59.812Z",
+        "id": 276
+      },
+      {
+        "start": 1461365228953,
+        "body": {},
+        "duration": 31,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getTri_semesters/1",
+        "createdAt": "2016-04-22T22:47:08.986Z",
+        "updatedAt": "2016-04-22T22:47:08.986Z",
+        "id": 277
+      },
+      {
+        "start": 1461365229024,
+        "body": {},
+        "duration": 40,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getMyUnits/1",
+        "createdAt": "2016-04-22T22:47:09.066Z",
+        "updatedAt": "2016-04-22T22:47:09.066Z",
+        "id": 278
+      },
+      {
+        "start": 1461365228971,
+        "body": {},
+        "duration": 240,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUnitsOfferedVersusStudent/1/1/1",
+        "createdAt": "2016-04-22T22:47:09.214Z",
+        "updatedAt": "2016-04-22T22:47:09.214Z",
+        "id": 279
+      },
+      {
+        "start": 1461365228930,
+        "body": {},
+        "duration": 344,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/student/getDepartmentsAndCourses/1",
+        "createdAt": "2016-04-22T22:47:09.276Z",
+        "updatedAt": "2016-04-22T22:47:09.276Z",
+        "id": 280
+      },
+      {
+        "start": 1461365229310,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 86,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:47:09.407Z",
+        "updatedAt": "2016-04-22T22:47:09.407Z",
+        "id": 281
+      },
+      {
+        "start": 1461365234942,
+        "body": {},
+        "duration": 213,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getMyPayments/1",
+        "createdAt": "2016-04-22T22:47:15.159Z",
+        "updatedAt": "2016-04-22T22:47:15.159Z",
+        "id": 282
+      },
+      {
+        "start": 1461365235213,
+        "body": {
+          "role": "student_management",
+          "cmd": "get_student_details",
+          "student_id": "1"
+        },
+        "duration": 82,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:47:15.297Z",
+        "updatedAt": "2016-04-22T22:47:15.297Z",
+        "id": 283
+      },
+      {
+        "start": 1461365238965,
+        "body": {},
+        "duration": 22,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboard/1",
+        "createdAt": "2016-04-22T22:47:18.992Z",
+        "updatedAt": "2016-04-22T22:47:18.992Z",
+        "id": 284
+      },
+      {
+        "start": 1461365239091,
+        "body": {},
+        "duration": 26,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboardOld/1",
+        "createdAt": "2016-04-22T22:47:19.120Z",
+        "updatedAt": "2016-04-22T22:47:19.120Z",
+        "id": 285
+      },
+      {
+        "start": 1461365241113,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 127,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-22T22:47:21.243Z",
+        "updatedAt": "2016-04-22T22:47:21.243Z",
+        "id": 286
       }
     ],
-    "proschool": [],
-    "course": [],
-    "level": [],
-    "stage": [],
-    "university": [],
-    "study_session": [],
-    "tri_semester": [],
-    "payment_method": [],
-    "student": [],
-    "unit_registration": [],
+    "proschool": [
+      {
+        "name": "school",
+        "uni": 1,
+        "createdAt": "2016-04-22T22:41:43.827Z",
+        "updatedAt": "2016-04-22T22:41:43.827Z",
+        "id": 1
+      }
+    ],
+    "course": [
+      {
+        "name": "course",
+        "department": 1,
+        "createdAt": "2016-04-22T22:42:01.361Z",
+        "updatedAt": "2016-04-22T22:43:53.630Z",
+        "id": 1
+      }
+    ],
+    "level": [
+      {
+        "name": "leve",
+        "course": 1,
+        "createdAt": "2016-04-22T22:42:05.742Z",
+        "updatedAt": "2016-04-22T22:43:53.651Z",
+        "id": 1
+      }
+    ],
+    "stage": [
+      {
+        "name": "semester",
+        "level": 1,
+        "createdAt": "2016-04-22T22:42:10.185Z",
+        "updatedAt": "2016-04-22T22:43:53.672Z",
+        "id": 1
+      }
+    ],
+    "university": [
+      {
+        "name": "bae",
+        "createdAt": "2016-04-22T22:41:30.596Z",
+        "updatedAt": "2016-04-22T22:44:49.224Z",
+        "id": 1,
+        "noticeboard": 1,
+        "active_tri_semester": 1
+      }
+    ],
+    "study_session": [
+      {
+        "name": "evening",
+        "uni": 1,
+        "createdAt": "2016-04-22T22:43:29.066Z",
+        "updatedAt": "2016-04-22T22:43:53.688Z",
+        "id": 1
+      }
+    ],
+    "tri_semester": [
+      {
+        "name": "jan-april-2016",
+        "uni": 1,
+        "createdAt": "2016-04-22T22:44:47.297Z",
+        "updatedAt": "2016-04-22T22:44:47.297Z",
+        "id": 1
+      }
+    ],
+    "payment_method": [
+      {
+        "name": "mpesa",
+        "channel_number": "6543",
+        "location": "mobile",
+        "university": 1,
+        "createdAt": "2016-04-22T22:45:08.074Z",
+        "updatedAt": "2016-04-22T22:45:08.074Z",
+        "id": 1
+      }
+    ],
+    "student": [
+      {
+        "adm": "100/200",
+        "name": "Branson Gitomeh Kuria",
+        "course": 1,
+        "level": 1,
+        "stage": 1,
+        "study_mode": 1,
+        "createdAt": "2016-04-22T22:43:53.524Z",
+        "updatedAt": "2016-04-22T22:43:53.966Z",
+        "id": 1
+      }
+    ],
+    "unit_registration": [
+      {
+        "student": 1,
+        "stage": 1,
+        "price": 1,
+        "unit": 1,
+        "tri_semester": 1,
+        "createdAt": "2016-04-22T22:45:48.169Z",
+        "updatedAt": "2016-04-22T22:45:48.169Z",
+        "id": 1
+      }
+    ],
     "student_profile": [],
-    "payment": [],
+    "payment": [
+      {
+        "student_who_made_me": 1,
+        "tri_semesters_i_was_paid_to": 1,
+        "course_paid_to": 1,
+        "level_paid_to": 1,
+        "stage_paid_to": 1,
+        "ammount": "2000",
+        "receipt": "asdsad",
+        "payment_method": 1,
+        "createdAt": "2016-04-22T22:46:31.794Z",
+        "updatedAt": "2016-04-22T22:46:31.795Z",
+        "id": 1
+      },
+      {
+        "student_who_made_me": 1,
+        "tri_semesters_i_was_paid_to": 1,
+        "course_paid_to": 1,
+        "level_paid_to": 1,
+        "stage_paid_to": 1,
+        "ammount": "23",
+        "receipt": "aweosmness",
+        "payment_method": 1,
+        "createdAt": "2016-04-22T22:46:56.764Z",
+        "updatedAt": "2016-04-22T22:46:56.764Z",
+        "id": 2
+      }
+    ],
     "installment": [],
-    "noticeboard": [],
+    "noticeboard": [
+      {
+        "createdAt": "2016-04-22T22:41:30.620Z",
+        "updatedAt": "2016-04-22T22:41:30.672Z",
+        "id": 1,
+        "university": 1
+      }
+    ],
     "noticeboard_item": [],
     "church": [],
     "university_admins__user_unis_i_admin": [],
     "university_revoked_admins__user_unis_im_revoked": [],
     "student_guardians__user_my_students": [],
-    "stage_units_i_offer__unit_stages_doing_me": [],
+    "stage_units_i_offer__unit_stages_doing_me": [
+      {
+        "unit_stages_doing_me": 1,
+        "stage_units_i_offer": 1,
+        "id": 1
+      }
+    ],
     "student_units_im_taking__unit_students_taking_me": [],
     "student_units_ive_done_before__unit_students_that_have_done_me_before": [],
-    "course_students_that_have_done_me_before__student_courses_ive_done_before": [],
-    "level_students_that_have_done_me_before__student_levels_ive_done_before": [],
-    "stage_students_that_have_done_me_before__student_stages_ive_done_before": [],
+    "course_students_that_have_done_me_before__student_courses_ive_done_before": [
+      {
+        "student_courses_ive_done_before": 1,
+        "course_students_that_have_done_me_before": 1,
+        "id": 1
+      }
+    ],
+    "level_students_that_have_done_me_before__student_levels_ive_done_before": [
+      {
+        "student_levels_ive_done_before": 1,
+        "level_students_that_have_done_me_before": 1,
+        "id": 1
+      }
+    ],
+    "stage_students_that_have_done_me_before__student_stages_ive_done_before": [
+      {
+        "student_stages_ive_done_before": 1,
+        "stage_students_that_have_done_me_before": 1,
+        "id": 1
+      }
+    ],
     "student_my_universities__university_students": [],
-    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": [],
+    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": [
+      {
+        "student_study_modes_ive_done_before": 1,
+        "study_session_students_that_have_done_me_before": 1,
+        "id": 1
+      }
+    ],
     "student_tri_semesters_i_pay_for__tri_semester_students_paying_for_me": []
   },
   "schema": {
@@ -1114,39 +4490,79 @@
   "counters": {
     "user": {},
     "user_profile": {},
-    "department": {},
-    "unit": {},
-    "price": {},
-    "request": {
-      "id": 15
+    "department": {
+      "id": 1
     },
-    "proschool": {},
-    "course": {},
-    "level": {},
-    "stage": {},
-    "university": {},
-    "study_session": {},
-    "tri_semester": {},
-    "payment_method": {},
-    "student": {},
-    "unit_registration": {},
+    "unit": {
+      "id": 1
+    },
+    "price": {
+      "id": 1
+    },
+    "request": {
+      "id": 286
+    },
+    "proschool": {
+      "id": 1
+    },
+    "course": {
+      "id": 1
+    },
+    "level": {
+      "id": 1
+    },
+    "stage": {
+      "id": 1
+    },
+    "university": {
+      "id": 1
+    },
+    "study_session": {
+      "id": 1
+    },
+    "tri_semester": {
+      "id": 1
+    },
+    "payment_method": {
+      "id": 1
+    },
+    "student": {
+      "id": 1
+    },
+    "unit_registration": {
+      "id": 1
+    },
     "student_profile": {},
-    "payment": {},
+    "payment": {
+      "id": 2
+    },
     "installment": {},
-    "noticeboard": {},
+    "noticeboard": {
+      "id": 1
+    },
     "noticeboard_item": {},
     "church": {},
     "university_admins__user_unis_i_admin": {},
     "university_revoked_admins__user_unis_im_revoked": {},
     "student_guardians__user_my_students": {},
-    "stage_units_i_offer__unit_stages_doing_me": {},
+    "stage_units_i_offer__unit_stages_doing_me": {
+      "id": 1
+    },
     "student_units_im_taking__unit_students_taking_me": {},
     "student_units_ive_done_before__unit_students_that_have_done_me_before": {},
-    "course_students_that_have_done_me_before__student_courses_ive_done_before": {},
-    "level_students_that_have_done_me_before__student_levels_ive_done_before": {},
-    "stage_students_that_have_done_me_before__student_stages_ive_done_before": {},
+    "course_students_that_have_done_me_before__student_courses_ive_done_before": {
+      "id": 1
+    },
+    "level_students_that_have_done_me_before__student_levels_ive_done_before": {
+      "id": 1
+    },
+    "stage_students_that_have_done_me_before__student_stages_ive_done_before": {
+      "id": 1
+    },
     "student_my_universities__university_students": {},
-    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": {},
+    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": {
+      "id": 1
+    },
     "student_tri_semesters_i_pay_for__tri_semester_students_paying_for_me": {}
   }
 }
