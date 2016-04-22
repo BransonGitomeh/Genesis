@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "genesis":"nodemon api/index.js & webpack clients/",
-    "start": "node index.js | bunyan && webpack",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
