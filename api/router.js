@@ -1,5 +1,5 @@
 module.exports = function(app, db) {
-  app.get("/", (req, res) => {
+  app.get("/none", (req, res) => {
     res.send("In the begining there was the word, and the word was with God, and the word was God")
   })
 

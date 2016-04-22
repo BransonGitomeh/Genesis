@@ -1,0 +1,1152 @@
+{
+  "data": {
+    "user": [],
+    "user_profile": [],
+    "department": [],
+    "unit": [],
+    "price": [],
+    "request": [
+      {
+        "start": 1461363254030,
+        "body": {},
+        "duration": 44,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-22T22:14:14.106Z",
+        "updatedAt": "2016-04-22T22:14:14.106Z",
+        "id": 1
+      },
+      {
+        "start": 1461363254438,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-22T22:14:14.458Z",
+        "updatedAt": "2016-04-22T22:14:14.458Z",
+        "id": 2
+      },
+      {
+        "start": 1461363254488,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-22T22:14:14.493Z",
+        "updatedAt": "2016-04-22T22:14:14.493Z",
+        "id": 3
+      },
+      {
+        "start": 1461363254518,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-22T22:14:14.522Z",
+        "updatedAt": "2016-04-22T22:14:14.522Z",
+        "id": 4
+      },
+      {
+        "start": 1461363254592,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-22T22:14:14.595Z",
+        "updatedAt": "2016-04-22T22:14:14.595Z",
+        "id": 5
+      },
+      {
+        "start": 1461363254610,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-22T22:14:14.614Z",
+        "updatedAt": "2016-04-22T22:14:14.614Z",
+        "id": 6
+      },
+      {
+        "start": 1461363254635,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-22T22:14:14.642Z",
+        "updatedAt": "2016-04-22T22:14:14.642Z",
+        "id": 7
+      },
+      {
+        "start": 1461363254704,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-22T22:14:14.709Z",
+        "updatedAt": "2016-04-22T22:14:14.709Z",
+        "id": 8
+      },
+      {
+        "start": 1461363254746,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-22T22:14:14.751Z",
+        "updatedAt": "2016-04-22T22:14:14.751Z",
+        "id": 9
+      },
+      {
+        "start": 1461363254818,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-22T22:14:14.832Z",
+        "updatedAt": "2016-04-22T22:14:14.832Z",
+        "id": 10
+      },
+      {
+        "start": 1461363254862,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-22T22:14:14.868Z",
+        "updatedAt": "2016-04-22T22:14:14.868Z",
+        "id": 11
+      },
+      {
+        "start": 1461363254916,
+        "body": {},
+        "duration": 13,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-22T22:14:14.932Z",
+        "updatedAt": "2016-04-22T22:14:14.932Z",
+        "id": 12
+      },
+      {
+        "start": 1461363257787,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-22T22:14:17.791Z",
+        "updatedAt": "2016-04-22T22:14:17.791Z",
+        "id": 13
+      },
+      {
+        "start": 1461363257816,
+        "body": {},
+        "duration": 11,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-22T22:14:17.830Z",
+        "updatedAt": "2016-04-22T22:14:17.830Z",
+        "id": 14
+      },
+      {
+        "start": 1461363258005,
+        "body": {},
+        "duration": 3,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/favicon.ico",
+        "createdAt": "2016-04-22T22:14:18.011Z",
+        "updatedAt": "2016-04-22T22:14:18.011Z",
+        "id": 15
+      }
+    ],
+    "proschool": [],
+    "course": [],
+    "level": [],
+    "stage": [],
+    "university": [],
+    "study_session": [],
+    "tri_semester": [],
+    "payment_method": [],
+    "student": [],
+    "unit_registration": [],
+    "student_profile": [],
+    "payment": [],
+    "installment": [],
+    "noticeboard": [],
+    "noticeboard_item": [],
+    "church": [],
+    "university_admins__user_unis_i_admin": [],
+    "university_revoked_admins__user_unis_im_revoked": [],
+    "student_guardians__user_my_students": [],
+    "stage_units_i_offer__unit_stages_doing_me": [],
+    "student_units_im_taking__unit_students_taking_me": [],
+    "student_units_ive_done_before__unit_students_that_have_done_me_before": [],
+    "course_students_that_have_done_me_before__student_courses_ive_done_before": [],
+    "level_students_that_have_done_me_before__student_levels_ive_done_before": [],
+    "stage_students_that_have_done_me_before__student_stages_ive_done_before": [],
+    "student_my_universities__university_students": [],
+    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": [],
+    "student_tri_semesters_i_pay_for__tri_semester_students_paying_for_me": []
+  },
+  "schema": {
+    "user": {
+      "identifier": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "profile": {
+        "type": "integer",
+        "model": "user_profile",
+        "foreignKey": true,
+        "alias": "profile"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user_profile": {
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "othernames": {
+        "type": "string"
+      },
+      "dob": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "department": {
+      "name": {
+        "type": "string"
+      },
+      "uni": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "uni"
+      },
+      "proschool": {
+        "type": "integer",
+        "model": "proschool",
+        "foreignKey": true,
+        "alias": "proschool"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "unit": {
+      "name": {
+        "type": "string"
+      },
+      "dep": {
+        "type": "integer",
+        "model": "department",
+        "foreignKey": true,
+        "alias": "dep"
+      },
+      "price": {
+        "type": "integer",
+        "model": "price",
+        "foreignKey": true,
+        "alias": "price"
+      },
+      "cost": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "price": {
+      "ammount": {
+        "type": "string"
+      },
+      "unit": {
+        "type": "integer",
+        "model": "unit",
+        "foreignKey": true,
+        "alias": "unit"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "request": {
+      "req": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "proschool": {
+      "name": {
+        "type": "string"
+      },
+      "uni": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "uni"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "course": {
+      "name": {
+        "type": "string"
+      },
+      "department": {
+        "type": "integer",
+        "model": "department",
+        "foreignKey": true,
+        "alias": "department"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "level": {
+      "name": {
+        "type": "string"
+      },
+      "course": {
+        "type": "integer",
+        "model": "course",
+        "foreignKey": true,
+        "alias": "course"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "stage": {
+      "name": {
+        "type": "string"
+      },
+      "level": {
+        "type": "integer",
+        "model": "level",
+        "foreignKey": true,
+        "alias": "level"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "university": {
+      "name": {
+        "type": "string"
+      },
+      "active_tri_semester": {
+        "type": "integer",
+        "model": "tri_semester",
+        "foreignKey": true,
+        "alias": "active_tri_semester"
+      },
+      "noticeboard": {
+        "type": "integer",
+        "model": "noticeboard",
+        "foreignKey": true,
+        "alias": "noticeboard"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "study_session": {
+      "name": {
+        "type": "string"
+      },
+      "uni": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "uni"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "tri_semester": {
+      "name": {
+        "type": "string"
+      },
+      "uni": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "uni"
+      },
+      "university": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "university"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "payment_method": {
+      "name": {
+        "type": "string"
+      },
+      "account": {
+        "type": "string"
+      },
+      "university": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "university"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "student": {
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "profile": {
+        "type": "integer",
+        "model": "student_profile",
+        "foreignKey": true,
+        "alias": "profile"
+      },
+      "course": {
+        "type": "integer",
+        "model": "course",
+        "foreignKey": true,
+        "alias": "course"
+      },
+      "level": {
+        "type": "integer",
+        "model": "level",
+        "foreignKey": true,
+        "alias": "level"
+      },
+      "stage": {
+        "type": "integer",
+        "model": "stage",
+        "foreignKey": true,
+        "alias": "stage"
+      },
+      "study_mode": {
+        "type": "integer",
+        "model": "study_session",
+        "foreignKey": true,
+        "alias": "study_mode"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "unit_registration": {
+      "unit": {
+        "type": "integer",
+        "model": "unit",
+        "foreignKey": true,
+        "alias": "unit"
+      },
+      "stage": {
+        "type": "integer",
+        "model": "stage",
+        "foreignKey": true,
+        "alias": "stage"
+      },
+      "student": {
+        "type": "integer",
+        "model": "student",
+        "foreignKey": true,
+        "alias": "student"
+      },
+      "tri_semester": {
+        "type": "integer",
+        "model": "tri_semester",
+        "foreignKey": true,
+        "alias": "tri_semester"
+      },
+      "price": {
+        "type": "integer",
+        "model": "price",
+        "foreignKey": true,
+        "alias": "price"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "student_profile": {
+      "student": {
+        "type": "integer",
+        "model": "student",
+        "foreignKey": true,
+        "alias": "student"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "othernames": {
+        "type": "string"
+      },
+      "dob": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "payment": {
+      "student": {
+        "type": "integer",
+        "model": "student",
+        "foreignKey": true,
+        "alias": "student"
+      },
+      "trisem": {
+        "type": "integer",
+        "model": "tri_semester",
+        "foreignKey": true,
+        "alias": "trisem"
+      },
+      "student_who_made_me": {
+        "type": "integer",
+        "model": "student",
+        "foreignKey": true,
+        "alias": "student_who_made_me"
+      },
+      "course_paid_to": {
+        "type": "integer",
+        "model": "course",
+        "foreignKey": true,
+        "alias": "course_paid_to"
+      },
+      "level_paid_to": {
+        "type": "integer",
+        "model": "level",
+        "foreignKey": true,
+        "alias": "level_paid_to"
+      },
+      "stage_paid_to": {
+        "type": "integer",
+        "model": "stage",
+        "foreignKey": true,
+        "alias": "stage_paid_to"
+      },
+      "tri_semesters_i_was_paid_to": {
+        "type": "integer",
+        "model": "tri_semester",
+        "foreignKey": true,
+        "alias": "tri_semesters_i_was_paid_to"
+      },
+      "payment_method": {
+        "type": "integer",
+        "model": "payment_method",
+        "foreignKey": true,
+        "alias": "payment_method"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "installment": {
+      "ammount": {
+        "type": "string"
+      },
+      "payment_i_belongTo": {
+        "type": "integer",
+        "model": "payment",
+        "foreignKey": true,
+        "alias": "payment_i_belongTo"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "noticeboard": {
+      "university": {
+        "type": "integer",
+        "model": "university",
+        "foreignKey": true,
+        "alias": "university"
+      },
+      "church": {
+        "type": "integer",
+        "model": "church",
+        "foreignKey": true,
+        "alias": "church"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "noticeboard_item": {
+      "title": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "myboard": {
+        "type": "integer",
+        "model": "noticeboard",
+        "foreignKey": true,
+        "alias": "myboard"
+      },
+      "oldboard": {
+        "type": "integer",
+        "model": "noticeboard",
+        "foreignKey": true,
+        "alias": "oldboard"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "church": {
+      "name": {
+        "type": "string"
+      },
+      "noticeboard": {
+        "type": "integer",
+        "model": "noticeboard",
+        "foreignKey": true,
+        "alias": "noticeboard"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "university_admins__user_unis_i_admin": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "user_unis_i_admin": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "university_admins"
+      },
+      "university_admins": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "university",
+        "on": "id",
+        "via": "user_unis_i_admin"
+      }
+    },
+    "university_revoked_admins__user_unis_im_revoked": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "user_unis_im_revoked": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "university_revoked_admins"
+      },
+      "university_revoked_admins": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "university",
+        "on": "id",
+        "via": "user_unis_im_revoked"
+      }
+    },
+    "student_guardians__user_my_students": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "user_my_students": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "student_guardians"
+      },
+      "student_guardians": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "user_my_students"
+      }
+    },
+    "stage_units_i_offer__unit_stages_doing_me": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "unit_stages_doing_me": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "unit",
+        "on": "id",
+        "via": "stage_units_i_offer"
+      },
+      "stage_units_i_offer": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "stage",
+        "on": "id",
+        "via": "unit_stages_doing_me"
+      }
+    },
+    "student_units_im_taking__unit_students_taking_me": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "unit_students_taking_me": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "unit",
+        "on": "id",
+        "via": "student_units_im_taking"
+      },
+      "student_units_im_taking": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "unit_students_taking_me"
+      }
+    },
+    "student_units_ive_done_before__unit_students_that_have_done_me_before": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "unit_students_that_have_done_me_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "unit",
+        "on": "id",
+        "via": "student_units_ive_done_before"
+      },
+      "student_units_ive_done_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "unit_students_that_have_done_me_before"
+      }
+    },
+    "course_students_that_have_done_me_before__student_courses_ive_done_before": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "course_students_that_have_done_me_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "course",
+        "on": "id",
+        "via": "student_courses_ive_done_before"
+      },
+      "student_courses_ive_done_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "course_students_that_have_done_me_before"
+      }
+    },
+    "level_students_that_have_done_me_before__student_levels_ive_done_before": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "level_students_that_have_done_me_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "level",
+        "on": "id",
+        "via": "student_levels_ive_done_before"
+      },
+      "student_levels_ive_done_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "level_students_that_have_done_me_before"
+      }
+    },
+    "stage_students_that_have_done_me_before__student_stages_ive_done_before": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "stage_students_that_have_done_me_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "stage",
+        "on": "id",
+        "via": "student_stages_ive_done_before"
+      },
+      "student_stages_ive_done_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "stage_students_that_have_done_me_before"
+      }
+    },
+    "student_my_universities__university_students": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "university_students": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "university",
+        "on": "id",
+        "via": "student_my_universities"
+      },
+      "student_my_universities": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "university_students"
+      }
+    },
+    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "study_session_students_that_have_done_me_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "study_session",
+        "on": "id",
+        "via": "student_study_modes_ive_done_before"
+      },
+      "student_study_modes_ive_done_before": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "study_session_students_that_have_done_me_before"
+      }
+    },
+    "student_tri_semesters_i_pay_for__tri_semester_students_paying_for_me": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "tri_semester_students_paying_for_me": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "tri_semester",
+        "on": "id",
+        "via": "student_tri_semesters_i_pay_for"
+      },
+      "student_tri_semesters_i_pay_for": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "student",
+        "on": "id",
+        "via": "tri_semester_students_paying_for_me"
+      }
+    }
+  },
+  "counters": {
+    "user": {},
+    "user_profile": {},
+    "department": {},
+    "unit": {},
+    "price": {},
+    "request": {
+      "id": 15
+    },
+    "proschool": {},
+    "course": {},
+    "level": {},
+    "stage": {},
+    "university": {},
+    "study_session": {},
+    "tri_semester": {},
+    "payment_method": {},
+    "student": {},
+    "unit_registration": {},
+    "student_profile": {},
+    "payment": {},
+    "installment": {},
+    "noticeboard": {},
+    "noticeboard_item": {},
+    "church": {},
+    "university_admins__user_unis_i_admin": {},
+    "university_revoked_admins__user_unis_im_revoked": {},
+    "student_guardians__user_my_students": {},
+    "stage_units_i_offer__unit_stages_doing_me": {},
+    "student_units_im_taking__unit_students_taking_me": {},
+    "student_units_ive_done_before__unit_students_that_have_done_me_before": {},
+    "course_students_that_have_done_me_before__student_courses_ive_done_before": {},
+    "level_students_that_have_done_me_before__student_levels_ive_done_before": {},
+    "stage_students_that_have_done_me_before__student_stages_ive_done_before": {},
+    "student_my_universities__university_students": {},
+    "student_study_modes_ive_done_before__study_session_students_that_have_done_me_before": {},
+    "student_tri_semesters_i_pay_for__tri_semester_students_paying_for_me": {}
+  }
+}

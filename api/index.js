@@ -2,6 +2,9 @@
 var seneca = require("seneca")()
 var bunyan = require('bunyan');
 
+var express = require("express")
+var path = require("path")
+
 //internal config/utility libs
 var config = require("./config")
 var log = bunyan.createLogger({
@@ -58,6 +61,10 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 		} else {
 			seneca.act(req.body, (err, result) => res.send(err || result))
 		}
-		
+
 	})
+	app.use(express.static(path.join(__dirname, 'public')));
+
+	app.use('/', express.static(path.join(__dirname + '/public/ninja')));
+
 })
