@@ -1,3 +1,4 @@
 /api/node_modules
+/node_modules
 #add folders for images and other things that are big and dont need to go into git
 /api/.tmp
