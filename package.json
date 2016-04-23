@@ -6,10 +6,8 @@
   "scripts": {
     "setup": "cd api && npm install",
     "dev": "cd api && nodemon index.js & cd clients && webpack",
-
     "deploy": "git add --all && git commit -m 'deploy commit'  && git push origin master",
-    "logs":"rhc tail -a premier",
-
+    "logs": "rhc tail -a premier",
     "start": "node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +24,7 @@
     "express": "^4.13.4",
     "lunr": "^0.7.0",
     "sails-disk": "^0.10.9",
+    "sails-mongo": "^0.12.0",
     "seneca": "^2.0.0",
     "underscore": "^1.8.3",
     "waterline": "github:atlantis-software/waterline#deepPopulate"
