@@ -4,9 +4,14 @@ var inputComponent = require('../../../../../__components/forminput');
 module.exports = {
   controller: function() {
     return {
-      admins: m.request({
-        url: apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
-        method: "GET"
+      registras: m.request({
+        url: apiUrl + "/services",
+        method: "POST",
+        data:{
+          role:"registra",
+          cmd:"get_all",
+          uni_id:m.route.param("uniId")
+        }
       }),
       revokedAdmins: m.request({
         url: apiUrl + "/basic/getRevokedAdmins/" + m.route.param("uniId"),
@@ -39,9 +44,9 @@ module.exports = {
               // m("td","createdAt")
             ])
           ]),
-
+          // console.log(controller.registras().res.registras)
           m("tbody", [
-            controller.admins().map(function(admin) {
+            controller.registras().res.registras.map(function(admin) {
               return m("tr", [
                 m("td", admin.identifier),
                 // m("td",admin.createdAt),

@@ -26,14 +26,17 @@ module.exports = {
           class:"card-panel",
           onsubmit:function(e){
             m.request({
-              url:apiUrl + "/basic/addNewAdminToUniversity/" + m.route.param("uniId"),
+              url:apiUrl + "/services",
               method:"POST",
               data:{
+                role:"registra",
+                cmd:"add_new",
+                uni_id:m.route.param("uniId"),
                 userIdentifier:controller.schema.userIdentifier(),
                 userUsername:controller.schema.userUsername(),
                 userPassword:controller.schema.userPassword()
               }
-            }).then(m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
+            }).then(m.route("/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
             e.preventDefault();
           }
         },[
@@ -70,7 +73,7 @@ module.exports = {
             m("button",{
                 type:"submit",
                 class:"btn waves-effect waves-block waves-light cyan"
-            },"Create User")
+            },"Create Userx")
         ])
       ]),
 

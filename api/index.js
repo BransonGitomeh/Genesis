@@ -43,8 +43,14 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 
 	//import a sevice directory
 	var student_services = require("./microservices/service_router.js")(app.locals.collections);
+
+	var registra_plugin = require("./microservices/registra.js")(app.locals.collections);
+
 	//register all the services in it
 	for (x in student_services) seneca.use(student_services[x])
+
+	for (x in registra_plugin) seneca.use(registra_plugin[x])
+
 
 	/*
 	 *a post must be used to access a service, the args,

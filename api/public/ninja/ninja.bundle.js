@@ -3401,9 +3401,14 @@
 	module.exports = {
 	  controller: function() {
 	    return {
-	      admins: m.request({
-	        url: apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
-	        method: "GET"
+	      registras: m.request({
+	        url: apiUrl + "/services",
+	        method: "POST",
+	        data:{
+	          role:"registra",
+	          cmd:"get_all",
+	          uni_id:m.route.param("uniId")
+	        }
 	      }),
 	      revokedAdmins: m.request({
 	        url: apiUrl + "/basic/getRevokedAdmins/" + m.route.param("uniId"),
@@ -3436,9 +3441,9 @@
 	              // m("td","createdAt")
 	            ])
 	          ]),
-
+	          // console.log(controller.registras().res.registras)
 	          m("tbody", [
-	            controller.admins().map(function(admin) {
+	            controller.registras().res.registras.map(function(admin) {
 	              return m("tr", [
 	                m("td", admin.identifier),
 	                // m("td",admin.createdAt),
@@ -3504,14 +3509,17 @@
 	          class:"card-panel",
 	          onsubmit:function(e){
 	            m.request({
-	              url:apiUrl + "/basic/addNewAdminToUniversity/" + m.route.param("uniId"),
+	              url:apiUrl + "/services",
 	              method:"POST",
 	              data:{
+	                role:"registra",
+	                cmd:"add_new",
+	                uni_id:m.route.param("uniId"),
 	                userIdentifier:controller.schema.userIdentifier(),
 	                userUsername:controller.schema.userUsername(),
 	                userPassword:controller.schema.userPassword()
 	              }
-	            }).then(m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
+	            }).then(m.route("/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
 	            e.preventDefault();
 	          }
 	        },[
@@ -3548,7 +3556,7 @@
 	            m("button",{
 	                type:"submit",
 	                class:"btn waves-effect waves-block waves-light cyan"
-	            },"Create User")
+	            },"Create Userx")
 	        ])
 	      ]),
 

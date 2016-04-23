@@ -6,6 +6,10 @@ module.exports = [{
       collection: "user",
       via: "unis_i_admin"
     },
+    registras: {
+      collection: "user",
+      via: "unis_i_registra"
+    },
     revoked_admins: {
       collection: "user",
       via: "unis_im_revoked"
