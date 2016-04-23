@@ -597,21 +597,28 @@ module.exports = function(db) {
 				}, (args, res) => {
 					var creaedAts = []
 					var durations = []
-					db.request.find().exec(function(err, requests) {
-						requests.map((request) => {
-							if (request.duration < 500) {
-								var requestString = request.url
-								for (x in request.body){
-									//send everything to the graph
-									requestString = requestString + " - " + request.body[x]
+					db.request.count().exec(function(err, requests) {
+						console.log(requests)
+						var percent = 100 / requests * 100
+						var tobetakenPercent = 100 - percent
+						var records = tobetakenPercent/100 * requests
+
+						db.request.find().skip(records).exec(function(err, requests) {
+							requests.map((request) => {
+								if (request.duration < 500) {
+									var requestString = request.url
+									for (x in request.body) {
+										//send everything to the graph
+										requestString = requestString + " - " + request.body[x]
+									}
+									creaedAts.push(requestString)
+									durations.push(request.duration)
 								}
-								creaedAts.push(requestString)
-								durations.push(request.duration)
-							}
-						})
-						res(err, {
-							creaedAts: creaedAts,
-							durations: durations
+							})
+							res(err, {
+								creaedAts: creaedAts,
+								durations: durations
+							})
 						})
 					})
 				}),

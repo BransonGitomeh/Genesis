@@ -74,6 +74,43 @@ module.exports = function(db) {
 							res: uniFound
 						})
 					})
+				}),
+
+				// check if this user is actually a registra
+				this.add({
+					role: "registra",
+					cmd: "auth"
+				}, (args, res) => {
+					var _ = require("lodash")
+					db.university.findOne({
+						id: args.uni_id
+					}).populate("registras").exec((err, uniFound) => {
+
+						this.act({
+							role: "registra",
+							cmd: "get_all",
+							uni_id: args.uni_id
+						}, (err, result) => {
+							var index = _.findIndex(result.res.registras, {
+								'identifier': args.username,
+								'password': args.password
+							});
+
+							if (index != -1) {
+								res(null, {
+									index: index,
+									result: result.res.registras[index]
+								})
+							} else {
+								res("no user was found with that username and passkey combination", {
+									index: index,
+									result: result.res.registras[index]
+								})
+							}
+
+						})
+
+					})
 				})
 		}
 	}
