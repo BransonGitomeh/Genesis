@@ -1,6 +1,6 @@
-var myComponent = require("./noticeItem")
+// var myComponent = require("./noticeItem")
 
-var inputComponent = require('../../../__components/forminput');
+var inputComponent = require('../../../../../__components/forminput');
 module.exports = {
   controller:function(){
     return {

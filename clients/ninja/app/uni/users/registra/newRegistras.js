@@ -1,6 +1,6 @@
-var myComponent = require("./noticeItem")
+// var myComponent = require("./noticeItem")
 
-var inputComponent = require('../../../__components/forminput');
+var inputComponent = require('../../../../../__components/forminput');
 module.exports = {
   controller:function(){
     return {
@@ -37,7 +37,7 @@ module.exports = {
             e.preventDefault();
           }
         },[
-          m("h1",{class:"center"},"Enter new admin user account"),
+          m("h1",{class:"center"},"Enter new registra account"),
 
           m(inputComponent,{
             label:"Email",

@@ -1,6 +1,6 @@
-var myComponent = require("./noticeItem")
+// var myComponent = require("./noticeItem")
 
-var inputComponent = require('../../../__components/forminput');
+var inputComponent = require('../../../../../__components/forminput');
 module.exports = {
   controller: function() {
     return {
@@ -23,9 +23,9 @@ module.exports = {
   view: function(controller, atrrs) {
     return m(".row", [
       m(".col l12", [
-        // m("br"),
+        m("br"),
         //all admins
-        m("h1", "Current Admins"),
+        // m("h1", "Current Admins"),
         m("a", {
           class: "btn blue right",
           href: "/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",

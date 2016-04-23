@@ -77,13 +77,13 @@ m.route(document.body, '/', {
   // view admins
   "/uni/admins/:uniName/:uniId": m(adminUi, {
     config: adminConfig,
-    body: require("../ninja/app/uni/allAdmins")
+    body: require("../ninja/app/uni/users/admins/allAdmins")
   }),
 
   // add admin
   "/uni/admins/:uniName/:uniId/add": m(adminUi, {
     config: adminConfig,
-    body: require("../ninja/app/uni/newAdmin")
+    body: require("../ninja/app/uni/users/admins/newAdmin")
   }),
 
   "/uniLogin/:uniName/:uniId": require("../ninja/app/uni/login"),

@@ -59,40 +59,40 @@
 
 	m.route(document.body, "/", {
 
-		"/": __webpack_require__(116),
+		"/": __webpack_require__(12),
 
 		"/home": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(12)
+			body: __webpack_require__(14)
 		}),
 
 		"/churchia/new": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(15)
+			body: __webpack_require__(17)
 		}),
 		"/churchia/all": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(17)
+			body: __webpack_require__(18)
 		}),
 
 		"/uni/new": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(18)
+			body: __webpack_require__(19)
 		}),
 		"/uni/all": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(19)
+			body: __webpack_require__(20)
 		}),
 
 		//playground
 		"/ninja/play/ted": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(20)
+			body: __webpack_require__(21)
 		}),
 
 		"/ninja/play/caro": m(adminUi, {
 			config: ninjaUIConfig,
-			body: __webpack_require__(21)
+			body: __webpack_require__(22)
 		}),
 
 		// student portal routes
@@ -102,70 +102,70 @@
 
 		"/uni/admin/:uniName/:uniId/Student/:student_id/finance": m(studentUi, {
 			config: uniStudentUiConfig,
-			body: __webpack_require__(23)
+			body: __webpack_require__(24)
 		}),
 
 		"/uniadmin/:uniName/:uniId": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(27)
+			body: __webpack_require__(28)
 		}),
 
 		"/churchAdmin/:churchName/:churchId": m(churchUi, {
 			config: churchiaAdminUiConfig,
-			body: __webpack_require__(29)
+			body: __webpack_require__(30)
 		}),
 
 		"/churchAdmin/:churchName/:churchId/Noticeboard": m(churchUi, {
 			config: churchiaAdminUiConfig,
-			body: __webpack_require__(31)
+			body: __webpack_require__(32)
 		}),
 
 		"/churchAdmin/:churchName/:churchId/Noticeboard/new": m(churchUi, {
 			config: churchiaAdminUiConfig,
-			body: __webpack_require__(34)
+			body: __webpack_require__(35)
 		}),
 
 		//finance search page
 		"/uni/:uniName/:uniId/Students/search": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(35)
+			body: __webpack_require__(36)
 		}),
 
 		//view noticeboard
 		"/uni/:uniName/:uniId/noticeboard": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(36)
+			body: __webpack_require__(37)
 		}),
 
 		"/uni/:uniName/:uniId/noticeboard/add": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(39)
+			body: __webpack_require__(40)
 		}),
 
 		// view admins
 		"/uni/admins/:uniName/:uniId": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(40)
+			body: __webpack_require__(41)
 		}),
 		// add admin
 		"/uni/admins/:uniName/:uniId/add": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(41)
+			body: __webpack_require__(42)
 		}),
 
 		// view admins
 		"/uni/registrars/:uniName/:uniId": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(42)
+			body: __webpack_require__(43)
 		}),
 		// add admin
-		"/uni/registrars/:uniName/:uniId/add": m(adminUi, {
+		"/uni/registra/:uniName/:uniId/add": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(43)
+			body: __webpack_require__(44)
 		}),
 
 		//login for admin
-		"/uniLogin/:uniName/:uniId": __webpack_require__(44),
+		"/uniLogin/:uniName/:uniId": __webpack_require__(45),
 
 		//configuration for the university
 
@@ -174,25 +174,25 @@
 		//view all proffessional schools
 		"/uni/admin/:uniName/:uniId/schools": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(45),
+			body: __webpack_require__(46),
 		}),
 
 		//viewing courses offered in a school ie IT
 		//**"/courses" in the end since this route can offer other things, maybe
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(48),
+			body: __webpack_require__(49),
 		}),
 
 		//viewing all the stages to be passed through in a level ie sem1 sem2 or in stages etc
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(50),
+			body: __webpack_require__(51),
 		}),
 		//viewing all the units offered in a certain level...will ask for department to be selected
 		"/uni/admin/:uniName/:uniId/schools/:school_id/courses/:course_id/levels/:level_id/stages/:stage_id/units": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(53),
+			body: __webpack_require__(54),
 		}),
 
 
@@ -203,73 +203,73 @@
 		//view all proffessional schools
 		"/uni/admin/:uniName/:uniId/departments/:school_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(55),
+			body: __webpack_require__(56),
 		}),
 
 		//view all units a department offers, and add
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(57),
+			body: __webpack_require__(58),
 		}),
 
 		//view its courses
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(48),
+			body: __webpack_require__(49),
 		}),
 
 		//viewing all the levels of a certain course ie diploma etc
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(59),
+			body: __webpack_require__(60),
 		}),
 
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(50),
+			body: __webpack_require__(51),
 		}),
 
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(53),
+			body: __webpack_require__(54),
 		}),
 
 		//a selected department is there
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(60),
+			body: __webpack_require__(61),
 		}),
 		//view its units
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(62),
+			body: __webpack_require__(63),
 		}),
 		//view prices of a unit
 		"/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units/:unit_id/prices": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(64),
+			body: __webpack_require__(65),
 		}),
 
 		//other settings
 		"/uni/admin/:uniName/:uniId/study_modes": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(66),
+			body: __webpack_require__(67),
 		}),
 		//view all units a department offers, and add
 		"/uni/admin/:uniName/:uniId/tri_sems": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(68),
+			body: __webpack_require__(69),
 		}),
 
 		"/uni/admin/:uniName/:uniId/payment-methods": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(70),
+			body: __webpack_require__(71),
 		}),
 
 		//register student to all that stuff
 		"/uni/admin/:uniName/:uniId/Students/index": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(72),
+			body: __webpack_require__(73),
 		}),
 
 		// "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
@@ -279,12 +279,12 @@
 
 		"/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id/:tri_sem_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(73),
+			body: __webpack_require__(74),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(24),
+			body: __webpack_require__(25),
 		}),
 
 		// "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
@@ -294,32 +294,32 @@
 
 		"/uni/admin/:uniName/:uniId/Students/payments/:student_id": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(79),
+			body: __webpack_require__(80),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(80),
+			body: __webpack_require__(81),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(82),
+			body: __webpack_require__(83),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(84),
+			body: __webpack_require__(85),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(86),
+			body: __webpack_require__(87),
 		}),
 
 		"/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode": m(adminUi, {
 			config: uniAdminUiConfig,
-			body: __webpack_require__(88),
+			body: __webpack_require__(89),
 		}),
 	})
 
@@ -1181,210 +1181,118 @@
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var item = __webpack_require__(13);
-	var card = __webpack_require__(14)
+	var inputComponent = __webpack_require__(13);
 
 	module.exports = {
-	      controller: () => {
-	            return {
-	                  stats: m.request({
-	                        method: "post",
-	                        url: apiUrl + "/services",
-	                        data: {
-	                              role: "app",
-	                              cmd: "get_stats"
-	                        }
-	                  }),
-	                  data_grapgh: m.request({
-	                        method: "post",
-	                        url: apiUrl + "/services",
-	                        data: {
-	                              role: "app",
-	                              cmd: "get_requests"
-	                        }
-	                  })
-	            }
-	      },
-	      view: (ctrl, args) => {
-	            var stats = ctrl.stats()
-	            return m(".row", [
-
-	                  m("div", {
-	                        class: "row"
-	                  }, [
-	                        m("div", {
-	                              id: "column_chart_lined",
-	                              class: "col l6 s12",
-	                              config: () => {
-	                                    var chart1 = new Highcharts.Chart({
-	                                          chart: {
-	                                                renderTo: "column_chart_lined",
-	                                                type: 'column'
-	                                          },
-	                                          title: {
-	                                                text: 'Perf gragh'
-	                                          },
-	                                          xAxis: {
-	                                                type: "datetime",
-	                                                categories: ctrl.data_grapgh().creaedAts,
-	                                                labels: {
-	                                                      enabled: false
-	                                                }
-	                                          },
-	                                          yAxis: {
-	                                                title: {
-	                                                      text: 'Process duration'
-	                                                }
-	                                          },
-	                                          series: [{
-	                                                name: 'Requests (' + ctrl.data_grapgh().durations.length + ' - time-ascending)',
-	                                                data: ctrl.data_grapgh().durations
-	                                          }]
-	                                    })
-	                              }
-	                        }),
-	                        m(card, {
-	                              title: "Universities",
-	                              number: stats.universities,
-	                              color: "purple darken-2"
-	                        }),
-
-	                        m(card, {
-	                              title: "Churches",
-	                              number: stats.churches,
-	                              color: "purple darken-3"
-	                        })
-	                  ]),
-	                  m(".card-stats", [
-
-	                        m(".row", [
-	                              // m(card, {
-	                              //       title: "All requests",
-	                              //       number: stats.requests,
-	                              //       color: "purple"
-	                              // }),
-
-	                              // m(card, {
-	                              //       title: "Universities",
-	                              //       number: stats.universities,
-	                              //       color: "purple darken-2"
-	                              // }),
-
-	                              // m(card, {
-	                              //       title: "Churches",
-	                              //       number: stats.churches,
-	                              //       color: "purple darken-3"
-	                              // })
-	                        ])
-	                  ]),
-
-	            ])
-	      }
-	}
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	var vm = {
-	  logstuff:function(stuff){
-	    console.log(stuff);
-	  }
-	}
-	module.exports = {
-	  controller:function(args){
+	  controller: function() {
 	    return {
-	      runthing:vm.logstuff(args)
+	      schema: {
+	        identifier: m.prop(""),
+	        password: m.prop("")
+	      },
+	      //other controller functions here
+	      onunload: function() {
+	        $("body").removeClass("purple centered");
+	        $("html").removeClass("centered");
+	      }
 	    }
 	  },
-	  view:function(ctrl,args){
-	    return m("li",{class:"collection-item dismissable"},[
-	      m("input",{
-	        type:"checkbox",
-	        disabled:"disabled",
-	        id:args.text ? args.text : "",
-	        onclick: function(e) {
-	            args.complete(e.target["checked"]);
-	        },
-	        checked:args.complete()
-	      }),
-	      console.log(args.complete()),
-	      m("label",{for:args.text,style:(args.complete() ? "text-decoration: line-through;" : "")},args.text),
-	      m("br"),
-	      m("span",{class:"task-cat teal"},args.type ? args.type : ""),
-	      m("span",{class:"pink-text right"},args.due ? args.due : "")
+	  view: function(ctrl, args) {
+	    return m("div",{
+	      id:"login-page",
+	      class:"row"
+	    },[
+
+	    m(".col s12 z-depth-5 hoverable card-panel", {
+	      id: "login-page",
+	      config: function() {
+	        $("body").addClass("purple centered");
+	        $("html").addClass("centered");
+	      }
+	    }, [
+	      m("form", {
+	        onsubmit: function(e) {
+	          e.preventDefault();
+	          console.log("clicked")
+	          m.request({
+	            url: apiUrl + "/basic/loginUserToUni/" + m.route.param("uniId"),
+	            method: "POST",
+	            data: {
+	              identifier: ctrl.schema.identifier(),
+	              password: ctrl.schema.password(),
+	            }
+	          }).then(function(res) {
+	            console.log(res)
+	            var uniName = m.route.param("uniName")
+	            if (res.result === true) {
+	              console.log(res)
+	              m.route("/home")
+	            } else {
+	              // alert(res.message)
+	              //stil pass, but will fix
+	              m.route("/home")
+	            }
+
+	            // if(res.result === true){
+	            //    cosole.log("im gonna go in successfully")
+	            // }else{
+	            //   console.log(res.result)
+	            // }
+	          })
+
+	        }
+	      }, [
+	      
+	        m(".row", [
+	          m(".input-field col s12 l12 center", [
+	            args ?
+	            m("img", {
+	              src: args ? args.holderPic : "",
+	              class: "responsive-img valign profile-image-login"
+	            })
+	            :"",
+	            m("p", {
+	              class: "center login-form-text"
+	            }, "login")
+	          ])
+	        ]),
+
+	        m(".row margin", [
+	          m(inputComponent, {
+	            value: ctrl.schema.identifier,
+	            label: "Email or Phone",
+	            icon: "mdi-hardware-phonelink prefix",
+	            type: "text",
+	            sizes: "s12 m12 l12",
+	          })
+	        ]),
+
+	        m(".row margin", [
+	          m(inputComponent, {
+	            value: ctrl.schema.password,
+	            label: "Password",
+	            icon: "mdi-action-lock prefix",
+	            type: "password",
+	            sizes: "s12 m12 l12",
+	          })
+	        ]),
+
+	        m(".row", [
+	          m(".input-field col s12", [
+	            m("button", {
+	              class: "btn  waves-effect waves-light col s12 purple",
+	              type: "submit"
+	            }, "authenticate me")
+	          ])
+	        ])
+	      ])
+	    ])
 	    ])
 	  }
 	}
 
-
 /***/ },
-/* 14 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		view:(ctrl,args)=>{
-			return 	m(".col s12 m6 l3",[
-						m(".card hoverable",[
-		      				m(".card-content white-text " + args.color,[
-		      					m("h5",{class:"center card-stats-title"},[
-		      						// m("i",{class:"mdi-social-group-add"})
-		      					],args.title),
-		      					m("h5",{class:"center card-stats-number"},args.number)
-		      				]),
-		      				m(".card-action darken-2 " + args.color,[
-
-		      				])
-		    			])
-		    	])
-		}
-	}
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var inputComponent = __webpack_require__(16);
-	module.exports = {
-		controller: function() {
-			return {
-				schema: {
-					name: m.prop("")
-				}
-			}
-		},
-		view: function(controller, atrrs) {
-			return m("form", {
-				class: "card-panel",
-				onsubmit: function(e) {
-					m.request({
-						url: apiUrl + "/services",
-						method: "POST",
-						data: {
-							role: "church",
-							cmd: "new",
-							church_name: controller.schema.name()
-						}
-					}).then(m.route("/churchia/all"))
-					e.preventDefault();
-				}
-			}, [
-				m(inputComponent, {
-					label: "Name of new Church",
-					icon: "mdi-communication-business prefix",
-					type: "text",
-					value: controller.schema.name
-				}),
-				m("button", {
-					type: "submit",
-					class: "btn waves-effect waves-block waves-light purple center"
-				}, "Create new Church")
-			])
-		}
-	}
-
-/***/ },
-/* 16 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1489,7 +1397,213 @@
 	// (m.route() === attrs.link.url ? 'active': '')
 
 /***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var item = __webpack_require__(15);
+	var card = __webpack_require__(16)
+
+	module.exports = {
+	      controller: () => {
+	            return {
+	                  stats: m.request({
+	                        method: "post",
+	                        url: apiUrl + "/services",
+	                        data: {
+	                              role: "app",
+	                              cmd: "get_stats"
+	                        }
+	                  }),
+	                  data_grapgh: m.request({
+	                        method: "post",
+	                        url: apiUrl + "/services",
+	                        data: {
+	                              role: "app",
+	                              cmd: "get_requests"
+	                        }
+	                  })
+	            }
+	      },
+	      view: (ctrl, args) => {
+	            var stats = ctrl.stats()
+	            return m(".row", [
+
+	                  m("div", {
+	                        class: "row"
+	                  }, [
+	                        m("div", {
+	                              id: "column_chart_lined",
+	                              class: "col l6 s12",
+	                              config: () => {
+	                                    var chart1 = new Highcharts.Chart({
+	                                          chart: {
+	                                                renderTo: "column_chart_lined",
+	                                                type: 'column'
+	                                          },
+	                                          title: {
+	                                                text: 'Perf gragh'
+	                                          },
+	                                          xAxis: {
+	                                                type: "datetime",
+	                                                categories: ctrl.data_grapgh().creaedAts,
+	                                                labels: {
+	                                                      enabled: false
+	                                                }
+	                                          },
+	                                          yAxis: {
+	                                                title: {
+	                                                      text: 'Process duration'
+	                                                }
+	                                          },
+	                                          series: [{
+	                                                name: 'Requests (' + ctrl.data_grapgh().durations.length + ' - time-ascending)',
+	                                                data: ctrl.data_grapgh().durations
+	                                          }]
+	                                    })
+	                              }
+	                        }),
+	                        m(card, {
+	                              title: "Universities",
+	                              number: stats.universities,
+	                              color: "purple darken-2"
+	                        }),
+
+	                        m(card, {
+	                              title: "Churches",
+	                              number: stats.churches,
+	                              color: "purple darken-3"
+	                        })
+	                  ]),
+	                  m(".card-stats", [
+
+	                        m(".row", [
+	                              // m(card, {
+	                              //       title: "All requests",
+	                              //       number: stats.requests,
+	                              //       color: "purple"
+	                              // }),
+
+	                              // m(card, {
+	                              //       title: "Universities",
+	                              //       number: stats.universities,
+	                              //       color: "purple darken-2"
+	                              // }),
+
+	                              // m(card, {
+	                              //       title: "Churches",
+	                              //       number: stats.churches,
+	                              //       color: "purple darken-3"
+	                              // })
+	                        ])
+	                  ]),
+
+	            ])
+	      }
+	}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	var vm = {
+	  logstuff:function(stuff){
+	    console.log(stuff);
+	  }
+	}
+	module.exports = {
+	  controller:function(args){
+	    return {
+	      runthing:vm.logstuff(args)
+	    }
+	  },
+	  view:function(ctrl,args){
+	    return m("li",{class:"collection-item dismissable"},[
+	      m("input",{
+	        type:"checkbox",
+	        disabled:"disabled",
+	        id:args.text ? args.text : "",
+	        onclick: function(e) {
+	            args.complete(e.target["checked"]);
+	        },
+	        checked:args.complete()
+	      }),
+	      console.log(args.complete()),
+	      m("label",{for:args.text,style:(args.complete() ? "text-decoration: line-through;" : "")},args.text),
+	      m("br"),
+	      m("span",{class:"task-cat teal"},args.type ? args.type : ""),
+	      m("span",{class:"pink-text right"},args.due ? args.due : "")
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		view:(ctrl,args)=>{
+			return 	m(".col s12 m6 l3",[
+						m(".card hoverable",[
+		      				m(".card-content white-text " + args.color,[
+		      					m("h5",{class:"center card-stats-title"},[
+		      						// m("i",{class:"mdi-social-group-add"})
+		      					],args.title),
+		      					m("h5",{class:"center card-stats-number"},args.number)
+		      				]),
+		      				m(".card-action darken-2 " + args.color,[
+
+		      				])
+		    			])
+		    	])
+		}
+	}
+
+/***/ },
 /* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+		controller: function() {
+			return {
+				schema: {
+					name: m.prop("")
+				}
+			}
+		},
+		view: function(controller, atrrs) {
+			return m("form", {
+				class: "card-panel",
+				onsubmit: function(e) {
+					m.request({
+						url: apiUrl + "/services",
+						method: "POST",
+						data: {
+							role: "church",
+							cmd: "new",
+							church_name: controller.schema.name()
+						}
+					}).then(m.route("/churchia/all"))
+					e.preventDefault();
+				}
+			}, [
+				m(inputComponent, {
+					label: "Name of new Church",
+					icon: "mdi-communication-business prefix",
+					type: "text",
+					value: controller.schema.name
+				}),
+				m("button", {
+					type: "submit",
+					class: "btn waves-effect waves-block waves-light purple center"
+				}, "Create new Church")
+			])
+		}
+	}
+
+/***/ },
+/* 18 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1559,10 +1673,10 @@
 	}
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -1601,7 +1715,7 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1660,7 +1774,7 @@
 
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1776,10 +1890,10 @@
 
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var card = __webpack_require__(22);
+	var card = __webpack_require__(23);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -1857,7 +1971,7 @@
 
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1888,10 +2002,10 @@
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var financeReport = __webpack_require__(24)
+	var financeReport = __webpack_require__(25)
 
 	module.exports = {
 		view:(ctrl,args)=>{
@@ -1902,11 +2016,11 @@
 	}
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var paymentCard = __webpack_require__(25)
-	var studentInfo = __webpack_require__(26)
+	var paymentCard = __webpack_require__(26)
+	var studentInfo = __webpack_require__(27)
 
 	var model = {
 		payments: () => {
@@ -2031,10 +2145,10 @@
 	}
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	var model = {
 		payment:(args)=>{
 			return m.request({
@@ -2161,7 +2275,7 @@
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var links = function(student) {
@@ -2224,12 +2338,12 @@
 	}
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var card = __webpack_require__(28)
+	var card = __webpack_require__(29)
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 		controller: () => {
 			return {
@@ -2265,7 +2379,7 @@
 	}
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2287,12 +2401,12 @@
 	}
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var card = __webpack_require__(30)
+	var card = __webpack_require__(31)
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 		controller: () => {
 			return {
@@ -2345,7 +2459,7 @@
 	}
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2367,12 +2481,12 @@
 	}
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	  var noticeItem = __webpack_require__(32)
-	  var oldNotices = __webpack_require__(33)
-	  var inputComponent = __webpack_require__(16);
+	  var noticeItem = __webpack_require__(33)
+	  var oldNotices = __webpack_require__(34)
+	  var inputComponent = __webpack_require__(13);
 	  module.exports = {
 	    controller: function() {
 	      return {
@@ -2448,7 +2562,7 @@
 	  }
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2532,7 +2646,7 @@
 	}
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2586,11 +2700,11 @@
 	}
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(32)
-	var inputComponent = __webpack_require__(16);
+	var myComponent = __webpack_require__(33)
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -2653,10 +2767,10 @@
 
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	module.exports = {
 		controller: () => {
@@ -2745,12 +2859,12 @@
 	}
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	  var noticeItem = __webpack_require__(37)
-	  var oldNotices = __webpack_require__(38)
-	  var inputComponent = __webpack_require__(16);
+	  var noticeItem = __webpack_require__(38)
+	  var oldNotices = __webpack_require__(39)
+	  var inputComponent = __webpack_require__(13);
 	  module.exports = {
 	    controller: function() {
 	      return {
@@ -2821,7 +2935,7 @@
 	  }
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2895,7 +3009,7 @@
 	}
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2944,12 +3058,12 @@
 	}
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(37)
-	var oldNotices = __webpack_require__(38)
-	var inputComponent = __webpack_require__(16);
+	var myComponent = __webpack_require__(38)
+	var oldNotices = __webpack_require__(39)
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -3009,12 +3123,12 @@
 
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(37)
+	// var myComponent = require("./noticeItem")
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller: function() {
 	    return {
@@ -3037,9 +3151,9 @@
 	  view: function(controller, atrrs) {
 	    return m(".row", [
 	      m(".col l12", [
-	        // m("br"),
+	        m("br"),
 	        //all admins
-	        m("h1", "Current Admins"),
+	        // m("h1", "Current Admins"),
 	        m("a", {
 	          class: "btn blue right",
 	          href: "/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
@@ -3153,283 +3267,14 @@
 	    ])
 	  }
 	}
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var myComponent = __webpack_require__(37)
-
-	var inputComponent = __webpack_require__(16);
-	module.exports = {
-	  controller:function(){
-	    return {
-	      admins:m.request({
-	        url:apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
-	        method:"GET"
-	      }),
-	      schema:{
-	        userIdentifier:m.prop(""),
-	        userUsername:m.prop(""),
-	        userPassword:m.prop(""),
-	        confirmPassword:m.prop(""),
-	        //for the search existing user form
-	        existingUserIdentifier:m.prop(""),
-	      }
-	    }
-	  },
-	  view:function(controller,atrrs){
-	    return m(".row",[
-	        m("div",{class:"col l8"},[
-
-	        m("form",{
-	          class:"card-panel",
-	          onsubmit:function(e){
-	            m.request({
-	              url:apiUrl + "/basic/addNewAdminToUniversity/" + m.route.param("uniId"),
-	              method:"POST",
-	              data:{
-	                userIdentifier:controller.schema.userIdentifier(),
-	                userUsername:controller.schema.userUsername(),
-	                userPassword:controller.schema.userPassword()
-	              }
-	            }).then(m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
-	            e.preventDefault();
-	          }
-	        },[
-	          m("h1",{class:"center"},"Enter new admin user account"),
-
-	          m(inputComponent,{
-	            label:"Email",
-	            type:"text",
-	            sizes:"col l6",
-	            value:controller.schema.userIdentifier
-	          }),
-
-	          m(inputComponent,{
-	            label:"Surname",
-	            type:"text",
-	            sizes:"col l6",
-	            value:controller.schema.userUsername
-	          }),
-
-	          m(inputComponent,{
-	            label:"Password",
-	            type:"password",
-	            sizes:"col l6",
-	            value:controller.schema.userPassword
-	          }),
-
-	          m(inputComponent,{
-	            label:"Confirm Password",
-	            type:"password",
-	            sizes:"col l6",
-	            value:controller.schema.confirmPassword
-	          }),
-
-	            m("button",{
-	                type:"submit",
-	                class:"btn waves-effect waves-block waves-light cyan"
-	            },"Create User")
-	        ])
-	      ]),
-
-	      m("div",{class:"col l4"},[
-	        m("form",{
-	          class:"card-panel",
-	          onsubmit:function(e){
-	            e.preventDefault();
-	            // var move = 
-	            m.request({
-	              url:apiUrl + "/basic/addExistingUserToAdmin/" + m.route.param("uniId"),
-	              method:"POST",
-	              data:{
-	                identifier:controller.schema.existingUserIdentifier(),
-	              }
-	            }).then(function(res){
-	              console.log(res)
-	              //back to view all admins
-	              if(res.result === false){
-	                alert("no user with that email was found")
-	              }else{
-	                m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )
-	              }
-	            }) 
-	            
-	          }
-	        },[
-	          m("h1",{class:"center"},"Search existing user"),
-	          m(inputComponent,{
-	            label:"Registered email",
-	            type:"text",
-	            sizes:"col l12 center",
-	            value:controller.schema.existingUserIdentifier
-	          }),
-	            m("button",{
-	                type:"submit",
-	                dissabled:"true",
-	                class:"btn waves-effect waves-block waves-light cyan"
-	            },"Search User")
-	        ])
-	      ])
-	    ])
-	  }
-	}
-
 
 /***/ },
 /* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(37)
+	// var myComponent = require("./noticeItem")
 
-	var inputComponent = __webpack_require__(16);
-	module.exports = {
-	  controller: function() {
-	    return {
-	      admins: m.request({
-	        url: apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
-	        method: "GET"
-	      }),
-	      revokedAdmins: m.request({
-	        url: apiUrl + "/basic/getRevokedAdmins/" + m.route.param("uniId"),
-	        method: "GET"
-	      }),
-	      schema: {
-	        userIdentifier: m.prop(""),
-	        userUsername: m.prop(""),
-	        userPassword: m.prop(""),
-	        confirmPassword: m.prop("")
-	      }
-	    }
-	  },
-	  view: function(controller, atrrs) {
-	    return m(".row", [
-	      m(".col l12", [
-	        // m("br"),
-	        //all admins
-	        m("h1", "Current Admins"),
-	        m("a", {
-	          class: "btn blue right",
-	          href: "/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
-	          config: m.route
-	        }, "add admin"),
-	        m("table", [
-
-	          m("thead", [
-	            m("tr", [
-	              m("th", "email"),
-	              // m("td","createdAt")
-	            ])
-	          ]),
-
-	          m("tbody", [
-	            controller.admins().map(function(admin) {
-	              return m("tr", [
-	                m("td", admin.identifier),
-	                // m("td",admin.createdAt),
-	                m("td", [
-	                  m("button", {
-	                    class: "btn-flat waves-effect waves-cyan waves-block hoverable",
-	                    onclick: function() {
-	                      m.request({
-	                        url: apiUrl + "/basic/revokeAdmin/" + m.route.param("uniId"),
-	                        method: "POST",
-	                        data: {
-	                          userId: admin.id
-	                        }
-	                      }).then(function() {
-	                        m.route(m.route())
-	                      })
-	                    }
-	                  }, "revoke admin rights")
-	                ]),
-	                m("td", [
-	                  m("button", {
-	                    class: "btn-flat waves-effect waves-cyan waves-block hoverable"
-	                  }, "View activity")
-	                ])
-	              ])
-	            })
-	          ])
-	        ]),
-
-	        // revoked admins
-	        m("h1", "Access Revoked Admins"),
-	        m("table", [
-
-	          m("thead", [
-	            m("tr", [
-	              m("th", "email"),
-	              // m("td","createdAt")
-	            ])
-	          ]),
-
-	          m("tbody", [
-	            controller.revokedAdmins().map(function(admin) {
-	              return m("tr", [
-	                console.log(admin),
-	                m("td", admin.identifier),
-	                // m("td",admin.createdAt),
-	                m("td", [
-	                  // restore admin rights
-	                  m("button", {
-	                    class: "btn-flat waves-effect waves-blue waves-block hoverable",
-	                    onclick: function() {
-	                      m.request({
-	                        url: apiUrl + "/basic/restoreAdmin/" + m.route.param("uniId"),
-	                        method: "POST",
-	                        data: {
-	                          userId: admin.id
-	                        }
-	                      }).then(function() {
-	                        m.route(m.route())
-	                      })
-	                    }
-	                  }, "Restore admin rights")
-	                ]),
-	                m("td", [
-	                  //remove from admin completely
-	                  m("button", {
-	                    class: "btn-flat waves-effect waves-cyan waves-block waves-red hoverable",
-	                    onclick: function() {
-	                      var confirmation = confirm("Are you sure you want to remove him from your admins permanently?")
-
-	                      if (confirmation == true) {
-	                        m.request({
-	                          url: apiUrl + "/basic/removeAdmin/" + m.route.param("uniId"),
-	                          method: "POST",
-	                          data: {
-	                            userId: admin.id
-	                          }
-	                        }).then(function() {
-	                          m.route(m.route())
-	                        })
-	                      }
-	                    }
-	                  }, "Remove as admin completely")
-	                ]),
-	                m("td", [
-	                  m("button", {
-	                    class: "btn-flat waves-effect waves-cyan waves-block hoverable"
-	                  }, "View activity")
-	                ])
-	              ])
-	            })
-	          ])
-	        ])
-	      ])
-	    ])
-	  }
-	}
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var myComponent = __webpack_require__(37)
-
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -3547,10 +3392,214 @@
 
 
 /***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// var myComponent = require("./noticeItem")
+
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+	  controller: function() {
+	    return {
+	      admins: m.request({
+	        url: apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
+	        method: "GET"
+	      }),
+	      revokedAdmins: m.request({
+	        url: apiUrl + "/basic/getRevokedAdmins/" + m.route.param("uniId"),
+	        method: "GET"
+	      }),
+	      schema: {
+	        userIdentifier: m.prop(""),
+	        userUsername: m.prop(""),
+	        userPassword: m.prop(""),
+	        confirmPassword: m.prop("")
+	      }
+	    }
+	  },
+	  view: function(controller, atrrs) {
+	    return m(".row", [
+	      m(".col l12", [
+	        m("br"),
+	        //all admins
+	        // m("div", "Current Registra's"),
+	        m("a", {
+	          class: "btn blue right",
+	          href: "/uni/registra/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
+	          config: m.route
+	        }, "add registra"),
+	        m("table", [
+
+	          m("thead", [
+	            m("tr", [
+	              m("th", "email"),
+	              // m("td","createdAt")
+	            ])
+	          ]),
+
+	          m("tbody", [
+	            controller.admins().map(function(admin) {
+	              return m("tr", [
+	                m("td", admin.identifier),
+	                // m("td",admin.createdAt),
+	                m("td", [
+	                  m("button", {
+	                    class: "btn-flat waves-effect waves-cyan waves-block hoverable",
+	                    onclick: function() {
+	                      m.request({
+	                        url: apiUrl + "/basic/revokeAdmin/" + m.route.param("uniId"),
+	                        method: "POST",
+	                        data: {
+	                          userId: admin.id
+	                        }
+	                      }).then(function() {
+	                        m.route(m.route())
+	                      })
+	                    }
+	                  }, "revoke admin rights")
+	                ]),
+	                m("td", [
+	                  m("button", {
+	                    class: "btn-flat waves-effect waves-cyan waves-block hoverable"
+	                  }, "View activity")
+	                ])
+	              ])
+	            })
+	          ])
+	        ])      
+	      ])
+	    ])
+	  }
+	}
+
+/***/ },
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	// var myComponent = require("./noticeItem")
+
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+	  controller:function(){
+	    return {
+	      admins:m.request({
+	        url:apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
+	        method:"GET"
+	      }),
+	      schema:{
+	        userIdentifier:m.prop(""),
+	        userUsername:m.prop(""),
+	        userPassword:m.prop(""),
+	        confirmPassword:m.prop(""),
+	        //for the search existing user form
+	        existingUserIdentifier:m.prop(""),
+	      }
+	    }
+	  },
+	  view:function(controller,atrrs){
+	    return m(".row",[
+	        m("div",{class:"col l8"},[
+
+	        m("form",{
+	          class:"card-panel",
+	          onsubmit:function(e){
+	            m.request({
+	              url:apiUrl + "/basic/addNewAdminToUniversity/" + m.route.param("uniId"),
+	              method:"POST",
+	              data:{
+	                userIdentifier:controller.schema.userIdentifier(),
+	                userUsername:controller.schema.userUsername(),
+	                userPassword:controller.schema.userPassword()
+	              }
+	            }).then(m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
+	            e.preventDefault();
+	          }
+	        },[
+	          m("h1",{class:"center"},"Enter new registra account"),
+
+	          m(inputComponent,{
+	            label:"Email",
+	            type:"text",
+	            sizes:"col l6",
+	            value:controller.schema.userIdentifier
+	          }),
+
+	          m(inputComponent,{
+	            label:"Surname",
+	            type:"text",
+	            sizes:"col l6",
+	            value:controller.schema.userUsername
+	          }),
+
+	          m(inputComponent,{
+	            label:"Password",
+	            type:"password",
+	            sizes:"col l6",
+	            value:controller.schema.userPassword
+	          }),
+
+	          m(inputComponent,{
+	            label:"Confirm Password",
+	            type:"password",
+	            sizes:"col l6",
+	            value:controller.schema.confirmPassword
+	          }),
+
+	            m("button",{
+	                type:"submit",
+	                class:"btn waves-effect waves-block waves-light cyan"
+	            },"Create User")
+	        ])
+	      ]),
+
+	      m("div",{class:"col l4"},[
+	        m("form",{
+	          class:"card-panel",
+	          onsubmit:function(e){
+	            e.preventDefault();
+	            // var move = 
+	            m.request({
+	              url:apiUrl + "/basic/addExistingUserToAdmin/" + m.route.param("uniId"),
+	              method:"POST",
+	              data:{
+	                identifier:controller.schema.existingUserIdentifier(),
+	              }
+	            }).then(function(res){
+	              console.log(res)
+	              //back to view all admins
+	              if(res.result === false){
+	                alert("no user with that email was found")
+	              }else{
+	                m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )
+	              }
+	            }) 
+	            
+	          }
+	        },[
+	          m("h1",{class:"center"},"Search existing user"),
+	          m(inputComponent,{
+	            label:"Registered email",
+	            type:"text",
+	            sizes:"col l12 center",
+	            value:controller.schema.existingUserIdentifier
+	          }),
+	            m("button",{
+	                type:"submit",
+	                dissabled:"true",
+	                class:"btn waves-effect waves-block waves-light cyan"
+	            },"Search User")
+	        ])
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var inputComponent = __webpack_require__(13);
 
 	module.exports = {
 	  controller: function() {
@@ -3561,7 +3610,7 @@
 	      },
 	      //other controller functions here
 	      onunload: function() {
-	        $("body").removeClass("cyan centered");
+	        $("body").removeClass("blue centered");
 	        $("html").removeClass("centered");
 	      }
 	    }
@@ -3575,7 +3624,7 @@
 	      m(".col s12 z-depth-5 hoverable card-panel", {
 	        id: "login-page",
 	        config: function() {
-	          $("body").addClass("cyan centered");
+	          $("body").addClass("blue centered");
 	          $("html").addClass("centered");
 	        }
 	      }, [
@@ -3613,21 +3662,47 @@
 	          m(".row", [
 	            m(".input-field col s12 l12 center", [
 	              m("img", {
-	                src: args.holderPic,
+	                src: "http://premiercollege.ac.rw/images/default/logo.png",
 	                class: "responsive-img valign profile-image-login"
 	              }),
-	              m("p", {
-	                class: "center login-form-text"
-	              }, "login"),
-	              // <div class="input-field col s12">
-	              //     <select>
-	              //     <option value="" disabled selected>Choose your option</option>
-	              //     <option value="1">Option 1</option>
-	              //     <option value="2">Option 2</option>
-	              //     <option value="3">Option 3</option>
-	              //   </select>
-	              //   <label>Materialize Select</label>
-	              // </div>
+	              // m("p", {
+	              //   class: "center login-form-text"
+	              // }, "login"),
+
+	              m(".row margin", [
+
+	                m(".input-field col s12", [
+	                  // <i class="material-icons prefix">mode_edit</i>
+
+	                  m("select", {
+	                    config: () => {
+	                      $('select').material_select();
+	                    }
+	                  }, [
+
+	                    m("option", {
+	                      value: "",
+	                      disabled: true,
+	                      selected: true
+	                    }, "Login as?"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Admin"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Registra"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Student")
+
+	                  ]),
+	                  m("label", "Select user type")
+	                ])
+
+	              ]),
 
 	            ])
 	          ]),
@@ -3640,42 +3715,22 @@
 	              sizes: "s12 m12 l12",
 	            })
 	          ]),
-	          m(".row margin", [
 
-	            m(".input-field col s12", [
-	              m("select", [
 
-	                m("option", {
-	                  value: "",
-	                  disabled: true,
-	                  selected: true
-	                }, "Login as?"),
-
-	                m("option", {
-	                  value: "1",
-	                  disabled: true,
-	                  selected: true
-	                }, "Admin")
-
-	              ])
-	            ])
-
-	          ]),
-	          
 	          m(".row margin", [
 	            m(inputComponent, {
 	              value: ctrl.schema.password,
 	              label: "Password",
 	              icon: "mdi-action-lock prefix",
 	              type: "password",
-	              sizes: "s12 m12 l12",
+	              sizes: "s12 m12 l12 active",
 	            })
 	          ]),
 
 	          m(".row", [
 	            m(".input-field col s12", [
 	              m("button", {
-	                class: "btn  waves-effect waves-light col s12 cyan",
+	                class: "btn  waves-effect waves-light col s12 blue",
 	                type: "submit"
 	              }, "authenticate me")
 	            ])
@@ -3687,12 +3742,12 @@
 	}
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
+	var schools = __webpack_require__(47);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3715,10 +3770,10 @@
 	}
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -3789,7 +3844,7 @@
 
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3816,13 +3871,13 @@
 	}
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var courses = __webpack_require__(49);
+	var schools = __webpack_require__(47);
+	var courses = __webpack_require__(50);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3859,10 +3914,10 @@
 
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var courses = [
 	   {id:"1",text:"IT"},
@@ -3931,15 +3986,15 @@
 
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var courses = __webpack_require__(49);
-	var levels = __webpack_require__(51);
-	var stages = __webpack_require__(52);
+	var courses = __webpack_require__(50);
+	var levels = __webpack_require__(52);
+	var stages = __webpack_require__(53);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3986,10 +4041,10 @@
 
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var levels = [
 	  {id:"1",text:"diploma"},
@@ -4058,10 +4113,10 @@
 
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var stages = [
 	  {id:"1",text:"semester 1"},
@@ -4131,15 +4186,15 @@
 
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var stages = __webpack_require__(52);
-	var units_selected = __webpack_require__(54);
+	var schools = __webpack_require__(47);
+	var stages = __webpack_require__(53);
+	var units_selected = __webpack_require__(55);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -4188,10 +4243,10 @@
 
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var selectedUnits = [
 	  {id:"2",text:"bbb"},
@@ -4308,13 +4363,13 @@
 
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var departments = __webpack_require__(56);
+	var departments = __webpack_require__(57);
 
-	var breadcrumb = __webpack_require__(47);
-	var schools = __webpack_require__(46);
+	var breadcrumb = __webpack_require__(48);
+	var schools = __webpack_require__(47);
 
 	var crumps = function(){
 		return [
@@ -4342,10 +4397,10 @@
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -4414,16 +4469,16 @@
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var departments = __webpack_require__(56);
-	var choices = __webpack_require__(58);
+	var departments = __webpack_require__(57);
+	var choices = __webpack_require__(59);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
-	var schools = __webpack_require__(46);
+	var schools = __webpack_require__(47);
 
 	var crumps = function(){
 		return [
@@ -4456,7 +4511,7 @@
 
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4487,15 +4542,15 @@
 
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var courses = __webpack_require__(49);
-	var levels = __webpack_require__(51);
+	var schools = __webpack_require__(47);
+	var courses = __webpack_require__(50);
+	var levels = __webpack_require__(52);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -4534,15 +4589,15 @@
 
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var stages = __webpack_require__(52);
-	var units_available = __webpack_require__(61);
+	var schools = __webpack_require__(47);
+	var stages = __webpack_require__(53);
+	var units_available = __webpack_require__(62);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -4590,10 +4645,10 @@
 
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var selectedUnits = [
 	  {id:"2",text:"bbb"},
@@ -4718,15 +4773,15 @@
 
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var departments = __webpack_require__(56);
-	var units = __webpack_require__(63);
+	var schools = __webpack_require__(47);
+	var departments = __webpack_require__(57);
+	var units = __webpack_require__(64);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -4754,10 +4809,10 @@
 
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [{
 	  id: "1",
@@ -4845,12 +4900,12 @@
 
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var prices = __webpack_require__(65);
-	var units = __webpack_require__(63)
-	var breadcrumb = __webpack_require__(47);
+	var prices = __webpack_require__(66);
+	var units = __webpack_require__(64)
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -4874,10 +4929,10 @@
 	}
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var prices = [{
 	  id: "1",
@@ -5009,12 +5064,12 @@
 	}
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var study_modes = __webpack_require__(67);
+	var study_modes = __webpack_require__(68);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -5037,10 +5092,10 @@
 	}
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -5109,12 +5164,12 @@
 
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var tri_sems = __webpack_require__(69);
+	var tri_sems = __webpack_require__(70);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -5137,10 +5192,10 @@
 	}
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -5235,12 +5290,12 @@
 	}
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var payments = __webpack_require__(71);
+	var payments = __webpack_require__(72);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function() {
 		return [{
@@ -5261,10 +5316,10 @@
 	}
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var levels = [{
 	  id: "1",
@@ -5372,7 +5427,7 @@
 	}
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5456,15 +5511,15 @@
 	}
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toogle = __webpack_require__(74);
-	var courses = __webpack_require__(75)
-	var stages = __webpack_require__(76)
-	var semesters = __webpack_require__(77)
-	var units = __webpack_require__(78)
-	var studentInfo = __webpack_require__(26)
+	var toogle = __webpack_require__(75);
+	var courses = __webpack_require__(76)
+	var stages = __webpack_require__(77)
+	var semesters = __webpack_require__(78)
+	var units = __webpack_require__(79)
+	var studentInfo = __webpack_require__(27)
 
 	module.exports = {
 		controller: () => {
@@ -5594,7 +5649,7 @@
 	}
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5619,7 +5674,7 @@
 
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5668,7 +5723,7 @@
 
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5717,7 +5772,7 @@
 
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5766,7 +5821,7 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5815,12 +5870,12 @@
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var paymentCard = __webpack_require__(25)
-	var inputComponent = __webpack_require__(16);
-	var studentInfo = __webpack_require__(26)
+	var paymentCard = __webpack_require__(26)
+	var inputComponent = __webpack_require__(13);
+	var studentInfo = __webpack_require__(27)
 
 	var model = {
 		student: () => {
@@ -6059,11 +6114,11 @@
 	}
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
-	var selectCourse = __webpack_require__(81)
+	var inputComponent = __webpack_require__(13);
+	var selectCourse = __webpack_require__(82)
 
 	module.exports = {
 	  controller: (args) => {
@@ -6088,7 +6143,7 @@
 	}
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6128,13 +6183,13 @@
 	}
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
 
 
 	module.exports = {
@@ -6166,7 +6221,7 @@
 	}
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6205,14 +6260,14 @@
 	}
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
 
 	module.exports = {
 		controller: (args) => {
@@ -6247,7 +6302,7 @@
 	}
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6286,15 +6341,15 @@
 	}
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
-	var selectStudyMode = __webpack_require__(87)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
+	var selectStudyMode = __webpack_require__(88)
 
 	module.exports = {
 	  controller: (args) => {
@@ -6335,7 +6390,7 @@
 	}
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6374,14 +6429,14 @@
 	}
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
-	var selectStudyMode = __webpack_require__(87)
+	var inputComponent = __webpack_require__(13);
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
+	var selectStudyMode = __webpack_require__(88)
 
 	module.exports = {
 	  controller: (args) => {
@@ -6462,147 +6517,6 @@
 
 
 	    )
-	  }
-	}
-
-/***/ },
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var inputComponent = __webpack_require__(16);
-
-	module.exports = {
-	  controller: function() {
-	    return {
-	      schema: {
-	        identifier: m.prop(""),
-	        password: m.prop("")
-	      },
-	      //other controller functions here
-	      onunload: function() {
-	        $("body").removeClass("purple centered");
-	        $("html").removeClass("centered");
-	      }
-	    }
-	  },
-	  view: function(ctrl, args) {
-	    return m("div",{
-	      id:"login-page",
-	      class:"row"
-	    },[
-
-	    m(".col s12 z-depth-5 hoverable card-panel", {
-	      id: "login-page",
-	      config: function() {
-	        $("body").addClass("purple centered");
-	        $("html").addClass("centered");
-	      }
-	    }, [
-	      m("form", {
-	        onsubmit: function(e) {
-	          e.preventDefault();
-	          console.log("clicked")
-	          m.request({
-	            url: apiUrl + "/basic/loginUserToUni/" + m.route.param("uniId"),
-	            method: "POST",
-	            data: {
-	              identifier: ctrl.schema.identifier(),
-	              password: ctrl.schema.password(),
-	            }
-	          }).then(function(res) {
-	            console.log(res)
-	            var uniName = m.route.param("uniName")
-	            if (res.result === true) {
-	              console.log(res)
-	              m.route("/home")
-	            } else {
-	              // alert(res.message)
-	              //stil pass, but will fix
-	              m.route("/home")
-	            }
-
-	            // if(res.result === true){
-	            //    cosole.log("im gonna go in successfully")
-	            // }else{
-	            //   console.log(res.result)
-	            // }
-	          })
-
-	        }
-	      }, [
-	      
-	        m(".row", [
-	          m(".input-field col s12 l12 center", [
-	            args ?
-	            m("img", {
-	              src: args ? args.holderPic : "",
-	              class: "responsive-img valign profile-image-login"
-	            })
-	            :"",
-	            m("p", {
-	              class: "center login-form-text"
-	            }, "login")
-	          ])
-	        ]),
-
-	        m(".row margin", [
-	          m(inputComponent, {
-	            value: ctrl.schema.identifier,
-	            label: "Email or Phone",
-	            icon: "mdi-hardware-phonelink prefix",
-	            type: "text",
-	            sizes: "s12 m12 l12",
-	          })
-	        ]),
-
-	        m(".row margin", [
-	          m(inputComponent, {
-	            value: ctrl.schema.password,
-	            label: "Password",
-	            icon: "mdi-action-lock prefix",
-	            type: "password",
-	            sizes: "s12 m12 l12",
-	          })
-	        ]),
-
-	        m(".row", [
-	          m(".input-field col s12", [
-	            m("button", {
-	              class: "btn  waves-effect waves-light col s12 purple",
-	              type: "submit"
-	            }, "authenticate me")
-	          ])
-	        ])
-	      ])
-	    ])
-	    ])
 	  }
 	}
 

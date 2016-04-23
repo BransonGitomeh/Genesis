@@ -46,38 +46,38 @@
 
 	var __components = __webpack_require__(1);
 	var adminUi = __components.adminLayout
-	var layout = __webpack_require__(89)
+	var layout = __webpack_require__(90)
 
 	var adminConfig = __webpack_require__(9)
 
 	m.route.mode = "hash";
 
 	m.route(document.body, '/', {
-	  "/": __webpack_require__(97),
+	  "/": __webpack_require__(98),
 	  "/noticeboard/:uniId": m(layout, {
-	    body: __webpack_require__(99)
+	    body: __webpack_require__(100)
 	  }),
 	  
-	  "/contactus": __webpack_require__(100),
+	  "/contactus": __webpack_require__(101),
 	  //academics
-	  "/academics/ecd": __webpack_require__(101),
-	  "/academics/calender": __webpack_require__(102),
-	  "/academics/admissions": __webpack_require__(103),
-	  "/academics/examinations": __webpack_require__(104),
-	  "/academics/liblary": __webpack_require__(105),
+	  "/academics/ecd": __webpack_require__(102),
+	  "/academics/calender": __webpack_require__(103),
+	  "/academics/admissions": __webpack_require__(104),
+	  "/academics/examinations": __webpack_require__(105),
+	  "/academics/liblary": __webpack_require__(106),
 
 	  //operations
-	  "/operations/service_charter": __webpack_require__(106),
-	  "/operations/governance": __webpack_require__(107),
-	  "/operations/HR": __webpack_require__(108),
-	  "/operations/finance": __webpack_require__(109),
-	  "/operations/downloads": __webpack_require__(110),
+	  "/operations/service_charter": __webpack_require__(107),
+	  "/operations/governance": __webpack_require__(108),
+	  "/operations/HR": __webpack_require__(109),
+	  "/operations/finance": __webpack_require__(110),
+	  "/operations/downloads": __webpack_require__(111),
 
 	  //proffessional_development
-	  "/proffessional_development/ctdc": __webpack_require__(111),
-	  "/proffessional_development/shortcourses": __webpack_require__(112),
-	  "/proffessional_development/bronchure": __webpack_require__(113),
-	  "/proffessional_development/productinformation": __webpack_require__(114),
+	  "/proffessional_development/ctdc": __webpack_require__(112),
+	  "/proffessional_development/shortcourses": __webpack_require__(113),
+	  "/proffessional_development/bronchure": __webpack_require__(114),
+	  "/proffessional_development/productinformation": __webpack_require__(115),
 
 	  // "/register/student":require('./app/pages/student-register'),
 	  // "/verify/student/:identifier":require('./app/pages/student-verify'),
@@ -110,158 +110,158 @@
 
 	  "/uniadmin/:uniName/:uniId": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(27)
+	    body: __webpack_require__(28)
 	  }),
 	  "/uni/:uniName/:uniId/noticeboard": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(36)
+	    body: __webpack_require__(37)
 	  }),
 	  "/uni/admins/:uniId": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(36)
+	    body: __webpack_require__(37)
 	  }),
 	  // view admins
 	  "/uni/admins/:uniName/:uniId": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(40)
+	    body: __webpack_require__(41)
 	  }),
 
 	  // add admin
 	  "/uni/admins/:uniName/:uniId/add": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(41)
+	    body: __webpack_require__(42)
 	  }),
 
-	  "/uniLogin/:uniName/:uniId": __webpack_require__(44),
+	  "/uniLogin/:uniName/:uniId": __webpack_require__(45),
 
 	  "/uni/:uniName/:uniId/Students/search": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(35)
+	    body: __webpack_require__(36)
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/schools": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(45),
+	    body: __webpack_require__(46),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/departments/:school_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(55),
+	    body: __webpack_require__(56),
 	  }),
 
 	  //view all units a department offers, and add
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(57),
+	    body: __webpack_require__(58),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(48),
+	    body: __webpack_require__(49),
 	  }),
 
 	  //viewing all the levels of a certain course ie diploma etc
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(59),
+	    body: __webpack_require__(60),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(50),
+	    body: __webpack_require__(51),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(53),
+	    body: __webpack_require__(54),
 	  }),
 
 	  //a selected department is there
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/courses/:course_id/levels/:level_id/stages/:stage_id/units/:selectedDepartment": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(60),
+	    body: __webpack_require__(61),
 	  }),
 	  //view its units
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(62),
+	    body: __webpack_require__(63),
 	  }),
 	  //view prices of a unit
 	  "/uni/admin/:uniName/:uniId/departments/:school_id/choices/:department_id/units/:unit_id/prices": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(64),
+	    body: __webpack_require__(65),
 	  }),
 
 	  //other settings
 	  "/uni/admin/:uniName/:uniId/study_modes": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(66),
+	    body: __webpack_require__(67),
 	  }),
 	  //view all units a department offers, and add
 	  "/uni/admin/:uniName/:uniId/tri_sems": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(68),
+	    body: __webpack_require__(69),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/payment-methods": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(70),
+	    body: __webpack_require__(71),
 	  }),
 
 	  //register student to all that stuff
 	  "/uni/admin/:uniName/:uniId/Students/index": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(72),
+	    body: __webpack_require__(73),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(115),
+	    body: __webpack_require__(116),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/config/:student_id/units/:semester_id/:tri_sem_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(73),
+	    body: __webpack_require__(74),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(24),
+	    body: __webpack_require__(25),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/config/:student_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(115),
+	    body: __webpack_require__(116),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/payments/:student_id": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(79),
+	    body: __webpack_require__(80),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(80),
+	    body: __webpack_require__(81),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(82),
+	    body: __webpack_require__(83),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(84),
+	    body: __webpack_require__(85),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(86),
+	    body: __webpack_require__(87),
 	  }),
 
 	  "/uni/admin/:uniName/:uniId/Students/:course_id/selectLevel/:level_id/stages/:stage_id/study_mode/:study_mode": m(adminUi, {
 	    config: adminConfig,
-	    body: __webpack_require__(88),
+	    body: __webpack_require__(89),
 	  }),
 
 
@@ -931,10 +931,7 @@
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1039,6 +1036,9 @@
 	// (m.route() === attrs.link.url ? 'active': '')
 
 /***/ },
+/* 14 */,
+/* 15 */,
+/* 16 */,
 /* 17 */,
 /* 18 */,
 /* 19 */,
@@ -1046,11 +1046,12 @@
 /* 21 */,
 /* 22 */,
 /* 23 */,
-/* 24 */
+/* 24 */,
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var paymentCard = __webpack_require__(25)
-	var studentInfo = __webpack_require__(26)
+	var paymentCard = __webpack_require__(26)
+	var studentInfo = __webpack_require__(27)
 
 	var model = {
 		payments: () => {
@@ -1175,10 +1176,10 @@
 	}
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	var model = {
 		payment:(args)=>{
 			return m.request({
@@ -1305,7 +1306,7 @@
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var links = function(student) {
@@ -1368,12 +1369,12 @@
 	}
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var card = __webpack_require__(28)
+	var card = __webpack_require__(29)
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 		controller: () => {
 			return {
@@ -1409,7 +1410,7 @@
 	}
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1431,16 +1432,16 @@
 	}
 
 /***/ },
-/* 29 */,
 /* 30 */,
 /* 31 */,
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	module.exports = {
 		controller: () => {
@@ -1529,12 +1530,12 @@
 	}
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	  var noticeItem = __webpack_require__(37)
-	  var oldNotices = __webpack_require__(38)
-	  var inputComponent = __webpack_require__(16);
+	  var noticeItem = __webpack_require__(38)
+	  var oldNotices = __webpack_require__(39)
+	  var inputComponent = __webpack_require__(13);
 	  module.exports = {
 	    controller: function() {
 	      return {
@@ -1605,7 +1606,7 @@
 	  }
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1679,7 +1680,7 @@
 	}
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1728,13 +1729,13 @@
 	}
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 40 */,
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(37)
+	// var myComponent = require("./noticeItem")
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller: function() {
 	    return {
@@ -1757,9 +1758,9 @@
 	  view: function(controller, atrrs) {
 	    return m(".row", [
 	      m(".col l12", [
-	        // m("br"),
+	        m("br"),
 	        //all admins
-	        m("h1", "Current Admins"),
+	        // m("h1", "Current Admins"),
 	        m("a", {
 	          class: "btn blue right",
 	          href: "/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
@@ -1875,12 +1876,12 @@
 	}
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var myComponent = __webpack_require__(37)
+	// var myComponent = require("./noticeItem")
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 	module.exports = {
 	  controller:function(){
 	    return {
@@ -1998,12 +1999,12 @@
 
 
 /***/ },
-/* 42 */,
 /* 43 */,
-/* 44 */
+/* 44 */,
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	module.exports = {
 	  controller: function() {
@@ -2014,7 +2015,7 @@
 	      },
 	      //other controller functions here
 	      onunload: function() {
-	        $("body").removeClass("cyan centered");
+	        $("body").removeClass("blue centered");
 	        $("html").removeClass("centered");
 	      }
 	    }
@@ -2028,7 +2029,7 @@
 	      m(".col s12 z-depth-5 hoverable card-panel", {
 	        id: "login-page",
 	        config: function() {
-	          $("body").addClass("cyan centered");
+	          $("body").addClass("blue centered");
 	          $("html").addClass("centered");
 	        }
 	      }, [
@@ -2066,21 +2067,47 @@
 	          m(".row", [
 	            m(".input-field col s12 l12 center", [
 	              m("img", {
-	                src: args.holderPic,
+	                src: "http://premiercollege.ac.rw/images/default/logo.png",
 	                class: "responsive-img valign profile-image-login"
 	              }),
-	              m("p", {
-	                class: "center login-form-text"
-	              }, "login"),
-	              // <div class="input-field col s12">
-	              //     <select>
-	              //     <option value="" disabled selected>Choose your option</option>
-	              //     <option value="1">Option 1</option>
-	              //     <option value="2">Option 2</option>
-	              //     <option value="3">Option 3</option>
-	              //   </select>
-	              //   <label>Materialize Select</label>
-	              // </div>
+	              // m("p", {
+	              //   class: "center login-form-text"
+	              // }, "login"),
+
+	              m(".row margin", [
+
+	                m(".input-field col s12", [
+	                  // <i class="material-icons prefix">mode_edit</i>
+
+	                  m("select", {
+	                    config: () => {
+	                      $('select').material_select();
+	                    }
+	                  }, [
+
+	                    m("option", {
+	                      value: "",
+	                      disabled: true,
+	                      selected: true
+	                    }, "Login as?"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Admin"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Registra"),
+
+	                    m("option", {
+	                      value: "1",
+	                    }, "Student")
+
+	                  ]),
+	                  m("label", "Select user type")
+	                ])
+
+	              ]),
 
 	            ])
 	          ]),
@@ -2093,42 +2120,22 @@
 	              sizes: "s12 m12 l12",
 	            })
 	          ]),
-	          m(".row margin", [
 
-	            m(".input-field col s12", [
-	              m("select", [
 
-	                m("option", {
-	                  value: "",
-	                  disabled: true,
-	                  selected: true
-	                }, "Login as?"),
-
-	                m("option", {
-	                  value: "1",
-	                  disabled: true,
-	                  selected: true
-	                }, "Admin")
-
-	              ])
-	            ])
-
-	          ]),
-	          
 	          m(".row margin", [
 	            m(inputComponent, {
 	              value: ctrl.schema.password,
 	              label: "Password",
 	              icon: "mdi-action-lock prefix",
 	              type: "password",
-	              sizes: "s12 m12 l12",
+	              sizes: "s12 m12 l12 active",
 	            })
 	          ]),
 
 	          m(".row", [
 	            m(".input-field col s12", [
 	              m("button", {
-	                class: "btn  waves-effect waves-light col s12 cyan",
+	                class: "btn  waves-effect waves-light col s12 blue",
 	                type: "submit"
 	              }, "authenticate me")
 	            ])
@@ -2140,12 +2147,12 @@
 	}
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
+	var schools = __webpack_require__(47);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -2168,10 +2175,10 @@
 	}
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -2242,7 +2249,7 @@
 
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2269,13 +2276,13 @@
 	}
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var courses = __webpack_require__(49);
+	var schools = __webpack_require__(47);
+	var courses = __webpack_require__(50);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -2312,10 +2319,10 @@
 
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var courses = [
 	   {id:"1",text:"IT"},
@@ -2384,15 +2391,15 @@
 
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var courses = __webpack_require__(49);
-	var levels = __webpack_require__(51);
-	var stages = __webpack_require__(52);
+	var courses = __webpack_require__(50);
+	var levels = __webpack_require__(52);
+	var stages = __webpack_require__(53);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -2439,10 +2446,10 @@
 
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var levels = [
 	  {id:"1",text:"diploma"},
@@ -2511,10 +2518,10 @@
 
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var stages = [
 	  {id:"1",text:"semester 1"},
@@ -2584,15 +2591,15 @@
 
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var stages = __webpack_require__(52);
-	var units_selected = __webpack_require__(54);
+	var schools = __webpack_require__(47);
+	var stages = __webpack_require__(53);
+	var units_selected = __webpack_require__(55);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -2641,10 +2648,10 @@
 
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var selectedUnits = [
 	  {id:"2",text:"bbb"},
@@ -2761,13 +2768,13 @@
 
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var departments = __webpack_require__(56);
+	var departments = __webpack_require__(57);
 
-	var breadcrumb = __webpack_require__(47);
-	var schools = __webpack_require__(46);
+	var breadcrumb = __webpack_require__(48);
+	var schools = __webpack_require__(47);
 
 	var crumps = function(){
 		return [
@@ -2795,10 +2802,10 @@
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -2867,16 +2874,16 @@
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var departments = __webpack_require__(56);
-	var choices = __webpack_require__(58);
+	var departments = __webpack_require__(57);
+	var choices = __webpack_require__(59);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
-	var schools = __webpack_require__(46);
+	var schools = __webpack_require__(47);
 
 	var crumps = function(){
 		return [
@@ -2909,7 +2916,7 @@
 
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2940,15 +2947,15 @@
 
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var courses = __webpack_require__(49);
-	var levels = __webpack_require__(51);
+	var schools = __webpack_require__(47);
+	var courses = __webpack_require__(50);
+	var levels = __webpack_require__(52);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -2987,15 +2994,15 @@
 
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var stages = __webpack_require__(52);
-	var units_available = __webpack_require__(61);
+	var schools = __webpack_require__(47);
+	var stages = __webpack_require__(53);
+	var units_available = __webpack_require__(62);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3043,10 +3050,10 @@
 
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var selectedUnits = [
 	  {id:"2",text:"bbb"},
@@ -3171,15 +3178,15 @@
 
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var schools = __webpack_require__(46);
-	var departments = __webpack_require__(56);
-	var units = __webpack_require__(63);
+	var schools = __webpack_require__(47);
+	var departments = __webpack_require__(57);
+	var units = __webpack_require__(64);
 
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3207,10 +3214,10 @@
 
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [{
 	  id: "1",
@@ -3298,12 +3305,12 @@
 
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var prices = __webpack_require__(65);
-	var units = __webpack_require__(63)
-	var breadcrumb = __webpack_require__(47);
+	var prices = __webpack_require__(66);
+	var units = __webpack_require__(64)
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3327,10 +3334,10 @@
 	}
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var prices = [{
 	  id: "1",
@@ -3462,12 +3469,12 @@
 	}
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var study_modes = __webpack_require__(67);
+	var study_modes = __webpack_require__(68);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3490,10 +3497,10 @@
 	}
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -3562,12 +3569,12 @@
 
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var tri_sems = __webpack_require__(69);
+	var tri_sems = __webpack_require__(70);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function(){
 		return [
@@ -3590,10 +3597,10 @@
 	}
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var schools = [
 	  {id:"1",text:"School of It"},
@@ -3688,12 +3695,12 @@
 	}
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var payments = __webpack_require__(71);
+	var payments = __webpack_require__(72);
 
-	var breadcrumb = __webpack_require__(47);
+	var breadcrumb = __webpack_require__(48);
 
 	var crumps = function() {
 		return [{
@@ -3714,10 +3721,10 @@
 	}
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
 	var levels = [{
 	  id: "1",
@@ -3825,7 +3832,7 @@
 	}
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3909,15 +3916,15 @@
 	}
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toogle = __webpack_require__(74);
-	var courses = __webpack_require__(75)
-	var stages = __webpack_require__(76)
-	var semesters = __webpack_require__(77)
-	var units = __webpack_require__(78)
-	var studentInfo = __webpack_require__(26)
+	var toogle = __webpack_require__(75);
+	var courses = __webpack_require__(76)
+	var stages = __webpack_require__(77)
+	var semesters = __webpack_require__(78)
+	var units = __webpack_require__(79)
+	var studentInfo = __webpack_require__(27)
 
 	module.exports = {
 		controller: () => {
@@ -4047,7 +4054,7 @@
 	}
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4072,7 +4079,7 @@
 
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4121,7 +4128,7 @@
 
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4170,7 +4177,7 @@
 
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4219,7 +4226,7 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4268,12 +4275,12 @@
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var paymentCard = __webpack_require__(25)
-	var inputComponent = __webpack_require__(16);
-	var studentInfo = __webpack_require__(26)
+	var paymentCard = __webpack_require__(26)
+	var inputComponent = __webpack_require__(13);
+	var studentInfo = __webpack_require__(27)
 
 	var model = {
 		student: () => {
@@ -4512,11 +4519,11 @@
 	}
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
-	var selectCourse = __webpack_require__(81)
+	var inputComponent = __webpack_require__(13);
+	var selectCourse = __webpack_require__(82)
 
 	module.exports = {
 	  controller: (args) => {
@@ -4541,7 +4548,7 @@
 	}
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4581,13 +4588,13 @@
 	}
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
 
 
 	module.exports = {
@@ -4619,7 +4626,7 @@
 	}
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4658,14 +4665,14 @@
 	}
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
 
 	module.exports = {
 		controller: (args) => {
@@ -4700,7 +4707,7 @@
 	}
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4739,15 +4746,15 @@
 	}
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
+	var inputComponent = __webpack_require__(13);
 
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
-	var selectStudyMode = __webpack_require__(87)
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
+	var selectStudyMode = __webpack_require__(88)
 
 	module.exports = {
 	  controller: (args) => {
@@ -4788,7 +4795,7 @@
 	}
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4827,14 +4834,14 @@
 	}
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var inputComponent = __webpack_require__(16);
-	var selectCourse = __webpack_require__(81)
-	var selectLevel = __webpack_require__(83)
-	var selectSemester = __webpack_require__(85)
-	var selectStudyMode = __webpack_require__(87)
+	var inputComponent = __webpack_require__(13);
+	var selectCourse = __webpack_require__(82)
+	var selectLevel = __webpack_require__(84)
+	var selectSemester = __webpack_require__(86)
+	var selectStudyMode = __webpack_require__(88)
 
 	module.exports = {
 	  controller: (args) => {
@@ -4919,13 +4926,13 @@
 	}
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 	module.exports = {
 	  view:function(ctrl,args){
@@ -4953,11 +4960,11 @@
 
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navitem = __webpack_require__(91)
-	var navdrop = __webpack_require__(92)
+	var navitem = __webpack_require__(92)
+	var navdrop = __webpack_require__(93)
 
 	module.exports = {
 	  view: function(args) {
@@ -5118,7 +5125,7 @@
 	}
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5138,7 +5145,7 @@
 	}
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5192,10 +5199,10 @@
 	}
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var fbPage = __webpack_require__(94);
+	var fbPage = __webpack_require__(95);
 
 	module.exports = {
 	  view: function(args){
@@ -5228,7 +5235,7 @@
 
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5259,11 +5266,11 @@
 
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// var JD = require('../../../../__components/libs/jollyData');
-	var fbPage = __webpack_require__(94);
+	var fbPage = __webpack_require__(95);
 
 	module.exports = {
 	  view:function(ctrl,attrs){
@@ -5322,7 +5329,7 @@
 
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5362,13 +5369,13 @@
 
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90)
-	var sidebar = __webpack_require__(95)
-	var nivoslider = __webpack_require__(98)
-	var footer = __webpack_require__(93)
+	var navbar = __webpack_require__(91)
+	var sidebar = __webpack_require__(96)
+	var nivoslider = __webpack_require__(99)
+	var footer = __webpack_require__(94)
 
 	var objectives = [
 	  {text:"To provide education geared toward development of the childs mental, physical and spiritual growth."},
@@ -5441,7 +5448,7 @@
 
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5487,11 +5494,11 @@
 
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var noticeboard_item = __webpack_require__(37)
-	var oldNotices = __webpack_require__(38)
+	var noticeboard_item = __webpack_require__(38)
+	var oldNotices = __webpack_require__(39)
 	module.exports = {
 	    controller: function() {
 	        var items = m.request({
@@ -5559,13 +5566,13 @@
 	}
 
 /***/ },
-/* 100 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
+	var navbar = __webpack_require__(91);
 
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -5636,13 +5643,13 @@
 
 
 /***/ },
-/* 101 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -5676,13 +5683,13 @@
 
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -5717,13 +5724,13 @@
 
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -5759,13 +5766,13 @@
 
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -5800,13 +5807,13 @@
 
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 	var working_hours = [
 	      {timeName:"Weekdays",duration:"8am-9pm"},
@@ -5958,13 +5965,13 @@
 
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -5999,12 +6006,12 @@
 
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6135,12 +6142,12 @@
 
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6175,12 +6182,12 @@
 
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6215,14 +6222,14 @@
 
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// TODO make a nice table with b=versioning and cute download buttons and last updated list
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6308,12 +6315,12 @@
 
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6446,12 +6453,12 @@
 
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
 	// var pdfobject = require("../peices/pdfobject");
 
 
@@ -6486,13 +6493,13 @@
 
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -6534,13 +6541,13 @@
 
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var navbar = __webpack_require__(90);
-	var footer = __webpack_require__(93);
-	var sidebar = __webpack_require__(95);
-	var pdfobject = __webpack_require__(96);
+	var navbar = __webpack_require__(91);
+	var footer = __webpack_require__(94);
+	var sidebar = __webpack_require__(96);
+	var pdfobject = __webpack_require__(97);
 
 
 
@@ -6582,15 +6589,15 @@
 
 
 /***/ },
-/* 115 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toogle = __webpack_require__(74);
-	var courses = __webpack_require__(75)
-	var stages = __webpack_require__(76)
-	var semesters = __webpack_require__(77)
-	var units = __webpack_require__(78)
-	var studentInfo = __webpack_require__(26)
+	var toogle = __webpack_require__(75);
+	var courses = __webpack_require__(76)
+	var stages = __webpack_require__(77)
+	var semesters = __webpack_require__(78)
+	var units = __webpack_require__(79)
+	var studentInfo = __webpack_require__(27)
 
 	module.exports = {
 		controller: () => {

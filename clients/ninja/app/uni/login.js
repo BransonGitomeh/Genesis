@@ -9,7 +9,7 @@ module.exports = {
       },
       //other controller functions here
       onunload: function() {
-        $("body").removeClass("cyan centered");
+        $("body").removeClass("blue centered");
         $("html").removeClass("centered");
       }
     }
@@ -23,7 +23,7 @@ module.exports = {
       m(".col s12 z-depth-5 hoverable card-panel", {
         id: "login-page",
         config: function() {
-          $("body").addClass("cyan centered");
+          $("body").addClass("blue centered");
           $("html").addClass("centered");
         }
       }, [
@@ -61,21 +61,47 @@ module.exports = {
           m(".row", [
             m(".input-field col s12 l12 center", [
               m("img", {
-                src: args.holderPic,
+                src: "http://premiercollege.ac.rw/images/default/logo.png",
                 class: "responsive-img valign profile-image-login"
               }),
-              m("p", {
-                class: "center login-form-text"
-              }, "login"),
-              // <div class="input-field col s12">
-              //     <select>
-              //     <option value="" disabled selected>Choose your option</option>
-              //     <option value="1">Option 1</option>
-              //     <option value="2">Option 2</option>
-              //     <option value="3">Option 3</option>
-              //   </select>
-              //   <label>Materialize Select</label>
-              // </div>
+              // m("p", {
+              //   class: "center login-form-text"
+              // }, "login"),
+
+              m(".row margin", [
+
+                m(".input-field col s12", [
+                  // <i class="material-icons prefix">mode_edit</i>
+
+                  m("select", {
+                    config: () => {
+                      $('select').material_select();
+                    }
+                  }, [
+
+                    m("option", {
+                      value: "",
+                      disabled: true,
+                      selected: true
+                    }, "Login as?"),
+
+                    m("option", {
+                      value: "1",
+                    }, "Admin"),
+
+                    m("option", {
+                      value: "1",
+                    }, "Registra"),
+
+                    m("option", {
+                      value: "1",
+                    }, "Student")
+
+                  ]),
+                  m("label", "Select user type")
+                ])
+
+              ]),
 
             ])
           ]),
@@ -88,42 +114,22 @@ module.exports = {
               sizes: "s12 m12 l12",
             })
           ]),
-          m(".row margin", [
 
-            m(".input-field col s12", [
-              m("select", [
 
-                m("option", {
-                  value: "",
-                  disabled: true,
-                  selected: true
-                }, "Login as?"),
-
-                m("option", {
-                  value: "1",
-                  disabled: true,
-                  selected: true
-                }, "Admin")
-
-              ])
-            ])
-
-          ]),
-          
           m(".row margin", [
             m(inputComponent, {
               value: ctrl.schema.password,
               label: "Password",
               icon: "mdi-action-lock prefix",
               type: "password",
-              sizes: "s12 m12 l12",
+              sizes: "s12 m12 l12 active",
             })
           ]),
 
           m(".row", [
             m(".input-field col s12", [
               m("button", {
-                class: "btn  waves-effect waves-light col s12 cyan",
+                class: "btn  waves-effect waves-light col s12 blue",
                 type: "submit"
               }, "authenticate me")
             ])

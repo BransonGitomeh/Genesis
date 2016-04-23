@@ -99,23 +99,23 @@ m.route(document.body, "/", {
 	// view admins
 	"/uni/admins/:uniName/:uniId": m(adminUi, {
 		config: uniAdminUiConfig,
-		body: require("./app/uni/allAdmins")
+		body: require("./app/uni/users/admins/allAdmins")
 	}),
 	// add admin
 	"/uni/admins/:uniName/:uniId/add": m(adminUi, {
 		config: uniAdminUiConfig,
-		body: require("./app/uni/newAdmin")
+		body: require("./app/uni/users/admins/newAdmin")
 	}),
 
 	// view admins
 	"/uni/registrars/:uniName/:uniId": m(adminUi, {
 		config: uniAdminUiConfig,
-		body: require("./app/uni/allRegistras")
+		body: require("./app/uni/users/registra/allRegistras")
 	}),
 	// add admin
-	"/uni/registrars/:uniName/:uniId/add": m(adminUi, {
+	"/uni/registra/:uniName/:uniId/add": m(adminUi, {
 		config: uniAdminUiConfig,
-		body: require("./app/uni/newRegistras")
+		body: require("./app/uni/users/registra/newRegistras")
 	}),
 
 	//login for admin
