@@ -9,7 +9,7 @@ module.exports = {
       },
       //other controller functions here
       onunload: function() {
-        $("body").removeClass("cyan centered");
+        $("body").removeClass("purple centered");
         $("html").removeClass("centered");
       }
     }
@@ -23,7 +23,7 @@ module.exports = {
     m(".col s12 z-depth-5 hoverable card-panel", {
       id: "login-page",
       config: function() {
-        $("body").addClass("cyan centered");
+        $("body").addClass("purple centered");
         $("html").addClass("centered");
       }
     }, [
@@ -42,7 +42,6 @@ module.exports = {
             console.log(res)
             var uniName = m.route.param("uniName")
             if (res.result === true) {
-
               console.log(res)
               m.route("/uniadmin/" + uniName + "/" + m.route.param("uniId"))
             } else {
@@ -58,17 +57,21 @@ module.exports = {
 
         }
       }, [
+      
         m(".row", [
           m(".input-field col s12 l12 center", [
+            args ?
             m("img", {
-              src: args.holderPic,
+              src: args ? args.holderPic : "",
               class: "responsive-img valign profile-image-login"
-            }),
+            })
+            :"",
             m("p", {
               class: "center login-form-text"
             }, "login")
           ])
         ]),
+        
         m(".row margin", [
           m(inputComponent, {
             value: ctrl.schema.identifier,
@@ -92,7 +95,7 @@ module.exports = {
         m(".row", [
           m(".input-field col s12", [
             m("button", {
-              class: "btn  waves-effect waves-light col s12 cyan",
+              class: "btn  waves-effect waves-light col s12 purple",
               type: "submit"
             }, "authenticate me")
           ])

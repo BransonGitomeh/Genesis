@@ -58,7 +58,10 @@
 	m.route.mode = "hash";
 
 	m.route(document.body, "/", {
-		"/": m(adminUi, {
+
+		"/": __webpack_require__(116),
+
+		"/home": m(adminUi, {
 			config: ninjaUIConfig,
 			body: __webpack_require__(12)
 		}),
@@ -6428,6 +6431,145 @@
 
 
 	    )
+	  }
+	}
+
+/***/ },
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var inputComponent = __webpack_require__(16);
+
+	module.exports = {
+	  controller: function() {
+	    return {
+	      schema: {
+	        identifier: m.prop(""),
+	        password: m.prop("")
+	      },
+	      //other controller functions here
+	      onunload: function() {
+	        $("body").removeClass("purple centered");
+	        $("html").removeClass("centered");
+	      }
+	    }
+	  },
+	  view: function(ctrl, args) {
+	    return m("div",{
+	      id:"login-page",
+	      class:"row"
+	    },[
+
+	    m(".col s12 z-depth-5 hoverable card-panel", {
+	      id: "login-page",
+	      config: function() {
+	        $("body").addClass("purple centered");
+	        $("html").addClass("centered");
+	      }
+	    }, [
+	      m("form", {
+	        onsubmit: function(e) {
+	          e.preventDefault();
+	          console.log("clicked")
+	          m.request({
+	            url: apiUrl + "/basic/loginUserToUni/" + m.route.param("uniId"),
+	            method: "POST",
+	            data: {
+	              identifier: ctrl.schema.identifier(),
+	              password: ctrl.schema.password(),
+	            }
+	          }).then(function(res) {
+	            console.log(res)
+	            var uniName = m.route.param("uniName")
+	            if (res.result === true) {
+	              console.log(res)
+	              m.route("/uniadmin/" + uniName + "/" + m.route.param("uniId"))
+	            } else {
+	              alert(res.message)
+	            }
+
+	            // if(res.result === true){
+	            //    cosole.log("im gonna go in successfully")
+	            // }else{
+	            //   console.log(res.result)
+	            // }
+	          })
+
+	        }
+	      }, [
+	      
+	        m(".row", [
+	          m(".input-field col s12 l12 center", [
+	            args ?
+	            m("img", {
+	              src: args ? args.holderPic : "",
+	              class: "responsive-img valign profile-image-login"
+	            })
+	            :"",
+	            m("p", {
+	              class: "center login-form-text"
+	            }, "login")
+	          ])
+	        ]),
+	        
+	        m(".row margin", [
+	          m(inputComponent, {
+	            value: ctrl.schema.identifier,
+	            label: "Email or Phone",
+	            icon: "mdi-hardware-phonelink prefix",
+	            type: "text",
+	            sizes: "s12 m12 l12",
+	          })
+	        ]),
+
+	        m(".row margin", [
+	          m(inputComponent, {
+	            value: ctrl.schema.password,
+	            label: "Password",
+	            icon: "mdi-action-lock prefix",
+	            type: "password",
+	            sizes: "s12 m12 l12",
+	          })
+	        ]),
+
+	        m(".row", [
+	          m(".input-field col s12", [
+	            m("button", {
+	              class: "btn  waves-effect waves-light col s12 purple",
+	              type: "submit"
+	            }, "authenticate me")
+	          ])
+	        ])
+	      ])
+	    ])
+	    ])
 	  }
 	}
 

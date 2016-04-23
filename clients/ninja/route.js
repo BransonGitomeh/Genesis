@@ -12,7 +12,10 @@ var uniStudentUiConfig = require("../premier/uniStudentUiConfig")
 m.route.mode = "hash";
 
 m.route(document.body, "/", {
-	"/": m(adminUi, {
+
+	"/": require("./app/ninja/login"),
+
+	"/home": m(adminUi, {
 		config: ninjaUIConfig,
 		body: require("./app/ninja/home")
 	}),
