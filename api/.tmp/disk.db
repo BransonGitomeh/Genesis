@@ -3825,6 +3825,83 @@
         "createdAt": "2016-04-23T07:17:26.270Z",
         "updatedAt": "2016-04-23T07:17:26.270Z",
         "id": 325
+      },
+      {
+        "start": 1461396434053,
+        "body": {},
+        "duration": 9,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-23T07:27:14.066Z",
+        "updatedAt": "2016-04-23T07:27:14.066Z",
+        "id": 326
+      },
+      {
+        "start": 1461396434464,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T07:27:14.469Z",
+        "updatedAt": "2016-04-23T07:27:14.469Z",
+        "id": 327
+      },
+      {
+        "start": 1461396434551,
+        "body": {},
+        "duration": 5,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T07:27:14.560Z",
+        "updatedAt": "2016-04-23T07:27:14.560Z",
+        "id": 328
+      },
+      {
+        "start": 1461396434622,
+        "body": {},
+        "duration": 18,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T07:27:14.644Z",
+        "updatedAt": "2016-04-23T07:27:14.645Z",
+        "id": 329
+      },
+      {
+        "start": 1461396434633,
+        "body": {},
+        "duration": 84,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T07:27:14.725Z",
+        "updatedAt": "2016-04-23T07:27:14.725Z",
+        "id": 330
+      },
+      {
+        "start": 1461396434634,
+        "body": {},
+        "duration": 139,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/homepage.bundle.js",
+        "createdAt": "2016-04-23T07:27:14.778Z",
+        "updatedAt": "2016-04-23T07:27:14.778Z",
+        "id": 331
+      },
+      {
+        "start": 1461396435597,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T07:27:15.603Z",
+        "updatedAt": "2016-04-23T07:27:15.603Z",
+        "id": 332
       }
     ],
     "proschool": [
@@ -4933,7 +5010,7 @@
       "id": 1
     },
     "request": {
-      "id": 325
+      "id": 332
     },
     "proschool": {
       "id": 1
