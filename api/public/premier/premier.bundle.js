@@ -2011,7 +2011,8 @@
 	    return {
 	      schema: {
 	        identifier: m.prop(""),
-	        password: m.prop("")
+	        password: m.prop(""),
+	        userType: m.prop("")
 	      },
 	      //other controller functions here
 	      onunload: function() {
@@ -2038,28 +2039,23 @@
 	            e.preventDefault();
 	            console.log("clicked")
 	            m.request({
-	              url: apiUrl + "/basic/loginUserToUni/" + m.route.param("uniId"),
+	              url: apiUrl + "/services",
 	              method: "POST",
 	              data: {
-	                identifier: ctrl.schema.identifier(),
+	                role: "university",
+	                cmd: "auth",
+	                userType: ctrl.schema.userType(),
+	                uni_id: m.route.param("uniId"),
+	                username: ctrl.schema.identifier(),
 	                password: ctrl.schema.password(),
 	              }
 	            }).then(function(res) {
 	              console.log(res)
-	              var uniName = m.route.param("uniName")
-	              if (res.result === true) {
-
-	                console.log(res)
-	                m.route("/uniadmin/" + uniName + "/" + m.route.param("uniId"))
-	              } else {
-	                alert(res.message)
+	              if(res.eraro == true){
+	                alert(res.orig.code)
+	              }else{
+	                m.route("/uniadmin/" + m.route.param("uniName") + "/" + m.route.param("uniId"))
 	              }
-
-	              // if(res.result === true){
-	              //    cosole.log("im gonna go in successfully")
-	              // }else{
-	              //   console.log(res.result)
-	              // }
 	            })
 
 	          }
@@ -2082,6 +2078,10 @@
 	                  m("select", {
 	                    config: () => {
 	                      $('select').material_select();
+	                    },
+	                    onchange: (e) => {
+	                      console.log(e.target.value)
+	                      ctrl.schema.userType(e.target.value)
 	                    }
 	                  }, [
 
@@ -2092,15 +2092,15 @@
 	                    }, "Login as?"),
 
 	                    m("option", {
-	                      value: "1",
+	                      value: "admin",
 	                    }, "Admin"),
 
 	                    m("option", {
-	                      value: "1",
+	                      value: "registra",
 	                    }, "Registra"),
 
 	                    m("option", {
-	                      value: "1",
+	                      value: "student",
 	                    }, "Student")
 
 	                  ]),

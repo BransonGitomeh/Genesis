@@ -78,8 +78,9 @@ module.exports = function(db) {
 
 				// check if this user is actually a registra
 				this.add({
-					role: "registra",
-					cmd: "auth"
+					role: "university",
+					cmd: "auth", 
+					userType: "registra"
 				}, (args, res) => {
 					var _ = require("lodash")
 					db.university.findOne({
@@ -102,7 +103,45 @@ module.exports = function(db) {
 									result: result.res.registras[index]
 								})
 							} else {
-								res("no user was found with that username and passkey combination", {
+								res("no registra was found with that username and passkey in " + uniFound.name, {
+									index: index,
+									result: result.res.registras[index]
+								})
+							}
+
+						})
+
+					})
+				}),
+
+				//for admins
+				this.add({
+					role: "university",
+					cmd: "auth", 
+					userType: "admin"
+				}, (args, res) => {
+					var _ = require("lodash")
+					db.university.findOne({
+						id: args.uni_id
+					}).populate("admins").exec((err, uniFound) => {
+
+						this.act({
+							role: "registra",
+							cmd: "get_all",
+							uni_id: args.uni_id
+						}, (err, result) => {
+							var index = _.findIndex(result.res.admins, {
+								'identifier': args.username,
+								'password': args.password
+							});
+
+							if (index != -1) {
+								res(null, {
+									index: index,
+									result: result.res.registras[index]
+								})
+							} else {
+								res("no admin was found with that username and passkey in" + uniFound.name, {
 									index: index,
 									result: result.res.registras[index]
 								})
