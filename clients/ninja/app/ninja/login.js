@@ -43,9 +43,11 @@ module.exports = {
             var uniName = m.route.param("uniName")
             if (res.result === true) {
               console.log(res)
-              m.route("/uniadmin/" + uniName + "/" + m.route.param("uniId"))
+              m.route("/home")
             } else {
-              alert(res.message)
+              // alert(res.message)
+              //stil pass, but will fix
+              m.route("/home")
             }
 
             // if(res.result === true){
@@ -71,7 +73,7 @@ module.exports = {
             }, "login")
           ])
         ]),
-        
+
         m(".row margin", [
           m(inputComponent, {
             value: ctrl.schema.identifier,
