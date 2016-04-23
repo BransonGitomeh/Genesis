@@ -21,8 +21,8 @@
 <body>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Genesis</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
+      <ul class="right ">
+        <li><a href="/ninja">Login</a></li>
       </ul>
 
       <ul class="right hide-on-med-and-down">
@@ -30,7 +30,7 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Login</a></li>
+        <li><a href="/ninja">Login</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -43,7 +43,7 @@
         <h5 class="header col s12 light">A modern ,centralised system for all your school management needs</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
       </div>
       <br><br>
 
@@ -138,7 +138,12 @@
         var appName = "Premier ECDE teachers college"
     </script>
         
-
+        <script type="text/javascript">
+          
+          $( document ).ready(function(){
+            $(".button-collapse").sideNav();
+          })
+        </script>
         <script src="homepage.bundle.js"></script>
     </body>
 </html>

@@ -66,5 +66,6 @@ require("./init/index.js")(require("./init/collections")(), config, function(app
 	app.use(express.static(path.join(__dirname, 'public')));
 
 	app.use('/', express.static(path.join(__dirname + '/public/homepage')));
+	app.use('/ninja', express.static(path.join(__dirname + '/public/ninja')));
 
 })

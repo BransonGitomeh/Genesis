@@ -374,10 +374,8 @@
 	                }, args.config().logoText ? args.config().logoText : "logoText here")
 	              ]),
 
-
-
 	              m("ul", {
-	                class: "right"
+	                class: "right hide-on-med-and-down"
 	              }, [
 	                args.config().topBarItems.map(function(item) {
 	                  return m(topNavItem, {
@@ -437,7 +435,21 @@
 	                  color: args.config().color
 	                })
 	              })
-	            ])
+	            ]),
+
+	            m("a",{
+	                href:"#",
+	                "data-activates":"slide-out",
+	                class:"sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only purple",
+	                config:()=>{
+	                   $(".sidebar-collapse").sideNav();
+	                }
+	              
+	              },[
+	                m("i",{
+	                  class:"mdi-navigation-menu"
+	                })
+	              ])
 
 	          ]),
 	          //rest of the body
@@ -448,19 +460,7 @@
 	          ])
 
 
-	          // m(".fixed-action-btn", {
-	          //   onclick: () => {
-	          //     window.history.back()
-	          //   }
-	          // }, [
-	          //   m("a", {
-	          //     class: "btn-floating btn-large waves-effect waves-light blue"
-	          //   }, [
-	          //     m("i", {
-	          //       class: "mdi-hardware-keyboard-backspace"
-	          //     })
-	          //   ])
-	          // ])
+	  
 
 	        ])
 
@@ -1211,8 +1211,7 @@
 	                  }, [
 	                        m("div", {
 	                              id: "column_chart_lined",
-	                              style: "width:50%; height:400px;",
-	                              class: "col l6",
+	                              class: "col l6 s12",
 	                              config: () => {
 	                                    var chart1 = new Highcharts.Chart({
 	                                          chart: {

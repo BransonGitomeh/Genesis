@@ -31,8 +31,7 @@ module.exports = {
                   }, [
                         m("div", {
                               id: "column_chart_lined",
-                              style: "width:50%; height:400px;",
-                              class: "col l6",
+                              class: "col l6 s12",
                               config: () => {
                                     var chart1 = new Highcharts.Chart({
                                           chart: {
