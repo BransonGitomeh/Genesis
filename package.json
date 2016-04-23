@@ -7,7 +7,7 @@
     "setup": "cd api && npm install",
     "dev": "cd api && nodemon index.js & cd clients && webpack",
 
-    "deploy": "git add --all && git commit -m 'deploy commit'  && git push openshift master",
+    "deploy": "git add --all && git commit -m 'deploy commit'  && git push origin master",
 
     "start": "node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
