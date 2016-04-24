@@ -32,29 +32,18 @@ module.exports = {
           e.preventDefault();
           console.log("clicked")
           m.request({
-            url: apiUrl + "/basic/loginUserToUni/" + m.route.param("uniId"),
+            url: apiUrl + "/services",
             method: "POST",
             data: {
+              role:"core",
+              cmd:"auth",
               identifier: ctrl.schema.identifier(),
               password: ctrl.schema.password(),
             }
           }).then(function(res) {
-            console.log(res)
-            var uniName = m.route.param("uniName")
-            if (res.result === true) {
-              console.log(res)
-              m.route("/home")
-            } else {
-              // alert(res.message)
-              //stil pass, but will fix
+            if(res){
               m.route("/home")
             }
-
-            // if(res.result === true){
-            //    cosole.log("im gonna go in successfully")
-            // }else{
-            //   console.log(res.result)
-            // }
           })
 
         }

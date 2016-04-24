@@ -31628,6 +31628,2354 @@
         "createdAt": "2016-04-23T17:05:19.638Z",
         "updatedAt": "2016-04-23T17:05:19.638Z",
         "id": 2708
+      },
+      {
+        "start": 1461431955535,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "admin",
+          "uni_id": "1",
+          "username": "ff",
+          "password": "ff"
+        },
+        "duration": 117,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:19:15.669Z",
+        "updatedAt": "2016-04-23T17:19:15.669Z",
+        "id": 2709
+      },
+      {
+        "start": 1461431955896,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 200,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:19:16.101Z",
+        "updatedAt": "2016-04-23T17:19:16.101Z",
+        "id": 2710
+      },
+      {
+        "start": 1461431959770,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 162,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-23T17:19:19.936Z",
+        "updatedAt": "2016-04-23T17:19:19.936Z",
+        "id": 2711
+      },
+      {
+        "start": 1461431961322,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 215,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:19:21.539Z",
+        "updatedAt": "2016-04-23T17:19:21.539Z",
+        "id": 2712
+      },
+      {
+        "start": 1461431964455,
+        "body": {},
+        "duration": 34,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:19:24.490Z",
+        "updatedAt": "2016-04-23T17:19:24.490Z",
+        "id": 2713
+      },
+      {
+        "start": 1461431971465,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 33,
+        "statusCode": 500,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/loginUserToUni/undefined",
+        "createdAt": "2016-04-23T17:19:31.500Z",
+        "updatedAt": "2016-04-23T17:19:31.500Z",
+        "id": 2714
+      },
+      {
+        "start": 1461431973620,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 19,
+        "statusCode": 500,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/loginUserToUni/undefined",
+        "createdAt": "2016-04-23T17:19:33.642Z",
+        "updatedAt": "2016-04-23T17:19:33.642Z",
+        "id": 2715
+      },
+      {
+        "start": 1461432096956,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 131,
+        "statusCode": 500,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/loginUserToUni/undefined",
+        "createdAt": "2016-04-23T17:21:37.102Z",
+        "updatedAt": "2016-04-23T17:21:37.102Z",
+        "id": 2716
+      },
+      {
+        "start": 1461432850998,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 25,
+        "statusCode": 500,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/loginUserToUni/undefined",
+        "createdAt": "2016-04-23T17:34:11.028Z",
+        "updatedAt": "2016-04-23T17:34:11.029Z",
+        "id": 2717
+      },
+      {
+        "start": 1461433380399,
+        "body": {},
+        "duration": 33,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-23T17:43:00.457Z",
+        "updatedAt": "2016-04-23T17:43:00.457Z",
+        "id": 2718
+      },
+      {
+        "start": 1461433380959,
+        "body": {},
+        "duration": 16,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:43:00.979Z",
+        "updatedAt": "2016-04-23T17:43:00.979Z",
+        "id": 2719
+      },
+      {
+        "start": 1461433381355,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:43:01.366Z",
+        "updatedAt": "2016-04-23T17:43:01.366Z",
+        "id": 2720
+      },
+      {
+        "start": 1461433381358,
+        "body": {},
+        "duration": 165,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T17:43:01.525Z",
+        "updatedAt": "2016-04-23T17:43:01.525Z",
+        "id": 2721
+      },
+      {
+        "start": 1461433381673,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T17:43:01.678Z",
+        "updatedAt": "2016-04-23T17:43:01.678Z",
+        "id": 2722
+      },
+      {
+        "start": 1461433381674,
+        "body": {},
+        "duration": 157,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/homepage.bundle.js",
+        "createdAt": "2016-04-23T17:43:01.833Z",
+        "updatedAt": "2016-04-23T17:43:01.833Z",
+        "id": 2723
+      },
+      {
+        "start": 1461433384578,
+        "body": {},
+        "duration": 6,
+        "statusCode": 303,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja",
+        "createdAt": "2016-04-23T17:43:04.588Z",
+        "updatedAt": "2016-04-23T17:43:04.588Z",
+        "id": 2724
+      },
+      {
+        "start": 1461433384748,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T17:43:04.755Z",
+        "updatedAt": "2016-04-23T17:43:04.755Z",
+        "id": 2725
+      },
+      {
+        "start": 1461433385128,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T17:43:05.131Z",
+        "updatedAt": "2016-04-23T17:43:05.131Z",
+        "id": 2726
+      },
+      {
+        "start": 1461433385307,
+        "body": {},
+        "duration": 15,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T17:43:05.324Z",
+        "updatedAt": "2016-04-23T17:43:05.324Z",
+        "id": 2727
+      },
+      {
+        "start": 1461433385312,
+        "body": {},
+        "duration": 250,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T17:43:05.571Z",
+        "updatedAt": "2016-04-23T17:43:05.571Z",
+        "id": 2728
+      },
+      {
+        "start": 1461433385314,
+        "body": {},
+        "duration": 400,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T17:43:05.715Z",
+        "updatedAt": "2016-04-23T17:43:05.715Z",
+        "id": 2729
+      },
+      {
+        "start": 1461433385848,
+        "body": {},
+        "duration": 6,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T17:43:05.855Z",
+        "updatedAt": "2016-04-23T17:43:05.855Z",
+        "id": 2730
+      },
+      {
+        "start": 1461433385849,
+        "body": {},
+        "duration": 136,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T17:43:05.986Z",
+        "updatedAt": "2016-04-23T17:43:05.986Z",
+        "id": 2731
+      },
+      {
+        "start": 1461433385850,
+        "body": {},
+        "duration": 273,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T17:43:06.125Z",
+        "updatedAt": "2016-04-23T17:43:06.125Z",
+        "id": 2732
+      },
+      {
+        "start": 1461433386258,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T17:43:06.267Z",
+        "updatedAt": "2016-04-23T17:43:06.267Z",
+        "id": 2733
+      },
+      {
+        "start": 1461433386261,
+        "body": {},
+        "duration": 162,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:43:06.428Z",
+        "updatedAt": "2016-04-23T17:43:06.428Z",
+        "id": 2734
+      },
+      {
+        "start": 1461433386262,
+        "body": {},
+        "duration": 462,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T17:43:06.729Z",
+        "updatedAt": "2016-04-23T17:43:06.729Z",
+        "id": 2735
+      },
+      {
+        "start": 1461433387050,
+        "body": {},
+        "duration": 6,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:43:07.059Z",
+        "updatedAt": "2016-04-23T17:43:07.059Z",
+        "id": 2736
+      },
+      {
+        "start": 1461433387412,
+        "body": {},
+        "duration": 7,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:43:07.424Z",
+        "updatedAt": "2016-04-23T17:43:07.424Z",
+        "id": 2737
+      },
+      {
+        "start": 1461433387603,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T17:43:07.607Z",
+        "updatedAt": "2016-04-23T17:43:07.607Z",
+        "id": 2738
+      },
+      {
+        "start": 1461433403162,
+        "body": {},
+        "duration": 2,
+        "statusCode": 303,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja",
+        "createdAt": "2016-04-23T17:43:23.166Z",
+        "updatedAt": "2016-04-23T17:43:23.166Z",
+        "id": 2739
+      },
+      {
+        "start": 1461433403309,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T17:43:23.315Z",
+        "updatedAt": "2016-04-23T17:43:23.315Z",
+        "id": 2740
+      },
+      {
+        "start": 1461433403679,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T17:43:23.683Z",
+        "updatedAt": "2016-04-23T17:43:23.683Z",
+        "id": 2741
+      },
+      {
+        "start": 1461433403829,
+        "body": {},
+        "duration": 19,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T17:43:23.849Z",
+        "updatedAt": "2016-04-23T17:43:23.849Z",
+        "id": 2742
+      },
+      {
+        "start": 1461433403830,
+        "body": {},
+        "duration": 164,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:43:23.997Z",
+        "updatedAt": "2016-04-23T17:43:23.997Z",
+        "id": 2743
+      },
+      {
+        "start": 1461433403833,
+        "body": {},
+        "duration": 305,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T17:43:24.139Z",
+        "updatedAt": "2016-04-23T17:43:24.139Z",
+        "id": 2744
+      },
+      {
+        "start": 1461433403841,
+        "body": {},
+        "duration": 431,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T17:43:24.274Z",
+        "updatedAt": "2016-04-23T17:43:24.274Z",
+        "id": 2745
+      },
+      {
+        "start": 1461433403842,
+        "body": {},
+        "duration": 567,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T17:43:24.411Z",
+        "updatedAt": "2016-04-23T17:43:24.411Z",
+        "id": 2746
+      },
+      {
+        "start": 1461433403844,
+        "body": {},
+        "duration": 707,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T17:43:24.552Z",
+        "updatedAt": "2016-04-23T17:43:24.552Z",
+        "id": 2747
+      },
+      {
+        "start": 1461433404693,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T17:43:24.704Z",
+        "updatedAt": "2016-04-23T17:43:24.704Z",
+        "id": 2748
+      },
+      {
+        "start": 1461433404694,
+        "body": {},
+        "duration": 138,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T17:43:24.833Z",
+        "updatedAt": "2016-04-23T17:43:24.833Z",
+        "id": 2749
+      },
+      {
+        "start": 1461433404966,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T17:43:24.970Z",
+        "updatedAt": "2016-04-23T17:43:24.970Z",
+        "id": 2750
+      },
+      {
+        "start": 1461433405111,
+        "body": {},
+        "duration": 5,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:43:25.118Z",
+        "updatedAt": "2016-04-23T17:43:25.118Z",
+        "id": 2751
+      },
+      {
+        "start": 1461433405430,
+        "body": {},
+        "duration": 3,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:43:25.434Z",
+        "updatedAt": "2016-04-23T17:43:25.434Z",
+        "id": 2752
+      },
+      {
+        "start": 1461433405609,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T17:43:25.613Z",
+        "updatedAt": "2016-04-23T17:43:25.613Z",
+        "id": 2753
+      },
+      {
+        "start": 1461433410391,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 6,
+        "statusCode": 401,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:43:30.400Z",
+        "updatedAt": "2016-04-23T17:43:30.400Z",
+        "id": 2754
+      },
+      {
+        "start": 1461433412468,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 3,
+        "statusCode": 401,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:43:32.475Z",
+        "updatedAt": "2016-04-23T17:43:32.475Z",
+        "id": 2755
+      },
+      {
+        "start": 1461433483648,
+        "body": {},
+        "duration": 30,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T17:44:43.721Z",
+        "updatedAt": "2016-04-23T17:44:43.721Z",
+        "id": 2756
+      },
+      {
+        "start": 1461433484131,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T17:44:44.147Z",
+        "updatedAt": "2016-04-23T17:44:44.147Z",
+        "id": 2757
+      },
+      {
+        "start": 1461433484430,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T17:44:44.440Z",
+        "updatedAt": "2016-04-23T17:44:44.440Z",
+        "id": 2758
+      },
+      {
+        "start": 1461433484602,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:44:44.614Z",
+        "updatedAt": "2016-04-23T17:44:44.614Z",
+        "id": 2759
+      },
+      {
+        "start": 1461433484603,
+        "body": {},
+        "duration": 159,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T17:44:44.763Z",
+        "updatedAt": "2016-04-23T17:44:44.763Z",
+        "id": 2760
+      },
+      {
+        "start": 1461433484604,
+        "body": {},
+        "duration": 314,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T17:44:44.920Z",
+        "updatedAt": "2016-04-23T17:44:44.920Z",
+        "id": 2761
+      },
+      {
+        "start": 1461433484605,
+        "body": {},
+        "duration": 486,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T17:44:45.102Z",
+        "updatedAt": "2016-04-23T17:44:45.102Z",
+        "id": 2762
+      },
+      {
+        "start": 1461433484607,
+        "body": {},
+        "duration": 679,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T17:44:45.287Z",
+        "updatedAt": "2016-04-23T17:44:45.287Z",
+        "id": 2763
+      },
+      {
+        "start": 1461433485465,
+        "body": {},
+        "duration": 5,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:44:45.472Z",
+        "updatedAt": "2016-04-23T17:44:45.472Z",
+        "id": 2764
+      },
+      {
+        "start": 1461433485728,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T17:44:45.739Z",
+        "updatedAt": "2016-04-23T17:44:45.739Z",
+        "id": 2765
+      },
+      {
+        "start": 1461433485731,
+        "body": {},
+        "duration": 152,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T17:44:45.885Z",
+        "updatedAt": "2016-04-23T17:44:45.885Z",
+        "id": 2766
+      },
+      {
+        "start": 1461433485732,
+        "body": {},
+        "duration": 320,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T17:44:46.057Z",
+        "updatedAt": "2016-04-23T17:44:46.057Z",
+        "id": 2767
+      },
+      {
+        "start": 1461433486260,
+        "body": {},
+        "duration": 12,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:44:46.277Z",
+        "updatedAt": "2016-04-23T17:44:46.277Z",
+        "id": 2768
+      },
+      {
+        "start": 1461433486446,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T17:44:46.450Z",
+        "updatedAt": "2016-04-23T17:44:46.450Z",
+        "id": 2769
+      },
+      {
+        "start": 1461433491551,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 7,
+        "statusCode": 401,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:44:51.561Z",
+        "updatedAt": "2016-04-23T17:44:51.561Z",
+        "id": 2770
+      },
+      {
+        "start": 1461433493500,
+        "body": {
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 1,
+        "statusCode": 401,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:44:53.505Z",
+        "updatedAt": "2016-04-23T17:44:53.505Z",
+        "id": 2771
+      },
+      {
+        "start": 1461433499438,
+        "body": {},
+        "duration": 5,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T17:44:59.447Z",
+        "updatedAt": "2016-04-23T17:44:59.447Z",
+        "id": 2772
+      },
+      {
+        "start": 1461433499441,
+        "body": {},
+        "duration": 164,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:44:59.608Z",
+        "updatedAt": "2016-04-23T17:44:59.608Z",
+        "id": 2773
+      },
+      {
+        "start": 1461433499767,
+        "body": {},
+        "duration": 7,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T17:44:59.781Z",
+        "updatedAt": "2016-04-23T17:44:59.781Z",
+        "id": 2774
+      },
+      {
+        "start": 1461433499769,
+        "body": {},
+        "duration": 165,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:44:59.936Z",
+        "updatedAt": "2016-04-23T17:44:59.936Z",
+        "id": 2775
+      },
+      {
+        "start": 1461433499773,
+        "body": {},
+        "duration": 321,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js.map",
+        "createdAt": "2016-04-23T17:45:00.097Z",
+        "updatedAt": "2016-04-23T17:45:00.097Z",
+        "id": 2776
+      },
+      {
+        "start": 1461433499770,
+        "body": {},
+        "duration": 475,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.map",
+        "createdAt": "2016-04-23T17:45:00.248Z",
+        "updatedAt": "2016-04-23T17:45:00.248Z",
+        "id": 2777
+      },
+      {
+        "start": 1461433590216,
+        "body": {},
+        "duration": 42,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T17:46:30.291Z",
+        "updatedAt": "2016-04-23T17:46:30.291Z",
+        "id": 2778
+      },
+      {
+        "start": 1461433590815,
+        "body": {},
+        "duration": 21,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T17:46:30.841Z",
+        "updatedAt": "2016-04-23T17:46:30.841Z",
+        "id": 2779
+      },
+      {
+        "start": 1461433591111,
+        "body": {},
+        "duration": 12,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T17:46:31.125Z",
+        "updatedAt": "2016-04-23T17:46:31.125Z",
+        "id": 2780
+      },
+      {
+        "start": 1461433591114,
+        "body": {},
+        "duration": 178,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T17:46:31.293Z",
+        "updatedAt": "2016-04-23T17:46:31.293Z",
+        "id": 2781
+      },
+      {
+        "start": 1461433591116,
+        "body": {},
+        "duration": 344,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T17:46:31.461Z",
+        "updatedAt": "2016-04-23T17:46:31.461Z",
+        "id": 2782
+      },
+      {
+        "start": 1461433591117,
+        "body": {},
+        "duration": 519,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T17:46:31.637Z",
+        "updatedAt": "2016-04-23T17:46:31.637Z",
+        "id": 2783
+      },
+      {
+        "start": 1461433591115,
+        "body": {},
+        "duration": 676,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T17:46:31.795Z",
+        "updatedAt": "2016-04-23T17:46:31.795Z",
+        "id": 2784
+      },
+      {
+        "start": 1461433591118,
+        "body": {},
+        "duration": 853,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T17:46:31.973Z",
+        "updatedAt": "2016-04-23T17:46:31.973Z",
+        "id": 2785
+      },
+      {
+        "start": 1461433591633,
+        "body": {},
+        "duration": 538,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T17:46:32.173Z",
+        "updatedAt": "2016-04-23T17:46:32.173Z",
+        "id": 2786
+      },
+      {
+        "start": 1461433591788,
+        "body": {},
+        "duration": 703,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T17:46:32.496Z",
+        "updatedAt": "2016-04-23T17:46:32.496Z",
+        "id": 2787
+      },
+      {
+        "start": 1461433591789,
+        "body": {},
+        "duration": 904,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T17:46:32.695Z",
+        "updatedAt": "2016-04-23T17:46:32.695Z",
+        "id": 2788
+      },
+      {
+        "start": 1461433592691,
+        "body": {},
+        "duration": 184,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js.map",
+        "createdAt": "2016-04-23T17:46:32.878Z",
+        "updatedAt": "2016-04-23T17:46:32.878Z",
+        "id": 2789
+      },
+      {
+        "start": 1461433591969,
+        "body": {},
+        "duration": 1069,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T17:46:33.042Z",
+        "updatedAt": "2016-04-23T17:46:33.042Z",
+        "id": 2790
+      },
+      {
+        "start": 1461433592681,
+        "body": {},
+        "duration": 540,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.map",
+        "createdAt": "2016-04-23T17:46:33.224Z",
+        "updatedAt": "2016-04-23T17:46:33.224Z",
+        "id": 2791
+      },
+      {
+        "start": 1461433593427,
+        "body": {},
+        "duration": 5,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:46:33.436Z",
+        "updatedAt": "2016-04-23T17:46:33.436Z",
+        "id": 2792
+      },
+      {
+        "start": 1461433593630,
+        "body": {},
+        "duration": 4,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T17:46:33.637Z",
+        "updatedAt": "2016-04-23T17:46:33.637Z",
+        "id": 2793
+      },
+      {
+        "start": 1461433596882,
+        "body": {
+          "role": "core",
+          "cmd": "auth",
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 11,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:36.896Z",
+        "updatedAt": "2016-04-23T17:46:36.896Z",
+        "id": 2794
+      },
+      {
+        "start": 1461433598644,
+        "body": {},
+        "duration": 747,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-23T17:46:39.392Z",
+        "updatedAt": "2016-04-23T17:46:39.392Z",
+        "id": 2795
+      },
+      {
+        "start": 1461433597094,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 2506,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:39.605Z",
+        "updatedAt": "2016-04-23T17:46:39.605Z",
+        "id": 2796
+      },
+      {
+        "start": 1461433597090,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 2511,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:39.762Z",
+        "updatedAt": "2016-04-23T17:46:39.762Z",
+        "id": 2797
+      },
+      {
+        "start": 1461433605647,
+        "body": {},
+        "duration": 23,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniversities",
+        "createdAt": "2016-04-23T17:46:45.675Z",
+        "updatedAt": "2016-04-23T17:46:45.675Z",
+        "id": 2798
+      },
+      {
+        "start": 1461433607327,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 258,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:47.589Z",
+        "updatedAt": "2016-04-23T17:46:47.589Z",
+        "id": 2799
+      },
+      {
+        "start": 1461433609311,
+        "body": {},
+        "duration": 31,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboard/1",
+        "createdAt": "2016-04-23T17:46:49.346Z",
+        "updatedAt": "2016-04-23T17:46:49.346Z",
+        "id": 2800
+      },
+      {
+        "start": 1461433609554,
+        "body": {},
+        "duration": 23,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboardOld/1",
+        "createdAt": "2016-04-23T17:46:49.579Z",
+        "updatedAt": "2016-04-23T17:46:49.579Z",
+        "id": 2801
+      },
+      {
+        "start": 1461433610115,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 143,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-23T17:46:50.260Z",
+        "updatedAt": "2016-04-23T17:46:50.260Z",
+        "id": 2802
+      },
+      {
+        "start": 1461433611633,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 177,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:51.813Z",
+        "updatedAt": "2016-04-23T17:46:51.813Z",
+        "id": 2803
+      },
+      {
+        "start": 1461433612105,
+        "body": {},
+        "duration": 22,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboard/1",
+        "createdAt": "2016-04-23T17:46:52.128Z",
+        "updatedAt": "2016-04-23T17:46:52.128Z",
+        "id": 2804
+      },
+      {
+        "start": 1461433612550,
+        "body": {},
+        "duration": 27,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboard/1",
+        "createdAt": "2016-04-23T17:46:52.579Z",
+        "updatedAt": "2016-04-23T17:46:52.579Z",
+        "id": 2805
+      },
+      {
+        "start": 1461433612854,
+        "body": {},
+        "duration": 17,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getNoticeboardOld/1",
+        "createdAt": "2016-04-23T17:46:52.872Z",
+        "updatedAt": "2016-04-23T17:46:52.872Z",
+        "id": 2806
+      },
+      {
+        "start": 1461433614918,
+        "body": {
+          "searchTerm": "''"
+        },
+        "duration": 95,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/saerchStudent/1",
+        "createdAt": "2016-04-23T17:46:55.015Z",
+        "updatedAt": "2016-04-23T17:46:55.015Z",
+        "id": 2807
+      },
+      {
+        "start": 1461433617078,
+        "body": {},
+        "duration": 36,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getAdmins/1",
+        "createdAt": "2016-04-23T17:46:57.121Z",
+        "updatedAt": "2016-04-23T17:46:57.121Z",
+        "id": 2808
+      },
+      {
+        "start": 1461433617098,
+        "body": {},
+        "duration": 203,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getRevokedAdmins/1",
+        "createdAt": "2016-04-23T17:46:57.303Z",
+        "updatedAt": "2016-04-23T17:46:57.303Z",
+        "id": 2809
+      },
+      {
+        "start": 1461433619843,
+        "body": {
+          "role": "registra",
+          "cmd": "get_all",
+          "uni_id": "1"
+        },
+        "duration": 31,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:46:59.877Z",
+        "updatedAt": "2016-04-23T17:46:59.877Z",
+        "id": 2810
+      },
+      {
+        "start": 1461433619854,
+        "body": {},
+        "duration": 235,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getRevokedAdmins/1",
+        "createdAt": "2016-04-23T17:47:00.095Z",
+        "updatedAt": "2016-04-23T17:47:00.095Z",
+        "id": 2811
+      },
+      {
+        "start": 1461433621729,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getAdmins/1",
+        "createdAt": "2016-04-23T17:47:01.746Z",
+        "updatedAt": "2016-04-23T17:47:01.746Z",
+        "id": 2812
+      },
+      {
+        "start": 1461433621921,
+        "body": {},
+        "duration": 10,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getRevokedAdmins/1",
+        "createdAt": "2016-04-23T17:47:01.932Z",
+        "updatedAt": "2016-04-23T17:47:01.932Z",
+        "id": 2813
+      },
+      {
+        "start": 1461433624914,
+        "body": {},
+        "duration": 5,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-23T17:47:04.928Z",
+        "updatedAt": "2016-04-23T17:47:04.928Z",
+        "id": 2814
+      },
+      {
+        "start": 1461433627979,
+        "body": {
+          "role": "core",
+          "cmd": "auth",
+          "identifier": "ff",
+          "password": "ff"
+        },
+        "duration": 4,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:47:07.985Z",
+        "updatedAt": "2016-04-23T17:47:07.985Z",
+        "id": 2815
+      },
+      {
+        "start": 1461433628143,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 2270,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:47:10.421Z",
+        "updatedAt": "2016-04-23T17:47:10.421Z",
+        "id": 2816
+      },
+      {
+        "start": 1461433628138,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 2280,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T17:47:10.584Z",
+        "updatedAt": "2016-04-23T17:47:10.584Z",
+        "id": 2817
+      },
+      {
+        "start": 1461437268022,
+        "body": {},
+        "duration": 35,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T18:47:48.088Z",
+        "updatedAt": "2016-04-23T18:47:48.088Z",
+        "id": 2818
+      },
+      {
+        "start": 1461437268690,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T18:47:48.707Z",
+        "updatedAt": "2016-04-23T18:47:48.707Z",
+        "id": 2819
+      },
+      {
+        "start": 1461437269035,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T18:47:49.046Z",
+        "updatedAt": "2016-04-23T18:47:49.046Z",
+        "id": 2820
+      },
+      {
+        "start": 1461437269270,
+        "body": {},
+        "duration": 8,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T18:47:49.281Z",
+        "updatedAt": "2016-04-23T18:47:49.281Z",
+        "id": 2821
+      },
+      {
+        "start": 1461437269271,
+        "body": {},
+        "duration": 186,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T18:47:49.458Z",
+        "updatedAt": "2016-04-23T18:47:49.458Z",
+        "id": 2822
+      },
+      {
+        "start": 1461437269272,
+        "body": {},
+        "duration": 375,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T18:47:49.648Z",
+        "updatedAt": "2016-04-23T18:47:49.648Z",
+        "id": 2823
+      },
+      {
+        "start": 1461437269273,
+        "body": {},
+        "duration": 552,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T18:47:49.829Z",
+        "updatedAt": "2016-04-23T18:47:49.829Z",
+        "id": 2824
+      },
+      {
+        "start": 1461437269275,
+        "body": {},
+        "duration": 734,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T18:47:50.010Z",
+        "updatedAt": "2016-04-23T18:47:50.010Z",
+        "id": 2825
+      },
+      {
+        "start": 1461437270005,
+        "body": {},
+        "duration": 171,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T18:47:50.179Z",
+        "updatedAt": "2016-04-23T18:47:50.179Z",
+        "id": 2826
+      },
+      {
+        "start": 1461437270374,
+        "body": {},
+        "duration": 13,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T18:47:50.388Z",
+        "updatedAt": "2016-04-23T18:47:50.388Z",
+        "id": 2827
+      },
+      {
+        "start": 1461437270377,
+        "body": {},
+        "duration": 169,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T18:47:50.548Z",
+        "updatedAt": "2016-04-23T18:47:50.548Z",
+        "id": 2828
+      },
+      {
+        "start": 1461437270378,
+        "body": {},
+        "duration": 355,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T18:47:50.742Z",
+        "updatedAt": "2016-04-23T18:47:50.742Z",
+        "id": 2829
+      },
+      {
+        "start": 1461437272201,
+        "body": {},
+        "duration": 785,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T18:47:52.988Z",
+        "updatedAt": "2016-04-23T18:47:52.988Z",
+        "id": 2830
+      },
+      {
+        "start": 1461437272202,
+        "body": {},
+        "duration": 1729,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-23T18:47:53.933Z",
+        "updatedAt": "2016-04-23T18:47:53.933Z",
+        "id": 2831
+      },
+      {
+        "start": 1461437272200,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 1934,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T18:47:54.138Z",
+        "updatedAt": "2016-04-23T18:47:54.138Z",
+        "id": 2832
+      },
+      {
+        "start": 1461437271280,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 2856,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T18:47:54.354Z",
+        "updatedAt": "2016-04-23T18:47:54.354Z",
+        "id": 2833
+      },
+      {
+        "start": 1461442961693,
+        "body": {},
+        "duration": 28,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-23T20:22:41.724Z",
+        "updatedAt": "2016-04-23T20:22:41.724Z",
+        "id": 2834
+      },
+      {
+        "start": 1461442962285,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T20:22:42.355Z",
+        "updatedAt": "2016-04-23T20:22:42.355Z",
+        "id": 2835
+      },
+      {
+        "start": 1461442962280,
+        "body": {},
+        "duration": 277,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-23T20:22:42.561Z",
+        "updatedAt": "2016-04-23T20:22:42.561Z",
+        "id": 2836
+      },
+      {
+        "start": 1461442962282,
+        "body": {},
+        "duration": 564,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-23T20:22:42.849Z",
+        "updatedAt": "2016-04-23T20:22:42.849Z",
+        "id": 2837
+      },
+      {
+        "start": 1461442963057,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T20:22:43.070Z",
+        "updatedAt": "2016-04-23T20:22:43.070Z",
+        "id": 2838
+      },
+      {
+        "start": 1461442963062,
+        "body": {},
+        "duration": 167,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-23T20:22:43.231Z",
+        "updatedAt": "2016-04-23T20:22:43.231Z",
+        "id": 2839
+      },
+      {
+        "start": 1461442963063,
+        "body": {},
+        "duration": 321,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-23T20:22:43.387Z",
+        "updatedAt": "2016-04-23T20:22:43.387Z",
+        "id": 2840
+      },
+      {
+        "start": 1461442963064,
+        "body": {},
+        "duration": 476,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T20:22:43.542Z",
+        "updatedAt": "2016-04-23T20:22:43.542Z",
+        "id": 2841
+      },
+      {
+        "start": 1461442963065,
+        "body": {},
+        "duration": 624,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-23T20:22:43.690Z",
+        "updatedAt": "2016-04-23T20:22:43.690Z",
+        "id": 2842
+      },
+      {
+        "start": 1461442963066,
+        "body": {},
+        "duration": 769,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T20:22:43.836Z",
+        "updatedAt": "2016-04-23T20:22:43.836Z",
+        "id": 2843
+      },
+      {
+        "start": 1461442963999,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-23T20:22:44.003Z",
+        "updatedAt": "2016-04-23T20:22:44.003Z",
+        "id": 2844
+      },
+      {
+        "start": 1461442963998,
+        "body": {},
+        "duration": 171,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-23T20:22:44.171Z",
+        "updatedAt": "2016-04-23T20:22:44.171Z",
+        "id": 2845
+      },
+      {
+        "start": 1461442965682,
+        "body": {},
+        "duration": 793,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-23T20:22:46.477Z",
+        "updatedAt": "2016-04-23T20:22:46.477Z",
+        "id": 2846
+      },
+      {
+        "start": 1461442965688,
+        "body": {},
+        "duration": 1773,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-23T20:22:47.462Z",
+        "updatedAt": "2016-04-23T20:22:47.462Z",
+        "id": 2847
+      },
+      {
+        "start": 1461442965680,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 2001,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T20:22:47.686Z",
+        "updatedAt": "2016-04-23T20:22:47.686Z",
+        "id": 2848
+      },
+      {
+        "start": 1461442964655,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 3027,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-23T20:22:47.858Z",
+        "updatedAt": "2016-04-23T20:22:47.858Z",
+        "id": 2849
+      },
+      {
+        "start": 1461446371176,
+        "body": {},
+        "duration": 150,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-23T21:19:31.329Z",
+        "updatedAt": "2016-04-23T21:19:31.329Z",
+        "id": 2850
+      },
+      {
+        "start": 1461446371995,
+        "body": {},
+        "duration": 43,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-23T21:19:32.040Z",
+        "updatedAt": "2016-04-23T21:19:32.040Z",
+        "id": 2851
+      },
+      {
+        "start": 1461446372229,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-23T21:19:32.233Z",
+        "updatedAt": "2016-04-23T21:19:32.233Z",
+        "id": 2852
+      },
+      {
+        "start": 1461446372510,
+        "body": {},
+        "duration": 236,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-23T21:19:32.749Z",
+        "updatedAt": "2016-04-23T21:19:32.749Z",
+        "id": 2853
+      },
+      {
+        "start": 1461446372513,
+        "body": {},
+        "duration": 391,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-23T21:19:32.905Z",
+        "updatedAt": "2016-04-23T21:19:32.905Z",
+        "id": 2854
+      },
+      {
+        "start": 1461446372514,
+        "body": {},
+        "duration": 546,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/homepage.bundle.js",
+        "createdAt": "2016-04-23T21:19:33.062Z",
+        "updatedAt": "2016-04-23T21:19:33.062Z",
+        "id": 2855
+      },
+      {
+        "start": 1461514406325,
+        "body": {},
+        "duration": 218,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/",
+        "createdAt": "2016-04-24T16:13:26.568Z",
+        "updatedAt": "2016-04-24T16:13:26.568Z",
+        "id": 2856
+      },
+      {
+        "start": 1461514407179,
+        "body": {},
+        "duration": 12,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-24T16:13:27.198Z",
+        "updatedAt": "2016-04-24T16:13:27.198Z",
+        "id": 2857
+      },
+      {
+        "start": 1461514407412,
+        "body": {},
+        "duration": 6,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-24T16:13:27.420Z",
+        "updatedAt": "2016-04-24T16:13:27.420Z",
+        "id": 2858
+      },
+      {
+        "start": 1461514407413,
+        "body": {},
+        "duration": 237,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-24T16:13:27.651Z",
+        "updatedAt": "2016-04-24T16:13:27.651Z",
+        "id": 2859
+      },
+      {
+        "start": 1461514407415,
+        "body": {},
+        "duration": 391,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-24T16:13:27.807Z",
+        "updatedAt": "2016-04-24T16:13:27.807Z",
+        "id": 2860
+      },
+      {
+        "start": 1461514407416,
+        "body": {},
+        "duration": 550,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/homepage.bundle.js",
+        "createdAt": "2016-04-24T16:13:27.967Z",
+        "updatedAt": "2016-04-24T16:13:27.967Z",
+        "id": 2861
+      },
+      {
+        "start": 1461514408752,
+        "body": {},
+        "duration": 6,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/favicon.ico",
+        "createdAt": "2016-04-24T16:13:28.762Z",
+        "updatedAt": "2016-04-24T16:13:28.762Z",
+        "id": 2862
+      },
+      {
+        "start": 1461514411107,
+        "body": {},
+        "duration": 4,
+        "statusCode": 303,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja",
+        "createdAt": "2016-04-24T16:13:31.112Z",
+        "updatedAt": "2016-04-24T16:13:31.112Z",
+        "id": 2863
+      },
+      {
+        "start": 1461514411314,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-24T16:13:31.326Z",
+        "updatedAt": "2016-04-24T16:13:31.326Z",
+        "id": 2864
+      },
+      {
+        "start": 1461514411895,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-24T16:13:31.907Z",
+        "updatedAt": "2016-04-24T16:13:31.907Z",
+        "id": 2865
+      },
+      {
+        "start": 1461514412107,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-24T16:13:32.121Z",
+        "updatedAt": "2016-04-24T16:13:32.121Z",
+        "id": 2866
+      },
+      {
+        "start": 1461514412108,
+        "body": {},
+        "duration": 174,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-24T16:13:32.284Z",
+        "updatedAt": "2016-04-24T16:13:32.284Z",
+        "id": 2867
+      },
+      {
+        "start": 1461514412113,
+        "body": {},
+        "duration": 317,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-24T16:13:32.433Z",
+        "updatedAt": "2016-04-24T16:13:32.433Z",
+        "id": 2868
+      },
+      {
+        "start": 1461514412115,
+        "body": {},
+        "duration": 466,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-24T16:13:32.590Z",
+        "updatedAt": "2016-04-24T16:13:32.590Z",
+        "id": 2869
+      },
+      {
+        "start": 1461514412735,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-24T16:13:32.740Z",
+        "updatedAt": "2016-04-24T16:13:32.740Z",
+        "id": 2870
+      },
+      {
+        "start": 1461514413004,
+        "body": {},
+        "duration": 52,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-24T16:13:33.061Z",
+        "updatedAt": "2016-04-24T16:13:33.061Z",
+        "id": 2871
+      },
+      {
+        "start": 1461514413052,
+        "body": {},
+        "duration": 168,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-24T16:13:33.229Z",
+        "updatedAt": "2016-04-24T16:13:33.229Z",
+        "id": 2872
+      },
+      {
+        "start": 1461514413377,
+        "body": {},
+        "duration": 4,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-24T16:13:33.383Z",
+        "updatedAt": "2016-04-24T16:13:33.383Z",
+        "id": 2873
+      },
+      {
+        "start": 1461514413010,
+        "body": {},
+        "duration": 534,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-24T16:13:33.546Z",
+        "updatedAt": "2016-04-24T16:13:33.546Z",
+        "id": 2874
+      },
+      {
+        "start": 1461514413854,
+        "body": {},
+        "duration": 1,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-24T16:13:33.856Z",
+        "updatedAt": "2016-04-24T16:13:33.856Z",
+        "id": 2875
+      },
+      {
+        "start": 1461514414286,
+        "body": {},
+        "duration": 7,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/undefined",
+        "createdAt": "2016-04-24T16:13:34.294Z",
+        "updatedAt": "2016-04-24T16:13:34.294Z",
+        "id": 2876
+      },
+      {
+        "start": 1461514414511,
+        "body": {},
+        "duration": 3,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-24T16:13:34.519Z",
+        "updatedAt": "2016-04-24T16:13:34.519Z",
+        "id": 2877
+      },
+      {
+        "start": 1461514419291,
+        "body": {
+          "role": "core",
+          "cmd": "auth",
+          "identifier": "dd",
+          "password": "dd"
+        },
+        "duration": 34,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:13:39.330Z",
+        "updatedAt": "2016-04-24T16:13:39.330Z",
+        "id": 2878
+      },
+      {
+        "start": 1461514421337,
+        "body": {},
+        "duration": 803,
+        "statusCode": 404,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/images/user-bg.jpg",
+        "createdAt": "2016-04-24T16:13:42.141Z",
+        "updatedAt": "2016-04-24T16:13:42.141Z",
+        "id": 2879
+      },
+      {
+        "start": 1461514419528,
+        "body": {
+          "role": "app",
+          "cmd": "get_requests"
+        },
+        "duration": 2804,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:13:42.335Z",
+        "updatedAt": "2016-04-24T16:13:42.335Z",
+        "id": 2880
+      },
+      {
+        "start": 1461514419525,
+        "body": {
+          "role": "app",
+          "cmd": "get_stats"
+        },
+        "duration": 2809,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:13:42.495Z",
+        "updatedAt": "2016-04-24T16:13:42.495Z",
+        "id": 2881
+      },
+      {
+        "start": 1461514431839,
+        "body": {},
+        "duration": 21,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getUniversities",
+        "createdAt": "2016-04-24T16:13:51.863Z",
+        "updatedAt": "2016-04-24T16:13:51.863Z",
+        "id": 2882
+      },
+      {
+        "start": 1461514449557,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "admin",
+          "uni_id": "1",
+          "username": "ff",
+          "password": "ff"
+        },
+        "duration": 72,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:14:09.631Z",
+        "updatedAt": "2016-04-24T16:14:09.631Z",
+        "id": 2883
+      },
+      {
+        "start": 1461514449843,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 223,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:14:10.068Z",
+        "updatedAt": "2016-04-24T16:14:10.068Z",
+        "id": 2884
+      },
+      {
+        "start": 1461514457770,
+        "body": {},
+        "duration": 22,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getAdmins/1",
+        "createdAt": "2016-04-24T16:14:17.795Z",
+        "updatedAt": "2016-04-24T16:14:17.795Z",
+        "id": 2885
+      },
+      {
+        "start": 1461514457979,
+        "body": {},
+        "duration": 33,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/basic/getRevokedAdmins/1",
+        "createdAt": "2016-04-24T16:14:18.014Z",
+        "updatedAt": "2016-04-24T16:14:18.014Z",
+        "id": 2886
+      },
+      {
+        "start": 1461514462746,
+        "body": {
+          "role": "university",
+          "cmd": "get_stats",
+          "university_id": "1"
+        },
+        "duration": 128,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:14:22.878Z",
+        "updatedAt": "2016-04-24T16:14:22.878Z",
+        "id": 2887
+      },
+      {
+        "start": 1461514477278,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "registra",
+          "uni_id": "1",
+          "username": "ggg",
+          "password": "ggg"
+        },
+        "duration": 94,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:14:37.375Z",
+        "updatedAt": "2016-04-24T16:14:37.375Z",
+        "id": 2888
+      },
+      {
+        "start": 1461514487055,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "admin",
+          "uni_id": "1",
+          "username": "g",
+          "password": "ggg"
+        },
+        "duration": 32,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:14:47.091Z",
+        "updatedAt": "2016-04-24T16:14:47.091Z",
+        "id": 2889
+      },
+      {
+        "start": 1461514500811,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "student",
+          "uni_id": "1",
+          "username": "g",
+          "password": "ggg"
+        },
+        "duration": 16,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:15:00.834Z",
+        "updatedAt": "2016-04-24T16:15:00.834Z",
+        "id": 2890
+      },
+      {
+        "start": 1461514704064,
+        "body": {},
+        "duration": 30,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/",
+        "createdAt": "2016-04-24T16:18:24.127Z",
+        "updatedAt": "2016-04-24T16:18:24.127Z",
+        "id": 2891
+      },
+      {
+        "start": 1461514704568,
+        "body": {},
+        "duration": 11,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/flash.css",
+        "createdAt": "2016-04-24T16:18:24.584Z",
+        "updatedAt": "2016-04-24T16:18:24.584Z",
+        "id": 2892
+      },
+      {
+        "start": 1461514704819,
+        "body": {},
+        "duration": 9,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/pace.js",
+        "createdAt": "2016-04-24T16:18:24.830Z",
+        "updatedAt": "2016-04-24T16:18:24.830Z",
+        "id": 2893
+      },
+      {
+        "start": 1461514704821,
+        "body": {},
+        "duration": 274,
+        "statusCode": 304,
+        "ip": null,
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-24T16:18:25.096Z",
+        "updatedAt": "2016-04-24T16:18:25.096Z",
+        "id": 2894
+      },
+      {
+        "start": 1461514704822,
+        "body": {},
+        "duration": 420,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/jquery/dist/jquery.min.js",
+        "createdAt": "2016-04-24T16:18:25.244Z",
+        "updatedAt": "2016-04-24T16:18:25.244Z",
+        "id": 2895
+      },
+      {
+        "start": 1461514704823,
+        "body": {},
+        "duration": 566,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/js/materialize.min.js",
+        "createdAt": "2016-04-24T16:18:25.390Z",
+        "updatedAt": "2016-04-24T16:18:25.390Z",
+        "id": 2896
+      },
+      {
+        "start": 1461514704824,
+        "body": {},
+        "duration": 714,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/moment.min.js",
+        "createdAt": "2016-04-24T16:18:25.540Z",
+        "updatedAt": "2016-04-24T16:18:25.540Z",
+        "id": 2897
+      },
+      {
+        "start": 1461514704825,
+        "body": {},
+        "duration": 867,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/mithril/mithril.min.js",
+        "createdAt": "2016-04-24T16:18:25.694Z",
+        "updatedAt": "2016-04-24T16:18:25.694Z",
+        "id": 2898
+      },
+      {
+        "start": 1461514705878,
+        "body": {},
+        "duration": 6,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/highcharts.min.js",
+        "createdAt": "2016-04-24T16:18:25.886Z",
+        "updatedAt": "2016-04-24T16:18:25.886Z",
+        "id": 2899
+      },
+      {
+        "start": 1461514706147,
+        "body": {},
+        "duration": 31,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/ninja/ninja.bundle.js",
+        "createdAt": "2016-04-24T16:18:26.188Z",
+        "updatedAt": "2016-04-24T16:18:26.188Z",
+        "id": 2900
+      },
+      {
+        "start": 1461514706152,
+        "body": {},
+        "duration": 188,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/css/styles.css",
+        "createdAt": "2016-04-24T16:18:26.343Z",
+        "updatedAt": "2016-04-24T16:18:26.343Z",
+        "id": 2901
+      },
+      {
+        "start": 1461514706151,
+        "body": {},
+        "duration": 343,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/css/materialize.min.css",
+        "createdAt": "2016-04-24T16:18:26.495Z",
+        "updatedAt": "2016-04-24T16:18:26.495Z",
+        "id": 2902
+      },
+      {
+        "start": 1461514706906,
+        "body": {},
+        "duration": 44,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/Ideal-Image-Slider-1.5.0/example/css/normalize.css",
+        "createdAt": "2016-04-24T16:18:26.952Z",
+        "updatedAt": "2016-04-24T16:18:26.952Z",
+        "id": 2903
+      },
+      {
+        "start": 1461514707403,
+        "body": {},
+        "duration": 2,
+        "statusCode": 304,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/__dependencies/js/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2",
+        "createdAt": "2016-04-24T16:18:27.406Z",
+        "updatedAt": "2016-04-24T16:18:27.406Z",
+        "id": 2904
+      },
+      {
+        "start": 1461515071874,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "admin",
+          "uni_id": "1",
+          "username": "dd",
+          "password": "dd"
+        },
+        "duration": 137,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:24:32.017Z",
+        "updatedAt": "2016-04-24T16:24:32.017Z",
+        "id": 2905
+      },
+      {
+        "start": 1461515081612,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "registra",
+          "uni_id": "1",
+          "username": "dddd",
+          "password": "dd"
+        },
+        "duration": 67,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:24:41.682Z",
+        "updatedAt": "2016-04-24T16:24:41.682Z",
+        "id": 2906
+      },
+      {
+        "start": 1461515088077,
+        "body": {
+          "role": "university",
+          "cmd": "auth",
+          "userType": "student",
+          "uni_id": "1",
+          "username": "dddd",
+          "password": "dd"
+        },
+        "duration": 11,
+        "statusCode": 200,
+        "ip": "::ffff:127.0.0.1",
+        "url": "/services",
+        "createdAt": "2016-04-24T16:24:48.091Z",
+        "updatedAt": "2016-04-24T16:24:48.091Z",
+        "id": 2907
       }
     ],
     "proschool": [
@@ -32872,7 +35220,7 @@
       "id": 2
     },
     "request": {
-      "id": 2708
+      "id": 2907
     },
     "proschool": {
       "id": 1
