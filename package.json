@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "cd api && npm install",
-    "dev": "cd api && nodemon index.js & cd clients && webpack",
+    "dev": "nodemon api/index.js | bunyan -o short & cd clients && webpack",
     "deploy": "git add --all && git commit -m 'deploy commit'  && git push origin master",
     "logs": "rhc tail -a premier",
     "start": "node api/index.js",
