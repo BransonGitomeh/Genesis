@@ -218,5 +218,19 @@ m.route(document.body, '/', {
     body: require("../ninja/app/uni/students/enterOtherDetails"),
   }),
 
+  // view registras
+  "/uni/registrars/:uniName/:uniId": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/users/registra/allRegistras")
+  }),
+  // add registras
+  "/uni/registra/:uniName/:uniId/add": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/users/registra/newRegistras")
+  }),
 
+  "/uni/:uniName/:uniId/noticeboard/add": m(adminUi, {
+    config: adminConfig,
+    body: require("../ninja/app/uni/newnotice")
+  })
 });

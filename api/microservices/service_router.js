@@ -604,6 +604,13 @@ module.exports = function(db) {
 						var records = tobetakenPercent/100 * requests
 
 						db.request.find().skip(records).exec(function(err, requests) {
+							var _ = require("lodash")
+
+							var uniqueIPs = _.uniq(requests,"ip")
+							var uniqueUrls = _.uniq(requests,"url")
+							// console.log(uniques)
+							console.log(uniqueUrls)
+
 							requests.map((request) => {
 								if (request.duration < 500) {
 									var requestString = request.url
@@ -617,7 +624,9 @@ module.exports = function(db) {
 							})
 							res(err, {
 								creaedAts: creaedAts,
-								durations: durations
+								durations: durations,
+								uniqueIPs:uniqueIPs,
+								uniqueUrl:uniqueUrls
 							})
 						})
 					})

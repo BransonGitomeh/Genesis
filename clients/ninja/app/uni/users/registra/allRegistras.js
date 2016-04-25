@@ -51,25 +51,10 @@ module.exports = {
                 m("td", admin.identifier),
                 // m("td",admin.createdAt),
                 m("td", [
-                  m("button", {
-                    class: "btn-flat waves-effect waves-cyan waves-block hoverable",
-                    onclick: function() {
-                      m.request({
-                        url: apiUrl + "/basic/revokeAdmin/" + m.route.param("uniId"),
-                        method: "POST",
-                        data: {
-                          userId: admin.id
-                        }
-                      }).then(function() {
-                        m.route(m.route())
-                      })
-                    }
-                  }, "revoke admin rights")
-                ]),
-                m("td", [
-                  m("button", {
-                    class: "btn-flat waves-effect waves-cyan waves-block hoverable"
-                  }, "View activity")
+                  m("a",{
+                    href:"/uni/admin/" + m.route.param("uniId") + "/" + m.route.param("uniId") + "/Registra/" + admin.id,
+                    config:m.route,
+                  },"more details")
                 ])
               ])
             })

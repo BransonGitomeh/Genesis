@@ -8,6 +8,8 @@ var ninjaUIConfig = require("./ninjaAdminUiConfig")
 var uniAdminUiConfig = require("../premier/uniAdminUiConfig")
 var churchiaAdminUiConfig = require("../churchia/churchiaAdminUiConfig")
 var uniStudentUiConfig = require("../premier/uniStudentUiConfig")
+var uniRegistraUiConfig = require("../premier/uniRegistraUiConfig")
+
 
 m.route.mode = "hash";
 
@@ -59,6 +61,20 @@ m.route(document.body, "/", {
 		body: require("./app/uni/students/portal/finance")
 	}),
 
+	// registra portal routes
+	"/uni/admin/:uniName/:uniId/Registra/:student_id": m(studentUi, {
+		config: uniRegistraUiConfig,
+		body: require("./app/uni/home")
+	}),
+
+	"/uni/admin/:uniName/:uniId/Registra/:student_id/finance": m(studentUi, {
+		config: uniRegistraUiConfig,
+		body: require("./app/uni/finance/search")
+	}),
+
+
+	//------
+
 	"/uniadmin/:uniName/:uniId": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/home")
@@ -107,12 +123,12 @@ m.route(document.body, "/", {
 		body: require("./app/uni/users/admins/newAdmin")
 	}),
 
-	// view admins
+	// view registras
 	"/uni/registrars/:uniName/:uniId": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/users/registra/allRegistras")
 	}),
-	// add admin
+	// add registras
 	"/uni/registra/:uniName/:uniId/add": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/users/registra/newRegistras")

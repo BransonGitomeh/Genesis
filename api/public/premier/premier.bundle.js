@@ -264,7 +264,21 @@
 	    body: __webpack_require__(89),
 	  }),
 
+	  // view registras
+	  "/uni/registrars/:uniName/:uniId": m(adminUi, {
+	    config: adminConfig,
+	    body: __webpack_require__(43)
+	  }),
+	  // add registras
+	  "/uni/registra/:uniName/:uniId/add": m(adminUi, {
+	    config: adminConfig,
+	    body: __webpack_require__(44)
+	  }),
 
+	  "/uni/:uniName/:uniId/noticeboard/add": m(adminUi, {
+	    config: adminConfig,
+	    body: __webpack_require__(40)
+	  })
 	});
 
 /***/ },
@@ -1729,7 +1743,71 @@
 	}
 
 /***/ },
-/* 40 */,
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var myComponent = __webpack_require__(38)
+	var oldNotices = __webpack_require__(39)
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+	  controller:function(){
+	    return {
+	      schema:{
+	        title:m.prop(""),
+	        content:m.prop("")
+	      }
+	    }
+	  },
+	  view:function(controller,atrrs){
+	    return m("span",[
+	       m("nav",[
+	            m(".nav-wrapper blue",[
+	            m(".col s6",[
+	              m("a",{class:"breadcrumb"},"Dashboard"),
+	              m("a",{class:"breadcrumb"},"Noticeboard"),
+	              m("a",{class:"breadcrumb"},"New")
+	            ])
+	          ])
+	        ]),
+	        m("form",{
+	          class:"container",
+	          onsubmit:function(e){
+	            m.request({
+	              url:apiUrl + "/basic/addToNoticeboard/" + m.route.param("uniId"),
+	              method:"POST",
+	              data:{
+	                title:controller.schema.title(),
+	                content:controller.schema.content()
+	              }
+	            }).then(m.route( "/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard" ))
+	            e.preventDefault();
+	          }
+	        },[
+	          // m("h1",{class:"center"},"New Noticeboard Item"),
+	          m(inputComponent,{
+	            label:"New Notice Header",
+	            icon:"mdi-communication-business prefix",
+	            type:"text",
+	            value:controller.schema.title
+	          }),
+
+	          m(inputComponent,{
+	            label:"New Notice Body",
+	            icon:"mdi-communication-business prefix",
+	            type:"textarea",
+	            value:controller.schema.content
+	          }),
+	            m("button",{
+	                type:"submit",
+	                class:"btn waves-effect waves-block waves-light green center"
+	            },"Create Notice")
+	        ])
+	      ])
+	  }
+	}
+
+
+/***/ },
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1999,8 +2077,203 @@
 
 
 /***/ },
-/* 43 */,
-/* 44 */,
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// var myComponent = require("./noticeItem")
+
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+	  controller: function() {
+	    return {
+	      registras: m.request({
+	        url: apiUrl + "/services",
+	        method: "POST",
+	        data:{
+	          role:"registra",
+	          cmd:"get_all",
+	          uni_id:m.route.param("uniId")
+	        }
+	      }),
+	      revokedAdmins: m.request({
+	        url: apiUrl + "/basic/getRevokedAdmins/" + m.route.param("uniId"),
+	        method: "GET"
+	      }),
+	      schema: {
+	        userIdentifier: m.prop(""),
+	        userUsername: m.prop(""),
+	        userPassword: m.prop(""),
+	        confirmPassword: m.prop("")
+	      }
+	    }
+	  },
+	  view: function(controller, atrrs) {
+	    return m(".row", [
+	      m(".col l12", [
+	        m("br"),
+	        //all admins
+	        // m("div", "Current Registra's"),
+	        m("a", {
+	          class: "btn blue right",
+	          href: "/uni/registra/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/add",
+	          config: m.route
+	        }, "add registra"),
+	        m("table", [
+
+	          m("thead", [
+	            m("tr", [
+	              m("th", "email"),
+	              // m("td","createdAt")
+	            ])
+	          ]),
+	          // console.log(controller.registras().res.registras)
+	          m("tbody", [
+	            controller.registras().res.registras.map(function(admin) {
+	              return m("tr", [
+	                m("td", admin.identifier),
+	                // m("td",admin.createdAt),
+	                m("td", [
+	                  m("a",{
+	                    href:"/uni/admin/" + m.route.param("uniId") + "/" + m.route.param("uniId") + "/Registra/" + admin.id,
+	                    config:m.route,
+	                  },"more details")
+	                ])
+	              ])
+	            })
+	          ])
+	        ])      
+	      ])
+	    ])
+	  }
+	}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// var myComponent = require("./noticeItem")
+
+	var inputComponent = __webpack_require__(13);
+	module.exports = {
+	  controller:function(){
+	    return {
+	      admins:m.request({
+	        url:apiUrl + "/basic/getAdmins/" + m.route.param("uniId"),
+	        method:"GET"
+	      }),
+	      schema:{
+	        userIdentifier:m.prop(""),
+	        userUsername:m.prop(""),
+	        userPassword:m.prop(""),
+	        confirmPassword:m.prop(""),
+	        //for the search existing user form
+	        existingUserIdentifier:m.prop(""),
+	      }
+	    }
+	  },
+	  view:function(controller,atrrs){
+	    return m(".row",[
+	        m("div",{class:"col l8"},[
+
+	        m("form",{
+	          class:"card-panel",
+	          onsubmit:function(e){
+	            m.request({
+	              url:apiUrl + "/services",
+	              method:"POST",
+	              data:{
+	                role:"registra",
+	                cmd:"add_new",
+	                uni_id:m.route.param("uniId"),
+	                userIdentifier:controller.schema.userIdentifier(),
+	                userUsername:controller.schema.userUsername(),
+	                userPassword:controller.schema.userPassword()
+	              }
+	            }).then(m.route("/uni/registrars/" + m.route.param("uniName") + "/" + m.route.param("uniId") )) //back to view all admins
+	            e.preventDefault();
+	          }
+	        },[
+	          m("h1",{class:"center"},"Enter new registra account"),
+
+	          m(inputComponent,{
+	            label:"Email",
+	            type:"text",
+	            sizes:"col l6",
+	            value:controller.schema.userIdentifier
+	          }),
+
+	          m(inputComponent,{
+	            label:"Surname",
+	            type:"text",
+	            sizes:"col l6",
+	            value:controller.schema.userUsername
+	          }),
+
+	          m(inputComponent,{
+	            label:"Password",
+	            type:"password",
+	            sizes:"col l6",
+	            value:controller.schema.userPassword
+	          }),
+
+	          m(inputComponent,{
+	            label:"Confirm Password",
+	            type:"password",
+	            sizes:"col l6",
+	            value:controller.schema.confirmPassword
+	          }),
+
+	            m("button",{
+	                type:"submit",
+	                class:"btn waves-effect waves-block waves-light cyan"
+	            },"Create Userx")
+	        ])
+	      ]),
+
+	      m("div",{class:"col l4"},[
+	        m("form",{
+	          class:"card-panel",
+	          onsubmit:function(e){
+	            e.preventDefault();
+	            // var move = 
+	            m.request({
+	              url:apiUrl + "/basic/addExistingUserToAdmin/" + m.route.param("uniId"),
+	              method:"POST",
+	              data:{
+	                identifier:controller.schema.existingUserIdentifier(),
+	              }
+	            }).then(function(res){
+	              console.log(res)
+	              //back to view all admins
+	              if(res.result === false){
+	                alert("no user with that email was found")
+	              }else{
+	                m.route("/uni/admins/" + m.route.param("uniName") + "/" + m.route.param("uniId") )
+	              }
+	            }) 
+	            
+	          }
+	        },[
+	          m("h1",{class:"center"},"Search existing user"),
+	          m(inputComponent,{
+	            label:"Registered email",
+	            type:"text",
+	            sizes:"col l12 center",
+	            value:controller.schema.existingUserIdentifier
+	          }),
+	            m("button",{
+	                type:"submit",
+	                dissabled:"true",
+	                class:"btn waves-effect waves-block waves-light cyan"
+	            },"Search User")
+	        ])
+	      ])
+	    ])
+	  }
+	}
+
+
+/***/ },
 /* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
