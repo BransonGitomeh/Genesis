@@ -10,7 +10,7 @@
 To start hacking on the application, read [HACKING.md][hacking] for
 guidelines and other relevant information.
 
-[hacking]:https://github.com/forfuturellc/mmtc-ke/blob/master/HACKING.md
+[hacking]:https://github.com/BransonGitomeh/Genesis/blob/master/HACKING.md
 
 
 ## license: 
