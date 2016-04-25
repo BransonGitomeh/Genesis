@@ -86,8 +86,12 @@ module.exports = (collections, config, callback) => {
 					// console.log(created.url)
 				})
 
-				log.info(res.statusCode + " - " + req.method + " - " +  req.url + "(" + duration + ")") 
-				 req.method === "POST" ?  log.info(req.body) : ""
+				if (req.url.indexOf("__") > -1) {
+					//dont log a call for assets...only log http calls
+				}else{
+					log.info(res.statusCode + " - " + req.method + " - " +  req.url + "(" + duration + ")") 
+					req.method === "POST" ?  log.info(req.body) : ""
+				}
 			});
 
 			next();
