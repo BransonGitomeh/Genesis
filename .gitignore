@@ -3,5 +3,6 @@
 #add folders for images and other things that are big and dont need to go into git
 /api/.tmp
 
-/api/public/ninja/ninja.bundle.js
+#cant ignore ninja as its deployed in production
+#/api/public/ninja/ninja.bundle.js
 /api/public/churchia/churchia.bundle.js
