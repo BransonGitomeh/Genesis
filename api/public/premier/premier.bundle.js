@@ -5792,7 +5792,7 @@
 	        return m(".noticeboard", [
 	            m(".row", [
 	                ctrl.items().noticeboard_items.length > 0 ?
-	                m(".col l8", [
+	                m(".col l12", [
 	                    ctrl.items().noticeboard_items.reverse().map(function(item) {
 	                        return m(noticeboard_item, {
 	                            id: item.id,
@@ -5829,11 +5829,11 @@
 	                        ])
 	                    ])
 
-	                ]),
-
-	                m(".col l4", [
-	                    m.component(oldNotices),
 	                ])
+
+	                // m(".col l4", [
+	                //     m.component(oldNotices),
+	                // ])
 	            ])
 	        ])
 	    }
