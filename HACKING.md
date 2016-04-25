@@ -19,9 +19,7 @@ While Node.js applications are mostly platform-agnostic, our code runs on window
 
 * [application architecture](#arch)
 * [starting the application](#start)
-* [data entry](#data-entry)
 * [deployment](#deploy)
-* [news](#news)
 
 
 <a name="arch"></a>
@@ -33,11 +31,11 @@ The directory structure of the code repository:
 .
 |-- api/     # the `server` , houses all the code that will run on the server
 	|-- collections/     # the `models` houses all the simple database entities, illustration all the relationships
-	|-- init/     # routing logic
+	|-- init/     
 		|-- collections.js      # a place to import all the `collections` that are relevant.
 		|-- index.js      # main entry point, sets up the application, innitialises the data-store magic, and other options
 		|-- routes.js      # old place to pull in all `router` files, is deprecated
-	|-- micro-services/        # houses the express routes and a few seneca services, the logic here is devided into  folders to find things easily
+	|-- micro-services/ 
 		|-- institution # a folder for all the routes for endpoints specific to modifying the university object and entities related to it
 		|-- student # a folder to hold all routes for endpoints specific to modifying the student object and entities related to it
 		|-- registra.js      # a seneca service to manage all the actions for the "registra" user

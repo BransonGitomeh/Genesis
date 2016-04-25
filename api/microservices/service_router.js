@@ -598,35 +598,33 @@ module.exports = function(db) {
 					var creaedAts = []
 					var durations = []
 					db.request.count().exec(function(err, requests) {
-						console.log(requests)
-						var percent = 100 / requests * 100
-						var tobetakenPercent = 100 - percent
-						var records = tobetakenPercent/100 * requests
+						var take = 500
+						var percentToTake = 100 - ((take / requests) * 100)
+						var records = (percentToTake / 100) * requests
 
 						db.request.find().skip(records).exec(function(err, requests) {
-							var _ = require("lodash")
-
-							var uniqueIPs = _.uniq(requests,"ip")
-							var uniqueUrls = _.uniq(requests,"url")
-							// console.log(uniques)
-							console.log(uniqueUrls)
-
 							requests.map((request) => {
 								if (request.duration < 500) {
-									var requestString = request.url
-									for (x in request.body) {
-										//send everything to the graph
-										requestString = requestString + " - " + request.body[x]
+									if (request.url.indexOf("__") > -1) {
+										//ignore any url that came to get an asset
+										// console.log("contains __deps in url" + request.url)
+									} else {
+										// console.log("does not" + request.url)
+										var requestString = request.url
+										for (x in request.body) {
+											//send everything to the graph
+											requestString = requestString + " - " + request.body[x]
+										}
+										creaedAts.push(requestString)
+										durations.push(request.duration)
 									}
-									creaedAts.push(requestString)
-									durations.push(request.duration)
+
+
 								}
 							})
 							res(err, {
 								creaedAts: creaedAts,
-								durations: durations,
-								uniqueIPs:uniqueIPs,
-								uniqueUrl:uniqueUrls
+								durations: durations
 							})
 						})
 					})

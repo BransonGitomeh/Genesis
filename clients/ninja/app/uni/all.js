@@ -5,10 +5,10 @@ module.exports = {
     }
   },
   view:function(controller,atrrs){
-    return m("div",[
+    return m(".container",[
       m("div",{class:"card-panel"},[
           m("br"),
-          m("span",{class:"flow-text"},"All Registered Universities"),
+          m("span",{class:"flow-text"},"Registered Universities"),
           m("a",{
             class:"btn blue right",
             href:"/uni/new",
@@ -20,15 +20,21 @@ module.exports = {
               m("tr",[
                 // m("th","id"),
                 m("th","name"),
-                m("th","createdAt")
+                m("th","admins"),
+                m("th","registras"),
+                m("th","students"),
+                m("th","age")
               ])
             ]),
             m("tbody",[
                 controller.universities().map(function(university){
                   return m("tr",[
                     // m("td",university.id),
-                    m("td",university.uniName  || university.name),
-                    m("td",university.createdAt),
+                    m("td",university.name),
+                    m("td",university.admins),
+                    m("td",university.registras),
+                    m("td",university.students),
+                    m("td",university.age),
                     m("td",[
                       m("a",{
                         href:"/uniadmin/" + (university.uniName  || university.name )+ "/" + university.id,

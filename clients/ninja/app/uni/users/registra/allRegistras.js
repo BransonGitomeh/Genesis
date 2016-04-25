@@ -52,7 +52,7 @@ module.exports = {
                 // m("td",admin.createdAt),
                 m("td", [
                   m("a",{
-                    href:"/uni/admin/" + m.route.param("uniId") + "/" + m.route.param("uniId") + "/Registra/" + admin.id,
+                    href:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Registra/",
                     config:m.route,
                   },"more details")
                 ])

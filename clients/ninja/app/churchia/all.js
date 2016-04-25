@@ -13,14 +13,14 @@ module.exports = {
 		}
 	},
 	view: function(controller, atrrs) {
-		return m("div", [
+		return m(".container", [
 			m("div", {
 				class: "card-panel"
 			}, [
 				m("br"),
 				m("span", {
 					class: "flow-text"
-				}, "All Registered Churches"),
+				}, "Registered Churches"),
 				m("a", {
 					class: "btn blue right",
 					href: "/churchia/new",

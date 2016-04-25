@@ -13,11 +13,11 @@ module.exports = function(){
       // {url:"/Church",icon:"mdi-notification-network-locked left",text:"Schools"}
   	],
   	sideBarItems:[
-      // {
-      //   text:"Dashboard",
-      //   url:"/uniadmin/" + m.route.param("uniName") + "/" + m.route.param("uniId"),
-      //   icon:"mdi-action-view-carousel"
-      // },
+      {
+        text:"Dashboard",
+        url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Registra/",
+        icon:"mdi-action-view-carousel"
+      },
       // {
       //   text:"Noticeboard",
       //   url:"/uni/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/noticeboard",
@@ -25,7 +25,7 @@ module.exports = function(){
       // },
       {
         text:"Finance",
-        url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Student/" + m.route.param("student_id") + "/finance",
+        url:"/uni/admin/" + m.route.param("uniName") + "/" + m.route.param("uniId") + "/Registra/" + m.route.param("student_id") + "/finance",
         icon:"mdi-editor-attach-money"
       },
 

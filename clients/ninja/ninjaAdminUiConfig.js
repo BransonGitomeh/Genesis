@@ -21,6 +21,11 @@ module.exports = function() {
       //   {url:"/churchia/all",text:"View all"}
       // ]},
       {
+        url: "/home",
+        text: "Dashboard",
+        icon: "mdi-action-view-carousel"
+      },
+      {
         text: "Universities",
         url: "/uni/all",
         icon: "mdi-image-movie-creation"

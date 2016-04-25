@@ -62,7 +62,7 @@ m.route(document.body, "/", {
 	}),
 
 	// registra portal routes
-	"/uni/admin/:uniName/:uniId/Registra/:student_id": m(studentUi, {
+	"/uni/admin/:uniName/:uniId/Registra": m(studentUi, {
 		config: uniRegistraUiConfig,
 		body: require("./app/uni/home")
 	}),
@@ -71,8 +71,6 @@ m.route(document.body, "/", {
 		config: uniRegistraUiConfig,
 		body: require("./app/uni/finance/search")
 	}),
-
-
 	//------
 
 	"/uniadmin/:uniName/:uniId": m(adminUi, {
@@ -253,6 +251,11 @@ m.route(document.body, "/", {
 	}),
 
 	"/uni/admin/:uniName/:uniId/Students/viewpayments/:student_id": m(adminUi, {
+		config: uniAdminUiConfig,
+		body: require("./app/uni/students/viewpayments"),
+	}),
+
+	"/uni/admin/:uniName/:uniId/Registra/viewpayments/:student_id": m(adminUi, {
 		config: uniAdminUiConfig,
 		body: require("./app/uni/students/viewpayments"),
 	}),
