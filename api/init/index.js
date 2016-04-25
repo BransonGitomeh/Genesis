@@ -89,7 +89,7 @@ module.exports = (collections, config, callback) => {
 				if (req.url.indexOf("__") > -1) {
 					//dont log a call for assets...only log http calls
 				}else{
-					log.info(res.statusCode + " - " + req.method + " - " +  req.url + "(" + duration + ")") 
+					log.info(res.statusCode + " - " + req.method + " - " + duration + "ms" + " - " + req.url) 
 					req.method === "POST" ?  log.info(req.body) : ""
 				}
 			});
