@@ -13,4 +13,5 @@ guidelines and other relevant information.
 [hacking]:https://github.com/forfuturellc/mmtc-ke/blob/master/HACKING.md
 
 
-## license: DO WHATEVER YOU WANT WITH IT, and share it, so we can help :smile:
+## license: 
+DO WHATEVER YOU WANT WITH IT, and share it, so we can help :smile:
