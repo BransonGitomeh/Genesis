@@ -1,0 +1,6 @@
+[submodule "web-clients"]
+	path = web-clients
+	url = https://BransonGitomeh@bitbucket.org/sabek/web-clients.git
+[submodule "server-main"]
+	path = server-main
+	url = https://BransonGitomeh@bitbucket.org/sabek/server-main.git
